@@ -1,24 +1,37 @@
-<?php echo '
-<div id="loginModal" class="modal">
-    <form action="validate.php" method="post">
-        <div class="login-box">
-            <h1>Login</h1>
-  
-            <div class="textbox">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <input type="text" placeholder="Adminname"
-                         name="adminname" value="">
-            </div>
-  
-            <div class="textbox">
-                <i class="fa fa-lock" aria-hidden="true"></i>
-                <input type="password" placeholder="Password"
-                         name="password" value="">
-            </div>
-  
-            <input class="button" type="submit"
-                     name="login" value="Sign In">
-        </div>
-    </form>
-</div>
-'?>
+<?php 
+if(isset($_POST['submit'])){
+
+$username = mysqli_real_escape_string($conn, $_POST['username']); 
+$password = mysqli_real_escape_string($conn, $_POST['password']); 
+$sql = "SELECT * FROM members WHERE username = '$username' AND password = '$password'";
+				
+$result = mysqli_query($conn, $sql);
+$count = mysqli_num_rows($result);
+$row = mysqli_fetch_assoc($result);
+$fullname = $row['fullname'];
+$status = $row['status'];
+$id = $row['id'];
+if ($count == 1) {
+	if ($status == "Admin")
+		{
+		$_SESSION['login'] = "<div class='message success'>Logged In Successfully!</div>";
+		$_SESSION['username'] = $username;
+		$_SESSION['fullname'] = $fullname;
+		$_SESSION['status'] = $status;
+		header("Location: admin/index.php");  
+		}
+	else if($status == "Member")
+		{
+		$_SESSION['id'] = $id;
+		$_SESSION['username'] = $username;
+		header("Location: main.php");
+		}
+} else {
+		$_SESSION['login'] = "<div class='message warning'>Incorrect Username or Password.</div>";
+				}
+}
+if (isset($_SESSION['login'])){
+    echo $_SESSION['login'];
+    unset($_SESSION['login']);
+}
+?>     

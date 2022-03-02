@@ -1,5 +1,6 @@
 <?php
 include('connections/connection.php');
+include('includes/login.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -176,21 +177,21 @@ include('connections/connection.php');
 					</button>
 				</div>
 			<div class="modal-body">
-				<form>
+				<form action="" class="text-center" method="post">
 					<div class="form-group">
 						   <label for="formGroupExampleInput">Username</label>
- 						   <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+ 						   <input type="text" class="form-control" id="formGroupExampleInput" name="username" id="username" placeholder="">
 					</div>
 					<div class="form-group">
 						<label for="exampleInputPassword1">Password</label>
-						<input type="password" class="form-control" id="exampleInputPassword1" placeholder="">
+						<input type="password" class="form-control" id="exampleInputPassword1" name="password" id="password" placeholder="">
 					</div>
-					
+
 					<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
 					<!-- dto mo lagay validate.php -->
-					<button type="button" class="btn btn-primary" >Sign In</button>     
+					<input type="submit" name="submit" value="Sign In" class="btn btn-primary">
 				</div>
 				</form>
 			</div>
