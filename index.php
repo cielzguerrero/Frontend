@@ -24,7 +24,7 @@ include('connections/connection.php');
 <body>
 	<!-- NAVBAR -->
 		<nav>
-			<div class="navbar-wrapper"><div><img src="/img/Glogo-white.png" alt=""  class="logo" srcset=""></div>
+			<div class="navbar-wrapper"><div><img src="img/Glogo-white.png" alt=""  class="logo" srcset=""></div>
 			<a href="#" class="toggle-button" onclick="myFunction()">
 				<span class="bar"></span>
 				<span class="bar"></span>
@@ -47,8 +47,8 @@ include('connections/connection.php');
 			<div class="hero-col1">
 				<h1>SEGREGATE WASTE<br> EARN POINTS<br> CLAIM PRIZES!!!</h1>
 				<div class="hero-btn">
-				<input type="button" value="SIGN UP" class="btn1" ></input>
-				<button class="btn2"><a href="validate.php">Log In</a></button>
+				<input type="button" value="SIGN IN" class="btn1" ></input>
+				
 				</div>
 			</div>
 			<div class="hero-col2">
