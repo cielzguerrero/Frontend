@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@1,900&display=swap");
+
+.prize-wrapper{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.box a
+{
+    color: white;
+}
+.box .indexslideshow-box
+{
+    display: flex;
+    width: 1100px;
+    margin: 0 auto;
+}
+.box .indexbox-wrapper
+{
+    width: 100%;
+   
+    margin: 0px auto;
+    height: 25rem;
+    overflow: hidden;
+
+}
+.box .indexbox-wrapper .indexprizebox
+{
+    display: flex;
+    flex-basis: 80%;
+    height: 400px;
+    width: 100%;
+    
+    margin-left: 0.2rem;
+}
+.box .indexbox-wrapper .indexprizebox img
+{
+    border: 2px solid #767676;
+    margin-left: 0.2rem;
+    border-radius: 5px;
+}
+.prize-wrapper .slide-description{
+    flex-basis: 30%;
+}
+.slide-description{
+    margin-left: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.power-grid
+{
+
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* PROFILE */
+.profile{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.profile div{
+    font-family: "Poppins", sans-serif;
+}
+.profile button{
+    background-color: #143536;
+    color:  #d8e4d3;
+    font-family: "Poppins", sans-serif;
+    border: none;
+}
+.profile button:hover{
+    background-color: #1f5253;
+    color:  #ffffff;
+    font-family: "Poppins", sans-serif;
+}
+.profile .card-header{
+    background-color: #143536;
+    color:  #d8e4d3;
+}

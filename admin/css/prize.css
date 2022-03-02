@@ -1,0 +1,220 @@
+.prize-wrapper
+{
+    border: 1px solid #54BAB9;
+    border-radius: 5px;
+}
+.box
+{
+    border: 1px solid #54BAB9;
+}
+.box a
+{
+    color: white;
+}
+.box .slideshow-box
+{
+    display: grid;
+    grid-template-columns:10% 80% 10%;
+}
+
+.box .indexslideshow-box
+{
+    display: grid;
+    grid-template-columns:100%;
+}
+.box .boxtitle
+{
+    border: 1px solid #54BAB9;
+    background-color: #54BAB9;
+    color: white;
+    text-align: center;
+}
+.box .next
+{
+    text-align: center;
+    margin-top: 8.5rem;
+    margin-right: 2rem;
+    font-size: 2rem;
+}
+.box .prev
+{
+    text-align: center;
+    margin-top: 8.5rem;
+    margin-left: 2rem;
+    font-size: 2rem;
+}
+
+.box .box-wrapper
+{
+    width: 80%;
+    margin: 0px auto;
+    height: 21rem;
+    overflow: hidden;
+}
+.box .box-wrapper .prizebox
+{
+    display: inline-block;
+    background: #d9b48fff;
+    margin-left: 1.5rem;
+    height: 20.5rem;
+    width: 15rem;
+    border-radius: 5px;
+    position: relative;
+    border: 2px solid #767676;
+}
+.box .indexbox-wrapper
+{
+    width: 95%;
+    margin: 0px auto;
+    height: 11rem;
+    overflow: hidden;
+}
+.box .indexbox-wrapper .indexprizebox
+{
+    display: inline-block;
+    background: #d9b48fff;
+    height: 10.5rem;
+    width: 10rem;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    border: 2px solid #767676;
+}
+.prizeaction
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+.buttonaction
+{
+    font-size: 1.5rem;
+}
+.pdescription
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0.5rem;
+}
+.pindexdescription
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 9rem;
+}
+.pbutton
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pbutton button
+{
+    margin-left: 3rem;
+    padding: 0.2rem;
+    background-color: #54BAB9;
+    color: white;
+    border-radius: 10px;
+}
+.editprizegrid
+{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 100%;
+}
+.editwrappers
+{
+    display: grid;
+    grid-template-columns: 60% auto;
+    grid-gap: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.editwrapperz
+{
+    display: grid;
+    grid-template-columns: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.formedit
+{
+    display: grid;
+    grid-template-columns: 60% auto;
+    grid-gap: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: white;
+}
+.editcontent
+{
+    display: inline-block;
+    background: rgb(0, 161, 205);
+    height: 27rem;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+.editactions
+{
+    display: inline-block;
+    background: rgb(0, 161, 205);
+    height: 27rem;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+.addcontent
+{
+    display: inline-block;
+    background: rgb(0, 161, 205);
+    height: 35rem;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+.addactions
+{
+    display: inline-block;
+    background: rgb(0, 161, 205);
+    height: 35rem;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+.editprizecontent
+{
+    margin: 1rem;
+    padding: 1rem;
+    background: white;
+    height: 24rem;
+    border-radius: 5px;
+}
+.buttonupdate
+{
+    text-align: center;
+}
+.edittype
+{
+    background: white;
+}
+.addcontentdesign
+{
+    background-color: white;
+    height: 34rem;
+}
+.addcontentdesign h3
+{
+    border:1px solid #767676;
+    padding: .25rem;
+}
+.addcontentdesignnews
+{
+    background-color: white;
+    height: 26.5rem;
+    padding-top: .5rem;
+    padding-left: .5rem;
+}

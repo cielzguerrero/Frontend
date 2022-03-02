@@ -1,0 +1,61 @@
+.log-grid
+{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 100% auto;
+    grid-gap: 2rem;
+}
+.card
+{
+    border-radius: 5px;
+}
+.logheader
+{
+    padding-top: .5rem;
+    background: #54BAB9;
+    color: black;
+}
+.logcard-header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid;
+}
+.logcard-header button
+{
+    padding: .5rem;
+    background-color: #d9b48fff;
+    color: white;
+    border-radius: 10px;
+}
+.logcard-body
+{
+    padding: 1rem;
+    min-height: 0%;
+    max-height: 50rem;
+    overflow: auto;
+}
+.table
+{
+    width: 100%;
+    overflow: auto;
+    max-height: 30rem;
+    text-align: center;
+}
+.table tr
+{
+    font-size: 1.2rem;
+}
+.table td
+{
+    border-top:1px #f0f0f0;
+    border-bottom:1px #f0f0f0;
+    border-style: solid;
+    padding: 0.5rem;
+}
+.table thead td
+{
+    font-weight: bolder;
+}
