@@ -246,7 +246,7 @@ if (isset($_POST['submit'])){
                                 <img src="admin/images/profile/<?php echo $rows['img_name'];?>" class="img-account-profile rounded-circle mb-1" >
                                 <input type="hidden" name="current_image" value="<?php echo $rows['img_name'];?>">
                                 <!-- Profile picture help block-->
-                                <div class="small font-italic text-muted mb-1">JPG or PNG no larger than 5 MB</div>
+                                <div class="small font-italic text-muted mb-1">--JPG or PNG no larger than 5 MB--</div>
                                 <!-- Profile picture upload button-->
                                 <button class="btn btn-primary" type="button"><input type="file" name="image"></button>
                             </div>
