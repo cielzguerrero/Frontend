@@ -26,12 +26,12 @@ if ($count == 1) {
 		$_SESSION['username'] = $username;
 		header("Location: main.php");
 		}
+		else
+		{
+			$_SESSION['login'] = "<div class='message warning'>Incorrect Username or Password.</div>";
+		}
 } else {
 		$_SESSION['login'] = "<div class='message warning'>Incorrect Username or Password.</div>";
 				}
-}
-if (isset($_SESSION['login'])){
-    echo $_SESSION['login'];
-    unset($_SESSION['login']);
 }
 ?>     

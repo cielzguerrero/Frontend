@@ -195,6 +195,10 @@ include('includes/register.php');
 					<input type="submit" name="submit" value="Sign In" class="btn btn-primary">
 				</div>
 				</form>
+				<?php if (isset($_SESSION['login'])){
+    			echo $_SESSION['login'];
+    			unset($_SESSION['login']);
+				}?>
 			</div>
 				</div>
 		</div>
