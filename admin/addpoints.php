@@ -25,6 +25,7 @@ if (!isset($_GET['ID'])){
 
 }
 $username = $_SESSION['username'];
+$profileuser = $row['username'];
 $activity = $row['profilename']." : Gained 150 points";
 $currentpoint = $row['points'];
 $point = 150;
@@ -34,7 +35,7 @@ $sum = $collectedpoint + $point;
 $sql = "UPDATE members SET points = '$sum' WHERE id = '$id'";
 $result = mysqli_query($conn, $sql);
 if($result) {
-    $log = "INSERT INTO logs (user, activity) VALUES ('$username', '$activity')";
+    $log = "INSERT INTO logs (user, activity) VALUES ('$profileuser', '$activity')";
     $result = mysqli_query($conn, $log);
     header("Location: viewmemberprofile.php?ID={$id}");
 } else {

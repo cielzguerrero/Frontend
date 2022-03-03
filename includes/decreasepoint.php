@@ -3,7 +3,7 @@ include ('connections/connection.php');
 if (!isset($_GET['ID'])){
 
     $_SESSION['update'] = "<div class='message warning'>User Not Found.</div>";
-    header("Location: members.php");
+    header("Location: ../main.php?ID={$id}");
 
 } else {
 
@@ -19,13 +19,13 @@ if (!isset($_GET['ID'])){
         if ($count > 0) {
         } else {
             $_SESSION['update'] = "<div class='message warning'>User Not Found.</div>";
-            header("Location: members.php");
+            header("Location: ../main.php?ID={$id}");
         }
     }
 
 }
 $username = $_SESSION['username'];
-$profileuser = $row['username'];
+$profileuser = $row['profilename'];
 $activity = $row['profilename']." : Lost 150 points";
 $currentpoint = $row['points'];
 $point = 150;
@@ -37,8 +37,8 @@ $result = mysqli_query($conn, $sql);
 if($result) {
     $log = "INSERT INTO logs (user, activity) VALUES ('$profileuser', '$activity')";
     $result = mysqli_query($conn, $log);
-    header("Location: viewmemberprofile.php?ID={$id}");
+    header("Location: ../main.php?ID={$id}");
 } else {
-    header("Location: members.php");
+    header("Location: ../main.php?ID={$id}");
 }
 ?>

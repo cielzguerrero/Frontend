@@ -26,13 +26,14 @@ if (!isset($_GET['ID'])){
 }
 
 $username = $_SESSION['username'];
+$profileuser = $row['username'];
 $activity = $row['profilename']." : Profile Points Restarted";
 $currentpoint = $row['points'];
 $point = 0;
 $sql = "UPDATE members SET points = '$point' WHERE id = '$id'";
 $result = mysqli_query($conn, $sql);
 if($result) {
-    $log = "INSERT INTO logs (user, activity) VALUES ('$username', '$activity')";
+    $log = "INSERT INTO logs (user, activity) VALUES ('$profileuser', '$activity')";
     $result = mysqli_query($conn, $log);
     header("Location: viewmemberprofile.php?ID={$id}");
 } else {

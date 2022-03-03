@@ -16,7 +16,8 @@ if (!isset($_SESSION['id'])){
     $sql = "SELECT * FROM members WHERE id = $id";
     $result = mysqli_query($conn, $sql);
     $rows = mysqli_fetch_assoc($result);
-
+    $currentprofileuser = $rows['username'];
+    $userid = $rows['id'];
     if($result == TRUE) {
         $count = mysqli_num_rows($result);
         
@@ -28,104 +29,10 @@ if (!isset($_SESSION['id'])){
     }
 
 }
- function time_elapsed_string($datetime, $full = false) {
-    $now = new DateTime;
-    $ago = new DateTime($datetime, new DateTimeZone('Asia/Manila'));
-    $diff = $now->diff($ago);
-
-    $diff->w = floor($diff->d / 7);
-    $diff->d -= $diff->w * 7;
-
-    $string = array(
-        'y' => 'year',
-        'm' => 'month',
-        'w' => 'week',
-        'd' => 'day',
-        'h' => 'hour',
-        'i' => 'minute',
-        's' => 'second',
-    );
-    foreach ($string as $k => &$v) {
-        if ($diff->$k) {
-            $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
-        } else {
-            unset($string[$k]);
-        }
-    }
-
-    if (!$full) $string = array_slice($string, 0, 1);
-    return $string ? implode(', ', $string) . ' ago' : 'just now';
-}
+include ('includes/timeinclude.php');
 $name = $rows['profilename'];
-if (isset($_POST['submit'])){
-    $time = date("Y-m-d H:i:s");
-    $username = $_SESSION['username'];
-    
-    $activity = "Edited Profile";
-    $profile_name = $_POST['pname'];
-    $dc = date('Y-m-d');
-    $full_name = $_POST['fname'];
-    $pstatus = $_POST['sname'];
-    $user_name = $_POST['uname'];
-    $pass_word = $_POST['pass'];
-    $age = $_POST['age'];
-    $email = $_POST['email'];
-    $current_image = $_POST['current_image'];
-    $image_name = $_POST['image'];
-    $address = $_POST['paddress'];
-    $contact = $_POST['pcontact'];
-    if(isset($_FILES['image']['name'])){
- 
-        $image_name = $_FILES['image']['name'];
-
-            if($image_name != ""){
-
-                //Rename Image
-                $extension = end(explode('.', $image_name));
-                $image_name = "Profile-". rand(000, 999). "." .$extension;
-    
-                $sourcepath = $_FILES['image']['tmp_name'];
-                $destinationpath = "admin/images/profile/".$image_name;
-    
-                $upload = move_uploaded_file($sourcepath, $destinationpath);
-    
-                if($upload == FALSE) {
-                    $_SESSION['upload'] = "<div class='message warning'>Failed To Upload Image. Try Again Later.</div>";
-                    echo "<meta http-equiv='refresh' content='0'>";
-                    die();
-                }
-
-                if($current_image != "") {
-                    $remove_path = "admin/images/profile/".$current_image;
-                    $remove = unlink($remove_path);
-    
-                    if($remove == FALSE){
-                        $_SESSION['remove'] = "<div class='message warning'>Failed To Remove Current Image. Try Again Later.</div>";
-                        echo "<meta http-equiv='refresh' content='0'>";
-                        die();
-                    }
-                }
-            } else {
-                $image_name = $current_image;
-            }
-        } else {
-            $image_name = $current_image;
-        }
-    
-    
-        $sql = "UPDATE members SET profilename = '$profile_name', fullname = '$full_name', email = '$email', address = '$address', img_name = '$image_name' WHERE id = '$id'";
-        $result = mysqli_query($conn, $sql);
-    
-        if($result) {
-            $_SESSION['update'] = "<div class='message success'>Details Updated Successfully!</div>";
-            $log = "INSERT INTO logs (user, activity, datetime) VALUES ('$username', '$activity', '$time')";
-            $result = mysqli_query($conn, $log);
-            echo "<meta http-equiv='refresh' content='0'>";
-        } else {
-            $_SESSION['update'] = "<div class='message warning'>Failed To Update Details. Try Again Later.</div>";
-            echo "<meta http-equiv='refresh' content='0'>";
-        }
-}
+$username = $_SESSION['username'];
+include ('includes/mainedit.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -176,7 +83,6 @@ if (isset($_POST['submit'])){
                     <div class="content-upper">
                         <p>Available Points</p>
                         <h2><?php echo $rows['points'];?></h2>
-                        
                     </div>
                     <div class="content-lower">
                         <h4><?php echo $rows['profilename'];?></h4>
@@ -248,7 +154,7 @@ if (isset($_POST['submit'])){
                             <div class="card-header">Profile Picture</div>
                             <div class="card-body text-center">
                                 <!-- Profile picture image-->
-                                <img src="admin/images/profile/<?php echo $rows['img_name'];?>" class="img-account-profile rounded-circle mb-1" >
+                                <img src="admin/images/profile/<?php echo $rows['img_name'];?>" class="img-account-profile rounded-circle mb-1" style="height:238px;width:238px;">
                                 <input type="hidden" name="current_image" value="<?php echo $rows['img_name'];?>">
                                 <!-- Profile picture help block-->
                                 <div class="small font-italic text-muted mb-1">--JPG or PNG no larger than 5 MB--</div>
@@ -303,70 +209,35 @@ if (isset($_POST['submit'])){
                 </form>
             </div>  
         </section>
-            
-        
-        
+
+
+
 
     <section class="Transactions">
     <table>
 		<thead>
 		<tr>
-			<th>#</th>
-			<th>Tabla CS3</th>
-			<th>Year</th>
+			<th>User</th>
+			<th>Activity</th>
+			<th>Date</th>
+            <th>Elasped Time</th>
 		</tr>
 		</thead>
-		<tbody>
-		<tr>
-			<td>1</td>
-			<td>Primera fila</td>
-			<td>2000</td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>Segunda fila</td>
-			<td>2001</td>
-		</tr>
-		<tr>
-			<td>3</td>
-			<td>Tercera fila</td>
-			<td>2002</td>
-		</tr>
-		<tr>
-			<td>4</td>
-			<td>Cuarta fila</td>
-			<td>2003</td>
-		</tr>
-		<tr>
-			<td>5</td>
-			<td>Quinta fila</td>
-			<td>2004</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>Primera fila</td>
-			<td>2000</td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>Segunda fila</td>
-			<td>2001</td>
-		</tr>
-		<tr>
-			<td>3</td>
-			<td>Tercera fila</td>
-			<td>2002</td>
-		</tr>
-		<tr>
-			<td>4</td>
-			<td>Cuarta fila</td>
-			<td>2003</td>
-		</tr>
-		<tr>
-			<td>5</td>
-			<td>Quinta fila</td>
-			<td>2004</td>
-		</tr>
+		<tbody >
+        <?php
+            $sql = "SELECT * FROM logs WHERE user='$currentprofileuser' ORDER BY id DESC Limit 0,10";
+            $result = mysqli_query($conn, $sql);
+            $rows = mysqli_fetch_assoc($result);                               
+            $rank = 1;
+            $number = 0;
+            do { ?>
+                <tr>
+                    <td><?php echo $rows['user'];?></td>
+                    <td><?php echo $rows['activity'];?></td>
+                    <td><?php echo $rows['datetime'];?></td>
+                    <td><?php echo time_elapsed_string($rows['daysago']);?></td>
+                    </tr>
+            <?php $rank++;} while (($rows = mysqli_fetch_assoc($result)) and ($number <= 10))?>
 		</tbody>
 	</table>
 
