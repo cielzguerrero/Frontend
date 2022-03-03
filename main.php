@@ -139,9 +139,14 @@ if (isset($_POST['submit'])){
         <link href="scss/carousel.css" rel="stylesheet" type="text/css" /></link>
         
         <!-- BOOTSTRAP -->
+        <!-- ICONS -->
+        <script src="https://kit.fontawesome.com/9fb78288eb.js" crossorigin="anonymous"></script>
         <!-- FONT AWESOME -->
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/></link>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></link>
+        <link rel="stylesheet" href="scss/footer.css">
+       
+       
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"></script>
@@ -298,8 +303,61 @@ if (isset($_POST['submit'])){
                 </form>
             </div>  
         </section>
-       
-    
+            
+     <div class="footer">
+        <div class="footer-wrapper">
+            <div class="footer-icons">
+                <img src="img/grewardwhite.png" alt="" srcset="">
+           
+            </div>
+                
+            <div class="footer-quick-links ">
+                <ul>
+                    <li><p>Quick Links</p></li>
+                    <li><a href="">G-Points</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">Profile</a></li>
+                    <li><a href="">Transactions</a></li>
+                </ul>
+            </div>   
 
+            <div class="footer-quick-links  ">
+                <ul>
+                    <li><p>Information</p></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Getting Started</a></li>
+                    <li><a href="">Our Team</a></li>
+                    
+                </ul>
+            </div>   
+
+            <div class="footer-quick-links">
+                
+                <ul class="footer-icons footer-media">
+                    <li><p>Follow us!</p></li>
+                    <div class="footer-socials">
+                    <li><a href=""><i class="fa-brands fa-github-square fa-2xl"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook-square fa-2xl"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-twitter-square fa-2xl"></i></a></li></div>
+			    </ul>
+                <div class="copy-right">
+                <div class="copy-wrapper">
+                <p> &copy; G-Reward All rights Reserved 2022 </p>
+                </div>
+               
+    </div>
+             
+            </div>   
+               
+
+        </div>
+               
+                
+    </div>
+     
+    
+      
 </body>
 </html>

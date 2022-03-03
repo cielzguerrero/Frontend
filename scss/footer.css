@@ -1,0 +1,121 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  width: 100%;
+  overflow: hidden;
+  background-color: #146356;
+}
+
+.footer .footer-wrapper {
+  width: 60%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .footer-wrapper.footer-wrapper img {
+  width: 15rem;
+  cursor: pointer;
+}
+
+.footer .footer-icons {
+  width: 240px;
+}
+
+.footer .footer-icons.footer-icons li a {
+  color: #d8e4d3;
+}
+
+.footer .footer-icons.footer-icons li a {
+  color: #d8e4d3;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer .footer-icons.footer-icons li a:hover {
+  color: hover;
+}
+
+.footer .footer-icons.footer-icons ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .footer-icons.footer-icons ul li {
+  text-decoration: none;
+}
+
+.footer .footer-socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .footer-socials li {
+  gap: 0.1rem;
+}
+
+.footer .footer-quick-links {
+  width: 240px;
+  margin-top: 2.5rem;
+}
+
+.footer .footer-quick-links.footer-quick-links ul {
+  list-style: none;
+  line-height: 1.5;
+}
+
+.footer .footer-quick-links.footer-quick-links li a {
+  font-family: "Poppins",sans-serif;
+  list-style: none;
+  text-decoration: none;
+  color: #d8e4d3;
+  font-size: 0.8rem;
+}
+
+.footer .footer-quick-links.footer-quick-links li a:hover {
+  color: white;
+}
+
+.footer .footer-quick-links.footer-quick-links ul p {
+  font-family: "Poppins",sans-serif;
+  font-size: large;
+  color: #d8e4d3;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.copy-right {
+  width: 100%;
+  background-color: #146356;
+  overflow: hidden;
+}
+
+.copy-right.copy-right p {
+  font-family: "Poppins",sans-serif;
+  font-size: 0.6rem;
+  color: #d8e4d3;
+  margin-left: 20px;
+}
+
+.copy-right .copy-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=footer.css.map */
