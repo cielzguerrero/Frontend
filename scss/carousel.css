@@ -15,6 +15,7 @@
     width: 1100px;
     margin: 0 auto;
 }
+
 .box .indexbox-wrapper
 {
     width: 100%;
@@ -35,9 +36,10 @@
 }
 .box .indexbox-wrapper .indexprizebox img
 {
-    border: 2px solid #767676;
+
     margin-left: 0.2rem;
-    border-radius: 5px;
+ 
+ 
 }
 .prize-wrapper .slide-description{
     flex-basis: 30%;
@@ -49,10 +51,16 @@
 }
 .power-grid
 {
-
+    border: 2px #1f5253;
     width: 1100px;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 5px;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.25);
+    transition: all 0.5s ease-in-out;
+}
+.power-grid:hover{
+    transform: scale(1.02);
 }
 
 
@@ -65,17 +73,68 @@
     font-family: "Poppins", sans-serif;
 }
 .profile button{
-    background-color: #143536;
+    background-color: #146356;
     color:  #d8e4d3;
     font-family: "Poppins", sans-serif;
     border: none;
 }
 .profile button:hover{
-    background-color: #1f5253;
-    color:  #ffffff;
-    font-family: "Poppins", sans-serif;
+    background-color: #146356;
 }
 .profile .card-header{
-    background-color: #143536;
+    background-color: #146356;
     color:  #d8e4d3;
+    font-size: larger;
 }
+
+/* NEWS TITLE DESCRIPTIONS */
+.indexprizebox H2{
+    font-family: "Poppins",sans-serif;
+    text-align: center;
+    margin-top: 80px;
+    font-weight: 600;
+    margin-bottom: 1.05rem;
+    color:  #d8e4d3;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.329);
+    width: 95%;
+}
+.indexprizebox H3{
+    margin-top: 40px;
+    font-family: "Poppins",sans-serif;
+    text-align: justify;
+    color:  #d8e4d3;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.329);
+}
+.indexprizebox p{
+    font-family: "Poppins",sans-serif;
+    text-align: justify;
+    text-justify: inter-word;
+    width: 95%;
+    color:  #d8e4d3;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.329);
+}
+.indexprizebox{
+    background-image: linear-gradient(to left,#0bab64,#3bb78f)  
+}
+
+form input[type = submit]{
+    background-color: #67BB6A;
+    color:  whitesmoke;
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+}
+form input[type = submit]:hover{
+    background-color: #61ac64;
+    color:  whitesmoke;
+}
+
+.btn-primary {
+    background-color: #61ac64;
+}
+
+
+
+
+
+

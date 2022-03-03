@@ -181,7 +181,6 @@ if (isset($_POST['submit'])){
                     <div class="content-lower">
                         <h4><?php echo $rows['profilename'];?></h4>
                         <p><i class="fa-solid fa-user-check"></i><?php echo $rows['contact'];?></p>
-                        <input type="button" class="btn1" value="History">
                         <input type="button" class="btn2" value="Claim">
                     </div>
                 </div>
@@ -209,8 +208,8 @@ if (isset($_POST['submit'])){
                         <div class="indexprizebox">
                             <img src="admin/images/news/<?php echo $rows['news_img'];?>" style = "width:100%; height:auto;">
                             <div class="slide-description">
-                            <H1><?php echo $rows['news_title'];?></H1>
-                            <H2><?php echo $rows['news_description'];?></H2>
+                            <H2><?php echo $rows['news_title'];?></H>
+                            <H3><?php echo $rows['news_description'];?></H3>
                             <p>Posted by <?php echo $rows['postedby'];?> on <?php echo $rows['datetime'];?> | Last Updated <?php echo time_elapsed_string($rows['lastupdate']); ?>.</p>
                             </div>  
                         </div>
@@ -241,7 +240,7 @@ if (isset($_POST['submit'])){
                 $result = mysqli_query($conn, $sql);
                 $rows = mysqli_fetch_assoc($result);
                 ?>
-                <hr class="mt-0 mb-2">
+             
                 <div class="row">
                     <div class="col-xl-5">
                         <!-- Profile picture card-->
@@ -316,8 +315,8 @@ if (isset($_POST['submit'])){
                 <ul>
                     <li><p>Quick Links</p></li>
                     <li><a href="">G-Points</a></li>
-                    <li><a href="">News</a></li>
-                    <li><a href="">Profile</a></li>
+                    <li><a href="#newspage">News</a></li>
+                    <li><a href="#profilepage">Profile</a></li>
                     <li><a href="">Transactions</a></li>
                 </ul>
             </div>   
@@ -338,9 +337,9 @@ if (isset($_POST['submit'])){
                 <ul class="footer-icons footer-media">
                     <li><p>Follow us!</p></li>
                     <div class="footer-socials">
-                    <li><a href=""><i class="fa-brands fa-github-square fa-2xl"></i></a></li>
-                    <li><a href=""><i class="fa-brands fa-facebook-square fa-2xl"></i></a></li>
-                    <li><a href=""><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+                    <li><a href="https://github.com/cielzguerrero"><i class="fa-brands fa-github-square fa-2xl"></i></a></li>
+                    <li><a href="https://www.facebook.com/aldrin.ramores.77"><i class="fa-brands fa-facebook-square fa-2xl"></i></a></li>
+                    <li><a href="https://www.instagram.com/ramoresaldrin/"><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
                     <li><a href=""><i class="fa-brands fa-twitter-square fa-2xl"></i></a></li></div>
 			    </ul>
                 <div class="copy-right">
