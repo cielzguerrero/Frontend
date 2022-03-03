@@ -232,6 +232,7 @@ if (isset($_POST['submit'])){
                 <h1>Profile</h1>
             </div>
             </div>
+            
         <section class = "profile" id="profilepage">
             <div class="container-xl px-4 mt-8">
                 <form action="" method="POST" enctype="multipart/form-data">
