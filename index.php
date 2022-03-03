@@ -50,7 +50,7 @@ include('includes/register.php');
 		</div>
 		</nav>
 		
-	<header>
+	<header >
 		<div class="nav-wrapper" id="head">
 			<div class="hero-section" >
 			<div class="hero-col1">
