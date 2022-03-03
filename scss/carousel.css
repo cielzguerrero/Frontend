@@ -67,7 +67,8 @@
 /* PROFILE */
 .profile{
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 0 auto 400px;
+
 }
 .profile div{
     font-family: "Poppins", sans-serif;
@@ -84,7 +85,7 @@
 .profile .card-header{
     background-color: #146356;
     color:  #d8e4d3;
-    font-size: larger;
+    font-size:x-large;
 }
 
 /* NEWS TITLE DESCRIPTIONS */
@@ -114,7 +115,8 @@
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.329);
 }
 .indexprizebox{
-    background-image: linear-gradient(to left,#0bab64,#3bb78f)  
+    background-color: #146356;
+    /* background-image: linear-gradient(to left,#0bab64,#3bb78f)   */
 }
 
 form input[type = submit]{

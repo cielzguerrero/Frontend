@@ -100,6 +100,7 @@
 
 .copy-right {
   width: 100%;
+  background-image: linear-gradient(to left,#146356,#215e53,);
   background-color: #146356;
   overflow: hidden;
 }
