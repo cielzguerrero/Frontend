@@ -1,6 +1,7 @@
 <?php
 include('connections/connection.php');
 include('includes/login.php');
+include('includes/register.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -212,39 +213,52 @@ include('includes/login.php');
 					</button>
 				</div>
 			<div class="modal-body">
+			<form action="" method="POST" enctype="multipart/form-data">
 					<div class="form-group">
 						   <label for="formGroupExampleInput">Username</label>
- 						   <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+ 						   <input type="text" class="form-control" id="formGroupExampleInput" placeholder="" name="rusername" autocomplete="off" required>
 					</div>
 					<div class="form-group">
 						   <label for="formGroupExampleInput">Full Name</label>
- 						   <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+ 						   <input type="text" class="form-control" id="formGroupExampleInput" placeholder="" name="rfullname" autocomplete="off" required>
+					</div>
+					<div class="form-group">
+						   <label for="formGroupExampleInput">Profile Name</label>
+ 						   <input type="text" class="form-control" id="formGroupExampleInput" placeholder="" name="rprofilename" autocomplete="off" required>
 					</div>
 				<form>
 					<div class="form-group">
 						<label for="exampleInputEmail1">Email address</label>
-						<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ex: user@gmail.com">
+						<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ex: user@gmail.com"  name="remail" id="remail" autocomplete="off" required>
+					</div>
+					<div class="form-group">
+						<label for="formGroupExampleInput">Contact</label>
+						<input type="text" class="form-control" id="formGroupExampleInput"  name="rcontact" autocomplete="off" required>
 				
 					</div>
 					<div class="form-group">
 						<label for="exampleInputPassword1">Password</label>
-						<input type="password" class="form-control" id="exampleInputPassword1" placeholder="">
+						<input type="password" class="form-control" id="exampleInputPassword1" name="rpassword" placeholder="" autocomplete="off" required>
 					</div>
 				
 					<div class="form-group">
 					<label for="exampleFormControlSelect1">Barangay</label>
-					<select class="form-control" id="exampleFormControlSelect1">
+					<select class="form-control" id="exampleFormControlSelect1" name="raddress" autocomplete="off" required>
 						<option>Barangay Nueva</option>
 						<option>Barangay San Roque</option>
 						<option>Barangay Landayan</option>
 						<option>Barangay San Vicente</option>
 						<option>Barangay San Antonio</option>
 					</select>
+					<label for="exampleFormControlSelect1">Status</label>
+					<select class="form-control" id="exampleFormControlSelect1" name="rstatus" autocomplete="off" required>
+						<option>Member</option>
+					</select>
 					<br>
 					<!-- IMAGE UPLOAD -->
 					<div class="form-group">
 						<label for="exampleFormControlFile1">Upload Profile Photo</label>
-						<input type="file" class="form-control-file" id="exampleFormControlFile1">
+						<button class="btn btn-primary" type="button"><input type="file" name="image"></button>
 					</div>
 					<form>
 
@@ -252,9 +266,10 @@ include('includes/login.php');
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
 					<!-- dto mo lagay yung sa register  -->
-					<button type="button" class="btn btn-primary">Confirm</button>
+					<input type="submit" name="registersubmit" value="Confirm" class="btn btn-primary">
 				</div>
 				</form>
+			</form>
 			</div>
 				
 				</div>

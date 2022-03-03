@@ -153,7 +153,7 @@ include('chartjava.php');?>
                                                 <h3>Name: <input type="text" name="newsname" value="News Name" autocomplete="off" required> </h3>                           
                                                 <h3>Description: <input type="text" name="newsdesc" value="News Description" autocomplete="off" required></h3>
                                                 <div>
-                                                <h3 class="newsimage">News Image: <input type="file" name="image" style="font-size: 1.5rem;"></h3>
+                                                <h3 class="newsimage">News Image: <input type="file" name="image" style="font-size: 1.5rem;" required></h3>
                                                 </div>                                              
                                                 <h3>News Content :</h3>
                                                 <textarea name="newscontent" id="newscontent" class="form-control" rows="16"></textarea>
