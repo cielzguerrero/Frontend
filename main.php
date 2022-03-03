@@ -307,7 +307,7 @@ if (isset($_POST['submit'])){
      <div class="footer">
         <div class="footer-wrapper">
             <div class="footer-icons">
-                <img src="img/grewardwhite.png" alt="" srcset="">
+                <a href=""><img src="img/grewardwhite.png" alt="" srcset=""></a>
            
             </div>
                 
