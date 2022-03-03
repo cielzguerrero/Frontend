@@ -145,7 +145,7 @@ if (isset($_POST['submit'])){
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/></link>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></link>
         <link rel="stylesheet" href="scss/footer.css">
-       
+        <link rel="stylesheet" href="css/transaction.css">
        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -304,6 +304,77 @@ if (isset($_POST['submit'])){
             </div>  
         </section>
             
+        
+        
+
+    <section class="Transactions">
+    <table>
+		<thead>
+		<tr>
+			<th>#</th>
+			<th>Tabla CS3</th>
+			<th>Year</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>1</td>
+			<td>Primera fila</td>
+			<td>2000</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Segunda fila</td>
+			<td>2001</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Tercera fila</td>
+			<td>2002</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Cuarta fila</td>
+			<td>2003</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>Quinta fila</td>
+			<td>2004</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Primera fila</td>
+			<td>2000</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Segunda fila</td>
+			<td>2001</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Tercera fila</td>
+			<td>2002</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Cuarta fila</td>
+			<td>2003</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>Quinta fila</td>
+			<td>2004</td>
+		</tr>
+		</tbody>
+	</table>
+
+    </section>
+     
+
+
+
      <div class="footer">
         <div class="footer-wrapper">
             <div class="footer-icons">
@@ -356,7 +427,7 @@ if (isset($_POST['submit'])){
                
                 
     </div>
-     
+
     
       
 </body>
