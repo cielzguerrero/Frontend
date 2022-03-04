@@ -191,7 +191,7 @@ include('chartjava.php');?>
                                             <div class="addcontentdesign">              
                                                 <h3>Name: <input type="text" name="gname" value="<?php echo $row['garbage_Name']; ?>" autocomplete="off" required> </h3>                           
                                                 <h3>Points: <input type="text" name="gpoints" value="<?php echo $row['garbage_Points']; ?>" autocomplete="off" required></h3>                                              
-                                                <h3 class="newsimage">News Image: </h3>
+                                                <h3 class="newsimage">Garbage Image: </h3>
                                                 <input type="file" name="image">
                                                 <br>
                                                 <input type="hidden" name="current_image" value="<?php echo $row['garbage_Img'];?>">
