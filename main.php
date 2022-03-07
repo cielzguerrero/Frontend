@@ -60,8 +60,7 @@ include ('includes/mainedit.php');
         <script src="js/Main.js"></script> 
     </head>
 <body>
-        
-
+ 
         <div class="navbar">
             <div class="navbar-wrapper">
                 <div><img src="img/Glogo-white.png" class="logo"></div>
