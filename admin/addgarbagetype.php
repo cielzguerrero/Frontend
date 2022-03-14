@@ -152,11 +152,12 @@ include('chartjava.php');?>
                                         <div class="addactions">
                                             <div class="addcontentdesign">
                                             <h2 class="buttonaction">Actions</h2>
-                                            <button class=""><a href="garbagetype.php">Return</a> </button>
+                                            <button class=""><a href="garbagetype.php">Return</a></button>
                                             <input type="submit" name="submit" value="Add GarbageType" class="btn-secondary">
                                             </div>
                                         </div>                   
                             </form>
+                            
                         </div>
                 </div>
                 
