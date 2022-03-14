@@ -93,7 +93,7 @@ include('chartjava.php');?>
                 </li>
                 <li>
                     <a href="analytics.php"><span class="las la-signal"></span>
-                    <span>Analytics(Post-Poned)</span></a>
+                    <span>Analytics</span></a>
                 </li>
                 <li>
                     <a href="logout.php" onclick="return confirm('Are you sure')"><span class="las la-signal"></span>

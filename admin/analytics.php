@@ -81,7 +81,7 @@ function time_elapsed_string($datetime, $full = false) {
                     <span>Dashboard</span></a>
                 </li>
                 <li>
-                    <a href="garbagetype.php" class="active"><span class="las la-signal"></span>
+                    <a href="garbagetype.php"><span class="las la-signal"></span>
                     <span>Garbage Type</span></a>
                 </li>
                 <li>
@@ -97,8 +97,8 @@ function time_elapsed_string($datetime, $full = false) {
                     <span>Logs</span></a>
                 </li>
                 <li>
-                    <a href="#.php"><span class="las la-signal"></span>
-                    <span>Analytics(Post-Poned)</span></a>
+                    <a href="analytics.php" class="active"><span class="las la-signal"></span>
+                    <span>Analytics</span></a>
                 </li>
                 <li>
                     <a href="index.php"><span class="las la-signal"></span>

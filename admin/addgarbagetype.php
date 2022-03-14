@@ -105,7 +105,7 @@ include('chartjava.php');?>
                     <span>Logs</span></a>
                 </li>
                 <li>
-                    <a href="#"><span class="las la-signal"></span>
+                    <a href="analytics.php"><span class="las la-signal"></span>
                     <span>Analytics</span></a>
                 </li>
                 <li>
