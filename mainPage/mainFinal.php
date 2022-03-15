@@ -136,9 +136,13 @@ include ('../includes/mainedit.php');
                 <h4>Your Points</h4>
                 <h1><?php echo $rows['points'];?></h1>
               </div>
-              <div class="gpoints-button">
+              <!-- <div class="gpoints-button">
               <a href="">Claim</a>
-              </div>
+              </div> -->
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Launch demo modal
+              </button>
             </div>
         </div>
       </div>
@@ -410,7 +414,78 @@ include ('../includes/mainedit.php');
         </div>
  
 
+        <!-- CLAIM MODAL -->
+        <div class="claim">
+          <div class="claim-wrapper">
+           
 
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Claim Rewards</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+
+
+
+
+                          <div class="modal-body">
+                          <div class="container px-4">
+
+
+                          <div class="container">
+
+                              <div class="row align-items-center">
+                                <div class="col">
+                                  200 pesos
+                                </div>
+                                <div class="col">
+                                <button type="button" class="btn btn-primary btn-lg">2000 Points</button>
+                                </div>
+                              </div>
+
+                              <div class="row align-items-center">
+                                <div class="col">
+                                  300 pesos
+                                </div>
+                                <div class="col">
+                                <button type="button" class="btn btn-primary btn-lg">3000 Points</button>
+                                </div>
+                              </div>
+
+                              <div class="row align-items-center">
+                                <div class="col">
+                                  400 pesos
+                                </div>
+                                <div class="col">
+                                <button type="button" class="btn btn-primary btn-lg">4000 Points</button>
+                                </div>
+                              </div>
+
+                              <div class="row align-items-center">
+                                <div class="col">
+                                  500 pesos
+                                </div>
+                                <div class="col">
+                                <button type="button" class="btn btn-primary btn-lg">5000 Points</button>
+                                </div>
+                              </div>
+                              </div>
+                          </div>
+
+
+
+
+
+                        </div>
+                      </div>
+                    </div>  
+                    <!-- END OF MODAL -->
+
+          </div>
+        </div>
     
       
      
