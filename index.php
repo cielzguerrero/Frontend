@@ -15,10 +15,9 @@ include('includes/register.php');
 	<link href="css/login1.css" rel="stylesheet" type="text/css" /></link>
 	<link href="css/style.css" rel="stylesheet" type="text/css" /></link>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<!-- BOOTSTRAP JS -->
-	
+	<script src="https://kit.fontawesome.com/9fb78288eb.js" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -26,13 +25,13 @@ include('includes/register.php');
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="login.js"></script>
-	<script src="https://kit.fontawesome.com/9fb78288eb.js" crossorigin="anonymous"></script>
 	<script src="includes/modal.js"></script> 
 	
 </head>
 <body>
-	<!-- NAVBAR -->
-		<nav>
+	
+	
+		<!-- <nav>
 			<div class="navbar-wrapper"><div><img src="img/Glogo-white.png" alt=""  class="logo" srcset=""></div>
 			<a href="#" class="toggle-button" onclick="myFunction()">
 				<span class="bar"></span>
@@ -48,18 +47,44 @@ include('includes/register.php');
 				</ul>
 			</div>
 		</div>
-		</nav>
-		
-	<header >
+		</nav>  -->
+	
+		<nav class="navbar navbar-expand-lg navbar-light">
+  <img src="img/Glogo-white.png">
+  <button class="navbar-toggler "id = "nav-toggle-button" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fa-solid fa-bars fa-lg "></i></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Getting Started <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="#">Our Team</a>
+      </li>
+   
+    </ul>
+  </div>
+</nav>
+	
+
+	<header>
+
 		<div class="nav-wrapper" id="head">
 			<div class="hero-section" >
 			<div class="hero-col1">
 				<h1>SEGREGATE WASTE<br> EARN POINTS<br> CLAIM PRIZES!!!</h1>
 				<div class="hero-btn">
-				<button type="button" class="btn2" data-toggle="modal" data-target="#SignInModal">
+				<button type="button" class="btn2 btn1" data-toggle="modal" data-target="#SignInModal">
 				SIGN IN
 				</button>
-				<button type="button" class="btn2" data-toggle="modal" data-target="#SignUpModal">
+				<button type="button" class="btn2 btn3" data-toggle="modal" data-target="#SignUpModal">
 				SIGN UP
 				</button>
 				</div>
@@ -68,8 +93,20 @@ include('includes/register.php');
 				<img src="img/grewardwhite.png" class="right-image">
 			</div>
 		</div>
+		<footer class="footerSocial">
+		<div class="social-wrapper">
+			<li><a href="https://www.facebook.com/aldrin.ramores.77" class="facebook"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+			<li><a href="https://www.instagram.com/ramoresaldrin/" class="instagram"><i class="fa-brands fa-instagram fa-xl"></i></a></li>
+			<li><a href="https://github.com/aldrinnunal" class="github"><i class="fa-brands fa-github fa-xl"></i></a></li>
+			<li><a href="https://www.linkedin.com/in/aldrin-ramores-556798202/" class="linkedin"><i class="fa-brands fa-linkedin-in fa-xl"></i></a></li>
 		</div>
-		<section class="title-card" id="steps">
+	</footer>
+	</div>
+	
+</header>
+
+
+		<!-- <section class="title-card" id="steps">
 			<div class="title-card-wrapper">
 				<div><img src="img/Procedures.gif" class="title-card-img" id = "img"></div>
 				<div class="title-card-text">
@@ -78,6 +115,9 @@ include('includes/register.php');
 				</div>
 			</div>
 		</section>
+ -->
+
+<!-- 
 		<section class = "card-content">
 			<div class="card-content-box">
 				<div class="card-1 card-box">
@@ -97,7 +137,7 @@ include('includes/register.php');
 				</div>
 			</div>
 		</section>
-		<!-- END OF CARD CONTENT -->
+	
 		<section class="about-us" id="aboutus">
 			<div class="about-us-wrapper">
 				<h1 > ABOUT US</h1>
@@ -105,7 +145,7 @@ include('includes/register.php');
 			</div>
 			<div class="aboutus-img"><img src="img/About us page.gif"></div>
 		</section>
-		<!-- END OF ABOUT US -->
+	
 		<section class="contact-us" id="contact">
 			<div class="contact-us-wrapper">
 			<img src="img/Contact us-pana.png" alt="">
@@ -159,7 +199,7 @@ include('includes/register.php');
 
 		
 		</div>
-		</section>
+		</section> -->
 
 	
 
@@ -167,7 +207,6 @@ include('includes/register.php');
 		
 			
 
-			<!-- SIGN IN Modal -->
 	<div class="modal fade" id="SignInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 				<div class="modal-content">
@@ -191,7 +230,7 @@ include('includes/register.php');
 					<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
-					<!-- dto mo lagay validate.php -->
+
 					<input type="submit" name="submit" value="Sign In" class="btn btn-primary">
 				</div>
 				</form>
@@ -206,7 +245,7 @@ include('includes/register.php');
 
 
 
-				<!-- SIGN UP Modal -->
+	
 				<div class="modal fade" id="SignUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 				<div class="modal-content">
@@ -259,7 +298,7 @@ include('includes/register.php');
 						<option>Member</option>
 					</select>
 					<br>
-					<!-- IMAGE UPLOAD -->
+
 					<div class="form-group">
 						<label for="exampleFormControlFile1">Upload Profile Photo</label>
 						<button class="btn btn-primary" type="button"><input type="file" name="image"></button>
@@ -269,14 +308,14 @@ include('includes/register.php');
 					<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
-					<!-- dto mo lagay yung sa register  -->
+					
 					<input type="submit" name="registersubmit" value="Confirm" class="btn btn-primary">
 				</div>
 				</form>
 			</form>
 			</div>
 				
-				</div>
+			</div>
 		</div>
 	</div>
 	
