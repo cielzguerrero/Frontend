@@ -58,7 +58,7 @@ include('includes/register.php');
 			<div class="collapse navbar-collapse" id="navbarNavDropdown">
 				<ul class="navbar-nav ms-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="#">Getting Started <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="mainPage/GettingStarted.php">Getting Started <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">About Us</a>
@@ -108,9 +108,9 @@ include('includes/register.php');
 	</div>
 
 </header>
+<!-- 
 
-
-		<!-- <section class="title-card" id="steps">
+		<section class="title-card" id="steps">
 			<div class="title-card-wrapper">
 				<div><img src="img/Procedures.gif" class="title-card-img" id = "img"></div>
 				<div class="title-card-text">
@@ -119,9 +119,9 @@ include('includes/register.php');
 				</div>
 			</div>
 		</section>
- -->
 
-<!-- 
+
+
 		<section class = "card-content">
 			<div class="card-content-box">
 				<div class="card-1 card-box">
@@ -140,9 +140,9 @@ include('includes/register.php');
 					<p>Once the system recognized your identity, you can now drop all your trash in the bins.</p>
 				</div>
 			</div>
-		</section>
+		</section> -->
 	
-		<section class="about-us" id="aboutus">
+		<!-- <section class="about-us" id="aboutus">
 			<div class="about-us-wrapper">
 				<h1 > ABOUT US</h1>
 				<p>G-Reward Is made by a group of students in Polytechnic University Of The Philippines - San Pedro Campus. We believe that we can motivate people to throw their garbage in a proper way and earning Cash or Prize in exchange. Our mission is to help the community in terms of cleanliness. It also helps the local government to earn funds for their future projects. We're excited and striving for a change in the environment of the community.</p>
@@ -178,9 +178,9 @@ include('includes/register.php');
 				</form>
 				
 			</div>
-		</section>
+		</section> -->
 
-		<section class="footer">
+		<!-- <section class="footer">
 		<div class="footer-wrapper">
 			<img src="img/Glogo-white.png" alt="">
 
@@ -203,8 +203,7 @@ include('includes/register.php');
 
 		
 		</div>
-		</section> -->
-
+		</section>  -->
 	
 
 			<!-- MODAL -->

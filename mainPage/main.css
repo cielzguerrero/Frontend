@@ -446,6 +446,37 @@ body{
 .modal-content .modal-body {
     align-items: center;
     text-align: center;
+    background-color: #323949;
+}
+.modal-content .modal-body p{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+    color: #fbfbfb;
+    background-color: #323949;
+    line-height: 4 !important;
+}
+.modal-content .modal-body button{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 100;
+
+    background-color: transparent;
+
+}
+.modal-content .modal-body button:hover{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+    background-color: #0b5ed7;
+
+}
+.modal-content .modal-body button:focus{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+    background-color: #0b5ed7;
+
 }
 
 /* FOOTER */
@@ -1020,8 +1051,47 @@ body{
     top: 3300px;
     height: 40px;
 }
+/* MODAL */
+.modal-content .btn-close{
+    color: white;
+}
+.modal-content .modal-header{
+    background-color: #212129;
+}
+.modal-content .modal-title{
+    color: #fbfbfb;
+    font-size: 2rem;
+    font-weight: 800;
+}
+.modal-content .modal-body {
+    align-items: center;
+    text-align: center;
+}
+.modal-content .modal-body p{
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 600;
+    line-height: 6 !important;
+}
+.modal-content .modal-body button{
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 400;
+}
+.modal-content .modal-body button:hover{
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 600;
+    background-color: #0b5ed7;
 
+}
+.modal-content .modal-body button:focus{
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 600;
+    background-color: #0b5ed7;
 
+}
 
 
 }

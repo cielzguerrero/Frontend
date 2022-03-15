@@ -452,7 +452,7 @@ include('../includes/decreasepoint.php');
                                 </div>
                                 <div class="col">
                                 <button type="submit" onclick="return confirm('Are you sure')" class="btn btn-primary btn-lg"  name="rsubmit" value="<?php echo $rows['price']; ?>">
-                                <?php echo $rows['price']; ?>
+                                <?php echo $rows['price']; ?> PTS
                                 </button>
                                 </div>
                               </form>
