@@ -33,6 +33,7 @@ include ('../includes/timeinclude.php');
 $name = $rows['profilename'];
 $username = $_SESSION['username'];
 include ('../includes/mainedit.php');
+include('../includes/decreasepoint.php');
 ?>
 <!doctype html>
 <html lang="en">
@@ -436,43 +437,25 @@ include ('../includes/mainedit.php');
 
 
                           <div class="container">
-
-                              <div class="row align-items-center">
+                          <?php                            
+                          $sql = "SELECT * FROM prizes";
+                          $result = mysqli_query($conn, $sql);
+                          $rows = mysqli_fetch_assoc($result);
+                          $number = 0;
+                          do { ?>
+                            <div class="row align-items-center">
+                              <form action="" method="POST" enctype="multipart/form-data" style="display:inline-flex;">
                                 <div class="col">
-                                  200 pesos
+                                  <?php echo $rows['prize'];?>
                                 </div>
                                 <div class="col">
-                                <button type="button" class="btn btn-primary btn-lg">2000 Points</button>
+                                <button type="submit" class="btn btn-primary btn-lg"  name="rsubmit" value="<?php echo $rows['price']; ?>">
+                                <?php echo $rows['price']; ?>
+                                </button>
                                 </div>
-                              </div>
-
-                              <div class="row align-items-center">
-                                <div class="col">
-                                  300 pesos
-                                </div>
-                                <div class="col">
-                                <button type="button" class="btn btn-primary btn-lg">3000 Points</button>
-                                </div>
-                              </div>
-
-                              <div class="row align-items-center">
-                                <div class="col">
-                                  400 pesos
-                                </div>
-                                <div class="col">
-                                <button type="button" class="btn btn-primary btn-lg">4000 Points</button>
-                                </div>
-                              </div>
-
-                              <div class="row align-items-center">
-                                <div class="col">
-                                  500 pesos
-                                </div>
-                                <div class="col">
-                                <button type="button" class="btn btn-primary btn-lg">5000 Points</button>
-                                </div>
-                              </div>
-                              </div>
+                              </form>
+                            </div>
+                          <?php $number++; } while (($rows = mysqli_fetch_assoc($result)) and ($number <= 10))?> 
                           </div>
 
 
