@@ -119,8 +119,8 @@ include('../includes/decreasepoint.php');
 </div>
         <!-- WELCOME USER -->
         <div class="welcome">
-            <h1>Welcome!</h1>
-            <h1><?php echo $rows['profilename'];?></h1>
+            <h1>Welcome!!! <?php echo $rows['profilename'];?></h1>
+      
             <p>Start earning points and claim rewards</p>
         </div>
         
@@ -142,7 +142,7 @@ include('../includes/decreasepoint.php');
               </div> -->
               <!-- Button trigger modal -->
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              Launch demo modal
+              CLAIM
               </button>
             </div>
         </div>
@@ -184,7 +184,7 @@ include('../includes/decreasepoint.php');
                   $row = mysqli_fetch_assoc($rsult);
                                                  
                   ?>
-                    <img src="../admin/images/profile/<?php echo $row['img_name'];?>" style="height:208px;width:208px;"><p><?php echo $row['profilename'];?></p><h5><?php echo $row['points'];?></h5>
+                    <img src="../admin/images/profile/<?php echo $row['img_name'];?>" ><p><?php echo $row['profilename'];?></p><h5><?php echo $row['points'];?></h5>
                   </div>
                   <div class="top1">
                   <?php
@@ -192,7 +192,7 @@ include('../includes/decreasepoint.php');
                   $rsult = mysqli_query($conn, $sql);
                   $row = mysqli_fetch_assoc($rsult);                                      
                   ?>
-                    <img src="../admin/images/profile/<?php echo $row['img_name'];?>" style="height:238px;width:238px;"><p><?php echo $row['profilename'];?></p><h5><?php echo $row['points'];?></h5>
+                    <img src="../admin/images/profile/<?php echo $row['img_name'];?>" ><p><?php echo $row['profilename'];?></p><h5><?php echo $row['points'];?></h5>
                   </div>
                   <div class="top3">
                   <?php
@@ -200,7 +200,7 @@ include('../includes/decreasepoint.php');
                   $rsult = mysqli_query($conn, $sql);
                   $row = mysqli_fetch_assoc($rsult);                                               
                   ?>
-                    <img src="../admin/images/profile/<?php echo $row['img_name'];?>" style="height:11rem;width:11rem;"><p><?php echo $row['profilename'];?></p><h5><?php echo $row['points'];?></h5>
+                    <img src="../admin/images/profile/<?php echo $row['img_name'];?>" ><p><?php echo $row['profilename'];?></p><h5><?php echo $row['points'];?></h5>
                   </div>
                </div>
                
@@ -245,8 +245,9 @@ include('../includes/decreasepoint.php');
 
            <div class="profile-section">
              <div class="profile">
+             <div class="border-color-top"></div>
                <form action="" method="POST" enctype="multipart/form-data">
-               <div class="border-color-top"></div>
+              
                <?php
                 $sql = "SELECT * FROM members WHERE id = $id";
                 $result = mysqli_query($conn, $sql);
@@ -280,7 +281,7 @@ include('../includes/decreasepoint.php');
         
                   <div class="input-group mb-3">
                   
-                    <select class="custom-select" id="inputGroupSelect01" name="paddress" value="<?php echo $rows['address'];?>">
+                    <select class="custom-select w-100 p-2" id="inputGroupSelect01" name="paddress" value="<?php echo $rows['address'];?>">
                     <option value="<?php echo $rows['address'];?>"><?php echo $rows['address'];?></option>
                       <option value="Barangay Nueva">Barangay Nueva</option>
                       <option value="Barangay San Antonio">Barangay San Antonio</option>
@@ -333,7 +334,7 @@ include('../includes/decreasepoint.php');
               $number = 0;
               do { ?>
                 <tr>
-                  <th scope="row"><?php echo $rows['user'];?></th>
+                  <td scope="row"><?php echo $rows['user'];?></td>
                   <td><?php echo $rows['activity'];?></td>
                   <td><?php echo $rows['datetime'];?></td>
                   <td><?php echo time_elapsed_string($rows['daysago']);?></td>
@@ -426,7 +427,7 @@ include('../includes/decreasepoint.php');
                         <div class="modal-content">
                           <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Claim Rewards</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          
                           </div>
 
 
