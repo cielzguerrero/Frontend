@@ -199,7 +199,7 @@ include ('../includes/mainedit.php');
                   $rsult = mysqli_query($conn, $sql);
                   $row = mysqli_fetch_assoc($rsult);                                               
                   ?>
-                    <img src="../admin/images/profile/<?php echo $row['img_name'];?>" style="height:158px;width:158px;"><p><?php echo $row['profilename'];?></p><h5><?php echo $row['points'];?></h5>
+                    <img src="../admin/images/profile/<?php echo $row['img_name'];?>" style="height:11rem;width:11rem;"><p><?php echo $row['profilename'];?></p><h5><?php echo $row['points'];?></h5>
                   </div>
                </div>
                
@@ -325,7 +325,7 @@ include ('../includes/mainedit.php');
               </thead>
               <tbody>
               <?php
-              $sql = "SELECT * FROM logs WHERE user='$currentprofileuser' ORDER BY id DESC Limit 0,10";
+              $sql = "SELECT * FROM logs WHERE user='$currentprofileuser' ORDER BY id DESC Limit 0,5";
               $result = mysqli_query($conn, $sql);
               $rows = mysqli_fetch_assoc($result);                               
               $rank = 1;
@@ -337,7 +337,7 @@ include ('../includes/mainedit.php');
                   <td><?php echo $rows['datetime'];?></td>
                   <td><?php echo time_elapsed_string($rows['daysago']);?></td>
                 </tr> 
-                <?php $rank++;} while (($rows = mysqli_fetch_assoc($result)) and ($number <= 10))?>
+                <?php $rank++;} while (($rows = mysqli_fetch_assoc($result)) and ($number <= 5))?>
               </tbody>
             </table>
             
@@ -358,7 +358,7 @@ include ('../includes/mainedit.php');
 
       <div class="footer-wrapper">
             <!-- Site footer -->
-    <footer class="site-footer" id="footer">
+    <footer class="site-footer">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-6">
