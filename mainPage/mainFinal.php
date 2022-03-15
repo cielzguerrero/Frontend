@@ -1,3 +1,39 @@
+<?php
+include ('../connections/connection.php');
+if (empty($_SESSION['username'])) {
+
+    header("Location: logout.php");
+}
+if (!isset($_SESSION['id'])){
+
+    $_SESSION['view'] = "<div class='message warning'>User Not Found.</div>";
+    header("Location: ../../Frontend/index.php");
+
+} else {
+
+    $id = $_SESSION['id'];
+
+    $sql = "SELECT * FROM members WHERE id = $id";
+    $result = mysqli_query($conn, $sql);
+    $rows = mysqli_fetch_assoc($result);
+    $currentprofileuser = $rows['username'];
+    $userid = $rows['id'];
+    if($result == TRUE) {
+        $count = mysqli_num_rows($result);
+        
+        if ($count > 0) {
+        } else {
+            $_SESSION['view'] = "<div class='message warning'>User Not Found.</div>";
+            header("Location: ../../Frontend/index.php");
+        }
+    }
+
+}
+include ('../includes/timeinclude.php');
+$name = $rows['profilename'];
+$username = $_SESSION['username'];
+include ('../includes/mainedit.php');
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -64,13 +100,13 @@
 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
-                  <img src="main-images/bojji.jpg" alt="">
+                  <img src="../admin/images/profile/<?php echo $rows['img_name'];?>" alt="" style="height:50px;width:50px;">
                 </a>
                 <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="#">Profile</a></li>
-                  <li><a class="dropdown-item" href="#">Logs</a></li>
+                  <li><a class="dropdown-item" href="#logs-title">Logs</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Sign Out</a></li>
+                  <li><a class="dropdown-item" href="../logout.php">Sign Out</a></li>
                 </ul>
               </li>
              
@@ -83,7 +119,7 @@
         <!-- WELCOME USER -->
         <div class="welcome">
             <h1>Welcome!</h1>
-            <h1>Aldrin Ramores</h1>
+            <h1><?php echo $rows['profilename'];?></h1>
             <p>Start earning points and claim rewards</p>
         </div>
         
@@ -98,7 +134,7 @@
             <div class="gpoints-below">
               <div class="gpoints-text">
                 <h4>Your Points</h4>
-                <h1>2400</h1>
+                <h1><?php echo $rows['points'];?></h1>
               </div>
               <div class="gpoints-button">
               <a href="">Claim</a>
@@ -115,9 +151,15 @@
            </div>
           <!-- CAROUSEL -->
           <div class="owl-carousel owl-theme">
-            <div class="item"><img src="main-images/1img.jpg"><h4>Title</h4><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius sunt vitae eligendi saepe, nihil porro eum inventore perspiciatis ut, suscipit, ipsam dolorem laborum numquam. Aperiam asperiores molestias sunt voluptates fugiat. <a href="">continue reading...</a></p></div>
-            <div class="item"><img src="main-images/2img.jpg"><h4>Title</h4><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius sunt vitae eligendi saepe, nihil porro eum inventore perspiciatis ut, suscipit, ipsam dolorem laborum numquam. Aperiam asperiores molestias sunt voluptates fugiat. <a href="">continue reading...</a></p></div>
-            <div class="item"><img src="main-images/3img.jpg"><h4>Title</h4><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius sunt vitae eligendi saepe, nihil porro eum inventore perspiciatis ut, suscipit, ipsam dolorem laborum numquam. Aperiam asperiores molestias sunt voluptates fugiat. <a href="">continue reading...</a></p></div>
+          <?php
+          $sql = "SELECT * FROM news";
+          $result = mysqli_query($conn, $sql);
+          $rows = mysqli_fetch_assoc($result);
+          $ranker = 1; 
+          do { ?>
+            <div class="item"><img src="../admin/images/news/<?php echo $rows['news_img'];?>"><h4><?php echo $rows['news_title'];?></h4><p><?php echo $rows['news_description'];?><p> Posted by <?php echo $rows['postedby'];?> on <?php echo $rows['datetime'];?> | Last Updated <?php echo time_elapsed_string($rows['lastupdate']); ?>.</p>
+            <a href="">continue reading...</a></p></div>
+          <?php $ranker++; } while ($rows = mysqli_fetch_assoc($result))?>
           </div>
 
           <!-- RANKING SECTION -->
@@ -130,45 +172,50 @@
               <div class="border-color-top"></div>
           <!-- TOP 3 -->
                <div class="rank-3">
-                  <div class="top2"><img src="main-images/bojji.jpg"><p>Username</p><h5>2030</h5></div>
-                  <div class="top1"><img src="main-images/bojji.jpg"><p>Username</p><h5>3040</h5></div>
-                  <div class="top3"><img src="main-images/bojji.jpg"><p>Username</p><h5>3000</h5></div>
+                  <div class="top2">
+                  <?php
+                  $sql = "SELECT * FROM members ORDER BY points DESC LIMIT 1,2";
+                  $rsult = mysqli_query($conn, $sql);
+                  $row = mysqli_fetch_assoc($rsult);
+                                                 
+                  ?>
+                    <img src="../admin/images/profile/<?php echo $row['img_name'];?>" style="height:208px;width:208px;"><p><?php echo $row['profilename'];?></p><h5><?php echo $row['points'];?></h5>
+                  </div>
+                  <div class="top1">
+                  <?php
+                  $sql = "SELECT * FROM members ORDER BY points DESC LIMIT 0,1";
+                  $rsult = mysqli_query($conn, $sql);
+                  $row = mysqli_fetch_assoc($rsult);                                      
+                  ?>
+                    <img src="../admin/images/profile/<?php echo $row['img_name'];?>" style="height:238px;width:238px;"><p><?php echo $row['profilename'];?></p><h5><?php echo $row['points'];?></h5>
+                  </div>
+                  <div class="top3">
+                  <?php
+                  $sql = "SELECT * FROM members ORDER BY points DESC LIMIT 2,3";
+                  $rsult = mysqli_query($conn, $sql);
+                  $row = mysqli_fetch_assoc($rsult);                                               
+                  ?>
+                    <img src="../admin/images/profile/<?php echo $row['img_name'];?>" style="height:158px;width:158px;"><p><?php echo $row['profilename'];?></p><h5><?php echo $row['points'];?></h5>
+                  </div>
                </div>
+               
                <div class="rank-4-10">
                   <div class="ranks">
                       <table class="rank-table">
+                      <?php  
+                      $sql = "SELECT * FROM members ORDER BY points DESC LIMIT 3,5";
+                      $result = mysqli_query($conn, $sql);
+                      $rows = mysqli_fetch_assoc($result);
+                      $rank = 4;
+                      $number = 0;
+                      do { ?>
                         <tr class = "trBorder">
-                          <td> 4th</td>
-                          <td class="rank-image"><img src="main-images/1img.jpg"></td>
-                          <td>UserName</td>
-                          <td>2030</td>
+                          <td><?php echo $rank;?>th</td>
+                          <td class="rank-image"><img src="../admin/images/profile/<?php echo $rows['img_name'];?>" style="background:white;"></td>
+                          <td><?php echo $rows['profilename'];?></td>
+                          <td><?php echo $rows['points'];?></td>
                         </tr>
-                        <tr>
-                          <td>5th</td>
-                          <td class="rank-image"><img src="main-images/2img.jpg"></td>
-                          <td>UserName</td>
-                          <td>2030</td>
-                        </tr>
-                        <tr>
-                          <td>6th</td>
-                          <td class="rank-image"><img src="main-images/3img.jpg"></td>
-                          <td>UserName</td>
-                          <td>2030</td>
-                        </tr>
-                        <tr>
-                          <td>7th</td>
-                          <td class="rank-image"><img src="main-images/bojji.jpg"></td>
-                          <td>UserName</td>
-                          <td>2030</td>
-                        </tr>
-                        <tr>
-                          <td>8th</td>
-                          <td class="rank-image"><img src="main-images/bojji.jpg"></td>
-                          <td>UserName</td>
-                          <td>2030</td>
-                        </tr>
-                 
-                        
+                        <?php $rank++;} while (($rows = mysqli_fetch_assoc($result)) and ($number <= 4))?>                 
                       </table>
                   </div>
                  
@@ -193,53 +240,65 @@
 
            <div class="profile-section">
              <div class="profile">
+               <form action="" method="POST" enctype="multipart/form-data">
                <div class="border-color-top"></div>
+               <?php
+                $sql = "SELECT * FROM members WHERE id = $id";
+                $result = mysqli_query($conn, $sql);
+                $rows = mysqli_fetch_assoc($result);
+              ?>
               <div class="profile-image">
-                <div class="image"><img src="main-images/bojji.jpg" class="ProfileImage"></div><br>
+                <div class="image"><img src="../admin/images/profile/<?php echo $rows['img_name'];?>" class="ProfileImage" style="height:228px;width:228px;"></div><br>
                </div>
     
                 <form>
                   <div class="row">
                     <div class="col">
                       <!-- USERNAME -->
-                      <input type="text" class="form-control" placeholder="Username">
+                      <input type="text" class="form-control" placeholder="Username" name="uname" value="<?php echo $rows['username'];?>">
                     </div>
                     <div class="col">
                       <!-- FULLNAME -->
-                      <input type="text" class="form-control" placeholder="Full name">
-                    </div>
+                      <input type="text" class="form-control" placeholder="Full name" name="fname" value="<?php echo $rows['fullname']; ?>">
+                    </div>     
                   </div>
+                    <!-- PROFILE -->
+                    <input type="text" class="form-control" placeholder="Profile Name" name="pname" value="<?php echo $rows['profilename']; ?>">
+                    <!-- CONTACT -->
+                    <input type="text" class="form-control" placeholder="Contact" name="pcontact" value="<?php echo $rows['contact']; ?>"> 
                     <!-- EMAIL -->
-                    <input type="email" class="form-control" placeholder="user@gmail.com">
+                    <input type="email" class="form-control" placeholder="user@gmail.com" name="email" value="<?php echo $rows['email'];?>">
                     <!-- PASSWORD -->
-                  <input type="password" class="form-control" placeholder="Password">
+                    <input type="password" class="form-control" placeholder="Password" name="pass" value="<?php echo $rows['password'];?>">
 
                   <!-- BARANGAY -->
         
                   <div class="input-group mb-3">
                   
-                    <select class="custom-select" id="inputGroupSelect01">
-                      <option selected >Barangay Nueva</option>
-                      <option value="1">Barangay San Antonio</option>
-                      <option value="2">Barangay San Vicente</option>
-                      <option value="3">Barangay San Roque</option>
-                      <option value="3">Barangay Landayan</option>
+                    <select class="custom-select" id="inputGroupSelect01" name="paddress" value="<?php echo $rows['address'];?>">
+                    <option value="<?php echo $rows['address'];?>"><?php echo $rows['address'];?></option>
+                      <option value="Barangay Nueva">Barangay Nueva</option>
+                      <option value="Barangay San Antonio">Barangay San Antonio</option>
+                      <option value="Barangay San Vicente">Barangay San Vicente</option>
+                      <option value="Barangay San Roque">Barangay San Roque</option>
+                      <option value="Barangay Landayan">Barangay Landayan</option>
                    
                     </select>
                   </div>
                   
                     <!-- SAVE CHANGES -->
                     <div class="d-flex justify-content-center">
-                      <button type="submit" class="btn btn-outline-primary">Save Changes</button>
+                      <button type="submit" class="btn btn-outline-primary" name="submit">Save Changes</button>
                     </div>
                  
                     <!-- HIDDEN FILE INPUT -->
-                    <input type="file" class="custom-file-input UploadImage" id="inputGroupFile02">
-                  
+                    <input type="file" class="custom-file-input UploadImage" id="inputGroupFile02" name="image">
+                    <input type="hidden" name="current_image" value="<?php echo $rows['img_name'];?>">
+                    <input type="hidden" name="id" value="<?php echo $rows['id'];?>">
 
                 </form>
                 <div class="border-color-top"></div>
-
+               </form>
              </div>
            </div>
 
@@ -261,51 +320,20 @@
                 </tr>
               </thead>
               <tbody>
+              <?php
+              $sql = "SELECT * FROM logs WHERE user='$currentprofileuser' ORDER BY id DESC Limit 0,10";
+              $result = mysqli_query($conn, $sql);
+              $rows = mysqli_fetch_assoc($result);                               
+              $rank = 1;
+              $number = 0;
+              do { ?>
                 <tr>
-                  <th scope="row">User name</th>
-                  <td>Edit Profile</td>
-                  <td>September something</td>
-                  <td>4:00</td>
-                </tr>
-                <tr>
-                  <th scope="row">User name</th>
-                  <td>Edit Profile</td>
-                  <td>September something</td>
-                  <td>4:00</td>
-                </tr>
-                <tr>
-                  <th scope="row">User name</th>
-                  <td>Edit Profile</td>
-                  <td>September something</td>
-                  <td>4:00</td>
-                </tr>
-                <tr>
-                  <th scope="row">User name</th>
-                  <td>Edit Profile</td>
-                  <td>September something</td>
-                  <td>4:00</td>
-                </tr>
-                <tr>
-                  <th scope="row">User name</th>
-                  <td>Edit Profile</td>
-                  <td>September something</td>
-                  <td>4:00</td>
-                </tr>
-                <tr>
-                  <th scope="row">User name</th>
-                  <td>Edit Profile</td>
-                  <td>September something</td>
-                  <td>4:00</td>
-                </tr>
-                <tr>
-                  <th scope="row">User name</th>
-                  <td>Edit Profile</td>
-                  <td>September something</td>
-                  <td>4:00</td>
-                </tr>
-
-            
-          
+                  <th scope="row"><?php echo $rows['user'];?></th>
+                  <td><?php echo $rows['activity'];?></td>
+                  <td><?php echo $rows['datetime'];?></td>
+                  <td><?php echo time_elapsed_string($rows['daysago']);?></td>
+                </tr> 
+                <?php $rank++;} while (($rows = mysqli_fetch_assoc($result)) and ($number <= 10))?>
               </tbody>
             </table>
             
@@ -326,7 +354,7 @@
 
       <div class="footer-wrapper">
             <!-- Site footer -->
-    <footer class="site-footer">
+    <footer class="site-footer" id="footer">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-6">

@@ -24,7 +24,7 @@ if ($count == 1) {
 		{
 		$_SESSION['id'] = $id;
 		$_SESSION['username'] = $username;
-		header("Location: main.php");
+		header("Location: mainPage/mainFinal.php");
 		}
 		else
 		{

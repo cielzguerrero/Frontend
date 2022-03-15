@@ -26,7 +26,7 @@ if (isset($_POST['submit'])){
                 $image_name = "Profile-". rand(000, 999). "." .$extension;
     
                 $sourcepath = $_FILES['image']['tmp_name'];
-                $destinationpath = "admin/images/profile/".$image_name;
+                $destinationpath = "../admin/images/profile/".$image_name;
     
                 $upload = move_uploaded_file($sourcepath, $destinationpath);
     
@@ -37,7 +37,7 @@ if (isset($_POST['submit'])){
                 }
 
                 if($current_image != "") {
-                    $remove_path = "admin/images/profile/".$current_image;
+                    $remove_path = "../admin/images/profile/".$current_image;
                     $remove = unlink($remove_path);
     
                     if($remove == FALSE){
@@ -54,7 +54,7 @@ if (isset($_POST['submit'])){
         }
     
     
-        $sql = "UPDATE members SET profilename = '$profile_name', fullname = '$full_name', email = '$email', address = '$address', img_name = '$image_name' WHERE id = '$id'";
+        $sql = "UPDATE members SET profilename = '$profile_name', fullname = '$full_name', username = '$user_name' , password = '$pass_word' , email = '$email', contact = '$contact' , address = '$address', img_name = '$image_name' WHERE id = '$id'";
         $result = mysqli_query($conn, $sql);
     
         if($result) {
