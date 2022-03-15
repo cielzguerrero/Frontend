@@ -22,7 +22,10 @@ body{
     width: 26px;
     margin-bottom: 2px;
 }
-    
+.top {
+ width: 100% !important;
+ background-color: #212129 !important;
+}
 
 .navbar{
     position: fixed !important;
@@ -33,7 +36,7 @@ body{
     margin: auto !important;
     padding: 10px !important;
     z-index: 1000;
-    background-color: #171818 !important;
+    background-color: #212129 !important;
 }
 .navbar img{
     width: 50px;
@@ -43,6 +46,7 @@ body{
 }
 .navbar a:hover{
     color: #b1acac !important;
+    text-decoration: underline;
 }
     
 
@@ -229,8 +233,96 @@ footer {
 }
 
 
+/* SIGN IN MODAL */
 
+.modal-content{
+    padding: 0 !important;
+    
+}
+.modal-content .close{
+    color: white;
+}
+.modal-content .close:hover{
+    color: white;
+}
+.modal-header{
+    background-color: #212129;
+   
+}
+.modal-header h5{
+    background-color: #212129;
+    color: #fbfbfb;
+    font-family: "Poppins",sans-serif;
+    border: none;
+    font-size: 1.5rem;
+}
+.modal-body{
+    background-color: 	#323949;
+    border: none !important;
+}
+.modal-content .form-control{
+    padding: 0px !important;
+    border: none;
+    color: #fbfbfb;
+    font-weight: 2rem;
+    font-family: "Poppins",sans-serif;
+    background-color: 	#323949;
+    border-bottom: 2px solid green; 
+    margin: auto; 
+}
+.modal-content .form-control{
+    padding: 0px !important;
+    border: none;
+    color: #fbfbfb;
+    font-weight: 2rem;
+    font-family: "Poppins",sans-serif;
+    background-color: 	#323949;
+    border-bottom: 2px solid #207ce4;
+    outline: none;
+  
+}
+.modal-content .form-control:focus{
+    padding: 0px !important;
+    border: none;
+    color: #fbfbfb;
+    background-color: 	#323949;
+    border-bottom: 2px solid #207ce4; 
+    outline: none;
+}
+.modal-content label{
+    font-weight: 400;
+    font-family: "Poppins",sans-serif;
+    color: #fbfbfb;
+    font-size: 1rem;
+    align-items: left !important;
+}
+.modal-content form{
+    background-color: 	#323949;
+}
+.modal-footer{
+    border: none !important;
+    margin: auto; 
+}
+.modal-footer input{
+    margin: auto; 
+    font-family: "Poppins",sans-serif;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: transparent;
+    color: #207ce4;
+}
+.modal-content input {
+    outline: none;
+    
+}
 
+/* FILE UPLOAD */
+.form-group input[type=file]{
+    background-color: transparent !important;
+    font-family: "Poppins",sans-serif;
+    color: #fbfbfb;
+}
 
 
 

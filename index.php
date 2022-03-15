@@ -75,7 +75,6 @@ include('includes/register.php');
 	
 
 	<header>
-
 		<div class="nav-wrapper" id="head">
 			<div class="hero-section" >
 			<div class="hero-col1">
@@ -101,8 +100,10 @@ include('includes/register.php');
 			<li><a href="https://www.linkedin.com/in/aldrin-ramores-556798202/" class="linkedin"><i class="fa-brands fa-linkedin-in fa-xl"></i></a></li>
 		</div>
 	</footer>
-	</div>
+
 	
+	</div>
+
 </header>
 
 
@@ -209,7 +210,7 @@ include('includes/register.php');
 
 	<div class="modal fade" id="SignInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
-				<div class="modal-content">
+				<div class="modal-content w-75">
 				<div class="modal-header">
 					<h5 class="modal-title" id="exampleModalLabel">SIGN IN</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -218,20 +219,17 @@ include('includes/register.php');
 				</div>
 			<div class="modal-body">
 				<form action="" class="text-center" method="post">
-					<div class="form-group">
-						   <label for="formGroupExampleInput">Username</label>
- 						   <input type="text" class="form-control" id="formGroupExampleInput" name="username" id="username" placeholder="">
+					<div class="form-group w-100 ">
+						   <label for="formGroupExampleInput"><i class="fa-solid fa-user"></i>   Username</label>
+ 						   <input type="text" class="form-control w-75 shadow-none"  id="formGroupExampleInput" name="username" id="username" placeholder="">
 					</div>
-					<div class="form-group">
-						<label for="exampleInputPassword1">Password</label>
-						<input type="password" class="form-control" id="exampleInputPassword1" name="password" id="password" placeholder="">
+					<div class="form-group w-100">
+						<label for="exampleInputPassword1"><i class="fa-solid fa-key"></i>  Password</label>
+						<input type="password" class="form-control w-75 shadow-none" id="exampleInputPassword1" name="password" id="password" placeholder="">
 					</div>
 
-					<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
-
-					<input type="submit" name="submit" value="Sign In" class="btn btn-primary">
+					<div class="modal-footer ">
+					<input type="submit" name="submit" value="Sign In" class="btn btn-primary w-75">
 				</div>
 				</form>
 				<?php if (isset($_SESSION['login'])){
@@ -251,7 +249,7 @@ include('includes/register.php');
 				<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title" id="exampleModalLabel">SIGN UP</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				
 					<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
@@ -259,29 +257,29 @@ include('includes/register.php');
 			<form action="" method="POST" enctype="multipart/form-data">
 					<div class="form-group">
 						   <label for="formGroupExampleInput">Username</label>
- 						   <input type="text" class="form-control" id="formGroupExampleInput" placeholder="" name="rusername" autocomplete="off" required>
+ 						   <input type="text" class="form-control shadow-none" id="formGroupExampleInput" placeholder="" name="rusername" autocomplete="off" required>
 					</div>
 					<div class="form-group">
 						   <label for="formGroupExampleInput">Full Name</label>
- 						   <input type="text" class="form-control" id="formGroupExampleInput" placeholder="" name="rfullname" autocomplete="off" required>
+ 						   <input type="text" class="form-control shadow-none" id="formGroupExampleInput" placeholder="" name="rfullname" autocomplete="off" required>
 					</div>
 					<div class="form-group">
 						   <label for="formGroupExampleInput">Profile Name</label>
- 						   <input type="text" class="form-control" id="formGroupExampleInput" placeholder="" name="rprofilename" autocomplete="off" required>
+ 						   <input type="text" class="form-control shadow-none" id="formGroupExampleInput" placeholder="" name="rprofilename" autocomplete="off" required>
 					</div>
 				<form>
 					<div class="form-group">
 						<label for="exampleInputEmail1">Email address</label>
-						<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ex: user@gmail.com"  name="remail" id="remail" autocomplete="off" required>
+						<input type="email" class="form-control shadow-none" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ex: user@gmail.com"  name="remail" id="remail" autocomplete="off" required>
 					</div>
 					<div class="form-group">
 						<label for="formGroupExampleInput">Contact</label>
-						<input type="text" class="form-control" id="formGroupExampleInput"  name="rcontact" autocomplete="off" required>
+						<input type="text" class="form-control shadow-none" id="formGroupExampleInput"  name="rcontact" autocomplete="off" required>
 				
 					</div>
 					<div class="form-group">
 						<label for="exampleInputPassword1">Password</label>
-						<input type="password" class="form-control" id="exampleInputPassword1" name="rpassword" placeholder="" autocomplete="off" required>
+						<input type="password" class="form-control shadow-none" id="exampleInputPassword1" name="rpassword" placeholder="" autocomplete="off" required>
 					</div>
 				
 					<div class="form-group">
@@ -301,15 +299,15 @@ include('includes/register.php');
 
 					<div class="form-group">
 						<label for="exampleFormControlFile1">Upload Profile Photo</label>
-						<button class="btn btn-primary" type="button"><input type="file" name="image"></button>
+						<button class="btn " type="button"><input type="file" name="image"></button>
 					</div>
 					<form>
 
 					<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				
 
 					
-					<input type="submit" name="registersubmit" value="Confirm" class="btn btn-primary">
+					<input type="submit" name="registersubmit" value="Confirm" class="btn btn-primary w-75">
 				</div>
 				</form>
 			</form>
