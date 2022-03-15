@@ -1,3 +1,40 @@
+<?php
+include ('../connections/connection.php');
+if (empty($_SESSION['username'])) {
+
+    header("Location: logout.php");
+}
+if (!isset($_SESSION['id'])){
+
+    $_SESSION['view'] = "<div class='message warning'>User Not Found.</div>";
+    header("Location: ../../Frontend/index.php");
+
+} else {
+
+    $id = $_SESSION['id'];
+
+    $sql = "SELECT * FROM members WHERE id = $id";
+    $result = mysqli_query($conn, $sql);
+    $rows = mysqli_fetch_assoc($result);
+    $currentprofileuser = $rows['username'];
+    $userid = $rows['id'];
+    if($result == TRUE) {
+        $count = mysqli_num_rows($result);
+        
+        if ($count > 0) {
+        } else {
+            $_SESSION['view'] = "<div class='message warning'>User Not Found.</div>";
+            header("Location: ../../Frontend/index.php");
+        }
+    }
+
+}
+include ('../includes/timeinclude.php');
+$name = $rows['profilename'];
+$username = $_SESSION['username'];
+include ('../includes/mainedit.php');
+include('../includes/decreasepoint.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,13 +112,24 @@
             <h1>Your Reward is ready to Claim!</h1>
             <h2>"Don't forget to screenshot this"</h2>
             <br>
-             <h3>USERNAME</h3>
-             <h3>Full name</h3>
-             <h3>Barangay San Antonio</h3>
-             <p>Reward to Receive: 500 pesos </p>
-             <h5>Date: 12/11/22</h5>
-             <h5>Time: 5:00pm</h5>
-
+            <?php
+            $mysql = "SELECT * FROM members WHERE id = $id";
+            $rsult = mysqli_query($conn, $mysql);
+            $row = mysqli_fetch_assoc($rsult);
+            ?>
+             <h3><?php echo $row['profilename'];?></h3>
+             <h3><?php echo $row['fullname']?></h3>
+             <h3><?php echo $row['address']?></h3>
+             <?php
+              $tsql = "SELECT * FROM tempo WHERE profile_name = '$currentprofileuser' ORDER BY datetransaction DESC LIMIT 0,1";
+              $tresult = mysqli_query($conn, $tsql);
+              $drows = mysqli_fetch_assoc($tresult);
+              $count = mysqli_num_rows($tresult);       
+              $tresult -> close();
+            ?>
+             <p>Reward to Receive: <?php echo $drows['t_reward'];?> pesos </p>
+             <h5>Date: <?php echo $drows['t_date'];?></h5>
+             <h5>Time: <?php echo $drows['t_time'];?></h5>
         </div>
          
                   

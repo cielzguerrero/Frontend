@@ -446,7 +446,8 @@ include('../includes/decreasepoint.php');
                             <div class="row align-items-center">
                               <form action="" method="POST" enctype="multipart/form-data" style="display:inline-flex;">
                                 <div class="col">
-                                  <?php echo $rows['prize'];?>
+                                  <p>PHP <?php echo $rows['prize'];?></p>
+                                  <input type="text" name="rprize" value="<?php echo $rows['prize'];?>" style="display:none;">
                                 </div>
                                 <div class="col">
                                 <button type="submit" onclick="return confirm('Are you sure')" class="btn btn-primary btn-lg"  name="rsubmit" value="<?php echo $rows['price']; ?>">
@@ -457,11 +458,7 @@ include('../includes/decreasepoint.php');
                             </div>
                           <?php $number++; } while (($rows = mysqli_fetch_assoc($result)) and ($number <= 10))?> 
                           </div>
-
-
-
-
-
+                          
                         </div>
                       </div>
                     </div>  

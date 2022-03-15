@@ -26,9 +26,9 @@ if (!isset($_GET['ID'])){
 }
 $username = $_SESSION['username'];
 $profileuser = $row['username'];
-$activity = $row['profilename']." : Gained 150 points";
+$activity = $row['profilename']." : Gained 1500 points";
 $currentpoint = $row['points'];
-$point = 150;
+$point = 1500;
 $collectedpoint = $currentpoint;
 $sum = $collectedpoint + $point;
 

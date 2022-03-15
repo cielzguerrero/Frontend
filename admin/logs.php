@@ -70,6 +70,30 @@ $rows = mysqli_fetch_assoc($result);
                 </tr>
                 <?php } while ($rows = mysqli_fetch_assoc($result))?>
             </table>
+            <table class="tbl-full">
+                TEMPO
+                <?php
+                $tsql = "SELECT * FROM tempo";
+                $tresult = mysqli_query($conn, $tsql);
+                $drows = mysqli_fetch_assoc($tresult);
+                ?>
+                <tr>
+                    <th>User</th>
+                    <th>Prize</th>
+                    <th>Time</th>
+                    <th>Actions</th>                  
+                </tr>
+                <?php do { ?>
+                <tr>
+                    <td><?php echo $drows['profile_name'];?></td>
+                    <td> Claimed <?php echo $drows['t_reward'];?></td>
+                    <td><?php echo $drows['datetransaction'];?></td>
+                    <td>
+                        <a onclick="return confirm('Are you sure')" href="deletetemplog.php?ID=<?php echo $rows['id'];?>" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+                <?php } while ($rows = mysqli_fetch_assoc($result))?>
+            </table>
             </div>
         </div>
     </article>

@@ -35,7 +35,7 @@ function time_elapsed_string($datetime, $full = false) {
     if (!$full) $string = array_slice($string, 0, 1);
     return $string ? implode(', ', $string) . ' ago' : 'just now';
 }
-
+error_reporting(0);
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -144,7 +144,7 @@ include('chartjava.php');?>
                                         <th>Activity</th>
                                         <th>Activity Start Date</th>
                                         <th>Elapsed Time</th>
-                                        <th>Actions</th>          
+                                        <th>Actions | <a onclick="return confirm('Are you sure')" href="deletealllog.php" class="btn btn-danger">Delete All</a></th>          
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -161,10 +161,43 @@ include('chartjava.php');?>
                                                 <td><?php echo $rows['datetime'];?></td>
                                                 <td><?php echo time_elapsed_string($rows['daysago']);?></td>
                                                 <td>
-                                                    <a href="deletelog.php?ID=<?php echo $rows['id'];?>" class="btn btn-danger">Delete</a>
+                                                    <a onclick="return confirm('Are you sure')" href="deletelog.php?ID=<?php echo $rows['id'];?>" class="btn btn-danger">Delete</a>
                                                 </td>
                                             </tr>
                                         <?php $rank++;} while (($rows = mysqli_fetch_assoc($result)) and ($number <= 10))?>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="logheader" style="text-align:center;">
+                                <h4>Temporary User Transaction</h4>
+                            </div>
+                            <div class="logcard-body">
+                                <table class="table table-striped table-bordered" id="datatable">
+                                    <thead>
+                                    <tr>
+                                        <th>User</th>
+                                        <th>Activity</th>
+                                        <th>Elapsed Time</th>
+                                        <th>Actions | <a onclick="return confirm('Are you sure')" href="deletealltemplog.php" class="btn btn-danger">Delete All</a></th>          
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php  
+                                        $tsql = "SELECT * FROM tempo ORDER BY datetransaction DESC";
+                                        $tresult = mysqli_query($conn, $tsql);
+                                        $drows = mysqli_fetch_assoc($tresult);                                        
+                                        $rank = 1;
+                                        $number = 0;
+                                        do { ?>
+                                            <tr>
+                                            <td><?php echo $drows['profile_name'];?></td>
+                                            <td> Claimed <?php echo $drows['t_reward'];?></td>
+                                            <td><?php echo $drows['datetransaction'];?></td>
+                                            <td>
+                                                <a onclick="return confirm('Are you sure')" href="deletetemplog.php?ID=<?php echo $drows['id'];?>" class="btn btn-danger">Delete</a>
+                                            </td>
+                                            </tr>
+                                        <?php $rank++;} while (($drows = mysqli_fetch_assoc($tresult)) and ($number <= 10))?>
                                     </tbody>
                                 </table>
                             </div>
