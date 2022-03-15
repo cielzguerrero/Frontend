@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;900&display=swap");
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif !important;
+    background-color: #fbfbfb;
+}
+
+/* NAVBAR */
+.nav-main {
+    width: 100%;
+    background-color:  #151c26;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.637);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+.navbar{
+    background-color:  #151c26;
+    max-width: 80%;
+    margin: auto;
+   
+}
+.nav-item{
+    margin-right: 2rem !important;
+}
+
+.nav-item a{
+    color: #fbfbfb !important;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.dropdown-menu{
+    background-color: #496081;
+}
+.dropdown-menu a{
+    color: #fbfbfb !important;
+}
+.dropdown-menu a:hover{
+    color: #1a2330 !important;
+}
+
+.navbar-brand img{
+    width: 3rem;
+}
+/* NAVBAR PROFILE IMAGE */
+.nav-item img{
+    border-radius: 100%;
+    border: 3px solid #fbfbfb;
+    width: 40px;
+} 
+
+/* RECEIPT */
+.receipt{
+    width: 100%;
+}
+.receipt-wrapper{
+    width: 15%;
+    
+    align-items: center;
+   margin: 150px auto 20px auto;
+
+}
+.receipt-wrapper img{
+  width: 100%;
+}
+.receipt-contents{
+    text-align: center;
+}
+.receipt-contents h2{
+    font-style: italic;
+    font-size: 1.5rem;
+}
+.receipt-contents p{
+    
+    font-size: 1.5rem;
+}
+.receipt-contents h1{
+    font-weight: 600;
+    font-size: 4rem;
+}
+
+
+
+
+
+/* mobile */
+
+@media only screen and (max-width: 700px){
+    
+    .navbar .navbar-toggler {
+        color:transparent !important;
+        border: none;
+    }
+    
+    .bar{
+        display: block;
+        width: 32px;
+        height: 3px;
+        background-color: #fbfbfb;
+        color: wheat;
+        margin-top: 5px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navbar{
+        background-color:  #151c26;
+        max-width: 100%;
+        margin: auto;
+        
+   }
+   .navbar-nav{
+    align-items: end !important;
+    }
+    /* RECEIPT */
+.receipt{
+    width: 100%;
+}
+.receipt-wrapper{
+    width: 45%;
+    margin: auto;
+    margin-top: 150px;
+   
+}
+.receipt-wrapper img{
+  width: 100%;
+
+}
+.receipt-contents h1{
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+.receipt-contents h2{
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+
+}
+
