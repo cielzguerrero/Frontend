@@ -163,7 +163,7 @@ include('../includes/decreasepoint.php');
           $ranker = 1; 
           do { ?>
             <div class="item"><img src="../admin/images/news/<?php echo $rows['news_img'];?>"><h4><?php echo $rows['news_title'];?></h4><p><?php echo $rows['news_description'];?><p> Posted by <?php echo $rows['postedby'];?> on <?php echo $rows['datetime'];?> | Last Updated <?php echo time_elapsed_string($rows['lastupdate']); ?>.</p>
-            <a href="">continue reading...</a></p></div>
+            <a href="NewsContent.php">continue reading...</a></p></div>
           <?php $ranker++; } while ($rows = mysqli_fetch_assoc($result))?>
           </div>
 
