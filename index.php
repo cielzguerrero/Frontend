@@ -99,7 +99,7 @@ include('includes/register.php');
 		<div class="social-wrapper">
 			<li><a href="https://www.facebook.com/aldrin.ramores.77" class="facebook"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
 			<li><a href="https://www.instagram.com/ramoresaldrin/" class="instagram"><i class="fa-brands fa-instagram fa-xl"></i></a></li>
-			<li><a href="https://github.com/aldrinnunal" class="github"><i class="fa-brands fa-github fa-xl"></i></a></li>
+			<li><a href="https://github.com/cielzguerrero" class="github"><i class="fa-brands fa-github fa-xl"></i></a></li>
 			<li><a href="https://www.linkedin.com/in/aldrin-ramores-556798202/" class="linkedin"><i class="fa-brands fa-linkedin-in fa-xl"></i></a></li>
 		</div>
 	</footer>
