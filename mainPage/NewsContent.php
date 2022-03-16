@@ -21,7 +21,7 @@
   
   </head>
   <body>
-
+      
 <div class="nav-main">
     <nav class="navbar navbar-expand-lg navbar-light ">
         <div class="container-fluid">
@@ -32,9 +32,9 @@
             <!-- <span class="navbar-toggler-icon navbar-light"></span> -->
            
             <span class="clickHamburger">
-                <div class="bar bar1 active"></div>
-                <div class="bar bar2 active"></div>
-                <div class="bar bar3 active"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </span>
           </button>
 
@@ -43,85 +43,46 @@
             <ul class="navbar-nav ms-auto mb-2  align-items-center">
                 
             <li class="nav-item ">
-                <a class="nav-link active" aria-current="page" href="mainFinal.php">Home</a>
+                <a class="nav-link active" aria-current="page" href="mainFinal.php">Return</a>
               </li>
-
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="GettingStarted.php">Getting Started</a>
-              </li>
-              
-              <li class="nav-item ">
-                <a class="nav-link active" aria-current="page" href="AboutUs.php">About Us</a>
-              </li>
-
-              <li class="nav-item ">
-                <a class="nav-link active" aria-current="page" href="ContactUs.php">Contact</a>
-              </li>
-
-              <li class="nav-item ">
-                <a class="nav-link active" aria-current="page" href="#profile-title">Our Team</a>
-              </li>
-        
             </ul>
             
           </div>
         </div>
       </nav>
 </div>
-        
+              
+        <!-- CONTENTS -->
+    <div class="news">
+        <div class="news-wrapper">
+            <img src="../mainPage/main-images/1img.jpg">
+               <h1>Title Waste Management</h1>
+               <h3>Description Waste Management</h3>
+               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus odit aperiam adipisci consectetur i
+                   d rem consequatur dicta. Dolorem cum veniam maiores dolore
+                    sapiente reiciendis, accusamus iste,
+                     facilis eius ea aperiam?
+                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus odit aperiam adipisci consectetur i
+                   d rem consequatur dicta. Dolorem cum veniam maiores dolore
+                    sapiente reiciendis, accusamus iste,
+                     facilis eius ea aperiam?
+                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus odit aperiam adipisci consectetur i
+                   d rem consequatur dicta. Dolorem cum veniam maiores dolore
+                    sapiente reiciendis, accusamus iste,
+                     facilis eius ea aperiam?
+                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus odit aperiam adipisci consectetur i
+                   d rem consequatur dicta. Dolorem cum veniam maiores dolore
+                    sapiente reiciendis, accusamus iste,
+                     facilis eius ea aperiam?
+                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus odit aperiam adipisci consectetur i
+                   d rem consequatur dicta. Dolorem cum veniam maiores dolore
+                    sapiente reiciendis, accusamus iste,
+                     facilis eius ea aperiam?</p>
 
 
-<!-- CONTENT -->
-   
-
-
-		<section class="title-card" id="steps">
-			<div class="title-card-wrapper">
-				<div><img src="../img/Procedures.gif" class="title-card-img" id = "img"></div>
-				<div class="title-card-text">
-					<h1>GETTING STARTED</h1>
-					<h3>Follow This Easy Steps To Claim Your Points. Prizes May Vary Monthly</h3>
-				</div>
-			</div>
-		</section>
-
-
-  <div class="card">
-  <section class = "card-content">
-			<div class="card-content-box">
-				<div class="card-1 card-box">
-					<img src="../img/signup.png">
-					<h3>REGISTER</h3>
-					<p>Create an account before segregating your non profitable and profitable waste</p>
-				</div>
-				<div class="card-2 card-box">
-				<img src="../img/login.png">
-					<h3>LOG IN</h3>
-					<p>Log your account to your respective barangay for identification</p>
-				</div>
-				<div class="card-3 card-box" >
-					<img src="../img/throw.png">
-					<h3>DROP</h3>
-					<p>Once the system recognized your identity, you can now drop all your trash in the bins.</p>
-				</div>
-			</div>
-		</section>
-
-  </div>
-		
-
-
-
-
-
-
-
-
-
-    
-
-
-
+        </div>
+    </div>
+      
 
 
   <!-- bootstrap js -->

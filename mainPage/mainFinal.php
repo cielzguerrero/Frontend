@@ -163,7 +163,7 @@ include('../includes/decreasepoint.php');
           $ranker = 1; 
           do { ?>
             <div class="item"><img src="../admin/images/news/<?php echo $rows['news_img'];?>"><h4><?php echo $rows['news_title'];?></h4><p><?php echo $rows['news_description'];?><p> Posted by <?php echo $rows['postedby'];?> on <?php echo $rows['datetime'];?> | Last Updated <?php echo time_elapsed_string($rows['lastupdate']); ?>.</p>
-            <a href="">continue reading...</a></p></div>
+            <a href="NewsContent.php">continue reading...</a></p></div>
           <?php $ranker++; } while ($rows = mysqli_fetch_assoc($result))?>
           </div>
 
@@ -403,10 +403,10 @@ include('../includes/decreasepoint.php');
 
           <div class="col-md-4 col-sm-6 col-xs-12">
             <ul class="social-icons">
-              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a class="dribbble" href="#"><i class="fa fa-github"></i></a></li>
-              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+              <li><a class="facebook" href="https://www.facebook.com/aldrin.ramores.77"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="https://www.instagram.com/ramoresaldrin/"><i class="fa fa-instagram"></i></a></li>
+              <li><a class="dribbble" href="https://github.com/cielzguerrero"><i class="fa fa-github"></i></a></li>
+              <li><a class="linkedin" href="https://www.linkedin.com/in/aldrin-ramores-556798202/"><i class="fa fa-linkedin"></i></a></li>   
             </ul>
           </div>
         </div>

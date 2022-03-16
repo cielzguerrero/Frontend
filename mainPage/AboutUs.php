@@ -21,7 +21,7 @@
   
   </head>
   <body>
-
+      
 <div class="nav-main">
     <nav class="navbar navbar-expand-lg navbar-light ">
         <div class="container-fluid">
@@ -68,59 +68,15 @@
         </div>
       </nav>
 </div>
-        
-
-
-<!-- CONTENT -->
-   
-
-
-		<section class="title-card" id="steps">
-			<div class="title-card-wrapper">
-				<div><img src="../img/Procedures.gif" class="title-card-img" id = "img"></div>
-				<div class="title-card-text">
-					<h1>GETTING STARTED</h1>
-					<h3>Follow This Easy Steps To Claim Your Points. Prizes May Vary Monthly</h3>
-				</div>
+                <!-- CONTENTS -->
+ <section class="about-us" id="aboutus">
+			<div class="about-us-wrapper">
+				<h1 > ABOUT US</h1>
+				<p>G-Reward Is made by a group of students in Polytechnic University Of The Philippines - San Pedro Campus. We believe that we can motivate people to throw their garbage in a proper way and earning Cash or Prize in exchange. Our mission is to help the community in terms of cleanliness. It also helps the local government to earn funds for their future projects. We're excited and striving for a change in the environment of the community.</p>
 			</div>
-		</section>
-
-
-  <div class="card">
-  <section class = "card-content">
-			<div class="card-content-box">
-				<div class="card-1 card-box">
-					<img src="../img/signup.png">
-					<h3>REGISTER</h3>
-					<p>Create an account before segregating your non profitable and profitable waste</p>
-				</div>
-				<div class="card-2 card-box">
-				<img src="../img/login.png">
-					<h3>LOG IN</h3>
-					<p>Log your account to your respective barangay for identification</p>
-				</div>
-				<div class="card-3 card-box" >
-					<img src="../img/throw.png">
-					<h3>DROP</h3>
-					<p>Once the system recognized your identity, you can now drop all your trash in the bins.</p>
-				</div>
-			</div>
-		</section>
-
-  </div>
-		
-
-
-
-
-
-
-
-
-
-    
-
-
+			<div class="aboutus-img"><img src="../img/About us page.gif"></div>
+		</section> 
+	
 
 
 
