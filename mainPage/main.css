@@ -219,11 +219,12 @@ body{
     color: #fbfbfb;
     margin: auto;
     width: 90%;
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: center;
+    text-justify: justify;
+    
 }
 .owl-carousel a{
-  
+    text-align: justify;
     text-decoration: none;
 }
 
@@ -866,6 +867,7 @@ body{
     .owl-carousel a{
         font-size: 0.8rem;
         text-decoration: none;
+        
     }
 
     /* RANKING SECTION */

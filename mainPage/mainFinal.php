@@ -150,12 +150,13 @@ include('../includes/decreasepoint.php');
 
 
       <div class="main-wrapper">
-          <!-- NEWS SECTION -->
+          <!-- NEWS SECTION -->   
            <div class="titles title0" id="news-title">
             <h2>News</h2>
            </div>
           <!-- CAROUSEL -->
           <div class="owl-carousel owl-theme">
+         
           <?php
           $sql = "SELECT * FROM news";
           $result = mysqli_query($conn, $sql);
@@ -166,7 +167,7 @@ include('../includes/decreasepoint.php');
             <a href="NewsContent.php?ID=<?php echo $rows['news_id'];?>">continue reading...</a></p></div>
           <?php $ranker++; } while ($rows = mysqli_fetch_assoc($result))?>
           </div>
-
+      
           <!-- RANKING SECTION -->
            <div class="titles title1" id="rankings-title">
             <h2>Rankings</h2>
@@ -238,7 +239,9 @@ include('../includes/decreasepoint.php');
                  
                  
                </div>
+               <div class="border-color-top"></div>
              </div>
+         
            </div>
 
 
@@ -396,9 +399,9 @@ include('../includes/decreasepoint.php');
             <h6>Information</h6>
             <ul class="footer-links">
             
-              <li><a href="AboutUs.php">About Us</a></li>
-              <li><a href="GettingStarted.php">Getting Started</a></li>
-              <li><a href="ContactUs.php">Contact Us</a></li>
+              <li><a href="AboutUs2.php">About Us</a></li>
+              <li><a href="GettingStarted2.php">Getting Started</a></li>
+              <li><a href="ContactUs2.php">Contact Us</a></li>
               <li><a href="#">Our Team</a></li>
             </ul>
           </div>

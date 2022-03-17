@@ -61,10 +61,10 @@ include('includes/register.php');
 					<a class="nav-link" href="mainPage/GettingStarted.php">Getting Started <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">About Us</a>
+					<a class="nav-link" href="mainPage/AboutUs.php">About Us</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Contact</a>
+					<a class="nav-link" href="mainPage/ContactUs.php">Contact</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Our Team</a>
@@ -222,7 +222,7 @@ include('includes/register.php');
 			<div class="modal-body">
 				<form action="" class="text-center" method="post">
 					<div class="form-group w-100 ">
-						   <label for="formGroupExampleInput"><i class="fa-solid fa-user"></i>   Username</label>
+						   <label for="formGroupExampleInput"><i class="fa-solid fa-user"></i>  Username</label>
  						   <input type="text" class="form-control w-75 shadow-none"  id="formGroupExampleInput" name="username" id="username" placeholder="">
 					</div>
 					<div class="form-group w-100">

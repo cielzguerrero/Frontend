@@ -21,7 +21,7 @@
   
   </head>
   <body>
-      
+
 <div class="nav-main">
     <nav class="navbar navbar-expand-lg navbar-light ">
         <div class="container-fluid">
@@ -43,19 +43,19 @@
             <ul class="navbar-nav ms-auto mb-2  align-items-center">
                 
             <li class="nav-item ">
-                <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
+                <a class="nav-link active" aria-current="page" href="../mainPage/mainFinal.php">Home</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="GettingStarted.php">Getting Started</a>
+                <a class="nav-link active" aria-current="page" href="GettingStarted2.php">Getting Started</a>
               </li>
               
               <li class="nav-item ">
-                <a class="nav-link active" aria-current="page" href="AboutUs.php">About Us</a>
+                <a class="nav-link active" aria-current="page" href="AboutUs2.php">About Us</a>
               </li>
 
               <li class="nav-item ">
-                <a class="nav-link active" aria-current="page" href="ContactUs.php">Contact</a>
+                <a class="nav-link active" aria-current="page" href="ContactUs2.php">Contact</a>
               </li>
 
               <li class="nav-item ">
@@ -68,43 +68,57 @@
         </div>
       </nav>
 </div>
+        
 
-<!-- CONTENTS -->
 
-<section class="contact-us" id="contact">
-			<div class="contact-us-wrapper">
-			<img src="../img/Contact us-pana.png" alt="">
-			
-			<form action="../includes/contactform.php" method="POST">
-			<div class="form-group">
-			<h1>CONTACT US</h1>
-			<h3>Have any questions? Sends us a message</h3>
-				<div class="form-group">
-					
-					<input type="text" class="form-control" id="exampleInputPassword1" name="name" placeholder="Full Name">
+<!-- CONTENT -->
+   
+
+
+		<section class="title-card" id="steps">
+			<div class="title-card-wrapper">
+				<div><img src="../img/Procedures.gif" class="title-card-img" id = "img"></div>
+				<div class="title-card-text">
+					<h1>GETTING STARTED</h1>
+					<h3>Follow This Easy Steps To Claim Your Points. Prizes May Vary Monthly</h3>
 				</div>
-				<div class="form-group">
-					
-					<input type="email" class="form-control" id="exampleInputPassword1" name="email" placeholder="Email">
-				</div>
-				<div class="form-group">
-				
-					<input type="text" class="form-control" id="exampleInputPassword1" name="subject" placeholder="Subject">
-				</div>
-				<div class="form-group">
-					
-						<textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3 fixed"placeholder="Message" ></textarea>
-					</div><br>
-				<button type="submit" name="submit" class="btn btn-primary">Submit</button>
-				</form>
-				
 			</div>
-		</section> 
+		</section>
+
+
+  <div class="card">
+  <section class = "card-content">
+			<div class="card-content-box">
+				<div class="card-1 card-box">
+					<img src="../img/signup.png">
+					<h3>REGISTER</h3>
+					<p>Create an account before segregating your non profitable and profitable waste</p>
+				</div>
+				<div class="card-2 card-box">
+				<img src="../img/login.png">
+					<h3>LOG IN</h3>
+					<p>Log your account to your respective barangay for identification</p>
+				</div>
+				<div class="card-3 card-box" >
+					<img src="../img/throw.png">
+					<h3>DROP</h3>
+					<p>Once the system recognized your identity, you can now drop all your trash in the bins.</p>
+				</div>
+			</div>
+		</section>
+
+  </div>
+		
 
 
 
 
 
+
+
+
+
+    
 
 
 

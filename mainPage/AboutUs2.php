@@ -43,19 +43,19 @@
             <ul class="navbar-nav ms-auto mb-2  align-items-center">
                 
             <li class="nav-item ">
-                <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
+                <a class="nav-link active" aria-current="page" href="../mainPage/mainFinal.php">Home</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="GettingStarted.php">Getting Started</a>
+                <a class="nav-link active" aria-current="page" href="GettingStarted2.php">Getting Started</a>
               </li>
               
               <li class="nav-item ">
-                <a class="nav-link active" aria-current="page" href="AboutUs.php">About Us</a>
+                <a class="nav-link active" aria-current="page" href="AboutUs2.php">About Us</a>
               </li>
 
               <li class="nav-item ">
-                <a class="nav-link active" aria-current="page" href="ContactUs.php">Contact</a>
+                <a class="nav-link active" aria-current="page" href="ContactUs2.php">Contact</a>
               </li>
 
               <li class="nav-item ">
@@ -68,45 +68,15 @@
         </div>
       </nav>
 </div>
-
-<!-- CONTENTS -->
-
-<section class="contact-us" id="contact">
-			<div class="contact-us-wrapper">
-			<img src="../img/Contact us-pana.png" alt="">
-			
-			<form action="../includes/contactform.php" method="POST">
-			<div class="form-group">
-			<h1>CONTACT US</h1>
-			<h3>Have any questions? Sends us a message</h3>
-				<div class="form-group">
-					
-					<input type="text" class="form-control" id="exampleInputPassword1" name="name" placeholder="Full Name">
-				</div>
-				<div class="form-group">
-					
-					<input type="email" class="form-control" id="exampleInputPassword1" name="email" placeholder="Email">
-				</div>
-				<div class="form-group">
-				
-					<input type="text" class="form-control" id="exampleInputPassword1" name="subject" placeholder="Subject">
-				</div>
-				<div class="form-group">
-					
-						<textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3 fixed"placeholder="Message" ></textarea>
-					</div><br>
-				<button type="submit" name="submit" class="btn btn-primary">Submit</button>
-				</form>
-				
+                <!-- CONTENTS -->
+ <section class="about-us" id="aboutus">
+			<div class="about-us-wrapper">
+				<h1 > ABOUT US</h1>
+				<p>G-Reward Is made by a group of students in Polytechnic University Of The Philippines - San Pedro Campus. We believe that we can motivate people to throw their garbage in a proper way and earning Cash or Prize in exchange. Our mission is to help the community in terms of cleanliness. It also helps the local government to earn funds for their future projects. We're excited and striving for a change in the environment of the community.</p>
 			</div>
+			<div class="aboutus-img"><img src="../img/About us page.gif"></div>
 		</section> 
-
-
-
-
-
-
-
+	
 
 
 
