@@ -186,6 +186,7 @@ body{
     flex-direction: row;
     width: 50%;
     margin: 0 auto;
+    text-align: center;
 }
 .contact-us img{
     width:500px;
