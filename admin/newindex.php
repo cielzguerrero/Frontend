@@ -108,7 +108,7 @@ include('chartjava.php');?>
         <header>
             <h1>
                 <label for="navigation-toggle">
-                    <div><span class="las la-bars"></span>Dashboard</div>
+                    <div><span class="las la-bars"></span>  Dashboard</div>
                 </label>
             </h1>
             <div class="user-wrapper">
@@ -167,7 +167,7 @@ include('chartjava.php');?>
                             $result = mysqli_query($conn, $sql);
                             $count = mysqli_num_rows($result);
                             ?>
-                            <h1></i><?php echo $count?></h1>
+                            <h1><i class="fa-regular fa-address-book"></i><?php echo $count?></h1>
                             <span> <p>Total Logs</p> </span>
                         </div>
                     </div>

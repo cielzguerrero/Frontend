@@ -214,7 +214,8 @@ main
     text-shadow: 3px 3px 2px #13828f;
 }
 .card-single i{
-    font-size: 3rem;
+    padding-right: 10px;
+    font-size: 2.5rem;
     font-weight: 600;
     color: #fbfbfb;
     text-shadow: 3px 3px 2px #13828f;
