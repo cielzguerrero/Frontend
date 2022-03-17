@@ -170,7 +170,7 @@ include('../includes/decreasepoint.php');
       
           <!-- RANKING SECTION -->
            <div class="titles title1" id="rankings-title">
-            <h2>Rankings</h2>
+            <h2>Monthly Rankings</h2>
            </div>
 
            <div class="rank">
@@ -216,7 +216,7 @@ include('../includes/decreasepoint.php');
                </div>
                
                <div class="rank-4-10">
-                  <div class="ranks">
+      
                       <table class="rank-table">
                       <?php  
                       $thisyear = date('Y');
@@ -235,7 +235,7 @@ include('../includes/decreasepoint.php');
                         </tr>
                         <?php $rank++;} while (($rows = mysqli_fetch_assoc($result)) and ($number <= 4))?>                 
                       </table>
-                  </div>
+              
                  
                  
                </div>
@@ -270,7 +270,8 @@ include('../includes/decreasepoint.php');
               ?>
               <div class="profile-image">
                 <div class="image"><img src="../admin/images/profile/<?php echo $rows['img_name'];?>" class="ProfileImage" style="height:228px;width:228px;"></div><br>
-               </div>
+          
+              </div>
     
                 <form>
                   <div class="row">
@@ -462,8 +463,9 @@ include('../includes/decreasepoint.php');
                             <div class="row align-items-center">
                               <form action="" method="POST" enctype="multipart/form-data" style="display:inline-flex;">
                                 <div class="col">
-                                  <p><?php echo $rows['prizename'];?></p>
-
+                                <img src="../admin/images/prize/<?php echo $rows['prize_img'];?>">
+                               
+                               
                                   <input type="text" name="rprize" value="<?php echo $rows['pesos'];?>" style="display:none;">
                                 </div>
                                 <div class="col">

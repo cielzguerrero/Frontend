@@ -127,10 +127,11 @@ include('../includes/decreasepoint.php');
               $count = mysqli_num_rows($tresult);       
               $tresult -> close();
             ?>
+             <h5>Reference Number: <?php echo $drows['securitykey'];?></h5>
              <p>Reward to Receive: <?php echo $drows['t_reward'];?> pesos </p>
              <h5>Date: <?php echo $drows['t_date'];?></h5>
              <h5>Time: <?php echo $drows['t_time'];?></h5>
-             <h5>Reference Number: <?php echo $drows['securitykey'];?></h5>
+            
         </div>
          
                   

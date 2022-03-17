@@ -268,17 +268,17 @@ body{
 .rank-3 .top1 img{
     height: 280px;
     width: 280px;
-    border: 10px solid gold;
+    border: 20px solid gold;
 }
 .rank-3 .top2 img{
     height: 220px;
     width: 220px;
-    border: 8px solid silver;
+    border: 10px solid silver;
 }
 .rank-3 .top3 img{
     height: 220px;
     width: 220px;
-    border: 8px solid burlywood;
+    border: 10px solid burlywood;
 }
 /* RANK 4-10 */
 .rank-4-10{
@@ -394,6 +394,10 @@ body{
     padding-top: 50px;
 
 }
+.profile-image .overlay{
+   text-align: center;
+   color: white;
+}
 .profile-image .image{
     
     display: flex;
@@ -405,9 +409,20 @@ body{
     width: 50%;
     margin: auto;
     border-radius: 100%;
+    border: #183b4b59 solid 15px;
+    z-index: 50;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.profile-image img:hover{
+    width: 50%;
+    margin: auto;
+    border-radius: 100%;
+    border: #183b4b solid 15px;
     z-index: 50;
     cursor: pointer;
 }
+
 
 /* LOGS */
 
@@ -460,14 +475,15 @@ body{
 .modal-content .modal-body button{
     font-size: 2rem;
     text-align: center;
-    font-weight: 100;
-
+    font-weight: 400;
+    color: #0b5ed7;
     background-color: transparent;
 
 }
 .modal-content .modal-body button:hover{
     font-size: 2rem;
     text-align: center;
+    color: #fbfbfb;
     font-weight: 600;
     background-color: #0b5ed7;
 
@@ -477,7 +493,16 @@ body{
     text-align: center;
     font-weight: 600;
     background-color: #0b5ed7;
-
+}
+.modal-content .container img {
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+.modal-content .container img:hover {
+   transform: scale(1.4);
 }
 
 /* FOOTER */
@@ -873,6 +898,7 @@ body{
     /* RANKING SECTION */
     .rank {
         width: 100%;
+       
     }
     .rank-wrapper{
         width: 80%;
@@ -888,7 +914,7 @@ body{
         align-items: center;
         width: 95%;
         margin: auto;
-        padding: 40px 0 20px 0;
+        padding: 40px 0 0px 0;
     
     }
     .rank-3 p{

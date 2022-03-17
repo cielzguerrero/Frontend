@@ -49,6 +49,8 @@ if (empty($_SESSION['username'])) {
     <link href="css/news.css" rel="stylesheet" type="text/css" /></link>
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <!-- FONT AWSEOME ICONS -->
+    <script src="https://kit.fontawesome.com/9fb78288eb.js" crossorigin="anonymous"></script>
     <!-- CSS only -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></link>
@@ -67,36 +69,36 @@ include('chartjava.php');?>
     <div class="sidebar">
         
         <div class="sidebar-brand">
-        <h3><span class="las la-leaf"></span> <span>Waste Management</span> </h3>
+        <h3> <span>Waste&nbsp;<span class="las la-leaf"></span> Management</span> </h3>
         </div>
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <a href="newindex.php" class="active"><span class="las la-signal"></span>
+                    <a href="newindex.php" class="active"><span class="la la-dashboard"></span>
                     <span>Dashboard</span></a>
                 </li>
                 <li>
-                    <a href="garbagetype.php"><span class="las la-signal"></span>
+                    <a href="garbagetype.php"><span class="la la-trash"></span>
                     <span>Garbage Type</span></a>
                 </li>
                 <li>
-                    <a href="carousel.php"><span class="las la-signal"></span>
+                    <a href="carousel.php"><span class="la la-money"></span>
                     <span>News & Prizes</span></a>
                 </li>
                 <li>
-                    <a href="members.php"><span class="las la-signal"></span>
+                    <a href="members.php"><span class="la la-user"></span>
                     <span>Profile</span></a>
                 </li>
                 <li>
-                    <a href="actionlog.php"><span class="las la-signal"></span>
+                    <a href="actionlog.php"><span class="la la-book"></span>
                     <span>Logs</span></a>
                 </li>
                 <li>
-                    <a href="analytics.php"><span class="las la-signal"></span>
+                    <a href="analytics.php"><span class="la la-bar-chart"></span>
                     <span>Analytics</span></a>
                 </li>
                 <li>
-                    <a href="logout.php" onclick="return confirm('Are you sure')"><span class="las la-signal"></span>
+                    <a href="logout.php" onclick="return confirm('Are you sure')"><span class="la la-close"></span>
                     <span>Sign-Out</span></a>
                 </li>
             </ul>
@@ -106,7 +108,7 @@ include('chartjava.php');?>
         <header>
             <h1>
                 <label for="navigation-toggle">
-                    <div><span class="las la-bars"></span>Dashboard</div>
+                    <div><span class="las la-bars"></span>  Dashboard</div>
                 </label>
             </h1>
             <div class="user-wrapper">
@@ -131,7 +133,7 @@ include('chartjava.php');?>
                                 $result = mysqli_query($conn, $sql);
                                 $rows = mysqli_fetch_assoc($result);
                                 $fly = 1;?>
-                                <h4 class="boxtitle" style="color:black">Prizes</h4>
+                                <h4 class="boxtitle" >Prizes</h4>
                                 <div class="indexslideshow-box">
                                     <div class="indexbox-wrapper">
                                         <?php do { ?>
@@ -147,25 +149,26 @@ include('chartjava.php');?>
                         </div>
                     </div>
                     <div class="card-single">
-                        <div>
+                        <div class="totalmemberdesign">
                             <?php
                             $sql = "SELECT * FROM members";
                             $result = mysqli_query($conn, $sql);
                             $count = mysqli_num_rows($result);
                             ?>
-                            <h1><?php echo $count?></h1>
-                            <span>Total Members</span>
+                            <h1><i class="fa-solid fa-people-group"></i><?php echo $count?></h1>
+                            <span> <p>Total Members</p> </span>
                         </div>
                     </div>
                     <div class="card-single">
                         <div>
+                            
                             <?php
                             $sql = "SELECT * FROM logs";
                             $result = mysqli_query($conn, $sql);
                             $count = mysqli_num_rows($result);
                             ?>
-                            <h1><?php echo $count?></h1>
-                            <span>Total Logs</span>
+                            <h1><i class="fa-regular fa-address-book"></i><?php echo $count?></h1>
+                            <span> <p>Total Logs</p> </span>
                         </div>
                     </div>
                 </div>
@@ -236,7 +239,7 @@ include('chartjava.php');?>
                 </div>
                     <div class="power-grid">
                         <div class="news-box">
-                        <h2 class="boxnewstitle" style="color: black;">News</h2>     
+                        <h2 class="boxnewstitle">News</h2>     
                                 <div class="slideshow-newsbox">
                                         <div class="newsbox-wrapper">
                                             <?php
