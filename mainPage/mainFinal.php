@@ -177,33 +177,40 @@ include('../includes/decreasepoint.php');
               <div class="border-color-top"></div>
           <!-- TOP 3 -->
                <div class="rank-3">
-                  <div class="top2">
+               <div class="top2">
                   <?php
                   
-                  $sql = "SELECT * FROM members ORDER BY points DESC LIMIT 1,2";
+                  $thisyear = date('Y');
+                  $thismonth = date('m');
+                  $sql = "SELECT * , SUM(dpoints) AS tpoints FROM deposits WHERE MONTH(datetime) = '$thismonth' AND YEAR(datetime) = '$thisyear' GROUP BY profileuser ORDER BY tpoints DESC LIMIT 1,2";
                   $rsult = mysqli_query($conn, $sql);
                   $row = mysqli_fetch_assoc($rsult);
+                  $totalpoints = $row['tpoints'];
                                                  
                   ?>
-                    <img src="../admin/images/profile/<?php echo $row['img_name'];?>" ><p><?php echo $row['profilename'];?></p><h5><?php echo $row['totalpoints'];?></h5>
+                    <img src="../admin/images/profile/<?php echo $row['img_name'];?>" ><p><?php echo $row['profileuser'];?></p><h5><?php echo $totalpoints;?></h5>
                   </div>
                   <div class="top1">
                   <?php
-
-                  $sql = "SELECT * FROM members ORDER BY points DESC LIMIT 0,1";
+                  $thisyear = date('Y');
+                  $thismonth = date('m');
+                  $sql = "SELECT * , SUM(dpoints) AS tpoints FROM deposits WHERE MONTH(datetime) = '$thismonth' AND YEAR(datetime) = '$thisyear' GROUP BY profileuser ORDER BY tpoints DESC LIMIT 0,1";
                   $rsult = mysqli_query($conn, $sql);
-                  $row = mysqli_fetch_assoc($rsult);                                      
+                  $row = mysqli_fetch_assoc($rsult);
+                  $totalpoints = $row['tpoints'];                                  
                   ?>
-                    <img src="../admin/images/profile/<?php echo $row['img_name'];?>" ><p><?php echo $row['profilename'];?></p><h5><?php echo $row['totalpoints'];?></h5>
+                    <img src="../admin/images/profile/<?php echo $row['img_name'];?>" ><p><?php echo $row['profileuser'];?></p><h5><?php echo $totalpoints;?></h5>
                   </div>
                   <div class="top3">
                   <?php
-
-                  $sql = "SELECT * FROM members ORDER BY points DESC LIMIT 2,3";
-                  $rsult = mysqli_query($conn, $sql);
-                  $row = mysqli_fetch_assoc($rsult);                                               
+                    $thisyear = date('Y');
+                    $thismonth = date('m');
+                    $sql = "SELECT * , SUM(dpoints) AS tpoints FROM deposits WHERE MONTH(datetime) = '$thismonth' AND YEAR(datetime) = '$thisyear' GROUP BY profileuser ORDER BY tpoints DESC LIMIT 2,3";
+                    $rsult = mysqli_query($conn, $sql);
+                    $row = mysqli_fetch_assoc($rsult);
+                    $totalpoints = $row['tpoints'];                                               
                   ?>
-                    <img src="../admin/images/profile/<?php echo $row['img_name'];?>" ><p><?php echo $row['profilename'];?></p><h5><?php echo $row['totalpoints'];?></h5>
+                    <img src="../admin/images/profile/<?php echo $row['img_name'];?>" ><p><?php echo $row['profileuser'];?></p><h5><?php echo $totalpoints;?></h5>
                   </div>
                </div>
                
@@ -211,17 +218,19 @@ include('../includes/decreasepoint.php');
                   <div class="ranks">
                       <table class="rank-table">
                       <?php  
-                      $sql = "SELECT * FROM members ORDER BY points DESC LIMIT 3,5";
+                      $thisyear = date('Y');
+                      $thismonth = date('m');
+                      $sql = "SELECT * , SUM(dpoints) AS tpoints FROM deposits WHERE MONTH(datetime) = '$thismonth' AND YEAR(datetime) = '$thisyear' GROUP BY profileuser ORDER BY tpoints DESC LIMIT 3,5";
                       $result = mysqli_query($conn, $sql);
                       $rows = mysqli_fetch_assoc($result);
                       $rank = 4;
                       $number = 0;
                       do { ?>
                         <tr class = "trBorder">
-                          <td><?php echo $rank;?>th</td>
-                          <td class="rank-image"><img src="../admin/images/profile/<?php echo $rows['img_name'];?>" style="background:white;"></td>
-                          <td><?php echo $rows['profilename'];?></td>
-                          <td><?php echo $rows['totalpoints'];?></td>
+                          <td aria-placeholder="none"><?php echo $rank;?>th</td>
+                          <td class="rank-image" aria-placeholder="none"><img src="../admin/images/profile/<?php echo $rows['img_name'];?>" style="background:white;"></td>
+                          <td><?php echo $rows['profileuser'];?></td>
+                          <td><?php echo $rows['tpoints'];?></td>
                         </tr>
                         <?php $rank++;} while (($rows = mysqli_fetch_assoc($result)) and ($number <= 4))?>                 
                       </table>

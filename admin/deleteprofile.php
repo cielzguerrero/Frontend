@@ -33,6 +33,8 @@ if ($id == "") {
         $_SESSION['delete'] = "<div class='message success'>Removed Successfully!</div>";
         $log = "INSERT INTO logs (user, activity, datetime) VALUES ('$username', '$activity', '$time')";
         $result = mysqli_query($conn, $log);
+        $tsql = "DELETE FROM deposits WHERE d_id = '$id'";
+            $result = mysqli_query($conn, $tsql);
         header("Location: members.php");
     } else {
         $_SESSION['delete'] = "<div class='message warning'>Failed To Remove. Try Again Later.</div>";

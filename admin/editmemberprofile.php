@@ -98,6 +98,8 @@ if (isset($_POST['submit'])){
             $_SESSION['update'] = "<div class='message success'>Details Updated Successfully!</div>";
             $log = "INSERT INTO logs (user, activity, datetime) VALUES ('$username', '$activity', '$time')";
             $result = mysqli_query($conn, $log);
+            $tsql = "UPDATE deposits SET profileuser = '$profile_name', user = '$user_name', img_name = '$image_name' WHERE d_id = '$id'";
+            $result = mysqli_query($conn, $tsql);
             header("Location: members.php");
         } else {
             $_SESSION['update'] = "<div class='message warning'>Failed To Update Details. Try Again Later.</div>";
