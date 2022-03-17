@@ -77,32 +77,32 @@ include('chartjava.php');?>
         </div>
         <div class="sidebar-menu">
             <ul>
-                <li>
-                    <a href="newindex.php"><span class="las la-signal"></span>
+            <li>
+                    <a href="newindex.php"><span class="la la-dashboard"></span>
                     <span>Dashboard</span></a>
                 </li>
                 <li>
-                    <a href="garbagetype.php"><span class="las la-signal"></span>
+                    <a href="garbagetype.php"  ><span class="la la-trash"></span>
                     <span>Garbage Type</span></a>
                 </li>
                 <li>
-                    <a href="carousel.php"><span class="las la-signal"></span>
+                    <a href="carousel.php"><span class="la la-money"></span>
                     <span>News & Prizes</span></a>
                 </li>
                 <li>
-                    <a href="members.php" class="active"><span class="las la-signal"></span>
+                    <a href="members.php"  class="active"><span class="la la-user"></span>
                     <span>Profile</span></a>
                 </li>
                 <li>
-                    <a href="actionlog.php"><span class="las la-signal"></span>
+                    <a href="actionlog.php"><span class="la la-book"></span>
                     <span>Logs</span></a>
                 </li>
                 <li>
-                    <a href="analytics.php"><span class="las la-signal"></span>
+                    <a href="analytics.php"><span class="la la-bar-chart"></span>
                     <span>Analytics</span></a>
                 </li>
                 <li>
-                    <a href="logout.php" onclick="return confirm('Are you sure')"><span class="las la-signal"></span>
+                    <a href="logout.php" onclick="return confirm('Are you sure')"><span class="la la-close"></span>
                     <span>Sign-Out</span></a>
                 </li>
             </ul>
