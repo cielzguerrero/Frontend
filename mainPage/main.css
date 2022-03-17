@@ -394,6 +394,12 @@ body{
     padding-top: 50px;
 
 }
+.profile-image .overlay{
+    width: 100%;
+    color: green;
+    position: absolute;
+    bottom: 0; 
+}
 .profile-image .image{
     
     display: flex;
@@ -460,14 +466,15 @@ body{
 .modal-content .modal-body button{
     font-size: 2rem;
     text-align: center;
-    font-weight: 100;
-
+    font-weight: 400;
+    color: #0b5ed7;
     background-color: transparent;
 
 }
 .modal-content .modal-body button:hover{
     font-size: 2rem;
     text-align: center;
+    color: #fbfbfb;
     font-weight: 600;
     background-color: #0b5ed7;
 
@@ -477,7 +484,16 @@ body{
     text-align: center;
     font-weight: 600;
     background-color: #0b5ed7;
-
+}
+.modal-content .container img {
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+.modal-content .container img:hover {
+   transform: scale(1.4);
 }
 
 /* FOOTER */
