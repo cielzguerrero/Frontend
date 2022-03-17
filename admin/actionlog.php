@@ -74,7 +74,7 @@ include('chartjava.php');?>
     <div class="sidebar">
         
         <div class="sidebar-brand">
-        <h3><span class="las la-leaf"></span> <span>Waste Management</span> </h3>
+        <h3> <span>Waste&nbsp;<span class="las la-leaf"></span> Management</span> </h3>
         </div>
         <div class="sidebar-menu">
             <ul>

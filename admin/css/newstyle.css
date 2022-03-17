@@ -45,7 +45,7 @@ body{
 .sidebar-brand span
 {
     display: inline-block;
-    padding-right: 0rem;
+    padding-right: 2rem;
     color: #dcdcdd;
     
 }
@@ -82,7 +82,7 @@ body{
 }
 .sidebar-menu
 {
-    margin-top: 4rem;
+    margin-top: 6rem;
 }
 #navigation-toggle:checked + .sidebar
 {
