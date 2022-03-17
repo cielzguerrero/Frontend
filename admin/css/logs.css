@@ -11,9 +11,17 @@
 }
 .logheader
 {
-    padding-top: .5rem;
+    padding: 8px;
     background: #062C30;
     color: #fbfbfb;
+    text-align: center;
+}
+.logheader h4
+{
+    padding: 8px;
+    background: #062C30;
+    color: #fbfbfb;
+    text-align: center;
 }
 .logcard-header
 {

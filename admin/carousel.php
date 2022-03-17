@@ -138,8 +138,8 @@ include('chartjava.php');?>
                             $ranker = 1; 
                             do { ?>
                             <div class="prizebox">
-                                <?php echo $ranker;?>
-                                <img src="images/prize/<?php echo $rows['prize_img'];?>" style = "width:100%; height:12rem;">
+                                <!-- <?php echo $ranker;?> -->
+                                <img src="images/prize/<?php echo $rows['prize_img'];?>">
                                 <div class="pdescription" style="text-align:center;">
                                     <h4 style="text-align:center;"><?php echo $rows['prizename'];?></h4> 
                                     <i><?php echo $rows['pdescription'];?></i>
@@ -157,6 +157,7 @@ include('chartjava.php');?>
                     </div>
                 </div>
             </div>
+            
             <div class="news-grid">
                     <div class="news-box">     
                         <div class="slideshow-newsbox">
