@@ -139,7 +139,7 @@ include('chartjava.php');?>
                                         <?php do { ?>
                                         <div class="indexprizebox">
                                             <?php echo $rows['prizename'];?>
-                                            <img src="images/prize/<?php echo $rows['prize_img'];?>" style = "width:100%; height:7.5rem;">
+                                            <img src="images/prize/<?php echo $rows['prize_img'];?>" style = "width:100%; height:7.5rem;border: 2px solid #767676;">
                                             <i class="pindexdescription"><?php echo $rows['pdescription'];?></i>
                                         </div>
                                         <?php $fly++; }  while ($rows = mysqli_fetch_assoc($result))?>

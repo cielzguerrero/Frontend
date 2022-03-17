@@ -35,7 +35,7 @@ function time_elapsed_string($datetime, $full = false) {
     if (!$full) $string = array_slice($string, 0, 1);
     return $string ? implode(', ', $string) . ' ago' : 'just now';
 }
-
+error_reporting(0);
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -132,8 +132,9 @@ include('chartjava.php');?>
         <div class="member-grid">
                     <div class="leaderboards">
                         <div class="card">
-                            <div class="memberheader">
-                                <h4>Profiles</h4>
+                            <div class="memberheader" style="text-align:center;">
+                                <h4>Profile/Members</h4>
+                                <p><?php echo $_SESSION['update'];?></p>
                             </div>
                             <div class="membercard-body">
                                 <table class="table table-striped table-bordered" id="datatable">

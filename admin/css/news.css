@@ -7,6 +7,7 @@
 {
     border: 1px solid #54BAB9;
     border-radius: 5px;
+    width: 100%;
 }
 .news-box .slideshow-newsbox
 {
@@ -55,7 +56,7 @@
 }
 .newsbox .newsbox-wrapper
 {
-    width: 80%;
+    width: 90%;
     margin: 0px auto;
     height: 21rem;
     overflow: hidden;
@@ -66,7 +67,7 @@
     background: #d9b48fff;
     margin-left: 1.5rem;
     height: 20.5rem;
-    width: 15rem;
+    width: 17rem;
     border-radius: 5px;
     margin-bottom: 1rem;
     position: relative;

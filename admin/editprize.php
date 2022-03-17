@@ -39,46 +39,46 @@ if (empty($_SESSION['username'])) {
      $description = $_POST['pdesc'];
      $peso = $_POST['ppeso'];
      $price = $_POST['ppoints'];
-     $current_image = $_POST['current_image'];
      $image_name = $_POST['image'];
+     $current_image = $_POST['current_image'];
      if(isset($_FILES['image']['name'])){
  
-         $image_name = $_FILES['image']['name'];
- 
-             if($image_name != ""){
- 
-                 //Rename Image
-                 $extension = end(explode('.', $image_name));
-                 $image_name = "Prize-". rand(000, 999). "." .$extension;
-     
-                 $sourcepath = $_FILES['image']['tmp_name'];
-                 $destinationpath = "images/prize/".$image_name;
-     
-                 $upload = move_uploaded_file($sourcepath, $destinationpath);
-     
-                 if($upload == FALSE) {
-                     $_SESSION['upload'] = "<div class='message warning'>Failed To Upload Image. Try Again Later.</div>";
-                     header("Location: carousel.php");
-     
-                     die();
-                 }
- 
-                 if($current_image != "") {
-                     $remove_path = "images/prize/".$current_image;
-                     $remove = unlink($remove_path);
-     
-                     if($remove == FALSE){
-                         $_SESSION['remove'] = "<div class='message warning'>Failed To Remove Current Image. Try Again Later.</div>";
-                         header("Location: carousel.php");
-                         die();
-                     }
-                 }
-             } else {
-                 $image_name = $current_image;
-             }
-         } else {
-             $image_name = $current_image;
-         }
+        $image_name = $_FILES['image']['name'];
+
+            if($image_name != ""){
+
+                //Rename Image
+                $extension = end(explode('.', $image_name));
+                $image_name = "Prize-". rand(000, 999). "." .$extension;
+    
+                $sourcepath = $_FILES['image']['tmp_name'];
+                $destinationpath = "images/prize/".$image_name;
+    
+                $upload = move_uploaded_file($sourcepath, $destinationpath);
+    
+                if($upload == FALSE) {
+                    $_SESSION['upload'] = "<div class='message warning'>Failed To Upload Image. Try Again Later.</div>";
+                    header("Location: carousel.php");
+    
+                    die();
+                }
+
+                if($current_image != "") {
+                    $remove_path = "images/prize/".$current_image;
+                    $remove = unlink($remove_path);
+    
+                    if($remove == FALSE){
+                        $_SESSION['remove'] = "<div class='message warning'>Failed To Remove Current Image. Try Again Later.</div>";
+                        header("Location: carousel.php");
+                        die();
+                    }
+                }
+            } else {
+                $image_name = $current_image;
+            }
+        } else {
+            $image_name = $current_image;
+        }
  
      $sql = "UPDATE prizes SET prizename = '$prizen', pesos = '$peso' , pdescription = '$description', points = '$price', prize_img = '$image_name' WHERE id = '$id'";
      $result = mysqli_query($conn, $sql);
@@ -191,7 +191,7 @@ include('chartjava.php');?>
                                             <h3>Current Image: 
                                             <img src="images/prize/<?php echo $row['prize_img'];?>" style = "width:7rem;height:7rem;border-style:solid;border-radius:5px;padding:0.5rem;border-width:2px;" onerror="this.style.display='none';"></h3>
                                             <h3 class="pimage">Prize Image: </h3>
-                                            <input type="file" name="image">
+                                            <p><input type="file" name="image"></p>
                                             <input type="hidden" name="current_image" value="<?php echo $row['prize_img'];?>">
                                             <input type="hidden" name="id" value="<?php echo $row['id'];?>">
                                             <div class="buttonupdate">

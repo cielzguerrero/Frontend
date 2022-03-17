@@ -17,9 +17,9 @@ $(document).ready(function(){
           datasets : [
             {
               label: 'Total Garbage Count',
-              backgroundColor: 'rgba(255,216,1)',
+              backgroundColor: 'rgba(70,130,180)',
               borderColor: 'rgba(200, 200, 200, 0.75)',
-              hoverBackgroundColor: 'rgba(255, 232, 124)',
+              hoverBackgroundColor: 'rgba(72,209,204)',
               hoverBorderColor: 'rgba(200, 200, 200, 1)',
               data: count
             }

@@ -128,7 +128,7 @@ include('chartjava.php');?>
                     <div class="box">
                         <h4 class="boxtitle">Prizes</h4>
                         <div class="slideshow-box">
-                        <i class="fas fa-chevron-left prev"></i>
+                        <i class="fas fa-chevron-left prev" style="visibility: hidden;"></i>
                         <div class="box-wrapper">
                             <?php
                             $sql = "SELECT * FROM prizes";
@@ -138,8 +138,8 @@ include('chartjava.php');?>
                             $ranker = 1; 
                             do { ?>
                             <div class="prizebox">
-                                <!-- <?php echo $ranker;?> -->
-                                <img src="images/prize/<?php echo $rows['prize_img'];?>">
+                                <?php echo $ranker;?>
+                                <img src="images/prize/<?php echo $rows['prize_img'];?>" style = "width:100%; height:12rem;border: 2px solid #767676;">
                                 <div class="pdescription" style="text-align:center;">
                                     <h4 style="text-align:center;"><?php echo $rows['prizename'];?></h4> 
                                     <i><?php echo $rows['pdescription'];?></i>
@@ -148,7 +148,7 @@ include('chartjava.php');?>
                             </div>
                             <?php $ranker++; }  while ($rows = mysqli_fetch_assoc($result))?>
                         </div>
-                        <i class="fas fa-chevron-right next"></i>
+                        <i class="fas fa-chevron-right next" style="visibility: hidden;"></i>
                         </div>
                     </div>
                     <div class="prizeaction">

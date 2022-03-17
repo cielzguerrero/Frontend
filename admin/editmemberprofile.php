@@ -10,7 +10,6 @@ if (empty($_SESSION['username'])) {
  
      $_SESSION['update'] = "<div class='message warning'>User Not Found.</div>";
      header("Location: members.php");
- 
  } else {
  
      $id = $_GET['ID'];
@@ -19,10 +18,6 @@ if (empty($_SESSION['username'])) {
      $result = mysqli_query($conn, $sql);
      $row = mysqli_fetch_assoc($result);
      $status = $row['status'];
-
-     $tsql = "SELECT * FROM members WHERE status ='Admin'";
-     $result = mysqli_query($conn, $tsql);
-     $count = mysqli_num_rows($result);
 
      if($result == TRUE) {
          $count = mysqli_num_rows($result);
@@ -185,7 +180,7 @@ include('chartjava.php');?>
             <div class="user-wrapper">
                 <div>
                 <h4><div class="las la-user-tie"></div>
-                <?php echo $_SESSION['fullname']?></h4>
+                <?php echo $_SESSION['fullname'];?></h4>
                 <small><?php echo $_SESSION['status'];?></small>
                 </div>
             </div>
@@ -215,7 +210,6 @@ include('chartjava.php');?>
                                                     <?php } else { ?>
                                                         <option value="Member">Member</option>
                                                     <?php };?>
-                                                    <option value="Admin">Admin</option>
                                                     </select>
                                                 </h3>
                                                 <h3>Contact: <input type="text" name="pcontact" value="<?php echo $row['contact'];?>" autocomplete="off" required></h3>
