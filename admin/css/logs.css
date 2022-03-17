@@ -11,9 +11,17 @@
 }
 .logheader
 {
-    padding-top: .5rem;
-    background: #54BAB9;
-    color: black;
+    padding: 8px;
+    background: #062C30;
+    color: #fbfbfb;
+    text-align: center;
+}
+.logheader h4
+{
+    padding: 8px;
+    background: #062C30;
+    color: #fbfbfb;
+    text-align: center;
 }
 .logcard-header
 {
@@ -58,4 +66,25 @@
 .table thead td
 {
     font-weight: bolder;
+}
+
+@media only screen and (max-width: 700px) {
+    .table tr
+    {
+        font-size: 0.8rem;
+    }
+    .table td
+    {       font-size: 0.8rem;
+    
+    }
+    .table thead td
+    {      font-size: 0.8rem;
+       
+    }
+    table {
+        margin-bottom: 20px;
+    }
+    .table button{
+        font-size: 0.8rem;
+    }
 }

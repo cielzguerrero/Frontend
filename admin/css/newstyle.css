@@ -188,6 +188,7 @@ main
     background-color: #062C30 !important;
     color: #fbfbfb !important;
     font-weight: 600;
+    padding: 10px;
     text-shadow: 1px 1px 2px #54BAB9;
 }
 
@@ -367,8 +368,32 @@ table
 .editprize{
     color: #fbfbfb;
     font-weight: 800;
-
+    padding: 5px 50px;
 }
+.editprize button a{
+    padding: 5px 50px;
+}
+.prizebox{
+    width: 100%;
+    text-align: center;
+}
+.prizebox img{
+    padding-top: 30px;
+    width: 50%;
+    margin: auto;
+    height: 190px;
+}
+.news-grid{
+    margin-top: 20px;
+}
+.prizeaction button{
+    padding: 5px 40px !important;
+}
+.newsaction button{
+    padding: 5px 40px !important;
+    color: #062C30;
+}
+
 @media only screen and (max-width: 1200px) {
         .sidebar:hover
         {

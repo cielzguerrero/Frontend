@@ -11,9 +11,10 @@
 }
 .memberheader
 {
-    padding-top: .5rem;
-    background: #54BAB9;
-    color: black;
+    padding: 10px;
+    background: #062C30;
+    color: #fbfbfb;
+    text-align: center;
 }
 .membercard-header
 {

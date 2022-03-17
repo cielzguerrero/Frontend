@@ -15,6 +15,7 @@
     background-color: rgb(0, 161, 205);
     color: white;
     text-align: center;
+
 }
 .garbage-contents
 {
@@ -32,6 +33,7 @@
 }
 .garbagebox
 {
+    text-align: center;
     display: inline-block;
     background: rgb(224,255,255);
     margin-left: 1.5rem;
@@ -42,19 +44,25 @@
     margin-bottom: 1rem;
     position: relative;
     border: 2px solid #767676;
+    font-weight: 600;
+    font-size: 1.2rem;
+  
+}
+.garbagebox i{
+    padding-bottom: 20px;
 }
 .buttonactions
 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem;
+    padding-top: 10px;
 }
 .buttonaction
 {
     font-size: 1.2rem;
     margin: 1rem;
-    padding: 0.25rem;
+    padding: 5px 18px;
     background-color: rgb(0, 161, 205);
     color: white;
     border-radius: 5px;
@@ -70,11 +78,29 @@
 .addgarbagetype
 {
     font-size: 1.2rem;
-    padding: 0.25rem;
-    margin-left: .5rem;
-    margin-bottom: .5rem;
+    padding: 5px 45px;
     background-color: rgb(0, 161, 205);
     color: white;
     border-radius: 5px;
     border: 2px solid #767676;
+    margin-left: 5%;
+}
+
+.boxtitle{
+    padding: 10px;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 700px) {
+
+    .addgarbagetype
+    {
+        font-size: 1rem;
+        padding: 5px 45px;
+        background-color: rgb(0, 161, 205);
+        color: white;
+        border-radius: 5px;
+        border: 2px solid #767676;
+        margin-left: 55%;
+    }
 }

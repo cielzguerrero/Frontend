@@ -157,6 +157,7 @@ include('chartjava.php');?>
                     </div>
                 </div>
             </div>
+            
             <div class="news-grid">
                     <div class="news-box">     
                         <div class="slideshow-newsbox">

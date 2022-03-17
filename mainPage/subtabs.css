@@ -86,7 +86,7 @@ body{
     color: #28e687;
     font-family: "Poppins", sans-serif;
     font-weight: 800; 
-   
+text-align: center;
   
 }
 .title-card h3{
@@ -186,6 +186,7 @@ body{
     flex-direction: row;
     width: 50%;
     margin: 0 auto;
+ 
 }
 .contact-us img{
     width:500px;
@@ -201,6 +202,7 @@ body{
     font-weight: 800;
     font-size: 40px;
     color: #0d6ae4;
+    text-align: center;
     text-shadow: 1px 1px 2px gray;
 }
 .form-group label {
