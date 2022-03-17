@@ -49,6 +49,8 @@ if (empty($_SESSION['username'])) {
     <link href="css/news.css" rel="stylesheet" type="text/css" /></link>
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <!-- FONT AWSEOME ICONS -->
+    <script src="https://kit.fontawesome.com/9fb78288eb.js" crossorigin="anonymous"></script>
     <!-- CSS only -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></link>
@@ -147,14 +149,14 @@ include('chartjava.php');?>
                         </div>
                     </div>
                     <div class="card-single">
-                        <div>
+                        <div class="totalmemberdesign">
                             <?php
                             $sql = "SELECT * FROM members";
                             $result = mysqli_query($conn, $sql);
                             $count = mysqli_num_rows($result);
                             ?>
-                            <h1><?php echo $count?></h1>
-                            <span>Total Members</span>
+                            <h1><i class="fa-solid fa-people-group"></i><?php echo $count?></h1>
+                            <span> <p>Total Members</p> </span>
                         </div>
                     </div>
                     <div class="card-single">
@@ -164,8 +166,8 @@ include('chartjava.php');?>
                             $result = mysqli_query($conn, $sql);
                             $count = mysqli_num_rows($result);
                             ?>
-                            <h1><?php echo $count?></h1>
-                            <span>Total Logs</span>
+                            <h1><i class="fa-solid fa-memo-circle-check"></i><?php echo $count?></h1>
+                            <span> <p>Total Logs</p> </span>
                         </div>
                     </div>
                 </div>
