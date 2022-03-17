@@ -133,7 +133,7 @@ include('chartjava.php');?>
                                 $result = mysqli_query($conn, $sql);
                                 $rows = mysqli_fetch_assoc($result);
                                 $fly = 1;?>
-                                <h4 class="boxtitle" style="color:black">Prizes</h4>
+                                <h4 class="boxtitle" >Prizes</h4>
                                 <div class="indexslideshow-box">
                                     <div class="indexbox-wrapper">
                                         <?php do { ?>
@@ -161,12 +161,13 @@ include('chartjava.php');?>
                     </div>
                     <div class="card-single">
                         <div>
+                            
                             <?php
                             $sql = "SELECT * FROM logs";
                             $result = mysqli_query($conn, $sql);
                             $count = mysqli_num_rows($result);
                             ?>
-                            <h1><i class="fa-solid fa-memo-circle-check"></i><?php echo $count?></h1>
+                            <h1></i><?php echo $count?></h1>
                             <span> <p>Total Logs</p> </span>
                         </div>
                     </div>
@@ -238,7 +239,7 @@ include('chartjava.php');?>
                 </div>
                     <div class="power-grid">
                         <div class="news-box">
-                        <h2 class="boxnewstitle" style="color: black;">News</h2>     
+                        <h2 class="boxnewstitle">News</h2>     
                                 <div class="slideshow-newsbox">
                                         <div class="newsbox-wrapper">
                                             <?php
