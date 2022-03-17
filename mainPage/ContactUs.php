@@ -75,27 +75,27 @@
 			<div class="contact-us-wrapper">
 			<img src="../img/Contact us-pana.png" alt="">
 			
-			<form action="">
+			<form action="../includes/contactform.php" method="POST">
 			<div class="form-group">
 			<h1>CONTACT US</h1>
 			<h3>Have any questions? Sends us a message</h3>
 				<div class="form-group">
 					
-					<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Full Name">
+					<input type="text" class="form-control" id="exampleInputPassword1" name="name" placeholder="Full Name">
 				</div>
 				<div class="form-group">
 					
-					<input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
+					<input type="email" class="form-control" id="exampleInputPassword1" name="email" placeholder="Email">
 				</div>
 				<div class="form-group">
 				
-					<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Subject">
+					<input type="text" class="form-control" id="exampleInputPassword1" name="subject" placeholder="Subject">
 				</div>
 				<div class="form-group">
 					
-						<textarea class="form-control" id="exampleFormControlTextarea1" rows="3 fixed"placeholder="Message" ></textarea>
+						<textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3 fixed"placeholder="Message" ></textarea>
 					</div><br>
-				<button type="submit" class="btn btn-primary">Submit</button>
+				<button type="submit" name="submit" class="btn btn-primary">Submit</button>
 				</form>
 				
 			</div>
