@@ -51,14 +51,14 @@
 .barangay-content
 {
     display: inline-block;
-    background: rgb(255, 255, 255);
+    background: #062C30;
     margin-left: 1.25rem;
     margin-top: 1rem;
-    height: 20rem;
+    height: 17rem;
     width: 15rem;
     border-radius: 5px;
     margin-bottom: 1rem;
-    border: 2px solid #767676;
+    border: 2px solid rgb(0, 161, 205);
 }
 .analytics-barangays
 {
@@ -68,4 +68,17 @@
     margin-left: auto;
     margin-right: auto;
     border-top: 1px solid rgb(0, 161, 205);
+}
+
+.barangay-content h4{
+    margin-top: 50px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color:#fbfbfb;
+}
+.barangay-content p{
+    color:#fbfbfb;
+    font-weight: 300;
+    text-justify: justify;
+    font-size: 1.1rem;
 }
