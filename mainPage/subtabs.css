@@ -249,9 +249,86 @@ text-align: center;
     text-align: justify;
 }
 
+.team{
+    width: 100%;
+    padding-top: 20rem;
+}
+.team-wrapper{
+    
+    width: 70%;
+    margin: auto;
+}
+.team-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.team-box  {
+    border: 1px solid #8686863d;
+    box-shadow: 2px 2px 8px rgba(180, 180, 180, 0.267);
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+    background-color: #ffffff;
+    transition: all 0.2s ease-in-out;
+}
+.team-box:hover{
+    transform: scale(1.04);
+}
+.team-box .links    {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: auto;
+    width: 60%;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+.team-box .links i{
+    color: #8b8b8bdf;
+}
+.team-box .links .fa-facebook:hover{
+    color: #36518a;
+}
+.team-box .links .fa-github:hover{
+    color: #222222;
+}
+.team-box .links .fa-instagram:hover{
+color: #c738a0;
+}
+
+.team-box h2{
+    text-align: center;
+    font-size: 1.5rem;
+}
+.team-box p{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.team-box img{
+    width: 160px;
+    height: 160px;
+    border-radius: 100%;
+    border: 4px solid white;
+    box-shadow: 1px 1px 10px rgba(78, 78, 78, 0.39);
+    background-color: rgb(236, 236, 236);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 2.2rem;
+    margin-top: -100px;
+}
+.team-design-top{
+    width: 100%;
+   background: linear-gradient(#7F7FD5,#86A8E7,#91EAE4);
+    height: 150px;
+}
+   
 
 
-@media only screen and (max-width:800px){
+@media only screen and (max-width:700px){
     .nav-main{
         width: 100%;
     }
@@ -261,6 +338,13 @@ text-align: center;
     }
     .navbar img{
         width: 35px;
+    }
+    .team{
+        padding-top: 8rem;
+    }
+    .team-container{
+        gap: 40px;
+        flex-direction: column;
     }
     .contact-us{
         padding-bottom: 5rem;

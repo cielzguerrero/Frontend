@@ -21,7 +21,7 @@
   
   </head>
   <body>
-
+      
 <div class="nav-main">
     <nav class="navbar navbar-expand-lg navbar-light ">
         <div class="container-fluid">
@@ -68,60 +68,62 @@
         </div>
       </nav>
 </div>
-        
+                <!-- CONTENTS -->
+        <div class="team">
+          <div class="team-wrapper">
+            <div class="team-container">
+              <div class="team-box">
+                <div class="team-design-top"></div>
+                    <img src="../img/aldrin.jpg">
+                    <h2>Aldrin Ramores</h2>
+                    <p>Front-End Developer</p>
+                    <div class="links">
+                    <li><a href="https://www.facebook.com/aldrin.ramores.77"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+                    <li><a href="https://github.com/aldrinnunal"><i class="fa-brands fa-github fa-xl"></i></a></li>
+                    <li><a href="https://www.instagram.com/ramoresaldrin/"><i class="fa-brands fa-instagram fa-xl"></i></a></li>
+                    </div>
+              </div>
+              <div class="team-box">
+              <div class="team-design-top"></div>
+                    <img src="../img/ciel.png">
+                    <h2>Cielito Guerrero</h2>
+                    <p>Back-End Developer</p>
+                    <div class="links">
+                    <li><a href="https://www.facebook.com/cielits"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+                    <li><a href="https://github.com/cielzguerrero"><i class="fa-brands fa-github fa-xl"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram fa-xl"></i></a></li>
+                    </div>
+              </div>
+              <div class="team-box">
+              <div class="team-design-top"></div>
+                    <img src="../img/laz.png">
+                    <h2>Lazarus Ortega</h2>
+                    <p>Documentations</p>
+                    <div class="links">
+                    <li><a href="https://www.facebook.com/lazarus.ortega"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-github fa-xl"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram fa-xl"></i></a></li>
+                    </div>
+              </div>
+          
+              <div class="team-box">
+              <div class="team-design-top"></div>
+                    <img src="../img/faller.png">
+                    <h2>Marc John Faller</h2>
+                    <p>Quality Assurance</p>
+                    <div class="links">
+                    <li><a href="https://www.facebook.com/Marcjohnfaller"><i class="fa-brands fa-facebook fa-lg"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-github fa-lg"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram fa-lg"></i></a></li>
+                    </div>
+              </div>
+             
 
-
-<!-- CONTENT -->
-   
-
-
-		<section class="title-card" id="steps">
-			<div class="title-card-wrapper">
-				<div><img src="../img/Procedures.gif" class="title-card-img" id = "img"></div>
-				<div class="title-card-text">
-					<h1>GETTING STARTED</h1>
-					<h3>Follow This Easy Steps To Claim Your Points. Prizes May Vary Monthly</h3>
-				</div>
-			</div>
-		</section>
-
-
-  <div class="card">
-  <section class = "card-content">
-			<div class="card-content-box">
-				<div class="card-1 card-box">
-					<img src="../img/signup.png">
-					<h3>REGISTER</h3>
-					<p>Create an account before segregating your non profitable and profitable waste</p>
-				</div>
-				<div class="card-2 card-box">
-				<img src="../img/login.png">
-					<h3>LOG IN</h3>
-					<p>Log your account to your respective barangay for identification</p>
-				</div>
-				<div class="card-3 card-box" >
-					<img src="../img/throw.png">
-					<h3>DROP</h3>
-					<p>Once the system recognized your identity, you can now drop all your trash in the bins.</p>
-				</div>
-			</div>
-		</section>
-
-  </div>
-		
-
-
-
-
-
-
-
-
-
-    
-
-
-
+                
+       
+            </div>
+          </div>
+        </div>
 
 
   <!-- bootstrap js -->

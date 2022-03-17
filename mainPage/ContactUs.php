@@ -59,7 +59,7 @@
               </li>
 
               <li class="nav-item ">
-                <a class="nav-link active" aria-current="page" href="#profile-title">Our Team</a>
+                <a class="nav-link active" aria-current="page" href="OurTeam.php">Our Team</a>
               </li>
         
             </ul>

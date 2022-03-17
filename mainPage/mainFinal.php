@@ -403,7 +403,7 @@ include('../includes/decreasepoint.php');
               <li><a href="AboutUs2.php">About Us</a></li>
               <li><a href="GettingStarted2.php">Getting Started</a></li>
               <li><a href="ContactUs2.php">Contact Us</a></li>
-              <li><a href="#">Our Team</a></li>
+              <li><a href="OurTeam2.php">Our Team</a></li>
             </ul>
           </div>
         </div>

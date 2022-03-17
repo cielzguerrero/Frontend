@@ -1,15 +1,4 @@
-<?php
-include ('../connections/connection.php');
-if (empty($_SESSION['username'])) {
 
-    header("Location: logout.php");
-}
-if (!isset($_SESSION['id'])){
-
-    $_SESSION['view'] = "<div class='message warning'>User Not Found.</div>";
-    header("Location: ../../Frontend/index.php");
-}
-?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -80,15 +69,61 @@ if (!isset($_SESSION['id'])){
       </nav>
 </div>
                 <!-- CONTENTS -->
- <section class="about-us" id="aboutus">
-			<div class="about-us-wrapper">
-				<h1 > ABOUT US</h1>
-				<p>G-Reward Is made by a group of students in Polytechnic University Of The Philippines - San Pedro Campus. We believe that we can motivate people to throw their garbage in a proper way and earning Cash or Prize in exchange. Our mission is to help the community in terms of cleanliness. It also helps the local government to earn funds for their future projects. We're excited and striving for a change in the environment of the community.</p>
-			</div>
-			<div class="aboutus-img"><img src="../img/About us page.gif"></div>
-		</section> 
-	
+        <div class="team">
+          <div class="team-wrapper">
+            <div class="team-container">
+              <div class="team-box">
+                <div class="team-design-top"></div>
+                    <img src="../img/aldrin.jpg">
+                    <h2>Aldrin Ramores</h2>
+                    <p>Front-End Developer</p>
+                    <div class="links">
+                    <li><a href="https://www.facebook.com/aldrin.ramores.77"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+                    <li><a href="https://github.com/aldrinnunal"><i class="fa-brands fa-github fa-xl"></i></a></li>
+                    <li><a href="https://www.instagram.com/ramoresaldrin/"><i class="fa-brands fa-instagram fa-xl"></i></a></li>
+                    </div>
+              </div>
+              <div class="team-box">
+              <div class="team-design-top"></div>
+                    <img src="../img/ciel.png">
+                    <h2>Cielito Guerrero</h2>
+                    <p>Back-End Developer</p>
+                    <div class="links">
+                    <li><a href="https://www.facebook.com/cielits"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+                    <li><a href="https://github.com/cielzguerrero"><i class="fa-brands fa-github fa-xl"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram fa-xl"></i></a></li>
+                    </div>
+              </div>
+              <div class="team-box">
+              <div class="team-design-top"></div>
+                    <img src="../img/laz.png">
+                    <h2>Lazarus Ortega</h2>
+                    <p>Documentations</p>
+                    <div class="links">
+                    <li><a href="https://www.facebook.com/lazarus.ortega"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-github fa-xl"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram fa-xl"></i></a></li>
+                    </div>
+              </div>
+          
+              <div class="team-box">
+              <div class="team-design-top"></div>
+                    <img src="../img/faller.png">
+                    <h2>Marc John Faller</h2>
+                    <p>Quality Assurance</p>
+                    <div class="links">
+                    <li><a href="https://www.facebook.com/Marcjohnfaller"><i class="fa-brands fa-facebook fa-lg"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-github fa-lg"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram fa-lg"></i></a></li>
+                    </div>
+              </div>
+             
 
+                
+       
+            </div>
+          </div>
+        </div>
 
 
   <!-- bootstrap js -->

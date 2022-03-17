@@ -67,7 +67,7 @@ include('includes/register.php');
 					<a class="nav-link" href="mainPage/ContactUs.php">Contact</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Our Team</a>
+					<a class="nav-link" href="mainPage/OurTeam.php">Our Team</a>
 				</li>
 			
 				</ul>
