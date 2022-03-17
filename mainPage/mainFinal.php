@@ -150,12 +150,13 @@ include('../includes/decreasepoint.php');
 
 
       <div class="main-wrapper">
-          <!-- NEWS SECTION -->
+          <!-- NEWS SECTION -->   
            <div class="titles title0" id="news-title">
             <h2>News</h2>
            </div>
           <!-- CAROUSEL -->
           <div class="owl-carousel owl-theme">
+         
           <?php
           $sql = "SELECT * FROM news";
           $result = mysqli_query($conn, $sql);
@@ -166,7 +167,7 @@ include('../includes/decreasepoint.php');
             <a href="NewsContent.php?ID=<?php echo $rows['news_id'];?>">continue reading...</a></p></div>
           <?php $ranker++; } while ($rows = mysqli_fetch_assoc($result))?>
           </div>
-
+      
           <!-- RANKING SECTION -->
            <div class="titles title1" id="rankings-title">
             <h2>Rankings</h2>
@@ -229,7 +230,9 @@ include('../includes/decreasepoint.php');
                  
                  
                </div>
+               <div class="border-color-top"></div>
              </div>
+         
            </div>
 
 
