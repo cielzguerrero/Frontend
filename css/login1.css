@@ -16,7 +16,7 @@ body{
     left: 0;
     right: 0;
     margin: auto !important;
-    padding: 10px !important;
+    padding: 1px !important;
     z-index: 1000;
     background-color: #151c26 !important;
 }
