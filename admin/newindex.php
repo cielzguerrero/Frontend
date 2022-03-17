@@ -108,7 +108,7 @@ include('chartjava.php');?>
         <header>
             <h1>
                 <label for="navigation-toggle">
-                    <div><span class="la la-dashboard"></span>Dashboard</div>
+                    <div><span class="las la-bars"></span>Dashboard</div>
                 </label>
             </h1>
             <div class="user-wrapper">
