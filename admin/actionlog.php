@@ -169,7 +169,7 @@ include('chartjava.php');?>
                                 </table>
                             </div>
                             <div class="logheader" style="text-align:center;">
-                                <h4>Temporary User Transaction</h4>
+                                <h4>User Transactions</h4>
                             </div>
                             <div class="logcard-body">
                                 <table class="table table-striped table-bordered" id="datatable">

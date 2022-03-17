@@ -141,8 +141,8 @@ include('chartjava.php');?>
                             $ranker = 1; 
                             do { ?>
                             <div class="garbagebox">
-                                <p style="text-align: center;padding-top:.1rem;"><?php echo $rows['garbage_Name'];?></p>
-                                <img src="images/garbage/<?php echo $rows['garbage_Img'];?>" style = "width:100%; height:12rem;">
+                                <p ><?php echo $rows['garbage_Name'];?></p>
+                                <img src="images/garbage/<?php echo $rows['garbage_Img'];?>" style = "width:100%; height:12rem; padding-bottom:10px;">
                                 <div class="description" style="text-align: center;">
                                     <i>Points: <?php echo $rows['garbage_Points'];?></i>
                                     <div class="buttonactions">

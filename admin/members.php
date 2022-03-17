@@ -132,8 +132,8 @@ include('chartjava.php');?>
         <div class="member-grid">
                     <div class="leaderboards">
                         <div class="card">
-                            <div class="memberheader" style="text-align:center;">
-                                <h4>Profile/Members</h4>
+                            <div class="memberheader">
+                                <h4>Profiles</h4>
                             </div>
                             <div class="membercard-body">
                                 <table class="table table-striped table-bordered" id="datatable">
