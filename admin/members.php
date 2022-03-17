@@ -134,6 +134,7 @@ include('chartjava.php');?>
                         <div class="card">
                             <div class="memberheader" style="text-align:center;">
                                 <h4>Profile/Members</h4>
+                                <p><?php echo $_SESSION['update'];?></p>
                             </div>
                             <div class="membercard-body">
                                 <table class="table table-striped table-bordered" id="datatable">
