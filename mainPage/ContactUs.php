@@ -78,7 +78,7 @@
 			<form action="../includes/contactform.php" method="POST">
 			<div class="form-group">
 			<h1>CONTACT US</h1>
-			<h3>Have any questions? Sends us a message</h3>
+			<h3>Have any questions? Send us a message</h3>
 				<div class="form-group">
 					
 					<input type="text" class="form-control" id="exampleInputPassword1" name="name" placeholder="Full Name">
