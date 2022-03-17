@@ -43,7 +43,7 @@
             <ul class="navbar-nav ms-auto mb-2  align-items-center">
                 
             <li class="nav-item ">
-                <a class="nav-link active" aria-current="page" href="mainFinal.php">Home</a>
+                <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
               </li>
 
               <li class="nav-item">

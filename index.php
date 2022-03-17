@@ -61,10 +61,10 @@ include('includes/register.php');
 					<a class="nav-link" href="mainPage/GettingStarted.php">Getting Started <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">About Us</a>
+					<a class="nav-link" href="mainPage/AboutUs.php">About Us</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Contact</a>
+					<a class="nav-link" href="mainPage/ContactUs.php">Contact</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Our Team</a>

@@ -387,9 +387,9 @@ include('../includes/decreasepoint.php');
             <h6>Information</h6>
             <ul class="footer-links">
             
-              <li><a href="AboutUs.php">About Us</a></li>
-              <li><a href="GettingStarted.php">Getting Started</a></li>
-              <li><a href="ContactUs.php">Contact Us</a></li>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Getting Started</a></li>
+              <li><a href="">Contact Us</a></li>
               <li><a href="#">Our Team</a></li>
             </ul>
           </div>
