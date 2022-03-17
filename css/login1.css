@@ -126,7 +126,7 @@ header{
 }
 
 .btn1:hover{
-    background-color: #0d6efd;;
+    background-color: #151c26;
 }
 .btn2{
     font-family: "Poppins", sans-serif;
@@ -147,7 +147,7 @@ header{
     padding-left: 35px;
     cursor: pointer;
     margin-left: 5px;
-    background-color: #0d6efd;
+    background-color:#273547;
 }
 
 /* FOOTER */
