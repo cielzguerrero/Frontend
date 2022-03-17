@@ -1,14 +1,13 @@
 <?php 
 if(isset($_POST['submit'])){
 
-	$username = mysqli_real_escape_string($conn, $_POST['username']); 
+    $username = mysqli_real_escape_string($conn, $_POST['username']); 
     $password = mysqli_real_escape_string($conn, $_POST['password']); 
 
     $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
     $result = mysqli_query($conn, $sql);
     $count = mysqli_num_rows($result);
     $row = mysqli_fetch_assoc($result);
-	$username = $row['username'];
     $fullname = $row['fullname'];
     $status = $row['status'];
     if ($count == 1) {
@@ -27,9 +26,9 @@ if(isset($_POST['submit'])){
         $status = $rows['status'];
         $id = $rows['id'];
         if ($rcount == 1 AND $status == "Member" ){
-			$_SESSION['id'] = $id;
-			$_SESSION['username'] = $username;
-			header("Location: mainPage/mainFinal.php");
+        $_SESSION['id'] = $id;
+		$_SESSION['username'] = $username;
+		header("Location: mainPage/mainFinal.php");
         }
         else
         {

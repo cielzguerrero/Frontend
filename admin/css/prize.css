@@ -54,7 +54,7 @@
 .box .box-wrapper .prizebox
 {
     display: inline-block;
-    background: #d9b48fff;
+    background: rgb(224,255,255);
     margin-left: 1.5rem;
     height: 20.5rem;
     width: 15rem;
@@ -72,7 +72,7 @@
 .box .indexbox-wrapper .indexprizebox
 {
     display: inline-block;
-    background: #d9b48fff;
+    background: rgb(224,255,255);
     height: 10.5rem;
     width: 10rem;
     border-radius: 5px;
