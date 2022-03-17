@@ -221,6 +221,7 @@ footer {
     padding: 0px !important;
     border: none;
     color: #fbfbfb;
+    text-align: center;
     font-weight: 2rem;
     font-family: "Poppins",sans-serif;
     background-color: 	#323949;
@@ -485,6 +486,7 @@ footer {
         z-index: 1000;
         background-color: #151c26 !important;
     }
+   
     .navbar{
         width: 100%;
         padding: 0;

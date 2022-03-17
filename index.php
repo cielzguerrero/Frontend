@@ -222,7 +222,7 @@ include('includes/register.php');
 			<div class="modal-body">
 				<form action="" class="text-center" method="post">
 					<div class="form-group w-100 ">
-						   <label for="formGroupExampleInput"><i class="fa-solid fa-user"></i>   Username</label>
+						   <label for="formGroupExampleInput"><i class="fa-solid fa-user"></i>  Username</label>
  						   <input type="text" class="form-control w-75 shadow-none"  id="formGroupExampleInput" name="username" id="username" placeholder="">
 					</div>
 					<div class="form-group w-100">
