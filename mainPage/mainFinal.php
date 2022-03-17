@@ -226,7 +226,7 @@ include('../includes/decreasepoint.php');
                       $rank = 4;
                       $number = 0;
                       do { ?>
-                        <tr class = "trBorder">
+                        <tr class = "trBorder">""
                           <td aria-placeholder="none"><?php echo $rank;?>th</td>
                           <td class="rank-image" aria-placeholder="none"><img src="../admin/images/profile/<?php echo $rows['img_name'];?>" style="background:white;"></td>
                           <td><?php echo $rows['profileuser'];?></td>
