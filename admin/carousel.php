@@ -141,7 +141,7 @@ include('chartjava.php');?>
                                 <?php echo $ranker;?>
                                 <img src="images/prize/<?php echo $rows['prize_img'];?>" style = "width:100%; height:12rem;">
                                 <div class="pdescription" style="text-align:center;">
-                                    <h4 style="text-align:center;"><?php echo $rows['prize'];?></h4> 
+                                    <h4 style="text-align:center;"><?php echo $rows['prizename'];?></h4> 
                                     <i><?php echo $rows['pdescription'];?></i>
                                     <div class="pbutton"><button><a href="editprize.php?ID=<?php echo $rows['id'];?>" class="editprize">Edit</a></button><button><a  onclick="return confirm('Are you sure')" href="deleteprize.php?ID=<?php echo $rows['id'];?>&Image_Name=<?php echo $rows['prize_img'];?>" <?php if ($count <= 1) { echo 'style="pointer-events: none;color:red;"'; } ?>>Delete</a></button></div>
                                 </div>

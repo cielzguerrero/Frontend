@@ -2,6 +2,7 @@
 
 if (isset($_POST['rsubmit'])){
 $username = $_SESSION['username'];
+$key = md5(rand(0, 9999));
 $time = date("Y-m-d H:i:s");
 $t_time = date("H:i:s");
 $t_date = date("Y-m-d");
@@ -18,7 +19,7 @@ $result = mysqli_query($conn, $sql);
 if($result) {
     $log = "INSERT INTO logs (user, activity, datetime) VALUES ('$username', '$activity','$time')";
     $result = mysqli_query($conn, $log);
-    $temp ="INSERT INTO tempo (profile_name, t_reward, t_date, t_time, datetransaction) VALUES ('$username', '$prize','$t_date', '$t_time', '$time')";
+    $temp ="INSERT INTO tempo (profile_name, t_reward, t_date, t_time, datetransaction, securitykey) VALUES ('$username', '$prize','$t_date', '$t_time', '$time' ,'$key')";
     $tresult = mysqli_query($conn, $temp);
     header("Location: receipt.php?ID={$id}");
 } else {

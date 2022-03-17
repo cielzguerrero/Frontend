@@ -163,7 +163,7 @@ include('../includes/decreasepoint.php');
           $ranker = 1; 
           do { ?>
             <div class="item"><img src="../admin/images/news/<?php echo $rows['news_img'];?>"><h4><?php echo $rows['news_title'];?></h4><p><?php echo $rows['news_description'];?><p> Posted by <?php echo $rows['postedby'];?> on <?php echo $rows['datetime'];?> | Last Updated <?php echo time_elapsed_string($rows['lastupdate']); ?>.</p>
-            <a href="NewsContent.php">continue reading...</a></p></div>
+            <a href="NewsContent.php?ID=<?php echo $rows['news_id'];?>">continue reading...</a></p></div>
           <?php $ranker++; } while ($rows = mysqli_fetch_assoc($result))?>
           </div>
 
@@ -179,28 +179,31 @@ include('../includes/decreasepoint.php');
                <div class="rank-3">
                   <div class="top2">
                   <?php
+                  
                   $sql = "SELECT * FROM members ORDER BY points DESC LIMIT 1,2";
                   $rsult = mysqli_query($conn, $sql);
                   $row = mysqli_fetch_assoc($rsult);
                                                  
                   ?>
-                    <img src="../admin/images/profile/<?php echo $row['img_name'];?>" ><p><?php echo $row['profilename'];?></p><h5><?php echo $row['points'];?></h5>
+                    <img src="../admin/images/profile/<?php echo $row['img_name'];?>" ><p><?php echo $row['profilename'];?></p><h5><?php echo $row['totalpoints'];?></h5>
                   </div>
                   <div class="top1">
                   <?php
+
                   $sql = "SELECT * FROM members ORDER BY points DESC LIMIT 0,1";
                   $rsult = mysqli_query($conn, $sql);
                   $row = mysqli_fetch_assoc($rsult);                                      
                   ?>
-                    <img src="../admin/images/profile/<?php echo $row['img_name'];?>" ><p><?php echo $row['profilename'];?></p><h5><?php echo $row['points'];?></h5>
+                    <img src="../admin/images/profile/<?php echo $row['img_name'];?>" ><p><?php echo $row['profilename'];?></p><h5><?php echo $row['totalpoints'];?></h5>
                   </div>
                   <div class="top3">
                   <?php
+
                   $sql = "SELECT * FROM members ORDER BY points DESC LIMIT 2,3";
                   $rsult = mysqli_query($conn, $sql);
                   $row = mysqli_fetch_assoc($rsult);                                               
                   ?>
-                    <img src="../admin/images/profile/<?php echo $row['img_name'];?>" ><p><?php echo $row['profilename'];?></p><h5><?php echo $row['points'];?></h5>
+                    <img src="../admin/images/profile/<?php echo $row['img_name'];?>" ><p><?php echo $row['profilename'];?></p><h5><?php echo $row['totalpoints'];?></h5>
                   </div>
                </div>
                
@@ -218,7 +221,7 @@ include('../includes/decreasepoint.php');
                           <td><?php echo $rank;?>th</td>
                           <td class="rank-image"><img src="../admin/images/profile/<?php echo $rows['img_name'];?>" style="background:white;"></td>
                           <td><?php echo $rows['profilename'];?></td>
-                          <td><?php echo $rows['points'];?></td>
+                          <td><?php echo $rows['totalpoints'];?></td>
                         </tr>
                         <?php $rank++;} while (($rows = mysqli_fetch_assoc($result)) and ($number <= 4))?>                 
                       </table>
@@ -384,9 +387,9 @@ include('../includes/decreasepoint.php');
             <h6>Information</h6>
             <ul class="footer-links">
             
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Getting Started</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="AboutUs.php">About Us</a></li>
+              <li><a href="GettingStarted.php">Getting Started</a></li>
+              <li><a href="ContactUs.php">Contact Us</a></li>
               <li><a href="#">Our Team</a></li>
             </ul>
           </div>
@@ -447,12 +450,13 @@ include('../includes/decreasepoint.php');
                             <div class="row align-items-center">
                               <form action="" method="POST" enctype="multipart/form-data" style="display:inline-flex;">
                                 <div class="col">
-                                  <p>PHP <?php echo $rows['prize'];?></p>
-                                  <input type="text" name="rprize" value="<?php echo $rows['prize'];?>" style="display:none;">
+                                  <p><?php echo $rows['prizename'];?></p>
+
+                                  <input type="text" name="rprize" value="<?php echo $rows['pesos'];?>" style="display:none;">
                                 </div>
                                 <div class="col">
-                                <button type="submit" onclick="return confirm('Are you sure')" class="btn btn-primary btn-lg"  name="rsubmit" value="<?php echo $rows['price']; ?>">
-                                <?php echo $rows['price']; ?> PTS
+                                <button type="submit" onclick="return confirm('Are you sure')" class="btn btn-primary btn-lg"  name="rsubmit" value="<?php echo $rows['points']; ?>">
+                                <?php echo $rows['points']; ?> PTS
                                 </button>
                                 </div>
                               </form>

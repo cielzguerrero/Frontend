@@ -72,7 +72,7 @@ include('../includes/decreasepoint.php');
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
 
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../mainPage/mainFinal.php">Home</a>
+                <a class="nav-link active" aria-current="page" href="../mainPage/mainFinal.php" onclick="return confirm('Have you saved this record?')">Home</a>
               </li>
               
           
@@ -86,7 +86,7 @@ include('../includes/decreasepoint.php');
                   <li><a class="dropdown-item" href="#">Profile</a></li>
                   <li><a class="dropdown-item" href="#logs-title">Logs</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="../logout.php">Sign Out</a></li>
+                  <li><a class="dropdown-item" href="../logout.php" onclick="return confirm('Have you saved this record?')">Sign Out</a></li>
                 </ul>
               </li>
              
@@ -130,6 +130,7 @@ include('../includes/decreasepoint.php');
              <p>Reward to Receive: <?php echo $drows['t_reward'];?> pesos </p>
              <h5>Date: <?php echo $drows['t_date'];?></h5>
              <h5>Time: <?php echo $drows['t_time'];?></h5>
+             <h5>Reference Number: <?php echo $drows['securitykey'];?></h5>
         </div>
          
                   

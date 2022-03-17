@@ -37,7 +37,8 @@ if (empty($_SESSION['username'])) {
      $id = $_POST['id'];
      $prizen = $_POST['pname'];
      $description = $_POST['pdesc'];
-     $pricen = $_POST['pprice'];
+     $peso = $_POST['ppeso'];
+     $price = $_POST['ppoints'];
      $current_image = $_POST['current_image'];
      $image_name = $_POST['image'];
      if(isset($_FILES['image']['name'])){
@@ -79,7 +80,7 @@ if (empty($_SESSION['username'])) {
              $image_name = $current_image;
          }
  
-     $sql = "UPDATE prizes SET prize = '$prizen', pdescription = '$description', price = '$pricen', prize_img = '$image_name' WHERE id = '$id'";
+     $sql = "UPDATE prizes SET prizename = '$prizen', pesos = '$peso' , pdescription = '$description', points = '$price', prize_img = '$image_name' WHERE id = '$id'";
      $result = mysqli_query($conn, $sql);
  
      if($result) {
@@ -180,12 +181,13 @@ include('chartjava.php');?>
         <main>
             <div class="editprizegrid">
                 <div class="editwrappers">
-                    <div class="editcontent">
-                        <div class="editprizecontent">
+                    <div class="editcontent" style="height:29.5rem;">
+                        <div class="editprizecontent" style="height:26.5rem;">
                             <form action="" method="POST" enctype="multipart/form-data">                            
-                                            <h3>Name: <input type="text" name="pname" value="<?php echo $row['prize']; ?>" autocomplete="off" required> </h3>                   
-                                            <h3>Description: <input type="text" name="pdesc" value="<?php echo $row['pdescription']; ?>" autocomplete="off" required></h3>                               
-                                            <h3>Price:  <input type="text" name="pprice" value="<?php echo $row['price']; ?>" autocomplete="off" required></h3>                
+                                            <h3>Name: <input type="text" name="pname" value="<?php echo $row['prizename']; ?>" autocomplete="off" required> </h3>                   
+                                            <h3>Description: <input type="text" name="pdesc" value="<?php echo $row['pdescription']; ?>" autocomplete="off" required></h3>
+                                            <h3>Peso: <input type="text" name="ppeso" value="<?php echo $row['pesos']; ?>" autocomplete="off" required></h3> 
+                                            <h3>Price: <input type="text" name="ppoints" value="<?php echo $row['points']; ?>" autocomplete="off" required></h3>                
                                             <h3>Current Image: 
                                             <img src="images/prize/<?php echo $row['prize_img'];?>" style = "width:7rem;height:7rem;border-style:solid;border-radius:5px;padding:0.5rem;border-width:2px;" onerror="this.style.display='none';"></h3>
                                             <h3 class="pimage">Prize Image: </h3>
@@ -198,9 +200,13 @@ include('chartjava.php');?>
                         </div>
                     </div>
                 </div>
-                <div class="editactions">
-                <h2 class="buttonaction">Actions</h2>
-                        <button class=""><a href="carousel.php">Return</a> </button>
+                <div class="editactions" style="height:29.5rem;">
+                <div class="editactionbutton">
+                    <h2 class="buttonaction">Actions</h2>
+                            <div>
+                                <button class=""><a href="carousel.php">Return</a> </button>
+                            </div>
+                    </div>
                 </div>
             </div>         
         </main>

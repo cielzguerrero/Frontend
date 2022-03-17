@@ -12,7 +12,8 @@ if (empty($_SESSION['username'])) {
      $activity = "Added New Prize";
      $prizen = $_POST['pname'];
      $description = $_POST['pdesc'];
-     $price = $_POST['pprice'];
+     $peso = $_POST['ppeso'];
+     $price = $_POST['ppoints'];
     if(isset($_FILES['image']['name'])) {
 
         $image_name = $_FILES['image']['name'];
@@ -39,7 +40,7 @@ if (empty($_SESSION['username'])) {
 
     }
     
-    $sql = "INSERT INTO prizes (prize, pdescription, price, prize_img) VALUES ('$prizen', '$description', '$price', '$image_name')";
+    $sql = "INSERT INTO prizes (prizename,pesos, pdescription, points, prize_img) VALUES ('$prizen', '$peso', '$description',  '$price', '$image_name')";
     $result = mysqli_query($conn, $sql);
     if($result == TRUE) {
         $log = "INSERT INTO logs (user, activity, datetime) VALUES ('$username', '$activity', '$time')";
@@ -143,9 +144,11 @@ include('chartjava.php');?>
                     <div class="editcontent">
                         <div class="editprizecontent">
                             <form action="" method="POST" enctype="multipart/form-data">                            
-                                            <h3>Name: <input type="text" name="pname" value="Prize Name" autocomplete="off" required> </h3>                   
-                                            <h3>Description: <input type="text" name="pdesc" value="Prize Description" autocomplete="off" required></h3>                               
-                                            <h3>Price:  <input type="text" name="pprice" value="Prize Price" autocomplete="off" required></h3>                
+                                            <h3>Name: <input type="text" name="pname" placeholder="Prize Name" autocomplete="off" required> </h3>
+                                                            
+                                            <h3>Description: <input type="text" name="pdesc" placeholder="Prize Description" autocomplete="off" required></h3>
+                                            <h3>Peso: <input type="text" name="ppeso" placeholder="Insert Pesos" autocomplete="off" required></h3>                               
+                                            <h3>Points:  <input type="text" name="ppoints" placeholder="Insert Points" autocomplete="off" required></h3>                
                                             <h3 class="pimage">Prize Image: </h3>
                                             <input type="file" name="image">
                                             <div class="buttonupdate">

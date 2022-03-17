@@ -149,7 +149,7 @@ include('chartjava.php');?>
                                     </thead>
                                     <tbody>
                                         <?php  
-                                        $sql = "SELECT * FROM logs ORDER by id  DESC";
+                                        $sql = "SELECT * FROM logs ORDER by logs.id DESC";
                                         $result = mysqli_query($conn, $sql);
                                         $rows = mysqli_fetch_assoc($result);                                        
                                         $rank = 1;
@@ -177,7 +177,8 @@ include('chartjava.php');?>
                                     <tr>
                                         <th>User</th>
                                         <th>Activity</th>
-                                        <th>Elapsed Time</th>
+                                        <th>Date of Transaction</th>
+                                        <th>Reference Number</th>
                                         <th>Actions | <a onclick="return confirm('Are you sure')" href="deletealltemplog.php" class="btn btn-danger">Delete All</a></th>          
                                     </tr>
                                     </thead>
@@ -191,8 +192,9 @@ include('chartjava.php');?>
                                         do { ?>
                                             <tr>
                                             <td><?php echo $drows['profile_name'];?></td>
-                                            <td> Claimed <?php echo $drows['t_reward'];?></td>
+                                            <td> Claimed <?php echo $drows['t_reward'];?> Pesos</td>
                                             <td><?php echo $drows['datetransaction'];?></td>
+                                            <td><?php echo $drows['securitykey'];?></td>
                                             <td>
                                                 <a onclick="return confirm('Are you sure')" href="deletetemplog.php?ID=<?php echo $drows['id'];?>" class="btn btn-danger">Delete</a>
                                             </td>

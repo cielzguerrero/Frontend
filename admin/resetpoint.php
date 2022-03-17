@@ -30,7 +30,7 @@ $profileuser = $row['username'];
 $activity = $row['profilename']." : Profile Points Restarted";
 $currentpoint = $row['points'];
 $point = 0;
-$sql = "UPDATE members SET points = '$point' WHERE id = '$id'";
+$sql = "UPDATE members SET points = '$point', totalpoints = '$point' WHERE id = '$id'";
 $result = mysqli_query($conn, $sql);
 if($result) {
     $log = "INSERT INTO logs (user, activity) VALUES ('$profileuser', '$activity')";

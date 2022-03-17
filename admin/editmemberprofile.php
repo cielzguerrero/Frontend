@@ -18,7 +18,12 @@ if (empty($_SESSION['username'])) {
      $sql = "SELECT * FROM members WHERE id = $id";
      $result = mysqli_query($conn, $sql);
      $row = mysqli_fetch_assoc($result);
- 
+     $status = $row['status'];
+
+     $tsql = "SELECT * FROM members WHERE status ='Admin'";
+     $result = mysqli_query($conn, $tsql);
+     $count = mysqli_num_rows($result);
+
      if($result == TRUE) {
          $count = mysqli_num_rows($result);
          
@@ -196,13 +201,32 @@ include('chartjava.php');?>
                                                 <h3>Full Name: <input type="text" name="fname" value="<?php echo $row['fullname']; ?>" autocomplete="off" required> </h3>
                                                 <h3>Email: <input type="text" name="email" value="<?php echo $row['email']; ?>" autocomplete="off" required></h3>
                                                 <h3>Status: 
-                                                    <select id="status" name="sname" value="<?php echo $row['status']; ?>">
-                                                        <option value="Member">Member</option>
+                                                    <select id="status" name="sname" value="<?php echo $row['status']; ?>" >
+                                                    <option value="<?php echo $row['status']; ?>" selected><?php echo $row['status']; ?></option>
+                                                    <?php if ($status == "Admin")
+                                                    {?>
+                                                        <?php if ($count <= 1) {?>
                                                         <option value="Admin">Admin</option>
+                                                        <?php } else { ?>
+                                                        <option value="Member">Member</option>
+                                                        <?php };?>
+                                                    <?php } else { ?>
+                                                        <option value="Member">Member</option>
+                                                    <?php };?>
+                                                    <option value="Admin">Admin</option>
                                                     </select>
                                                 </h3>
                                                 <h3>Contact: <input type="text" name="pcontact" value="<?php echo $row['contact'];?>" autocomplete="off" required></h3>
-                                                <h3>Address: <input type="text" name="paddress" value="<?php echo $row['address'];?>" autocomplete="off" required></h3>                                         
+                                                <h3>Address: 
+                                                    <select class="custom-select w-100 p-2" id="inputGroupSelect01" name="paddress" value="<?php echo $row['address'];?>">
+                                                        <option value="<?php echo $row['address'];?>"><?php echo $row['address'];?></option>
+                                                        <option value="Barangay Nueva">Barangay Nueva</option>
+                                                        <option value="Barangay San Antonio">Barangay San Antonio</option>
+                                                        <option value="Barangay San Vicente">Barangay San Vicente</option>
+                                                        <option value="Barangay San Roque">Barangay San Roque</option>
+                                                        <option value="Barangay Landayan">Barangay Landayan</option>                                           
+                                                    </select>
+                                                </h3>                                         
                                                 <br>
                                                 <input type="hidden" name="current_image" value="<?php echo $row['img_name'];?>">
                                                 <input type="hidden" name="id" value="<?php echo $row['id'];?>">

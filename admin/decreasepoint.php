@@ -28,7 +28,7 @@ $username = $_SESSION['username'];
 $profileuser = $row['username'];
 $activity = $row['profilename']." : Lost 150 points";
 $currentpoint = $row['points'];
-$point = 150;
+$point = 1500;
 $collectedpoint = $currentpoint;
 $sum = $collectedpoint - $point;
 

@@ -26,17 +26,24 @@ if (!isset($_GET['ID'])){
 }
 $username = $_SESSION['username'];
 $profileuser = $row['username'];
+$datetime = date("Y-m-d H:i:s");
 $activity = $row['profilename']." : Gained 1500 points";
 $currentpoint = $row['points'];
 $point = 1500;
 $collectedpoint = $currentpoint;
 $sum = $collectedpoint + $point;
+$currenttotal= $row['totalpoints'];
+$totalsum = $currenttotal + $point;
 
-$sql = "UPDATE members SET points = '$sum' WHERE id = '$id'";
+$sql = "UPDATE members SET points = '$sum', totalpoints = '$totalsum' WHERE id = '$id'";
 $result = mysqli_query($conn, $sql);
 if($result) {
     $log = "INSERT INTO logs (user, activity) VALUES ('$profileuser', '$activity')";
     $result = mysqli_query($conn, $log);
+
+    $deposit ="INSERT INTO deposits (id, user, points, datetime) VALUES ('$id', '$profileuser', '$point', '$datetime')";
+    $result = mysqli_query($conn, $deposit);
+
     header("Location: viewmemberprofile.php?ID={$id}");
 } else {
     header("Location: members.php");

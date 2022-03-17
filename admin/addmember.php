@@ -156,7 +156,16 @@ include('chartjava.php');?>
                                                     </select>
                                                 </h3>
                                                 <h3>Contact: <input type="text" name="pcontact" value="Contact" autocomplete="off" required></h3>
-                                                <h3>Address: <input type="text" name="paddress" value="Address" autocomplete="off" required></h3>                                            
+                                                <h3>Address:
+                                                <select class="custom-select w-100 p-2" id="inputGroupSelect01" name="paddress">
+                                                    <option value="Barangay Nueva" selected>Barangay Nueva</option>
+                                                    <option value="Barangay San Antonio">Barangay San Antonio</option>
+                                                    <option value="Barangay San Vicente">Barangay San Vicente</option>
+                                                    <option value="Barangay San Roque">Barangay San Roque</option>
+                                                    <option value="Barangay Landayan">Barangay Landayan</option>
+                                                </select>    
+                                                </h3>
+                                                                                        
                                                 <br>
                                             </div>  
                                         </div>

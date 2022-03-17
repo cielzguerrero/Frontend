@@ -1,4 +1,32 @@
+<?php
+include ('../connections/connection.php');
+if (empty($_SESSION['username'])) {
 
+    header("Location: logout.php");
+}
+if (!isset($_SESSION['id'])){
+
+    $_SESSION['view'] = "<div class='message warning'>User Not Found.</div>";
+    header("Location: ../../Frontend/index.php");
+
+} else {
+  $id = $_GET['ID'];
+ 
+     $sql = "SELECT * FROM news WHERE news_id = $id";
+     $result = mysqli_query($conn, $sql);
+     $row = mysqli_fetch_assoc($result);
+ 
+     if($result == TRUE) {
+         $count = mysqli_num_rows($result);
+         
+         if ($count > 0) {
+         } else {
+             $_SESSION['update'] = "<div class='message warning'>User Not Found.</div>";
+             header("Location: carousel.php");
+         }
+     }
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -55,31 +83,10 @@
         <!-- CONTENTS -->
     <div class="news">
         <div class="news-wrapper">
-            <img src="../mainPage/main-images/1img.jpg">
-               <h1>Title Waste Management</h1>
-               <h3>Description Waste Management</h3>
-               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus odit aperiam adipisci consectetur i
-                   d rem consequatur dicta. Dolorem cum veniam maiores dolore
-                    sapiente reiciendis, accusamus iste,
-                     facilis eius ea aperiam?
-                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus odit aperiam adipisci consectetur i
-                   d rem consequatur dicta. Dolorem cum veniam maiores dolore
-                    sapiente reiciendis, accusamus iste,
-                     facilis eius ea aperiam?
-                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus odit aperiam adipisci consectetur i
-                   d rem consequatur dicta. Dolorem cum veniam maiores dolore
-                    sapiente reiciendis, accusamus iste,
-                     facilis eius ea aperiam?
-                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus odit aperiam adipisci consectetur i
-                   d rem consequatur dicta. Dolorem cum veniam maiores dolore
-                    sapiente reiciendis, accusamus iste,
-                     facilis eius ea aperiam?
-                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus odit aperiam adipisci consectetur i
-                   d rem consequatur dicta. Dolorem cum veniam maiores dolore
-                    sapiente reiciendis, accusamus iste,
-                     facilis eius ea aperiam?</p>
-
-
+        <img src="../admin/images/news/<?php echo $row['news_img'];?>">
+               <h1><?php echo $row['news_title'];?></h1>
+               <h3><?php echo $row['news_description'];?></h3>
+               <p><?php echo $row['news_content'];?></p>
         </div>
     </div>
       

@@ -136,7 +136,7 @@ include('chartjava.php');?>
                                     <div class="indexbox-wrapper">
                                         <?php do { ?>
                                         <div class="indexprizebox">
-                                            <?php echo $rows['prize'];?>
+                                            <?php echo $rows['prizename'];?>
                                             <img src="images/prize/<?php echo $rows['prize_img'];?>" style = "width:100%; height:7.5rem;">
                                             <i class="pindexdescription"><?php echo $rows['pdescription'];?></i>
                                         </div>
@@ -195,7 +195,7 @@ include('chartjava.php');?>
                                             <tr>
                                                 <td><?php echo $rank;?></td>
                                                 <td><?php echo $rows['profilename'];?></td>
-                                                <td><?php echo $rows['points'];?></td>
+                                                <td><?php echo $rows['totalpoints'];?></td>
                                             </tr>
                                         <?php $rank++;} while (($rows = mysqli_fetch_assoc($result)) and ($number <= 10))?>
                                     </tbody>

@@ -218,3 +218,11 @@
     padding-top: .5rem;
     padding-left: .5rem;
 }
+.editactionbutton
+{
+    margin: 1rem;
+    padding: 1rem;
+    background: white;
+    height: 26.5rem;
+    border-radius: 5px;
+}
