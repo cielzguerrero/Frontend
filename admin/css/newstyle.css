@@ -332,13 +332,13 @@ table
     margin-top: 2rem;
    
 } 
-/* .news-grid
+.news-grid
 {
-    margin-top: 1rem;
+    margin-top: 2rem !important; 
     display: flex;
     grid-template-columns: 100%;
     grid-gap: 1rem;
-}  */
+} 
 .news-box-wrapper{
     
 }
@@ -362,9 +362,9 @@ table
     width: 60%;
     margin: auto;
 }
-.news-box .news-description {
-    width: 60%;
-    color: #fbfbfb !important;
+.news-box .newsdescription {
+    width: 100% !important;
+    color: #242424 !important;
 }
 .editprize{
     color: #fbfbfb;
@@ -559,8 +559,14 @@ table
         width: 80%;
         font-size: 1rem;
     }
+    .newsaction button{
+        padding: 0 !important;
+        color: #062C30;
+    }
+   
 }
 @media only screen and (max-width: 650px) {
+   
     .cards
     {
         grid-template-columns: 100%;

@@ -133,7 +133,7 @@ include('chartjava.php');?>
                     <div class="leaderboards">
                         <div class="card">
                             <div class="memberheader" style="text-align:center;">
-                                <h4>Profile/Members</h4>
+                                <h4>Profile</h4>
                                 <p><?php echo $_SESSION['update'];?></p>
                             </div>
                             <div class="membercard-body">
@@ -158,7 +158,7 @@ include('chartjava.php');?>
                                         $number = 0;
                                         do { ?>
                                             <tr>
-                                                <td><img src="images/profile/<?php echo $rows['img_name'];?>" style = "width:2rem;height:2rem;border: 2px solid rgb(0, 161, 205);;" onerror="this.style.display='none' border-style='solid' border-width='5px' ;"></td>
+                                                <td><img src="images/profile/<?php echo $rows['img_name'];?>" style = "width:2rem;height:2rem;border: 3px solid white; border-radius:100%;" onerror="this.style.display='none' border-style='solid' border-width='5px' ;"></td>
                                                 <td><?php echo $rows['profilename'];?></td>
                                                 <td><?php echo $rows['status'];?></td>
                                                 <td><?php echo $rows['datecreated'];?></td>

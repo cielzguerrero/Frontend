@@ -172,7 +172,7 @@ include('chartjava.php');?>
                                 <div class="newsbox">
                                     <div class="news-divide">
                                         <div>
-                                            <img src="../images/news<?php echo $rows['news_img'];?>" style = "border: 2px solid #767676;width:95%; height:18rem;">
+                                            <img src="../images/news<?php echo $rows['news_img'];?>" style = "border: 2px solid #767676;width:100%; height:18rem;">
                                         </div>
                                         <div>
                                             <div class="newsdescription">
@@ -181,7 +181,7 @@ include('chartjava.php');?>
                                                 <br>
                                                 <i><?php echo $rows['news_description'];?></i>
                                                 <br>
-                                                <div class="newsbutton"><button ><a href="newspage.php?ID=<?php echo $rows['news_id'];?>"class="editprize">View</a></button><button><a href="editnews.php?ID=<?php echo $rows['news_id'];?>" class="editprize">Edit</a></button><button><a onclick="return confirm('Are you sure')"  href="deletenews.php?ID=<?php echo $rows['news_id'];?>&Image_Name=<?php echo $rows['news_img'];?>"<?php if ($count <= 1) { echo 'style="pointer-events: none;color:red;"'; }?>>Delete</a></button>             <button class=""><a href="addnews.php">Add</a> </button></div>
+                                                <div class="newsbutton"><button ><a href="newspage.php?ID=<?php echo $rows['news_id'];?>"class="editprize">View</a></button><button><a href="editnews.php?ID=<?php echo $rows['news_id'];?>" class="editprize">Edit</a></button><button><a onclick="return confirm('Are you sure')"  href="deletenews.php?ID=<?php echo $rows['news_id'];?>&Image_Name=<?php echo $rows['news_img'];?>"<?php if ($count <= 1) { echo 'style="pointer-events: none;color:red;"'; }?>class="editprize">Delete</a></button><button><a class="editprize" href="addnews.php">Add</a></button></div>
                                             </div>
                                         </div>
                                     </div>
