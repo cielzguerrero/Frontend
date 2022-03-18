@@ -51,7 +51,7 @@
 .barangay-content
 {
     display: inline-block;
-    background: #062C30;
+    background:  #e0ffff;
     margin-left: 1.25rem;
     margin-top: 1rem;
     height: 17rem;
@@ -71,14 +71,20 @@
 }
 
 .barangay-content h4{
-    margin-top: 50px;
-    font-weight: 600;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-weight: 800;
     font-size: 1.5rem;
+    text-shadow: 1px 1px  #54BAB9;
     color:#fbfbfb;
 }
 .barangay-content p{
-    color:#fbfbfb;
-    font-weight: 300;
+    color:#3a3a3a;
+    font-weight: 600;
     text-justify: justify;
     font-size: 1.1rem;
+
+}
+.barangay-padding {
+    background-color: #062C30;
 }

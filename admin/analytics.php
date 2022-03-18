@@ -147,7 +147,11 @@ function time_elapsed_string($datetime, $full = false) {
                                         $trows = mysqli_fetch_assoc($tresult);
                                         $sum = $trows['tpoints'];
                                         ?>
+
+                                <div class="barangay-padding">
                                 <h4 style="text-align:center;">Bgry Nueva</h4>
+                                </div>
+                                
                                 <br>
                                 <p style="text-align: center;">Total Registered Users: <?php echo $count?></p>
                                 <p style="text-align: center;">Total Accumulated Points:</p>
@@ -163,7 +167,9 @@ function time_elapsed_string($datetime, $full = false) {
                                         $trows = mysqli_fetch_assoc($tresult);
                                         $sum = $trows['tpoints'];
                                         ?>
+                               <div class="barangay-padding">
                                 <h4 style="text-align:center;">Bgry San Antonio</h4>
+                                </div>
                                 <br>
                                 <p style="text-align: center;">Total Registered Users: <?php echo $count?></p>
                                 <p style="text-align: center;">Total Accumulated Points:</p>
@@ -179,7 +185,9 @@ function time_elapsed_string($datetime, $full = false) {
                                         $trows = mysqli_fetch_assoc($tresult);
                                         $sum = $trows['tpoints'];
                                         ?>
+                                <div class="barangay-padding">
                                 <h4 style="text-align:center;">Bgry San Vicente</h4>
+                                </div>
                                 <br>
                                 <p style="text-align: center;">Total Registered Users: <?php echo $count?></p>
                                 <p style="text-align: center;">Total Accumulated Points:</p>
@@ -195,7 +203,9 @@ function time_elapsed_string($datetime, $full = false) {
                                         $trows = mysqli_fetch_assoc($tresult);
                                         $sum = $trows['tpoints'];
                                         ?>
+                               <div class="barangay-padding">
                                 <h4 style="text-align:center;">Bgry San Roque</h4>
+                                </div>
                                 <br>
                                 <p style="text-align: center;">Total Registered Users: <?php echo $count?></p>
                                 <p style="text-align: center;">Total Accumulated Points:</p>
@@ -211,7 +221,9 @@ function time_elapsed_string($datetime, $full = false) {
                                         $trows = mysqli_fetch_assoc($tresult);
                                         $sum = $trows['tpoints'];
                                         ?>
+                               <div class="barangay-padding">
                                 <h4 style="text-align:center;">Bgry Landayan</h4>
+                                </div>
                                 <br>
                                 <p style="text-align: center;">Total Registered Users: <?php echo $count?></p>
                                 <p style="text-align: center;">Total Accumulated Points:</p>
