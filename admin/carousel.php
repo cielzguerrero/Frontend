@@ -77,7 +77,7 @@ include('chartjava.php');?>
                 </li>
                 <li>
                     <a href="garbagetype.php"  ><span class="la la-trash"></span>
-                    <span>Garbage</span></a>
+                    <span>Garbage Type</span></a>
                 </li>
                 <li>
                     <a href="carousel.php" class="active"><span class="la la-money"></span>
@@ -139,22 +139,20 @@ include('chartjava.php');?>
                             do { ?>
                             <div class="prizebox">
                                 <?php echo $ranker;?>
-                                <img src="images/prize/<?php echo $rows['prize_img'];?>" style = "width:100%; height:12rem;border: 2px solid #767676;">
+                                <img src="images/prize/<?php echo $rows['prize_img'];?>" style = "width:70%; height:20rem;border: 4px solid #54BAB9;">
                                 <div class="pdescription" style="text-align:center;">
                                     <h4 style="text-align:center;"><?php echo $rows['prizename'];?></h4> 
                                     <i><?php echo $rows['pdescription'];?></i>
-                                    <div class="pbutton"><button><a href="editprize.php?ID=<?php echo $rows['id'];?>" class="editprize">Edit</a></button><button><a  onclick="return confirm('Are you sure')" href="deleteprize.php?ID=<?php echo $rows['id'];?>&Image_Name=<?php echo $rows['prize_img'];?>" <?php if ($count <= 1) { echo 'style="pointer-events: none;color:red;"'; } ?>>Delete</a></button></div>
+                                    <div class="pbutton"><button><a href="editprize.php?ID=<?php echo $rows['id'];?>" class="editprize">Edit</a></button><button><a  class="editprize" onclick="return confirm('Are you sure')" href="deleteprize.php?ID=<?php echo $rows['id'];?>&Image_Name=<?php echo $rows['prize_img'];?>" <?php if ($count <= 1) { echo 'style="pointer-events: none;color:red;"'; } ?>>Delete</a></button> <button class=""><a class="editprize" href="addprize.php">Add</a> </button></div>
                                 </div>
                             </div>
                             <?php $ranker++; }  while ($rows = mysqli_fetch_assoc($result))?>
                         </div>
                         <i class="fas fa-chevron-right next" style="visibility: hidden;"></i>
                         </div>
+                        
                     </div>
-                    <div class="prizeaction">
-                        <h2 class="buttonaction">Actions</h2>
-                        <button class=""><a href="addprize.php">Add</a> </button>
-                    </div>
+                 
                 </div>
             </div>
             
@@ -174,7 +172,7 @@ include('chartjava.php');?>
                                 <div class="newsbox">
                                     <div class="news-divide">
                                         <div>
-                                            <img src="images/news/<?php echo $rows['news_img'];?>" style = "border: 2px solid #767676;width:95%; height:12rem;">
+                                            <img src="../images/news<?php echo $rows['news_img'];?>" style = "border: 2px solid #767676;width:95%; height:18rem;">
                                         </div>
                                         <div>
                                             <div class="newsdescription">
@@ -183,7 +181,7 @@ include('chartjava.php');?>
                                                 <br>
                                                 <i><?php echo $rows['news_description'];?></i>
                                                 <br>
-                                                <div class="newsbutton"><button ><a href="newspage.php?ID=<?php echo $rows['news_id'];?>"class="editprize">View</a></button><button><a href="editnews.php?ID=<?php echo $rows['news_id'];?>" class="editprize">Edit</a></button><button><a onclick="return confirm('Are you sure')"  href="deletenews.php?ID=<?php echo $rows['news_id'];?>&Image_Name=<?php echo $rows['news_img'];?>"<?php if ($count <= 1) { echo 'style="pointer-events: none;color:red;"'; }?>>Delete</a></button></div>
+                                                <div class="newsbutton"><button ><a href="newspage.php?ID=<?php echo $rows['news_id'];?>"class="editprize">View</a></button><button><a href="editnews.php?ID=<?php echo $rows['news_id'];?>" class="editprize">Edit</a></button><button><a onclick="return confirm('Are you sure')"  href="deletenews.php?ID=<?php echo $rows['news_id'];?>&Image_Name=<?php echo $rows['news_img'];?>"<?php if ($count <= 1) { echo 'style="pointer-events: none;color:red;"'; }?>>Delete</a></button>             <button class=""><a href="addnews.php">Add</a> </button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -191,10 +189,7 @@ include('chartjava.php');?>
                                 <?php $ranker++; }  while ($rows = mysqli_fetch_assoc($result))?>
                             </div>
                         </div>
-                        <div class="newsaction">
-                        <h2 class="buttonaction">Actions</h2>
-                        <button class=""><a href="addnews.php">Add</a> </button>
-                    </div>
+                    
                     </div>
 
                 </div>

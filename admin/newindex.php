@@ -251,7 +251,7 @@ include('chartjava.php');?>
                                                 <div class="indexnewsbox">
                                                     <div class="news-divide">
                                                         <div>
-                                                            <img src="images/news/<?php echo $rows['news_img'];?>" style = "border: 2px solid #767676;width:100%; height:12rem;">
+                                                            <img src="images/news/<?php echo $rows['news_img'];?>" style = "border: 2px solid #767676;width:100%; height:18rem;">
                                                         </div>
                                                         <div>
                                                             <div class="newsdescription">

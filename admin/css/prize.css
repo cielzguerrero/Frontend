@@ -1,6 +1,6 @@
 .prize-wrapper
 {
-    border: 1px solid #54BAB9;
+   
     border-radius: 5px;
 }
 .box
@@ -14,26 +14,28 @@
 .box .slideshow-box
 {
     display: grid;
-    grid-template-columns:10% 80% 10%;
+    grid-template-columns:100%;
+    background-color: #e0ffff;
 }
 
 .box .indexslideshow-box
 {
     display: grid;
     grid-template-columns:100%;
+    margin: 0;
+    padding: 0;
 }
 .box .boxtitle
 {
-    border: 1px solid #54BAB9;
+ 
     background-color: #54BAB9;
     color: white;
     text-align: center;
 }
-.box .next
+/* .box .next
 {
     text-align: center;
-    margin-top: 8.5rem;
-    margin-right: 2rem;
+
     font-size: 2rem;
 }
 .box .prev
@@ -42,25 +44,23 @@
     margin-top: 8.5rem;
     margin-left: 2rem;
     font-size: 2rem;
-}
+} */
 
 .box .box-wrapper
 {
-    width: 80%;
+    width: 100%;
     margin: 0px auto;
-    height: 21rem;
+    height: auto;
     overflow: hidden;
 }
 .box .box-wrapper .prizebox
 {
     display: inline-block;
     background: rgb(224,255,255);
-    margin-left: 1.5rem;
-    height: 20.5rem;
-    width: 15rem;
+    height: 30rem;
     border-radius: 5px;
     position: relative;
-    border: 2px solid #767676;
+ 
 }
 .box .indexbox-wrapper
 {
@@ -79,7 +79,7 @@
     text-align: center;
     margin-left: 0.2rem;
     margin-right: 0.2rem;
-    border: 2px solid #767676;
+    
 }
 .prizeaction
 {
@@ -111,13 +111,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 50%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 27px;
+    
 }
 .pbutton button
 {
-    margin-left: 3rem;
+   
     padding: 0.2rem;
     background-color: #54BAB9;
     color: white;
@@ -208,7 +210,7 @@
 }
 .addcontentdesign h3
 {
-    border:1px solid #767676;
+
     padding: .25rem;
 }
 .addcontentdesignnews
@@ -225,4 +227,17 @@
     background: white;
     height: 26.5rem;
     border-radius: 5px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .editprize{
+        padding: 0;
+    }
+    .pbutton{
+        width: 100%;
+    }
+    .prizebox img{
+        width: 100% !important;
+    }
 }
