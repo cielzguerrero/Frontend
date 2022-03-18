@@ -82,7 +82,7 @@ function time_elapsed_string($datetime, $full = false) {
                 </li>
                 <li>
                     <a href="garbagetype.php"  ><span class="la la-trash"></span>
-                    <span>Garbage Type</span></a>
+                    <span>Garbage</span></a>
                 </li>
                 <li>
                     <a href="carousel.php"><span class="la la-money"></span>

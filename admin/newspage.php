@@ -71,7 +71,7 @@ include('chartjava.php');?>
                 </li>
                 <li>
                     <a href="garbagetype.php"><span class="las la-signal"></span>
-                    <span>Garbage Type</span></a>
+                    <span>Garbage </span></a>
                 </li>
                 <li>
                     <a href="carousel.php" class="active"><span class="las la-signal"></span>
