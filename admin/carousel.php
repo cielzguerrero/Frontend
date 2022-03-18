@@ -138,7 +138,7 @@ include('chartjava.php');?>
                             $ranker = 1; 
                             do { ?>
                             <div class="prizebox">
-                                <?php echo $ranker;?>
+                                
                                 <img src="images/prize/<?php echo $rows['prize_img'];?>" style = "width:70%; height:20rem;border: 4px solid #54BAB9;">
                                 <div class="pdescription" style="text-align:center;">
                                     <h4 style="text-align:center;"><?php echo $rows['prizename'];?></h4> 
