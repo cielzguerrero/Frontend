@@ -11,18 +11,19 @@
 }
 .memberheader
 {
-    padding: 10px;
+    padding: 5px;
     background: #062C30;
     color: #fbfbfb;
+    padding-bottom: 0;
     text-align: center;
+    text-shadow: 1px 1px 2px #54BAB9;
 }
 .membercard-header
 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    border-bottom: 1px solid;
+
 }
 .membercard-header button
 {
@@ -138,4 +139,23 @@
     border-radius: 5px;
     padding: .5rem;
     text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+
+    .table tr
+    {
+        font-size: 0.8rem;
+    }
+    .table td
+    {
+        font-size: 0.8rem;
+        border-top:1px #f0f0f0;
+        border-bottom:1px #f0f0f0;
+        border-style: solid;
+        padding: 0.5rem;
+    }
+    .btn{
+        font-size: 0.7rem !important;
+    }
 }
