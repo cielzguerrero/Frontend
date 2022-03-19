@@ -10,12 +10,14 @@ if(isset($_POST['submit'])){
     $row = mysqli_fetch_assoc($result);
     $fullname = $row['fullname'];
     $status = $row['status'];
+    $adminid = $row['id'];
     if ($count == 1) {
          
         $_SESSION['login'] = "<div class='message success'>Logged In Successfully!</div>";
 		$_SESSION['username'] = $username;
 		$_SESSION['fullname'] = $fullname;
 		$_SESSION['status'] = $status;
+        $_SESSION['adminid'] = $adminid;
 		header("Location: admin/index.php"); 
     } else if($count == 0){
         $sql = "SELECT * FROM members WHERE username = '$username' AND password = '$password'";				

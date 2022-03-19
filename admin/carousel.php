@@ -1,40 +1,9 @@
 <?php
 include('connections/connection.php');
+include('includes/afterlogin.php');
 
-if (empty($_SESSION['username'])) {
 
-    header("Location: logout.php");
-}
- include('chartjava.php');
-
-function time_elapsed_string($datetime, $full = false) {
-    $now = new DateTime;
-    $ago = new DateTime($datetime, new DateTimeZone('Asia/Manila'));
-    $diff = $now->diff($ago);
-
-    $diff->w = floor($diff->d / 7);
-    $diff->d -= $diff->w * 7;
-
-    $string = array(
-        'y' => 'year',
-        'm' => 'month',
-        'w' => 'week',
-        'd' => 'day',
-        'h' => 'hour',
-        'i' => 'minute',
-        's' => 'second',
-    );
-    foreach ($string as $k => &$v) {
-        if ($diff->$k) {
-            $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
-        } else {
-            unset($string[$k]);
-        }
-    }
-
-    if (!$full) $string = array_slice($string, 0, 1);
-    return $string ? implode(', ', $string) . ' ago' : 'just now';
-}
+ include('includes/timeinclude.php');
 
 ?>
 <!DOCTYPE HTML>
@@ -61,8 +30,7 @@ function time_elapsed_string($datetime, $full = false) {
 <script src="js/slideshow.js"></script>
 </head>
 <body>
-<?php include('timeinclude.php');
-include('chartjava.php');?>
+<?php include('timeinclude.php');?>
     <input type="checkbox"  id="navigation-toggle">
     <div class="sidebar">
         
@@ -116,8 +84,8 @@ include('chartjava.php');?>
             <div class="user-wrapper">
                 <div>
                 <h4><div class="las la-user-tie"></div>
-                <?php echo $_SESSION['fullname'];?></h4>
-                <small><?php echo $_SESSION['status'];?></small>
+                <?php echo $afullname;?></h4>
+                <small><?php echo $astatus;?></small>
                 </div>
             </div>
       
@@ -172,7 +140,7 @@ include('chartjava.php');?>
                                 <div class="newsbox">
                                     <div class="news-divide">
                                         <div>
-                                            <img src="../images/news<?php echo $rows['news_img'];?>" style = "border: 2px solid #767676;width:100%; height:18rem;">
+                                            <img src="images/news/<?php echo $rows['news_img'];?>" style = "border: 2px solid #54BAB9;width:100%; height:18rem;">
                                         </div>
                                         <div>
                                             <div class="newsdescription">

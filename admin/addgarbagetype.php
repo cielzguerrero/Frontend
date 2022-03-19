@@ -1,11 +1,8 @@
 <?php
 include('connections/connection.php');
+include('includes/afterlogin.php');
 
-if (empty($_SESSION['username'])) {
 
-    header("Location: logout.php");
-}
- include('chartjava.php');
  if (isset($_POST['submit'])) {
      $time = date("Y-m-d H:i:s");
      $username = $_SESSION['username'];
@@ -51,6 +48,8 @@ if (empty($_SESSION['username'])) {
         header("Location: garbagetype.php");
     }
 }
+include('includes/timeinclude.php');
+error_reporting(0);
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -74,8 +73,7 @@ if (empty($_SESSION['username'])) {
 <script src="js/slideshow.js"></script>
 </head>
 <body>
-<?php include('timeinclude.php');
-include('chartjava.php');?>
+<?php include('timeinclude.php');?>
     <input type="checkbox"  id="navigation-toggle">
     <div class="sidebar">
         
@@ -129,8 +127,8 @@ include('chartjava.php');?>
             <div class="user-wrapper">
                 <div>
                 <h4><div class="las la-user-tie"></div>
-                <?php echo $_SESSION['fullname']?></h4>
-                <small><?php echo $_SESSION['status'];?></small>
+                <?php echo $afullname;?></h4>
+                <small><?php echo $astatus;?></small>
                 </div>
             </div>
       

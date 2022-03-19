@@ -1,4 +1,15 @@
+<?php
+include ('../connections/connection.php');
+if (empty($_SESSION['username'])) {
 
+    header("Location: logout.php");
+}
+if (!isset($_SESSION['id'])){
+
+    $_SESSION['view'] = "<div class='message warning'>User Not Found.</div>";
+    header("Location: ../../Frontend/index.php");
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
