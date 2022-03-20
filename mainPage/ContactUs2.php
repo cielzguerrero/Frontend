@@ -9,6 +9,17 @@ if (!isset($_SESSION['id'])){
     $_SESSION['view'] = "<div class='message warning'>User Not Found.</div>";
     header("Location: ../../Frontend/index.php");
 }
+
+include ('../includes/contactform.php');
+
+$id = $_SESSION['id'];
+
+$sql = "SELECT * FROM members WHERE id = $id";
+$result = mysqli_query($conn, $sql);
+$rows = mysqli_fetch_assoc($result);
+$currentprofileuser = $rows['fullname'];
+$currentemail = $rows['email'];
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -86,27 +97,27 @@ if (!isset($_SESSION['id'])){
 			<div class="contact-us-wrapper">
 			<img src="../img/Contact us-pana.png" alt="">
 			
-			<form action="">
+			<form action="" method="POST">
 			<div class="form-group">
 			<h1>CONTACT US</h1>
 			<h3>Have any questions? Send us a message</h3>
 				<div class="form-group">
 					
-					<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Full Name">
+					<input type="text" class="form-control" id="exampleInputPassword1" name="name" value="<?php echo $currentprofileuser;?>" placeholder="Full Name" readonly>
 				</div>
 				<div class="form-group">
 					
-					<input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
+					<input type="email" class="form-control" id="exampleInputPassword1" name="email" value="<?php echo $currentemail;?>" placeholder="Email" readonly>
 				</div>
 				<div class="form-group">
 				
-					<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Subject">
+					<input type="text" class="form-control" id="exampleInputPassword1" name="subject" placeholder="Subject">
 				</div>
 				<div class="form-group">
 					
-						<textarea class="form-control" id="exampleFormControlTextarea1" rows="3 fixed"placeholder="Message" ></textarea>
+						<textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3 fixed"placeholder="Message" ></textarea>
 					</div><br>
-				<button type="submit" class="btn btn-primary">Submit</button>
+				<button type="submit" name="submit" class="btn btn-primary">Submit</button>
 				</form>
 				
 			</div>

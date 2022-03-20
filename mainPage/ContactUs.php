@@ -1,4 +1,6 @@
-
+<?php
+include ('../includes/contactform.php');
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -75,7 +77,7 @@
 			<div class="contact-us-wrapper">
 			<img src="../img/Contact us-pana.png" alt="">
 			
-			<form action="../includes/contactform.php" method="POST">
+			<form action="" method="POST">
 			<div class="form-group">
 			<h1>CONTACT US</h1>
 			<h3>Have any questions? Send us a message</h3>
