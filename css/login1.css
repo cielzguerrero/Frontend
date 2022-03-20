@@ -52,7 +52,7 @@ body{
 }
 .navbar a:hover{
     color: #b1acac !important;
-    text-decoration: underline;
+
 }
     
 
@@ -194,7 +194,10 @@ footer {
 
 .modal-content{
     padding: 0 !important;
-    
+}
+.modal-content h5{
+    text-align: center !important;
+    color: #fbfbfb;
 }
 .modal-content .close{
     color: white;

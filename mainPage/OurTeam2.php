@@ -96,7 +96,7 @@
               </div>
               <div class="team-box">
               <div class="team-design-top"></div>
-                    <img src="../img/laz.png">
+                    <img src="../img/laz.jpg">
                     <h2>Lazarus Ortega</h2>
                     <p>Documentations</p>
                     <div class="links">

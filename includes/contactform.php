@@ -6,12 +6,13 @@
         $message = $_POST["message"];
 
 
-        $mailTo = "ramoresaldrinpup@gmail.com";
-        $headers = "From: ".$mailFrom;
-        $txt = "You have receive an email from: ".$name.".\n\n".$message;
+        $to = "ramoresaldrinpup@gmail.com";
+        $headers = $name;
+        $txt = "You have receive an email from: ".$name."".$message;
 
 
-        mail($mailTo, $subject, $txt, $headers);
+        mail($to, $subject, $message, $headers);
+
         header("Location:../mainPage/ContactUs.php?Mail sent succesfully");
     }
 ?>

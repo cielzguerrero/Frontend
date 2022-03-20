@@ -32,12 +32,13 @@ if(isset($_POST['submit'])){
         }
         else
         {
-            $_SESSION['login'] = "<div class='message warning'>Incorrect Username or Password.</div>";
+            $_SESSION['login'] = "<div class='message warning'><h5>Incorrect Username or Password.</h5></div>";
         }
     }
     else
     {
-        $_SESSION['login'] = "<div class='message warning'>Incorrect Username or Password.</div>";
+        $_SESSION['login'] = "<div class='message warning'><h5>Incorrect Username or Password.</h5></div>";
+
     }
 }
 ?>     
