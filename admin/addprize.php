@@ -104,11 +104,11 @@ include('includes/afterlogin.php');
                     <span>Logs</span></a>
                 </li>
                 <li>
-                    <a href="#"><span class="las la-signal"></span>
-                    <span>Analytics(Post-Poned)</span></a>
+                    <a href="analytics.php"><span class="las la-signal"></span>
+                    <span>Analytics</span></a>
                 </li>
                 <li>
-                    <a href="index.php"><span class="las la-signal"></span>
+                    <a href="logout.php"><span class="las la-signal"></span>
                     <span>Sign-Out</span></a>
                 </li>
             </ul>

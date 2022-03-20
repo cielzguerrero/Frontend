@@ -53,7 +53,7 @@ include('includes/afterlogin.php');
                 </li>
                 <li>
                     <a href="garbagetype.php"  ><span class="la la-trash"></span>
-                    <span>Garbage</span></a>
+                    <span>Garbage Type</span></a>
                 </li>
                 <li>
                     <a href="carousel.php"><span class="la la-money"></span>
