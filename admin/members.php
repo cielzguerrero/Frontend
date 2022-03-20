@@ -1,40 +1,9 @@
 <?php
 include('connections/connection.php');
+include('includes/afterlogin.php');
 
-if (empty($_SESSION['username'])) {
-
-    header("Location: logout.php");
-}
- include('chartjava.php');
-
-function time_elapsed_string($datetime, $full = false) {
-    $now = new DateTime;
-    $ago = new DateTime($datetime, new DateTimeZone('Asia/Manila'));
-    $diff = $now->diff($ago);
-
-    $diff->w = floor($diff->d / 7);
-    $diff->d -= $diff->w * 7;
-
-    $string = array(
-        'y' => 'year',
-        'm' => 'month',
-        'w' => 'week',
-        'd' => 'day',
-        'h' => 'hour',
-        'i' => 'minute',
-        's' => 'second',
-    );
-    foreach ($string as $k => &$v) {
-        if ($diff->$k) {
-            $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
-        } else {
-            unset($string[$k]);
-        }
-    }
-
-    if (!$full) $string = array_slice($string, 0, 1);
-    return $string ? implode(', ', $string) . ' ago' : 'just now';
-}
+include('includes/timeinclude.php');
+include('includes/adminedit.php');
 error_reporting(0);
 ?>
 <!DOCTYPE HTML>
@@ -65,10 +34,10 @@ error_reporting(0);
 <script src="js/dist/chart.js"></script>
 <script src="js/slideshow.js"></script>
 <script src="js/datatable.js"></script>
+<script src="js/sessionhide.js"></script>
 </head>
 <body>
-<?php include('timeinclude.php');
-include('chartjava.php');?>
+<?php include('timeinclude.php');?>
     <input type="checkbox"  id="navigation-toggle">
     <div class="sidebar">
         
@@ -83,7 +52,7 @@ include('chartjava.php');?>
                 </li>
                 <li>
                     <a href="garbagetype.php"  ><span class="la la-trash"></span>
-                    <span>Garbage</span></a>
+                    <span>Garbage Type</span></a>
                 </li>
                 <li>
                     <a href="carousel.php"><span class="la la-money"></span>
@@ -122,8 +91,8 @@ include('chartjava.php');?>
             <div class="user-wrapper">
                 <div>
                 <h4><div class="las la-user-tie"></div>
-                <?php echo $_SESSION['fullname'];?></h4>
-                <small><?php echo $_SESSION['status'];?></small>
+                <?php echo $afullname;?></h4>
+                <small><?php echo $astatus;?></small>
                 </div>
             </div>
       
@@ -133,8 +102,8 @@ include('chartjava.php');?>
                     <div class="leaderboards">
                         <div class="card">
                             <div class="memberheader" style="text-align:center;">
-                                <h4>Profile</h4>
-                                <p><?php echo $_SESSION['update'];?></p>
+                                <h4>Profile/Members</h4>
+                                <div id="updatestuff"><?php echo $_SESSION['update'];?></div>
                             </div>
                             <div class="membercard-body">
                                 <table class="table table-striped table-bordered" id="datatable">
@@ -158,7 +127,7 @@ include('chartjava.php');?>
                                         $number = 0;
                                         do { ?>
                                             <tr>
-                                                <td><img src="images/profile/<?php echo $rows['img_name'];?>" style = "width:2rem;height:2rem;border: 3px solid white; border-radius:100%;" onerror="this.style.display='none' border-style='solid' border-width='5px' ;"></td>
+                                                <td><img src="images/profile/<?php echo $rows['img_name'];?>" style = "width:2rem;height:2rem;border: 2px solid rgb(0, 161, 205);;" onerror="this.style.display='none' border-style='solid' border-width='5px' ;"></td>
                                                 <td><?php echo $rows['profilename'];?></td>
                                                 <td><?php echo $rows['status'];?></td>
                                                 <td><?php echo $rows['datecreated'];?></td>
@@ -175,7 +144,22 @@ include('chartjava.php');?>
                                 </table>
                             </div>
                         </div>
+                        <div class="leaderboards">
+                        <div class="card">
+                            <div class="memberheader" style="text-align:center;">
+                                <h4>Edit Admin</h4>
+                                <div id="updateadminstuff"><?php echo $_SESSION['aupdate'];?></div>
+                            </div>
+                            <div class="membercard-body" style="text-align: right;">
+                                <form action="" method="POST" enctype="multipart/form-data">
+                                <input type="text" class="form-control" placeholder="Full Name" name="afullname" value="<?php echo $afullname;?>">
+                                <input type="text" class="form-control" placeholder="Username" name="ausername" value="<?php echo $ausername;?>">
+                                <input type="password" class="form-control" placeholder="Password" name="apass" value="<?php echo $apassword;?>">
+                                <button type="submit" class="btn btn-outline-primary" name="asubmit">Save Changes</button>
+                                </form>
+                            </div>
                     </div>
+            </div>
     </main>
     </div>
 </body>

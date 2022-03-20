@@ -1,11 +1,10 @@
 <?php
 include('connections/connection.php');
+include('includes/timeinclude.php');
+include('includes/afterlogin.php');
+error_reporting(0);
 
-if (empty($_SESSION['username'])) {
 
-    header("Location: logout.php");
-}
- include('chartjava.php');
  if (!isset($_GET['ID'])){
  
      $_SESSION['update'] = "<div class='message warning'>User Not Found.</div>";
@@ -55,8 +54,7 @@ if (empty($_SESSION['username'])) {
 <script src="js/slideshow.js"></script>
 </head>
 <body>
-<?php include('timeinclude.php');
-include('chartjava.php');?>
+<?php include('timeinclude.php');?>
     <input type="checkbox"  id="navigation-toggle">
     <div class="sidebar">
         
@@ -110,8 +108,8 @@ include('chartjava.php');?>
             <div class="user-wrapper">
                 <div>
                 <h4><div class="las la-user-tie"></div>
-                <?php echo $_SESSION['fullname']?></h4>
-                <small><?php echo $_SESSION['status'];?></small>
+                <?php echo $afullname;?></h4>
+                <small><?php echo $astatus;?></small>
                 </div>
             </div>
       
