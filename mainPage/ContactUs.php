@@ -1,4 +1,16 @@
-
+<?php 
+if(isset($_POST['submit'])){
+    $to = "ramoresaldrinpup@gmail.com"; 
+    $from = $_POST['email']; 
+    $name = $_POST['name'];
+    $subject = $_POST['subject'];
+    $message = $name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    header('Location:../mainPage/ContactUs.php?message sent succesful'); 
+    }
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -75,7 +87,7 @@
 			<div class="contact-us-wrapper">
 			<img src="../img/Contact us-pana.png" alt="">
 			
-			<form action="../includes/contactform.php" method="POST">
+			<form action="" method="post">
 			<div class="form-group">
 			<h1>CONTACT US</h1>
 			<h3>Have any questions? Send us a message</h3>
