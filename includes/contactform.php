@@ -5,9 +5,7 @@ require('../includes/PHPMailer-master/src/Exception.php');
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\OAuth;
 use PHPMailer\PHPMailer\Exception;
-use League\OAuth2\Client\Provider\Google;
 
 if (isset($_POST["submit"])) {
     $name = $_POST["name"];
