@@ -115,6 +115,9 @@ error_reporting(0);
                                         $tresult = mysqli_query($conn, "SELECT SUM(totalpoints) AS tpoints FROM members WHERE address = 'Barangay Nueva'");
                                         $trows = mysqli_fetch_assoc($tresult);
                                         $sum = $trows['tpoints'];
+                                        $tsql = "SELECT * FROM barangays WHERE Barangay ='Barangay Nueva'";
+                                        $sql = "UPDATE barangays SET total_user = '$count', total_points = '$sum' WHERE Barangay = 'Barangay Nueva'";
+                                        $result = mysqli_query($conn, $sql);
                                         ?>
 
                                 <div class="barangay-padding">
@@ -135,6 +138,9 @@ error_reporting(0);
                                         $tresult = mysqli_query($conn, "SELECT SUM(totalpoints) AS tpoints FROM members WHERE address = 'Barangay San Antonio'");
                                         $trows = mysqli_fetch_assoc($tresult);
                                         $sum = $trows['tpoints'];
+                                        $tsql = "SELECT * FROM barangays WHERE Barangay ='Barangay San Antonio'";
+                                        $sql = "UPDATE barangays SET total_user = '$count', total_points = '$sum' WHERE Barangay = 'Barangay San Antonio'";
+                                        $result = mysqli_query($conn, $sql);
                                         ?>
                                <div class="barangay-padding">
                                 <h4 style="text-align:center;">Bgry San Antonio</h4>
@@ -153,6 +159,9 @@ error_reporting(0);
                                         $tresult = mysqli_query($conn, "SELECT SUM(totalpoints) AS tpoints FROM members WHERE address = 'Barangay San Vicente'");
                                         $trows = mysqli_fetch_assoc($tresult);
                                         $sum = $trows['tpoints'];
+                                        $tsql = "SELECT * FROM barangays WHERE Barangay ='Barangay San Vicente'";
+                                        $sql = "UPDATE barangays SET total_user = '$count', total_points = '$sum' WHERE Barangay = 'Barangay San Vicente'";
+                                        $result = mysqli_query($conn, $sql);
                                         ?>
                                 <div class="barangay-padding">
                                 <h4 style="text-align:center;">Bgry San Vicente</h4>
@@ -171,6 +180,9 @@ error_reporting(0);
                                         $tresult = mysqli_query($conn, "SELECT SUM(totalpoints) AS tpoints FROM members WHERE address = 'Barangay San Roque'");
                                         $trows = mysqli_fetch_assoc($tresult);
                                         $sum = $trows['tpoints'];
+                                        $tsql = "SELECT * FROM barangays WHERE Barangay ='Barangay San Roque'";
+                                        $sql = "UPDATE barangays SET total_user = '$count', total_points = '$sum' WHERE Barangay = 'Barangay San Roque'";
+                                        $result = mysqli_query($conn, $sql);
                                         ?>
                                <div class="barangay-padding">
                                 <h4 style="text-align:center;">Bgry San Roque</h4>
@@ -189,6 +201,9 @@ error_reporting(0);
                                         $tresult = mysqli_query($conn, "SELECT SUM(totalpoints) AS tpoints FROM members WHERE address = 'Barangay Landayan'");
                                         $trows = mysqli_fetch_assoc($tresult);
                                         $sum = $trows['tpoints'];
+                                        $tsql = "SELECT * FROM barangays WHERE Barangay ='Barangay Landayan'";
+                                        $sql = "UPDATE barangays SET total_user = '$count', total_points = '$sum' WHERE Barangay = 'Barangay Landayan'";
+                                        $result = mysqli_query($conn, $sql);
                                         ?>
                                <div class="barangay-padding">
                                 <h4 style="text-align:center;">Bgry Landayan</h4>
