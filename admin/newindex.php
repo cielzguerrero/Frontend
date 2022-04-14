@@ -1,7 +1,7 @@
 <?php
 include('connections/connection.php');
 include('includes/afterlogin.php');
- include('includes/timeinclude.php');
+include('includes/timeinclude.php');
 
 
 ?>

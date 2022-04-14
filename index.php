@@ -2,6 +2,13 @@
 include('connections/connection.php');
 include('includes/login.php');
 include('includes/register.php');
+
+$gdata = $_GET["gdata"];
+if ($gdata == "1") {
+    $_SESSION['test'] = "<div class='message warning'><h5>Incorrect Username or Password.</h5></div>";
+    echo "<meta http-equiv='refresh' content='0'>";
+} 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,6 +88,8 @@ include('includes/register.php');
 		<div class="nav-wrapper" id="head">
 			<div class="hero-section" >
 			<div class="hero-col1">
+				<?php echo $_SESSION['test'];
+    			unset($_SESSION['test']);?>
 				<h1>SEGREGATE WASTE<br> EARN POINTS<br> CLAIM PRIZES!!!</h1>
 				<div class="hero-btn">
 				<button type="button" class="btn2 btn1" data-toggle="modal" data-target="#SignInModal">

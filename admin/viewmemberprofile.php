@@ -182,13 +182,17 @@ if (!isset($_GET['ID'])){
                         <div class="profileaction" style="margin-top: 4.75rem;">
                             <h2>Testing Only:</h2>
                             <a href="addpoints.php?ID=<?php echo $id = $_GET['ID'];;?>" class="btn btn-secondary">add 1500 points</a>
+                            <a href="add4points.php?ID=<?php echo $id = $_GET['ID'];;?>" class="btn btn-secondary">Glass Bottle: 4 points</a>
+                            <a href="add2points.php?ID=<?php echo $id = $_GET['ID'];;?>" class="btn btn-secondary">Doy Pack: 2 points</a>
+                            <a href="add3points.php?ID=<?php echo $id = $_GET['ID'];;?>" class="btn btn-secondary">Plastic Bottle: 3 points</a>
+                            <a href="add10points.php?ID=<?php echo $id = $_GET['ID'];;?>" class="btn btn-secondary">Aluminum: 10 points</a>
                             <a href="decreasepoint.php?ID=<?php echo $id = $_GET['ID'];;?>" class="btn btn-secondary">decrease 1500 points</a>
                             <a href="resetpoint.php?ID=<?php echo $id = $_GET['ID'];;?>" class="btn btn-secondary">reset points</a>
                         </div>
                         <div style="text-align: right;margin-top:2rem;">
                             <a href="members.php?" class="btn btn-secondary">Return</a>
                         </div>
-                            
+                        
                     </div>
                 </div>
             </div>
