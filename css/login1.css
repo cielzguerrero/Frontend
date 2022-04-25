@@ -181,6 +181,7 @@ footer {
 
 .social-wrapper .facebook:hover {
     color: gainsboro;
+  
     background: linear-gradient(#066adc,#0aa8e9);
 }
 .social-wrapper .instagram:hover {
@@ -395,6 +396,8 @@ body::before
 .socials .fa-facebook-f:hover
 {
     color:royalblue;
+    transform: translateY(-5px);
+    
 }
 
 .socials .fa-instagram
@@ -405,6 +408,7 @@ body::before
 .socials .fa-instagram:hover
 {
     color:rgb(151, 32, 125);
+    transform: translateY(-5px);
 }
 .socials .fa-twitter
 {
@@ -414,6 +418,7 @@ body::before
 .socials .fa-twitter:hover
 {
     color:rgb(19, 106, 236);
+    transform: translateY(-5px);
 }
 
 
