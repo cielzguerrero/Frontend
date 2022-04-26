@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Sarpanch:wght@900&display=swap');
+*
+{
+    transition: all 0.3s ease-in-out;
+    font-family: "Poppins",sans-serif ;
+}
+
+
+.upwardToggler
+{
+    position: fixed !important;
+    right: 1%;
+    bottom: 5%;
+
+    &:hover 
+    {
+        transform: translateY(-10px);
+    }
+}
+
+// NAVBAR
+
+.pointcard
+{
+    & .max-w-xs
+    {
+        background: linear-gradient(to right, #CAA347, #DCC080);
+    }
+    & h2 
+    {
+        color: white;
+        font-family: 'Sarpanch', sans-serif;
+        text-shadow: 0px 2px 0px  #c78f0c;
+    }
+    & h5 
+    {
+        color: white;
+        text-shadow: 0px 2px 0px  #c78f0c;
+    }
+    & h1 
+    {
+        color: white;
+      
+        text-shadow: 0px 2px 0px  #c78f0c;
+    }
+}
+
+// LEADERBOARD
+.whitewrapper
+{   
+    margin-top: -4rem;
+  
+    & .leaderboard
+    {
+        max-width: 800px ;
+        margin: auto;
+        & .leaderboard-wrapper
+        {
+            // background-color: red;
+            margin: auto;
+            width: 90% !important;
+        }
+    }
+}

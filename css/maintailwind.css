@@ -1,13 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@1,900&display=swap');
-*
-{
-    transition: all 0.3s ease-in-out;
-    font-family: "Poppins",sans-serif !important;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Sarpanch:wght@900&display=swap");
+* {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  font-family: "Poppins",sans-serif;
 }
 
-.darkToggler
-{
-    position: fixed !important;
-    right: 5%;
-    bottom: 5%;
+.upwardToggler {
+  position: fixed !important;
+  right: 1%;
+  bottom: 5%;
 }
+
+.upwardToggler:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.pointcard .max-w-xs {
+  background: -webkit-gradient(linear, left top, right top, from(#CAA347), to(#DCC080));
+  background: linear-gradient(to right, #CAA347, #DCC080);
+}
+
+.pointcard h2 {
+  color: white;
+  font-family: 'Sarpanch', sans-serif;
+  text-shadow: 0px 2px 0px  #c78f0c;
+}
+
+.pointcard h5 {
+  color: white;
+  text-shadow: 0px 2px 0px  #c78f0c;
+}
+
+.pointcard h1 {
+  color: white;
+  text-shadow: 0px 2px 0px  #c78f0c;
+}
+
+.whitewrapper {
+  margin-top: -4rem;
+}
+
+.whitewrapper .leaderboard {
+  max-width: 800px;
+  margin: auto;
+}
+
+.whitewrapper .leaderboard .leaderboard-wrapper {
+  margin: auto;
+  width: 90% !important;
+}
+/*# sourceMappingURL=maintailwind.css.map */
