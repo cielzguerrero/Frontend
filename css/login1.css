@@ -352,20 +352,20 @@ body::before
 .content button:hover
 {   outline: none !important;
     color: white;
-    border:  2px solid #212129;
-   background-color: #212129;
+    border:  2px solid #1e293b;
+   background-color: #1e293b;
    outline: none !important;
    box-shadow: none !important;
     transform: translateY(-5px);
-    box-shadow: 0px 10px 0px rgb(17, 17, 17) !important;
+    box-shadow: 0px 10px 0px #2f405c !important;
 }
 /* MODAL */
 .modal button
 {
-    background-color: #212129;
+    background-color: #1e293b;
 }
 .nav-pills > li > a.active {
-    background-color: #212129 !important;
+    background-color: #1e293b !important;
 }
 
 
