@@ -143,20 +143,20 @@
             <div class="top-2 flex flex-col items-center">
             <img src="./img/aldrin.jpg" class = "rounded-full  h-28" alt="">
             <h2 class = "mt-2 text-gray-600 dark:text-white">AldrinxD</h2>
-            <h1 class = "font-bold text-4xl text-gray-700 dark:text-white">3500</h1>
+            <h1 class = "font-bold text-2xl text-gray-700 dark:text-white">3500</h1>
             <h1></h1>
             </div>
 
             <div class="top-1 flex flex-col items-center pb-20">
             <img src="./img/aldrin.jpg" class = "rounded-full h-28" alt="">
             <h2 class = "mt-2  text-gray-600 dark:text-white">AldrinxD</h2>
-            <h1 class = "font-bold text-4xl text-gray-700 dark:text-white">3500</h1>
+            <h1 class = "font-bold text-2xl text-gray-700 dark:text-white">3500</h1>
             </div>
 
             <div class="top-3 flex flex-col items-center">
             <img src="./img/aldrin.jpg" class = "rounded-full h-28" alt="">
             <h2 class = "mt-2  text-gray-600 dark:text-white">AldrinxD</h2>
-            <h1 class = "font-bold text-gray-700 text-4xl dark:text-white">3500</h1>
+            <h1 class = "font-bold text-gray-700 text-2xl dark:text-white">3500</h1>
             </div>
             
         </div>
