@@ -62,14 +62,4 @@
 .whitewrapper {
   margin-top: -4rem;
 }
-
-.whitewrapper .leaderboard {
-  max-width: 800px;
-  margin: auto;
-}
-
-.whitewrapper .leaderboard .leaderboard-wrapper {
-  margin: auto;
-  width: 90% !important;
-}
 /*# sourceMappingURL=maintailwind.css.map */

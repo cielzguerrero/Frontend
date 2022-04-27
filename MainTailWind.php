@@ -125,12 +125,12 @@
 </section>
 
 <!-- MAIN WRAPPER -->
-<section class ="whitewrapper bg-white rounded-xl dark:bg-slate-50 mx-auto h-auto py-24">
+<section class ="whitewrapper bg-white rounded-xl dark:bg-slate-50 h-auto py-24">
 
   <!-- LEADERBOARD -->
-  <div class="leaderboard ">
-    <div class="leaderboard-wrapper bg-slate-200 shadow-xl ring-1 ring-slate-500 rounded-md dark:bg-slate-800">
-        <div class="top-lead flex space-between content-center mx-auto">
+  <div class="leaderboard  ">
+    <div class="leaderboard-wrapper mx-56 bg-slate-200 shadow-xl p-3 ring-1 ring-slate-500 rounded-md dark:bg-slate-800">
+        <div class="top-lead flex space-between content-center ">
 
             <div class="top-2">
             <img src="./img/aldrin.jpg" class = "rounded-full h-24 ring-4 ring-blue" alt="">
