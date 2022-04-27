@@ -20,7 +20,7 @@
 
 
 
-<body class = "bg-slate-300 dark:bg-slate-800">
+<body class = "bg-slate-200 dark:bg-slate-800">
  <!-- NAV -->
 <nav class="bg-white border-gray-200 px-2 shadow-xl dark:shadow-xl sm:px-4 py-4  dark:bg-slate-800">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
@@ -128,27 +128,79 @@
 <section class ="whitewrapper bg-white rounded-xl dark:bg-slate-50 h-auto py-24">
 
   <!-- LEADERBOARD -->
-  <div class="leaderboard  ">
-    <div class="leaderboard-wrapper mx-56 bg-slate-200 shadow-xl p-3 ring-1 ring-slate-500 rounded-md dark:bg-slate-800">
-        <div class="top-lead flex space-between content-center ">
+  <div class="leaderboard mt-20">
+      
+    <div class="leaderboard-wrapper  mx-auto bg-slate-200 shadow-xl  py-6 px-6 ring-1 ring-slate-500 rounded-md dark:bg-slate-800">
+    <h3 class = "text-black dark:text-white pb-6">Leaderboard</h3>
+        <!-- TOP3 -->
+        <div class="top-lead flex justify-center content-center items-center mx-auto gap-5">
+            <svg class = "svg1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,288L48,293.3C96,299,192,309,288,304C384,299,480,277,576,256C672,235,768,213,864,208C960,203,1056,213,1152,229.3C1248,245,1344,267,1392,277.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+            <svg class = "svg2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#0099ff" fill-opacity="1" d="M0,32L48,26.7C96,21,192,11,288,21.3C384,32,480,64,576,101.3C672,139,768,181,864,192C960,203,1056,181,1152,149.3C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+       
 
-            <div class="top-2">
-            <img src="./img/aldrin.jpg" class = "rounded-full h-24 ring-4 ring-blue" alt="">
+            <div class="top-2 flex flex-col items-center">
+            <img src="./img/aldrin.jpg" class = "rounded-full  h-28" alt="">
+            <h2 class = "mt-2 text-gray-600 dark:text-white">AldrinxD</h2>
+            <h1 class = "font-bold text-4xl text-gray-700 dark:text-white">3500</h1>
+            <h1></h1>
+            </div>
+
+            <div class="top-1 flex flex-col items-center pb-20">
+            <img src="./img/aldrin.jpg" class = "rounded-full h-28" alt="">
+            <h2 class = "mt-2  text-gray-600 dark:text-white">AldrinxD</h2>
+            <h1 class = "font-bold text-4xl text-gray-700 dark:text-white">3500</h1>
+            </div>
+
+            <div class="top-3 flex flex-col items-center">
+            <img src="./img/aldrin.jpg" class = "rounded-full h-28" alt="">
+            <h2 class = "mt-2  text-gray-600 dark:text-white">AldrinxD</h2>
+            <h1 class = "font-bold text-gray-700 text-4xl dark:text-white">3500</h1>
+            </div>
             
+        </div>
+        <!-- TOP5 -->
+        <div class="top-five">
+            
+            <div class="mt-3 flex justify-between items-center  rounded-md p-1">
+            <h1 class = "font-bold text-center px-4 text-lg  rounded-md bg-yellow-400 text-black dark:text-white" >1</h1>
+            <img src="./img/aldrin.jpg" class = "rounded-full  h-10" alt="">
+            <h2 class = "text-gray-700 dark:text-white"> AldrinxD</h2>
+            <h2 class = "font-bold text-2xl text-gray-700 dark:text-white"> 3500</h2>
             </div>
 
-            <div class="top-1">
-            <img src="./img/aldrin.jpg" class = "rounded-full h-24" alt="">
+            <div class="mt-3 flex justify-between items-center">
+            <h1 class = "font-bold text-center text-lg px-4  rounded-md bg-gray-400 text-black dark:text-white" >2</h1>
+            <img src="./img/aldrin.jpg" class = "rounded-full  h-10" alt="">
+            <h2 class = "text-gray-700 dark:text-white"> AldrinxD</h2>
+            <h2 class = "font-bold text-2xl text-gray-700 dark:text-white"> 3500</h2>
             </div>
 
-            <div class="top-3">
-            <img src="./img/aldrin.jpg" class = "rounded-full h-24" alt="">
+            <div class="mt-3 flex justify-between items-center">
+            <h1 class = "font-bold text-center px-4  text-lg rounded-md bg-yellow-600 text-black dark:text-white" >3</h1>
+            <img src="./img/aldrin.jpg" class = "rounded-full  h-10" alt="">
+            <h2 class = "text-gray-700 dark:text-white"> AldrinxD</h2>
+            <h2 class = "font-bold text-2xl text-gray-700 dark:text-white"> 3500</h2>
+            </div>
+
+            <div class="mt-3 flex justify-between items-center">
+            <h1 class = "font-bold text-center text-lg px-4 rounded-md  text-black dark:text-white" >4</h1>
+            <img src="./img/aldrin.jpg" class = "rounded-full  h-10" alt="">
+            <h2 class = "text-gray-700 dark:text-white"> AldrinxD</h2>
+            <h2 class = "font-bold text-2xl text-gray-700 dark:text-white"> 3500</h2>
+            </div>
+
+            <div class="mt-3 flex justify-between items-center">
+            <h1 class = "font-bold text-center px-4 text-lg rounded-md  text-black dark:text-white" >5</h1>
+            <img src="./img/aldrin.jpg" class = "rounded-full  h-10" alt="">
+            <h2 class = "text-gray-700 dark:text-white"> AldrinxD</h2>
+            <h2 class = "font-bold text-2xl text-gray-700 dark:text-white"> 3500</h2>
             </div>
 
         </div>
-      
     </div>
-  
+    
   </div>
 
 </section>

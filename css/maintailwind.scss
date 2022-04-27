@@ -76,11 +76,69 @@
   
     & .leaderboard
     {
-     
+      
         & .leaderboard-wrapper
         {
-            // background-color: red;
+            position: relative;
+            max-width: 600px !important;
+    
+            & .top-lead
+            {
+                & .svg1 
+                    {
+                        position: absolute;
+                        top: 0;
+                        opacity: 10%;
+
+                    }
+                & .svg2
+                {
+                    position: absolute;
+                    bottom: 0;
+                    opacity: 10%;
+                }   
+                & h1,h2,img
+                {
+                    z-index: 10;
+                }
+                & .top-2 img
+                {
+                    border: 5px solid rgba(153, 153, 153, 0.801);
+                }
+                & .top-1 img
+                {
+                    border: 6px solid rgba(220, 187, 2, 0.808);
+                }
+                & .top-3 img
+                {
+                    border: 5px solid rgba(218, 158, 80, 0.803);
+                }
+            }
+            & .top-five
+            {
+                & .mt-3
+                {
+                    background-color: rgba(30, 98, 147, 0.194);
+                    border-radius: 10px;
+                    padding: 5px;
+                }
+                & img 
+                {
+                    z-index: 10;
+                }
+            }
+           
+            
+  
           
         }
     }
+}
+
+
+// MODAL
+
+#defaultModal
+{
+    z-index: 1000;
 }

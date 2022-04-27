@@ -62,4 +62,51 @@
 .whitewrapper {
   margin-top: -4rem;
 }
+
+.whitewrapper .leaderboard .leaderboard-wrapper {
+  position: relative;
+  max-width: 600px !important;
+}
+
+.whitewrapper .leaderboard .leaderboard-wrapper .top-lead .svg1 {
+  position: absolute;
+  top: 0;
+  opacity: 10%;
+}
+
+.whitewrapper .leaderboard .leaderboard-wrapper .top-lead .svg2 {
+  position: absolute;
+  bottom: 0;
+  opacity: 10%;
+}
+
+.whitewrapper .leaderboard .leaderboard-wrapper .top-lead h1, .whitewrapper .leaderboard .leaderboard-wrapper .top-lead h2, .whitewrapper .leaderboard .leaderboard-wrapper .top-lead img {
+  z-index: 10;
+}
+
+.whitewrapper .leaderboard .leaderboard-wrapper .top-lead .top-2 img {
+  border: 5px solid rgba(153, 153, 153, 0.801);
+}
+
+.whitewrapper .leaderboard .leaderboard-wrapper .top-lead .top-1 img {
+  border: 6px solid rgba(220, 187, 2, 0.808);
+}
+
+.whitewrapper .leaderboard .leaderboard-wrapper .top-lead .top-3 img {
+  border: 5px solid rgba(218, 158, 80, 0.803);
+}
+
+.whitewrapper .leaderboard .leaderboard-wrapper .top-five .mt-3 {
+  background-color: rgba(30, 98, 147, 0.194);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.whitewrapper .leaderboard .leaderboard-wrapper .top-five img {
+  z-index: 10;
+}
+
+#defaultModal {
+  z-index: 1000;
+}
 /*# sourceMappingURL=maintailwind.css.map */
