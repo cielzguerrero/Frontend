@@ -20,7 +20,7 @@
 
 
 
-<body class = "bg-slate-300 dark:bg-white">
+<body class = "bg-slate-300 dark:bg-slate-800">
  <!-- NAV -->
 <nav class="bg-white border-gray-200 px-2 shadow-xl dark:shadow-xl sm:px-4 py-4  dark:bg-slate-800">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
@@ -78,19 +78,19 @@
   <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
     <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
     <li>
-        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">G-Points</a>
       </li>
       <li>
-        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Leaderboard</a>
       </li>
       <li>
-        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">News</a>
       </li>
       <li>
-        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>
+        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Profile</a>
       </li>
       <li>
-        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Logs</a>
       </li>
     </ul>
   </div>
@@ -117,7 +117,7 @@
     <h5 class="pl-3 pb-1 mt-10">Available Points</h5>
     <div class="bottomcard flex items-center">
       <h1 class="p-3 text-4xl font-black">3200</h1>
-      <button class="block font-bold text-white bg-slate-700 hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  ml-12 mr-3 px-10 py-3 text-center dark:bg-slate-600 dark:hover:bg-slate-700 dark:focus:ring-slate-800" type="button" data-modal-toggle="defaultModal">
+      <button class="block  text-white bg-slate-700 hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  ml-12 mr-3 px-10 py-3 text-center  dark:hover:bg-slate-800 dark:focus:ring-slate-800" type="button" data-modal-toggle="defaultModal">
       Claim
     </button>
     </div>
@@ -125,12 +125,28 @@
 </section>
 
 <!-- MAIN WRAPPER -->
-<section class ="whitewrapper bg-white rounded-xl dark:bg-slate-800 mx-auto h-auto py-24">
+<section class ="whitewrapper bg-white rounded-xl dark:bg-slate-50 mx-auto h-auto py-24">
 
   <!-- LEADERBOARD -->
   <div class="leaderboard ">
-    <div class="leaderboard-wrapper bg-slate-700 rounded-md dark:bg-slate-50">
-    <h1 class = "text-white">yes</h1>
+    <div class="leaderboard-wrapper bg-slate-200 shadow-xl ring-1 ring-slate-500 rounded-md dark:bg-slate-800">
+        <div class="top-lead flex space-between content-center mx-auto">
+
+            <div class="top-2">
+            <img src="./img/aldrin.jpg" class = "rounded-full h-24 ring-4 ring-blue" alt="">
+            
+            </div>
+
+            <div class="top-1">
+            <img src="./img/aldrin.jpg" class = "rounded-full h-24" alt="">
+            </div>
+
+            <div class="top-3">
+            <img src="./img/aldrin.jpg" class = "rounded-full h-24" alt="">
+            </div>
+
+        </div>
+      
     </div>
   
   </div>
@@ -141,7 +157,7 @@
 <div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
     <div class="relative w-full h-full max-w-2xl p-4 md:h-auto">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-600">
             <!-- Modal header -->
             <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
@@ -174,8 +190,8 @@
 
 
 <!-- FOOTER -->
- <footer class="p-5 bg-white sm:p-6 dark:bg-slate-800 mt-36 w-lg-50 mx-auto">
-    <div class="md:flex md:justify-between footers">
+ <footer class="p-5 bg-white sm:p-6 dark:bg-slate-800 mt-36 w-lg-50 ">
+    <div class="md:flex md:justify-between footers mx-auto max-w-7xl">
         <div class="mb-6 md:mb-0">
             <a href="MainTailWind.php" class="flex items-center">
                 <img src="img/glogoblue.png" class="mr-3 h-8" alt="FlowBite Logo" />
@@ -227,20 +243,13 @@
             
         </div>
 
-        
-        <!-- TO EDIT CONTENT -->
-        <div class="mb-6 md:mb-0">
-            <a href="MainTailWind.php" class="flex items-center">
-                <img src="img/glogoblue.png" class="mr-3 h-8" alt="FlowBite Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">G-Reward</span>
-            </a>
-        </div>
+      
      </div>
 
 
 
-    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-    <div class="sm:flex sm:items-center sm:justify-between">
+    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 mx-auto max-w-7xl" />
+    <div class="sm:flex sm:items-center sm:justify-between mx-auto max-w-7xl">
         <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://flowbite.com" class="hover:underline">G-Reward</a>. All Rights Reserved.
         </span>
         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
