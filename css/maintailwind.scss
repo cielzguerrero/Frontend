@@ -78,7 +78,7 @@ html
     }
 }
 
-// LEADERBOARD
+// MAINWRAPPER
 .whitewrapper
 {   
     margin-top: -4rem;
@@ -149,38 +149,133 @@ html
     {
         &-wrapper
         {
+            position: relative;
             max-width: 750px;
-      
             margin: auto;
-
-            & .left
+            
+            & h4 
             {
-                max-width: 200px;
+                position: absolute;
+                top: 3%;
+               
+            }
+            & #wave 
+            {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 10%;
+                z-index: 5;
+                transform: rotate(180deg) !important;
+            }
+            & #wave2 
+            {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                opacity: 10%;
+                z-index: 5;
+               
+            }
+            & .left
+            {   
+                z-index: 20;
+                max-width: 210px;
                 position: relative;
                 & img 
                 {
-                    max-width: 200px;
+                    max-width: 210px;
+                    box-shadow: 0px 0px 10px #08388b7f;
                 }
                 
                 & i 
                 {
                     position: absolute;
-                    left: 0%;  
-                     
+                    left: 0;
                     bottom: 0;
                     cursor: pointer;
+                    width: 100%;
+                    background-color: #215fca;
+                    &:hover
+                    {
+                        background-color: #033da2;
+                    }
                 }
-                
-          
-                
+                & input 
+                {
+                    display: none;
+                    z-index: 40;
+                }
             }
+
             & .right
             {
-
+                z-index: 20;
+                & button
+                {
+                  
+                    background-color: #215fca;
+                    &:hover 
+                    {
+                        background-color: #033da2;  
+                    }  
+                }
+                & input,select 
+                {
+                   border: none !important;
+                    background-color: transparent;
+                }
+              
+              
             }
         }
     }
-    
+    // NEWS
+    & .news
+    {
+        &-wrapper
+        {
+            
+            max-width: 750px;
+            margin: auto;
+            position: relative;
+            & h4 
+            {
+                position: absolute;
+                top: 0;
+                z-index: 100;
+                
+            }
+            & .carousel-container
+            {
+
+                
+                & a 
+                {
+                 position: absolute;
+                 bottom: 0;
+                 font-weight: 800;
+                 width: 100%;
+                 height: 100%;
+                 padding-top: 20%;
+                 background-color: rgba(0, 0, 0, 0.700);
+                 color: white;
+                 text-shadow: 0px 0px 20px #0b121e;
+                 opacity: 0;
+                 cursor: pointer;
+                 & p 
+                 {
+                     font-weight: 100;
+                 }
+                 &:hover
+                 {
+                     opacity: 100%;
+                 }
+                }
+            }
+            
+        }
+    }    
 }
 
 
@@ -189,16 +284,28 @@ html
 #defaultModal
 {
     z-index: 1000;
+    transition: all 0.3s ease-in-out;
 }
 
 
 //  MEDIA QUERY
 @media only screen and (max-width: 768px) {
+    .leaderboard
+    {
+        margin: auto;
+        max-width: 95%; 
+    }
     .profile
     {
+        margin: auto;
+        max-width: 95%;
         & .left 
         {
             margin: auto;
         }
+    }
+    .news{
+        margin: auto;
+        max-width: 95%;
     }
 }

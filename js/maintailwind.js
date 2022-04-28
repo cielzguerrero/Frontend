@@ -9,4 +9,9 @@ $(window).scroll(function(){
     {
         upward.style.opacity = "80%";
     }
-})
+});
+
+// FILE UPLOAD
+$("#cameraPhoto").click(function(){
+    $("#uploadPhoto").click();
+});

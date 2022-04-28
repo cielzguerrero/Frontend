@@ -51,18 +51,18 @@
       <!-- Dropdown menu -->
       <div class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown">
         <div class="py-3 px-4">
-          <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
-          <span class="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
+          <span class="block text-sm text-gray-900 dark:text-white">Profile Name</span>
+          <span class="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">myemail@gmail.com</span>
         </div>
         <ul class="py-1" aria-labelledby="dropdown">
           <li>
-            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
+            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Points</a>
           </li>
           <li>
-            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
+            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</a>
           </li>
           <li>
-            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
+            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Logs</a>
           </li>
           <li>
             <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
@@ -203,22 +203,103 @@
     </div>
   </div>
 
+
+
      <!-- PROFILE -->
      <div class="profile pt-20">
-         <div class="profile-wrapper bg-slate-200 dark:bg-slate-800 ring-2 shadow-xl ring-slate-400 rounded p-4 md:flex sm:flex-column">
-            <div class="left grid items-center justify-center ">
-                <img src="./img/aldrin.jpg" class="rounded-lg">
-              
-                <i class="las la-camera text-center rounded text-white bg-slate-800  font-bold text-4xl"></i>
 
-                
-            </div>
-            <div class="right p-2">
-                <h1>Profilesssssssssssssssssssssssss</h1>
+         <div class="profile-wrapper  shadow-2xl bg-slate-200 dark:bg-slate-800 ring-2  ring-slate-400 rounded p-4 md:flex sm:flex-column items-center">
+         <h4 class = "text-gray-800 dark:text-white">Profile</h4>
+                <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 250" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(2, 0, 36, 0.74)" offset="0%"></stop><stop stop-color="rgba(9, 9, 121, 0.75)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,50L30,54.2C60,58,120,67,180,91.7C240,117,300,158,360,145.8C420,133,480,67,540,70.8C600,75,660,150,720,175C780,200,840,175,900,141.7C960,108,1020,67,1080,41.7C1140,17,1200,8,1260,37.5C1320,67,1380,133,1440,162.5C1500,192,1560,183,1620,150C1680,117,1740,58,1800,41.7C1860,25,1920,50,1980,70.8C2040,92,2100,108,2160,95.8C2220,83,2280,42,2340,25C2400,8,2460,17,2520,45.8C2580,75,2640,125,2700,154.2C2760,183,2820,192,2880,183.3C2940,175,3000,150,3060,129.2C3120,108,3180,92,3240,100C3300,108,3360,142,3420,137.5C3480,133,3540,92,3600,70.8C3660,50,3720,50,3780,58.3C3840,67,3900,83,3960,100C4020,117,4080,133,4140,141.7C4200,150,4260,150,4290,150L4320,150L4320,250L4290,250C4260,250,4200,250,4140,250C4080,250,4020,250,3960,250C3900,250,3840,250,3780,250C3720,250,3660,250,3600,250C3540,250,3480,250,3420,250C3360,250,3300,250,3240,250C3180,250,3120,250,3060,250C3000,250,2940,250,2880,250C2820,250,2760,250,2700,250C2640,250,2580,250,2520,250C2460,250,2400,250,2340,250C2280,250,2220,250,2160,250C2100,250,2040,250,1980,250C1920,250,1860,250,1800,250C1740,250,1680,250,1620,250C1560,250,1500,250,1440,250C1380,250,1320,250,1260,250C1200,250,1140,250,1080,250C1020,250,960,250,900,250C840,250,780,250,720,250C660,250,600,250,540,250C480,250,420,250,360,250C300,250,240,250,180,250C120,250,60,250,30,250L0,250Z"></path><defs><linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(0, 212, 255, 0.77)" offset="0%"></stop><stop stop-color="rgba(0, 212, 255, 0.75)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 50px); opacity:0.9" fill="url(#sw-gradient-1)" d="M0,125L30,108.3C60,92,120,58,180,54.2C240,50,300,75,360,79.2C420,83,480,67,540,54.2C600,42,660,33,720,41.7C780,50,840,75,900,87.5C960,100,1020,100,1080,95.8C1140,92,1200,83,1260,100C1320,117,1380,158,1440,162.5C1500,167,1560,133,1620,137.5C1680,142,1740,183,1800,187.5C1860,192,1920,158,1980,133.3C2040,108,2100,92,2160,75C2220,58,2280,42,2340,33.3C2400,25,2460,25,2520,54.2C2580,83,2640,142,2700,141.7C2760,142,2820,83,2880,50C2940,17,3000,8,3060,4.2C3120,0,3180,0,3240,33.3C3300,67,3360,133,3420,166.7C3480,200,3540,200,3600,195.8C3660,192,3720,183,3780,170.8C3840,158,3900,142,3960,150C4020,158,4080,192,4140,204.2C4200,217,4260,208,4290,204.2L4320,200L4320,250L4290,250C4260,250,4200,250,4140,250C4080,250,4020,250,3960,250C3900,250,3840,250,3780,250C3720,250,3660,250,3600,250C3540,250,3480,250,3420,250C3360,250,3300,250,3240,250C3180,250,3120,250,3060,250C3000,250,2940,250,2880,250C2820,250,2760,250,2700,250C2640,250,2580,250,2520,250C2460,250,2400,250,2340,250C2280,250,2220,250,2160,250C2100,250,2040,250,1980,250C1920,250,1860,250,1800,250C1740,250,1680,250,1620,250C1560,250,1500,250,1440,250C1380,250,1320,250,1260,250C1200,250,1140,250,1080,250C1020,250,960,250,900,250C840,250,780,250,720,250C660,250,600,250,540,250C480,250,420,250,360,250C300,250,240,250,180,250C120,250,60,250,30,250L0,250Z"></path></svg>
+                 <svg id="wave2" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 250" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(2, 0, 36, 0.74)" offset="0%"></stop><stop stop-color="rgba(9, 9, 121, 0.75)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,50L30,54.2C60,58,120,67,180,91.7C240,117,300,158,360,145.8C420,133,480,67,540,70.8C600,75,660,150,720,175C780,200,840,175,900,141.7C960,108,1020,67,1080,41.7C1140,17,1200,8,1260,37.5C1320,67,1380,133,1440,162.5C1500,192,1560,183,1620,150C1680,117,1740,58,1800,41.7C1860,25,1920,50,1980,70.8C2040,92,2100,108,2160,95.8C2220,83,2280,42,2340,25C2400,8,2460,17,2520,45.8C2580,75,2640,125,2700,154.2C2760,183,2820,192,2880,183.3C2940,175,3000,150,3060,129.2C3120,108,3180,92,3240,100C3300,108,3360,142,3420,137.5C3480,133,3540,92,3600,70.8C3660,50,3720,50,3780,58.3C3840,67,3900,83,3960,100C4020,117,4080,133,4140,141.7C4200,150,4260,150,4290,150L4320,150L4320,250L4290,250C4260,250,4200,250,4140,250C4080,250,4020,250,3960,250C3900,250,3840,250,3780,250C3720,250,3660,250,3600,250C3540,250,3480,250,3420,250C3360,250,3300,250,3240,250C3180,250,3120,250,3060,250C3000,250,2940,250,2880,250C2820,250,2760,250,2700,250C2640,250,2580,250,2520,250C2460,250,2400,250,2340,250C2280,250,2220,250,2160,250C2100,250,2040,250,1980,250C1920,250,1860,250,1800,250C1740,250,1680,250,1620,250C1560,250,1500,250,1440,250C1380,250,1320,250,1260,250C1200,250,1140,250,1080,250C1020,250,960,250,900,250C840,250,780,250,720,250C660,250,600,250,540,250C480,250,420,250,360,250C300,250,240,250,180,250C120,250,60,250,30,250L0,250Z"></path><defs><linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(0, 212, 255, 0.77)" offset="0%"></stop><stop stop-color="rgba(0, 212, 255, 0.75)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 50px); opacity:0.9" fill="url(#sw-gradient-1)" d="M0,125L30,108.3C60,92,120,58,180,54.2C240,50,300,75,360,79.2C420,83,480,67,540,54.2C600,42,660,33,720,41.7C780,50,840,75,900,87.5C960,100,1020,100,1080,95.8C1140,92,1200,83,1260,100C1320,117,1380,158,1440,162.5C1500,167,1560,133,1620,137.5C1680,142,1740,183,1800,187.5C1860,192,1920,158,1980,133.3C2040,108,2100,92,2160,75C2220,58,2280,42,2340,33.3C2400,25,2460,25,2520,54.2C2580,83,2640,142,2700,141.7C2760,142,2820,83,2880,50C2940,17,3000,8,3060,4.2C3120,0,3180,0,3240,33.3C3300,67,3360,133,3420,166.7C3480,200,3540,200,3600,195.8C3660,192,3720,183,3780,170.8C3840,158,3900,142,3960,150C4020,158,4080,192,4140,204.2C4200,217,4260,208,4290,204.2L4320,200L4320,250L4290,250C4260,250,4200,250,4140,250C4080,250,4020,250,3960,250C3900,250,3840,250,3780,250C3720,250,3660,250,3600,250C3540,250,3480,250,3420,250C3360,250,3300,250,3240,250C3180,250,3120,250,3060,250C3000,250,2940,250,2880,250C2820,250,2760,250,2700,250C2640,250,2580,250,2520,250C2460,250,2400,250,2340,250C2280,250,2220,250,2160,250C2100,250,2040,250,1980,250C1920,250,1860,250,1800,250C1740,250,1680,250,1620,250C1560,250,1500,250,1440,250C1380,250,1320,250,1260,250C1200,250,1140,250,1080,250C1020,250,960,250,900,250C840,250,780,250,720,250C660,250,600,250,540,250C480,250,420,250,360,250C300,250,240,250,180,250C120,250,60,250,30,250L0,250Z"></path></svg>
+
+
+                <div class="left grid items-center justify-center rounded  py-5">
+                <!-- <h2 class ="text-center text-black dark:text-white">Profile</h2> -->
+                    <img src="./img/aldrin.jpg" class="rounded">
+                    <i class="las la-edit rounded-b text-center  text-white font-bold text-4xl" id="cameraPhoto"></i>
+                    <input class="block " aria-describedby="user_avatar_help" id="uploadPhoto" type="file">
+                    
+                </div>
+                <div class="right px-6 ">
+                    <form action="">
+                        <!-- TOP NAMES -->
+                    <!-- USERNAME -->
+                    <div class="top flex justify-between items-center mt-4">
+                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-50 border-none text-gray-700 dark:text-white text-start shadow-inner" value="Username">
+                    <!-- FULL NAME -->
+                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ml-5 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="Full Name">
+                    </div>
+                    <!-- PROFILE NAME -->
+                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="Profile Name">
+                     <!-- CONTACT NUMBER -->
+                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="Contact Number">
+                     <!-- EMAIL -->
+                    <input type="email" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="Email" required>
+                    <!-- PASSWORD -->
+                    <input type="password" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="Password">
+                    <!-- BARANGAY -->
+                    <select id="countries" class=" rounded ring-2 ring-slate-400  w-full  text-blackk   dark:text-white mt-3">
+                    <option selected value ="Barangay Landayan" class ="text-black dark:text-white bg-slate-200 dark:bg-slate-800 hover:bg-slate-900 focus:bg-slate-900"><h2 class="text-black dark:text-white">Barangay Landayan</h2></option>
+                    <option value="Barangay Nueva" class ="bg-slate-200 dark:bg-slate-800  text-black dark:text-white">Barangay Nueva</option>
+                    <option value="Barangay San Antonio" class ="bg-slate-200 dark:bg-slate-800 text-black dark:text-white">Barangay San Antonio</option>
+                    <option value="Barangay San Vicente" class ="bg-slate-200 dark:bg-slate-800 text-black dark:text-white">Barangay San Vicente</option>
+                  
+                    </select>
+                    <!-- SUBMIT PROFILE -->
+                    <button class = "mt-3 w-full text-start bg-slate-700 rounded py-1 text-lg text-white mb-4 font-bold">Submit</button>
+                    </form>
+                    
+                </div>
+
             </div>
          </div>
      </div>
+    
+     <!-- NEWS -->
+     <div class="news pt-20">
+         <div class="news-wrapper ring-2 shadow-2xl ring-slate-200 rounded">
+             <h4 class="px-4 py-2 text-gray-600 ring-2 ring-slate-200  shadow-lg rounded bg-slate-200">News</h4>
+          
+         <div id="controls-carousel" class="relative" data-carousel="slide">
+            <!-- Carousel wrapper -->
+            <div class="overflow-hidden relative h-96  rounded-lg sm:h-64 xl:h-96 2xl:h-96">
+                
+                    <!-- Item 1 -->
+                    <div class="hidden duration-700 ease-in-out carousel-container" data-carousel-item>
+                        <img src="mainPage/main-images/1img.jpg" class="block absolute top-1/2 left-1/2 w-contain -translate-x-1/2 -translate-y-1/2" alt="...">
+                        
+                        <a href="#!" class = ""><h2 class="text-center text-4xl">NEWS TITLE</h2><p class= "text-center">Read more...</p></a>
+                        
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="hidden duration-700 ease-in-out  carousel-container" data-carousel-item="active">
+                        <img src="mainPage/main-images/2img.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                        <a href="#!" class = ""><h2 class="text-center text-4xl">NEWS TITLE</h2><p class= "text-center">Read more...</p></a>
+                    </div> 
+                    <!-- Item 3 -->
+                    <div class="hidden duration-700 ease-in-out  carousel-container" data-carousel-item>
+                        <img src="mainPage/main-images/3img.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                        <a href="#!" class = ""><h2 class="text-center text-4xl">NEWS TITLE</h2><p class= "text-center">Read more...</p></a>
+                    </div>
 
+                </div>
+                <!-- Slider controls -->
+                <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
+                    <span class="inline-flex justify-center items-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-6 h-6 text-black dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        <span class="hidden">Previous</span>
+                    </span>
+                </button>
+                <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
+                    <span class="inline-flex justify-center items-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-6 h-6 text-black dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        <span class="hidden">Next</span>
+                    </span>
+                </button>
+            </div>
+         </div>
+     </div>
 </section>
 
 <!-- Main modal -->
