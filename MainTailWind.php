@@ -27,7 +27,7 @@
   <div class="container flex flex-wrap justify-between items-center mx-auto">
   <a href="MainTailWind.php" class="flex items-center">
       <img src="img/glogoblue.png" class="mr-3 h-8 sm:h-9 " alt="Flowbite Logo" />
-      <span class="self-center ml-1 text-xl font-semibold whitespace-nowrap dark:text-white">G-Reward</span>
+      <span class="self-center ml-1 text-xl font-semibold whitespace-nowrap text-gray-700 dark:text-white">G-Reward</span>
   </a>
   
   <div class="flex items-center md:order-2">
@@ -415,9 +415,9 @@
  <footer class="p-5 bg-white sm:p-6 dark:bg-slate-800 mt-36 w-lg-50 ">
     <div class="md:flex md:justify-between footers mx-auto max-w-7xl">
         <div class="mb-6 md:mb-0">
-            <a href="MainTailWind.php" class="flex items-center">
+            <a href="#top" class="flex items-center">
                 <img src="img/glogoblue.png" class="mr-3 h-8" alt="FlowBite Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">G-Reward</span>
+                <span class="self-center text-2xl font-semibold whitespace-nowrap text-gray-700 dark:text-white">G-Reward</span>
             </a>
         </div>
 
@@ -506,6 +506,7 @@ var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 // Change the icons inside the button based on previous settings
 if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     themeToggleLightIcon.classList.remove('hidden');
+    
 } else {
     themeToggleDarkIcon.classList.remove('hidden');
 }
