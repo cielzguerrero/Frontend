@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <!-- LINE AWESOME -->
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
   <!-- JQUERY -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- MY CSS -->
@@ -20,12 +21,12 @@
 
 
 
-<body class = "bg-slate-200 dark:bg-slate-800">
+<body class = "bg-slate-200 dark:bg-slate-800" id="top">
  <!-- NAV -->
 <nav class="bg-white border-gray-200 px-2 shadow-xl dark:shadow-xl sm:px-4 py-4  dark:bg-slate-800">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
   <a href="MainTailWind.php" class="flex items-center">
-      <img src="img/glogoblue.png" class="mr-3 h-8 sm:h-9" alt="Flowbite Logo" />
+      <img src="img/glogoblue.png" class="mr-3 h-8 sm:h-9 " alt="Flowbite Logo" />
       <span class="self-center ml-1 text-xl font-semibold whitespace-nowrap dark:text-white">G-Reward</span>
   </a>
   
@@ -102,10 +103,10 @@
   
 </section>
 <!-- UPWARD TOGGLER -->
-<section class = "upwardToggler">
-  <button type="button" class="text-gray-500   rounded-lg text-sm py-2 px-2.5 bg-slate-200">
+<section class = "upwardToggler" id="upward">
+  <a href="#top" class="text-white   rounded-lg text-sm  bg-slate-200">
   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z"></path></svg>
-  </button>
+</a>
 </section>
 
 
@@ -164,21 +165,21 @@
         <div class="top-five">
             
             <div class="mt-3 flex justify-between items-center  rounded-md p-1">
-            <h1 class = "font-bold text-center px-4 text-lg  rounded-md bg-yellow-400 text-black dark:text-white" >1</h1>
+            <h1 class = "font-bold text-center px-5 text-lg  rounded-md bg-yellow-400 text-white dark:text-white" >1 </h1>
             <img src="./img/aldrin.jpg" class = "rounded-full  h-10" alt="">
             <h2 class = "text-gray-700 dark:text-white"> AldrinxD</h2>
             <h2 class = "font-bold text-2xl text-gray-700 dark:text-white"> 3500</h2>
             </div>
 
             <div class="mt-3 flex justify-between items-center">
-            <h1 class = "font-bold text-center text-lg px-4  rounded-md bg-gray-400 text-black dark:text-white" >2</h1>
+            <h1 class = "font-bold text-center text-lg px-4  rounded-md bg-gray-400 text-white dark:text-white" >2</h1>
             <img src="./img/aldrin.jpg" class = "rounded-full  h-10" alt="">
             <h2 class = "text-gray-700 dark:text-white"> AldrinxD</h2>
             <h2 class = "font-bold text-2xl text-gray-700 dark:text-white"> 3500</h2>
             </div>
 
             <div class="mt-3 flex justify-between items-center">
-            <h1 class = "font-bold text-center px-4  text-lg rounded-md bg-yellow-600 text-black dark:text-white" >3</h1>
+            <h1 class = "font-bold text-center px-4  text-lg rounded-md bg-yellow-600 text-white dark:text-white" >3</h1>
             <img src="./img/aldrin.jpg" class = "rounded-full  h-10" alt="">
             <h2 class = "text-gray-700 dark:text-white"> AldrinxD</h2>
             <h2 class = "font-bold text-2xl text-gray-700 dark:text-white"> 3500</h2>
@@ -200,8 +201,23 @@
 
         </div>
     </div>
-    
   </div>
+
+     <!-- PROFILE -->
+     <div class="profile pt-20">
+         <div class="profile-wrapper bg-slate-200 dark:bg-slate-800 ring-2 shadow-xl ring-slate-400 rounded p-4 md:flex sm:flex-column">
+            <div class="left grid items-center justify-center ">
+                <img src="./img/aldrin.jpg" class="rounded-lg">
+              
+                <i class="las la-camera text-center rounded text-white bg-slate-800  font-bold text-4xl"></i>
+
+                
+            </div>
+            <div class="right p-2">
+                <h1>Profilesssssssssssssssssssssssss</h1>
+            </div>
+         </div>
+     </div>
 
 </section>
 
@@ -325,8 +341,9 @@
 </footer> 
 
 
-
-
+<!-- MYSCRIPT -->
+<script src="./js/maintailwind.js"></script>
+<!-- SCRIPTS TAILWIND -->
 <script src="../path/to/flowbite/dist/flowbite.js"></script>
 <script>
 var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');

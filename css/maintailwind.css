@@ -6,6 +6,10 @@
   font-family: "Poppins",sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 8px;
@@ -29,8 +33,12 @@
 
 .upwardToggler {
   position: fixed !important;
-  right: 1%;
+  right: 0;
   bottom: 5%;
+  z-index: 200;
+  padding: 5px;
+  background-color: slategray;
+  border-radius: 10px;
 }
 
 .upwardToggler:hover {
@@ -65,7 +73,7 @@
 
 .whitewrapper .leaderboard .leaderboard-wrapper {
   position: relative;
-  max-width: 600px !important;
+  max-width: 750px !important;
 }
 
 .whitewrapper .leaderboard .leaderboard-wrapper .top-lead .svg1 {
@@ -106,7 +114,34 @@
   z-index: 10;
 }
 
+.whitewrapper .profile-wrapper {
+  max-width: 750px;
+  margin: auto;
+}
+
+.whitewrapper .profile-wrapper .left {
+  max-width: 200px;
+  position: relative;
+}
+
+.whitewrapper .profile-wrapper .left img {
+  max-width: 200px;
+}
+
+.whitewrapper .profile-wrapper .left i {
+  position: absolute;
+  left: 0%;
+  bottom: 0;
+  cursor: pointer;
+}
+
 #defaultModal {
   z-index: 1000;
+}
+
+@media only screen and (max-width: 768px) {
+  .profile .left {
+    margin: auto;
+  }
 }
 /*# sourceMappingURL=maintailwind.css.map */

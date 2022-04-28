@@ -5,6 +5,11 @@
     transition: all 0.3s ease-in-out;
     font-family: "Poppins",sans-serif ;
 }
+// HTML SCROLL SMOOTH
+html
+{
+    scroll-behavior: smooth;
+}
 
 // SCROLLBAR
 /* width */
@@ -33,8 +38,12 @@
 .upwardToggler
 {
     position: fixed !important;
-    right: 1%;
+    right: 0;
     bottom: 5%;
+    z-index: 200;
+    padding: 5px;
+    background-color: slategray;
+    border-radius: 10px;
 
     &:hover 
     {
@@ -73,14 +82,15 @@
 .whitewrapper
 {   
     margin-top: -4rem;
-  
+    
+    // LEADERBOARD
     & .leaderboard
     {
       
         & .leaderboard-wrapper
         {
             position: relative;
-            max-width: 600px !important;
+            max-width: 750px !important;
     
             & .top-lead
             {
@@ -133,6 +143,44 @@
           
         }
     }
+
+    // PROFILE
+    & .profile
+    {
+        &-wrapper
+        {
+            max-width: 750px;
+      
+            margin: auto;
+
+            & .left
+            {
+                max-width: 200px;
+                position: relative;
+                & img 
+                {
+                    max-width: 200px;
+                }
+                
+                & i 
+                {
+                    position: absolute;
+                    left: 0%;  
+                     
+                    bottom: 0;
+                    cursor: pointer;
+                }
+                
+          
+                
+            }
+            & .right
+            {
+
+            }
+        }
+    }
+    
 }
 
 
@@ -141,4 +189,16 @@
 #defaultModal
 {
     z-index: 1000;
+}
+
+
+//  MEDIA QUERY
+@media only screen and (max-width: 768px) {
+    .profile
+    {
+        & .left 
+        {
+            margin: auto;
+        }
+    }
 }
