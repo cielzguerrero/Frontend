@@ -280,16 +280,27 @@ html
            
         }
     }
+   
 }
 
 
 // MODAL
 
-#defaultModal
+.claim-modal
 {
-    z-index: 1000;
-    transition: all 0.3s ease-in-out;
+ & .containers
+ {
+    & img
+    {
+        &:hover{
+            transform: scale(1.05) !important;
+        }
+    }
+   
+ }
+ 
 }
+
 
 
 //  MEDIA QUERY

@@ -56,16 +56,16 @@
         </div>
         <ul class="py-1" aria-labelledby="dropdown">
           <li>
-            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Points</a>
+            <a href="#top" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Points</a>
           </li>
           <li>
-            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</a>
+            <a href="#profileanchor" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</a>
           </li>
           <li>
-            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Logs</a>
+            <a href="#logsanchor" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Logs</a>
           </li>
           <li>
-            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+            <a href="#!" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
           </li>
         </ul>
       </div>
@@ -79,19 +79,19 @@
   <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
     <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
     <li>
-        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">G-Points</a>
+        <a href="#top" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">G-Points</a>
       </li>
       <li>
-        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Leaderboard</a>
+        <a href="#leaderanchor" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Leaderboard</a>
       </li>
       <li>
-        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">News</a>
+        <a href="#profileanchor" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Profile</a>
       </li>
       <li>
-        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Profile</a>
+        <a href="#newsanchor" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">News</a>
       </li>
       <li>
-        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Logs</a>
+        <a href="#logsanchor" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Logs</a>
       </li>
     </ul>
   </div>
@@ -118,7 +118,7 @@
     <h5 class="pl-3 pb-1 mt-10">Available Points</h5>
     <div class="bottomcard flex items-center">
       <h1 class="p-3 text-4xl font-black">3200</h1>
-      <button class="block  text-white bg-slate-700 hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  ml-12 mr-3 px-10 py-3 text-center  dark:hover:bg-slate-800 dark:focus:ring-slate-800" type="button" data-modal-toggle="defaultModal">
+      <button class="block  text-white bg-slate-700 hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  ml-12 mr-3 px-10 py-3 text-center  dark:hover:bg-slate-800 dark:focus:ring-slate-800" type="button" data-modal-toggle="authentication-modal">
       Claim
     </button>
     </div>
@@ -129,7 +129,7 @@
 <section class ="whitewrapper bg-white rounded-xl dark:bg-slate-50 h-auto py-24">
 
   <!-- LEADERBOARD -->
-  <div class="leaderboard mt-20">
+  <div class="leaderboard mt-20" id="leaderanchor">
       
     <div class="leaderboard-wrapper  mx-auto bg-slate-200 shadow-xl  py-6 px-6 ring-1 ring-slate-500 rounded-md dark:bg-slate-800">
     <h3 class = "text-black dark:text-white pb-6">Leaderboard</h3>
@@ -206,7 +206,7 @@
 
 
      <!-- PROFILE -->
-     <div class="profile pt-20">
+     <div class="profile pt-20" id="profileanchor">
 
          <div class="profile-wrapper  shadow-2xl bg-slate-200 dark:bg-slate-800 ring-2  ring-slate-400 rounded p-4 md:flex sm:flex-column items-center">
          <h4 class = "text-gray-800 dark:text-white">Profile</h4>
@@ -256,9 +256,9 @@
      </div>
     
      <!-- NEWS -->
-     <div class="news pt-20">
+     <div class="news pt-20" id="newsanchor">
          <div class="news-wrapper ring-2 shadow-2xl ring-slate-200 rounded">
-             <h4 class="px-4 py-2 text-gray-600 ring-2 ring-slate-200  shadow-lg rounded bg-slate-200">News</h4>
+            
           
          <div id="controls-carousel" class="relative" data-carousel="slide">
             <!-- Carousel wrapper -->
@@ -301,7 +301,7 @@
      </div>
 
      <!-- LOGS SECTION -->
-     <div class="logs pt-20">
+     <div class="logs pt-20" id="logsanchor">
          <div class="logs-wrapper shadow-2xl  ring-2 ring-slate-200 rounded">
          <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -375,37 +375,41 @@
      </div>
 </section>
 
-<!-- Main modal -->
-<div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
-    <div class="relative w-full h-full max-w-2xl p-4 md:h-auto">
+
+<!-- CLAIM MODAL -->
+<div id="authentication-modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full claim-modal">
+    <div class="relative w-full h-full max-w-md p-4 md:h-auto">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-600">
-            <!-- Modal header -->
-            <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                    Terms of Service
-                </h3>
-                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="defaultModal">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
-                </button>
-            </div>
-            <!-- Modal body -->
-            <div class="p-6 space-y-6">
-                <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                    With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
-                </p>
-                <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                    The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
-                </p>
-            </div>
-            <!-- Modal footer -->
-            <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
-                <button data-modal-toggle="defaultModal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I accept</button>
-                <button data-modal-toggle="defaultModal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Decline</button>
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="authentication-modal">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
+            </button>
+            <div class="px-6 py-6  ">
+                <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Claim Rewards</h3>
+                <div class="flex flex-wrap justify-center items-center mt-4  gap-2 containers">
+                    <img src="admin/images/prize/Prize-63.png" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
+                 
+                    <a href="#!"><h2 class ="px-3  py-2 rounded-md bg-slate-700 dark:bg-slate-50 text-white dark:text-gray-700 text-xl block">1000 PTS</h2></a>
+                </div>
+
+                <div class="flex flex-wrap justify-center items-center mt-4  gap-2 containers">
+                <img src="admin/images/prize/Prize-63.png" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
+                <a href="#!"><h2 class ="px-3  py-2 rounded-md bg-slate-700 dark:bg-slate-50 text-white dark:text-gray-700 text-xl">1000 PTS</h2></a>
+                </div>
+
+                <div class="flex flex-wrap justify-center items-center mt-4 gap-2 containersn">
+                <img src="admin/images/prize/Prize-63.png" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
+                <a href="#!"><h2 class ="px-3  py-2 rounded-md bg-slate-700 dark:bg-slate-50 text-white dark:text-gray-700 text-xl">1000 PTS</h2></a>
+                </div>
+                <div class="flex flex-wrap justify-center items-center mt-4  gap-2 containers">
+                <img src="admin/images/prize/Prize-63.png" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
+                <a href="#!"><h2 class ="px-3  py-2 rounded-md bg-slate-700 dark:bg-slate-50 text-white dark:text-gray-700 text-xl">1000 PTS</h2></a>
+                </div>
+                    
             </div>
         </div>
     </div>
-</div>
+</div> 
 <!-- MAINWRAPPER -->
 
 
@@ -427,36 +431,49 @@
 
         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Quick Links</h2>
                 <ul class="text-gray-600 dark:text-gray-400">
-                    <li class="mb-4">
-                        <a href="https://flowbite.com" class="hover:underline">Flowbite</a>
+                    <li class="mb-1">
+                        <a href="#top" class="hover:underline">G-Points</a>
                     </li>
-                    <li>
-                        <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                    <li class="mb-1">
+                        <a href="#leaderanchor" class="hover:underline">Leaderboard</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#profileanchor" class="hover:underline">Profile</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#newsanchor" class="hover:underline">News</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#logsanchor" class="hover:underline">Logs</a>
                     </li>
                 </ul>
             </div>
             <div>
-                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Information</h2>
                 <ul class="text-gray-600 dark:text-gray-400">
-                    <li class="mb-4">
-                        <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                    <li class="mb-1">
+                        <a href="" class="hover:underline ">About Us</a>
                     </li>
-                    <li>
-                        <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                    <li class="mb-1">
+                        <a href="" class="hover:underline">Getting Started</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="" class="hover:underline ">Contact Us</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="" class="hover:underline">Our Team</a>
                     </li>
                 </ul>
             </div>
             <div>
-                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">send a message </h2>
                 <ul class="text-gray-600 dark:text-gray-400">
                     <li class="mb-4">
                         <a href="#" class="hover:underline">Privacy Policy</a>
                     </li>
-                    <li>
-                        <a href="#" class="hover:underline ">Terms &amp; Conditions</a>
-                    </li>
+              
                 </ul>
             </div>
 
