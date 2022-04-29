@@ -59,16 +59,16 @@ if ($gdata == "1") {
 			<div class="collapse navbar-collapse" id="navbarNavDropdown">
 				<ul class="navbar-nav ms-auto text-end">
 				<li class="nav-item active">
-					<a class="nav-link fs-6" href="mainPage/GettingStarted.php">Getting Started </a>
+					<a class="nav-link fs-6" href="GettingStarted.php">Getting Started </a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link fs-6" href="mainPage/AboutUs.php">About Us</a>
+					<a class="nav-link fs-6" href="AboutUs.php">About Us</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link fs-6" href="mainPage/ContactUs.php">Contact</a>
+					<a class="nav-link fs-6" href="ContactUs.php">Contact</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link fs-6" href="mainPage/OurTeam.php">Our Team</a>
+					<a class="nav-link fs-6" href="OurTeam.php">Our Team</a>
 				</li>
 			
 				</ul>
