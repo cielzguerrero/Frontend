@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "flowbite": "^1.4.3",
+    "lightbox2": "^2.11.3",
     "tailwindcss": "^3.0.24"
   }
 }

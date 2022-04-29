@@ -15,3 +15,8 @@ $(window).scroll(function(){
 $("#cameraPhoto").click(function(){
     $("#uploadPhoto").click();
 });
+
+// PROFILE LIGHT BOX
+$("#profImage").click(function(){
+    $("#lightImage").click();
+});
