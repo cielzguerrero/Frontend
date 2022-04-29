@@ -456,16 +456,16 @@
                 <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Information</h2>
                 <ul class="text-gray-600 dark:text-gray-400">
                     <li class="mb-1">
-                        <a href="" class="hover:underline ">About Us</a>
+                        <a href="AboutUs2.php" class="hover:underline ">About Us</a>
                     </li>
                     <li class="mb-1">
-                        <a href="" class="hover:underline">Getting Started</a>
+                        <a href="GettingStarted2.php" class="hover:underline">Getting Started</a>
                     </li>
                     <li class="mb-1">
-                        <a href="" class="hover:underline ">Contact Us</a>
+                        <a href="ContactUs2.php" class="hover:underline ">Contact Us</a>
                     </li>
                     <li class="mb-1">
-                        <a href="" class="hover:underline">Our Team</a>
+                        <a href="OurTeam2.php" class="hover:underline">Our Team</a>
                     </li>
                 </ul>
             </div>
