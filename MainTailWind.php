@@ -1,3 +1,47 @@
+<?php
+include('../connections/connection.php');
+if (empty($_SESSION['username'])) {
+
+  header("Location: logout.php");
+}
+if (!isset($_SESSION['id'])) {
+
+  $_SESSION['view'] = "<div class='message warning'>User Not Found.</div>";
+  header("Location: ../../Frontend/index.php");
+} else {
+
+  $id = $_SESSION['id'];
+
+  $sql = "SELECT * FROM members WHERE id = $id";
+  $result = mysqli_query($conn, $sql);
+  $rows = mysqli_fetch_assoc($result);
+  $currentprofileuser = $rows['username'];
+  $userid = $rows['id'];
+
+  
+  if ($result == TRUE) {
+    $count = mysqli_num_rows($result);
+
+    if ($count > 0) {
+    } else {
+      $_SESSION['view'] = "<div class='message warning'>User Not Found.</div>";
+      header("Location: ../../Frontend/index.php");
+    }
+  }
+}
+include('../includes/timeinclude.php');
+include('../includes/mainedit.php');
+include('../includes/decreasepoint.php');
+include('../includes/deposit.php');
+$name = $rows['profilename'];
+$username = $_SESSION['username'];
+$arduinodata = $_GET["gdata"];
+$bump=0;
+
+$sql = "INSERT INTO tempdeposit (tdeposit) VALUES ('$arduinodata')";
+$mresult = mysqli_query($conn,$sql);
+
+?>
 <!doctype html>
 <html>
 <head>
@@ -46,14 +90,14 @@
       <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" type="button" data-dropdown-toggle="dropdown">
         <span class="sr-only">Open user menu</span>
         <!-- image -->
-        <img class="w-8 h-8 rounded-full ring-4  dark:ring-gray-600" src="./img/aldrin.jpg" alt="user photo">
+        <img class="w-8 h-8 rounded-full ring-4  dark:ring-gray-600" src="../admin/images/profile/<?php echo $rows['img_name']; ?>" alt="user photo">
       </button>
 
       <!-- Dropdown menu -->
       <div class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown">
         <div class="py-3 px-4">
-          <span class="block text-sm text-gray-900 dark:text-white">Profile Name</span>
-          <span class="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">myemail@gmail.com</span>
+          <span class="block text-sm text-gray-900 dark:text-white"><?php echo $rows['profilename']; ?></span>
+          <span class="block text-sm font-medium text-gray-500 truncate dark:text-gray-400"><?php echo $rows['email']; ?></span>
         </div>
         <ul class="py-1" aria-labelledby="dropdown">
           <li>
