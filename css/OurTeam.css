@@ -27,6 +27,8 @@
 {
     overflow: hidden;
     position: relative;
+    border-top-right-radius: 65px;
+    border-bottom-left-radius: 65px;
    box-shadow: 0px 1px 6px rgba(47, 47, 47, 0.481);
 }
 .box:hover .flex
