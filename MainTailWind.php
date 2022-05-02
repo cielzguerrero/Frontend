@@ -49,7 +49,7 @@
       <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" type="button" data-dropdown-toggle="dropdown">
         <span class="sr-only">Open user menu</span>
         <!-- image -->
-        <img class="w-8 h-8 rounded-full ring-4  dark:ring-gray-600" src="../admin/images/profile/<?php echo $rows['img_name']; ?>" alt="user photo">
+        <img class="w-8 h-8 rounded-full ring-4  dark:ring-gray-600" src="img/aldrin.jpg" alt="user photo">
       </button>
 
       <!-- Dropdown menu -->
@@ -391,24 +391,23 @@
             </button>
             <div class="px-6 py-6  ">
                 <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Claim Rewards</h3>
+
                 <div class="flex flex-wrap justify-center items-center mt-4  gap-2 containers">
                     <img src="admin/images/prize/Prize-63.png" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
-                 
+                    <a href="#!"><h2 class ="px-3  py-2 rounded-md bg-slate-700 dark:bg-slate-50 text-white dark:text-gray-700 text-xl block">1000 PTS</h2></a>
+                </div>
+                <div class="flex flex-wrap justify-center items-center mt-4  gap-2 containers">
+                    <img src="admin/images/prize/Prize-63.png" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
                     <a href="#!"><h2 class ="px-3  py-2 rounded-md bg-slate-700 dark:bg-slate-50 text-white dark:text-gray-700 text-xl block">1000 PTS</h2></a>
                 </div>
 
                 <div class="flex flex-wrap justify-center items-center mt-4  gap-2 containers">
-                <img src="admin/images/prize/Prize-63.png" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
-                <a href="#!"><h2 class ="px-3  py-2 rounded-md bg-slate-700 dark:bg-slate-50 text-white dark:text-gray-700 text-xl">1000 PTS</h2></a>
-                </div>
-
-                <div class="flex flex-wrap justify-center items-center mt-4 gap-2 containersn">
-                <img src="admin/images/prize/Prize-63.png" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
-                <a href="#!"><h2 class ="px-3  py-2 rounded-md bg-slate-700 dark:bg-slate-50 text-white dark:text-gray-700 text-xl">1000 PTS</h2></a>
+                    <img src="admin/images/prize/Prize-63.png" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
+                    <a href="#!"><h2 class ="px-3  py-2 rounded-md bg-slate-700 dark:bg-slate-50 text-white dark:text-gray-700 text-xl block">1000 PTS</h2></a>
                 </div>
                 <div class="flex flex-wrap justify-center items-center mt-4  gap-2 containers">
-                <img src="admin/images/prize/Prize-63.png" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
-                <a href="#!"><h2 class ="px-3  py-2 rounded-md bg-slate-700 dark:bg-slate-50 text-white dark:text-gray-700 text-xl">1000 PTS</h2></a>
+                    <img src="admin/images/prize/Prize-63.png" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
+                    <a href="#!"><h2 class ="px-3  py-2 rounded-md bg-slate-700 dark:bg-slate-50 text-white dark:text-gray-700 text-xl block">1000 PTS</h2></a>
                 </div>
                     
             </div>

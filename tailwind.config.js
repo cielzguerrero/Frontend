@@ -1,6 +1,6 @@
 module.exports = {
   
-  content: ["MainTailWind.php"],
+  content: ["./src/**/*.{php,js}"],
   theme: {
     extend: {},
   },
