@@ -63,30 +63,35 @@
 
         <!-- CONTENTS -->
         <div class="content-wrapper mt-5 mx-2">
+            <!-- TOP CONTENTS -->
             <div class="container grid xl:grid-cols-4 lg:grid-cols-4 
             md:grid-cols-2   sm:grid-cols-2  gap-4 ">
                 
                 <div class="box rounded-xl drop-shadow-md  p-14 px-28 bg-slate-100">
-                    <h1 class= "text-3xl font-bold text-center mb-5">150</h1>
-                    <h1 class = "text-center font-semibold"> <i class="fa-solid fa-users pr-2"></i>Members</h1>
+                    <h1 class= "text-3xl font-bold text-center mb-5 text-slate-800">150</h1>
+                    <h1 class = "text-center font-semibold text-slate-800"> <i class="fa-solid fa-users pr-2"></i>Members</h1>
                 </div>
                 
                  
                 <div class="box rounded-xl drop-shadow-md p-14 px-28 bg-slate-100">
-                    <h1 class= "text-3xl font-bold text-center mb-5">150</h1>
-                    <h1 class = "text-center font-semibold"> <i class="fa-solid fa-users pr-2"></i>Members</h1>
+                    <h1 class= "text-3xl font-bold text-center mb-5 text-slate-800">150</h1>
+                    <h1 class = "text-center font-semibold text-slate-800"> <i class="fa-solid fa-users pr-2"></i>Members</h1>
                 </div>
 
                 <div class="box rounded-xl drop-shadow-md p-14 px-28 bg-slate-100">
-                    <h1 class= "text-3xl font-bold text-center mb-5">150</h1>
-                    <h1 class = "text-center font-semibold"> <i class="fa-solid fa-users pr-2"></i>Members</h1>
+                    <h1 class= "text-3xl font-bold text-center mb-5 text-slate-800">150</h1>
+                    <h1 class = "text-center font-semibold text-slate-800"> <i class="fa-solid fa-users pr-2"></i>Members</h1>
                 </div>
 
                 <div class="box rounded-xl drop-shadow-md p-14 px-28    bg-slate-100">
-                    <h1 class= "text-3xl font-bold text-center mb-5">150</h1>
-                    <h1 class = "text-center font-semibold"> <i class="fa-solid fa-users pr-2"></i>Members</h1>
+                    <h1 class= "text-3xl font-bold text-center mb-5 text-slate-800">150</h1>
+                    <h1 class = "text-center font-semibold text-slate-800"> <i class="fa-solid fa-users pr-2"></i>Members</h1>
                 </div>
 
+            </div>
+            <!--BOTTOM CONTENTS -->
+            <div class="bottom-container">
+                
             </div>
         </div>
                
