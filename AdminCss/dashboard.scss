@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$poppins: "Poppins",sans-serif;
+// colors
+$blue: rgb(12, 86, 235);
+
+*{
+    font-family: $poppins;
+    transition: all 0.3s ease;
+}
+
+.main-wrapper
+{   max-width: 1400px;
+    margin: auto;
+    border-radius: 500px !important;
+    
+
+    // SIDEBAR
+    & nav 
+    {
+       width: 100px;
+       height: 100%;
+       box-shadow:1px 0px 2px rgba(52, 59, 66, 0.187);
+
+    }
+
+     // CONTENTS
+    & main
+    {   
+        margin-left: 100px;
+        height: 100vh;
+      
+        // HEADER
+        & .header 
+        {
+            box-shadow: 0px 3px 2px rgba(52, 59, 66, 0.187) !important;
+        }
+        // MOBILE TOGGLER
+        & .open 
+        {
+           & span
+            {
+             
+                &:first-child
+                {
+                    transform: rotate(40deg);
+                    max-width: 22px !important;
+                } 
+                &:nth-child(2)
+                {
+                  opacity: 0;
+                } 
+                &:last-child
+                {
+                    transform: rotate(-42deg);
+                    max-width: 22px !important;
+                } 
+            }
+        }
+
+            & .mobileToggler 
+            {   
+                
+                & h6 
+                {
+                    opacity: 0;
+                }
+                // TOGGLER STYLE    
+                &  span 
+                {
+                   
+                    display:block;
+                    height: 3px;
+                    margin-top: 4px;
+                    background-color: $blue;
+                    transform-origin: left center;
+                    border-radius: 10px;
+                    &:first-child
+                    {
+                        max-width: 22px;
+                    }
+                    &:nth-child(2)
+                    {
+                        max-width: 17px;
+                    }
+                    &:last-child
+                    {
+                        max-width: 12px;
+                    }
+                }
+              
+              
+            
+            }
+        
+       
+    }
+}
+
+
+// BREAKPOINT
+@media only screen and (max-width: 768px) {
+   .clock 
+   {
+       display: none !important;
+   }
+   
+}
+   
