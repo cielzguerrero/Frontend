@@ -11,7 +11,6 @@
 }
 
 .main-wrapper nav {
-  display: none;
   width: 100px;
   height: 100%;
   -webkit-box-shadow: 1px 0px 2px rgba(52, 59, 66, 0.187);
@@ -29,18 +28,14 @@
 }
 
 .main-wrapper main .open span:first-child {
-  -webkit-transform: rotate(40deg);
-          transform: rotate(40deg);
   max-width: 22px !important;
 }
 
 .main-wrapper main .open span:nth-child(2) {
-  opacity: 0;
+  max-width: 18px !important;
 }
 
 .main-wrapper main .open span:last-child {
-  -webkit-transform: rotate(-42deg);
-          transform: rotate(-42deg);
   max-width: 22px !important;
 }
 

@@ -32,7 +32,7 @@
                         <a href=""><i class="fa-solid fa-user text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
                         <a href=""><i class="fa-solid fa-paperclip text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
                         <a href=""><i class="fa-solid fa-chart-simple text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
-                        <a href=""><i class="fa-solid fa-right-from-bracket text-2xl mt-48 text-slate-600  hover:text-red-800"></i></a>
+                        <a href=""><i class="fa-solid fa-power-off text-2xl mt-48 text-slate-600  hover:text-red-800"></i></a>
                         </div>
             
                 </div>
@@ -40,20 +40,23 @@
 
 
         <!-- CONTENTS WRAPPER -->
-        <main class ="bg-slate-200 p-2   overflow-y-auto" id = "contents">
+        <main class ="bg-slate-200 md:p-6 sm:p-3   overflow-y-auto" id = "contents">
             <!-- HEADER -->
             <div class="header pt-4 mb-4 pb-3 px-4 flex items-center justify-around drop-shadow-lg rounded-lg">
-                <a href="#!" class ="mobileToggler mr-2  lg:hidden md:block " >
+                <a href="#!" class ="mobileToggler mr-3  lg:hidden md:block " >
                                 <span class = ""><h6>test</h1></span>
                                 <span class = ""> </span>
                                 <span class = ""> </span>
                         </a>
                 <h1 class = "text-xl font-bold flex-1 text-slate-600">Dashboard</h1>
                 <!-- TIME CLOCK -->
-                <h1 class = "text-xl font-bold text-slate-600 lg:block md:hidden sm:hidden xs:hidden clock flex-auto" id = "clock"></h1>
+                <i class="fa-solid fa-clock mr-2 text-xl font-bold text-slate-600 lg:block md:hidden sm:hidden xs:hidden clock "></i>
+                <h1 class = "text-xl font-bold text-slate-600 lg:block md:hidden sm:hidden xs:hidden clock flex-auto" id = "clock">
+
+                </h1>
                 <!-- PROFILE NAME --> 
                     <div class="profile-display ">
-                    <h1 class = "text-md font-bold text-slate-600" >Cielito Guerrero</h1>
+                    <h1 class = "text-md font-bold text-slate-600 " >Cielito Guerrero</h1>
                     <h1 class = "text-sm text-center text-slate-600" >Admin</h1>
                     </div>
             </div>
