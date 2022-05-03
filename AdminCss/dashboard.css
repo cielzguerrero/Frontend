@@ -8,10 +8,10 @@
 .main-wrapper {
   max-width: 1400px;
   margin: auto;
-  border-radius: 500px !important;
 }
 
 .main-wrapper nav {
+  display: none;
   width: 100px;
   height: 100%;
   -webkit-box-shadow: 1px 0px 2px rgba(52, 59, 66, 0.187);

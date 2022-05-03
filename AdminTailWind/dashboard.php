@@ -14,12 +14,12 @@
     <!-- JQUERY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
-<body  onload="startTime()">
+<body  class = "bg-slate-800"onload="startTime()">
 
-    <section class = "main-wrapper ">
+    <section class = "main-wrapper rounded-xl">
 
 
-            <nav class = " rounded-md bg-slate-200 fixed" id = "nav">
+            <nav class = "  bg-slate-200 fixed" id = "nav">
                 <div class="p-5">
                     <div class="flex flex-col justify-center items-center content-center">
                         <!-- SIDEBAR LOGO -->
@@ -42,16 +42,16 @@
         <!-- CONTENTS WRAPPER -->
         <main class ="bg-slate-200 p-2   overflow-y-auto" id = "contents">
             <!-- HEADER -->
-            <div class="header pt-4 pb-3 px-4 flex items-center justify-around drop-shadow-lg rounded-lg">
+            <div class="header pt-4 mb-4 pb-3 px-4 flex items-center justify-around drop-shadow-lg rounded-lg">
                 <a href="#!" class ="mobileToggler mr-2  lg:hidden md:block " >
-                                <span class = ""><h6>yes</h1></span>
+                                <span class = ""><h6>test</h1></span>
                                 <span class = ""> </span>
                                 <span class = ""> </span>
                         </a>
                 <h1 class = "text-xl font-bold flex-1 text-slate-600">Dashboard</h1>
                 <!-- TIME CLOCK -->
                 <h1 class = "text-xl font-bold text-slate-600 lg:block md:hidden sm:hidden xs:hidden clock flex-auto" id = "clock"></h1>
-                <!-- PROFILE NAME -->
+                <!-- PROFILE NAME --> 
                     <div class="profile-display ">
                     <h1 class = "text-md font-bold text-slate-600" >Cielito Guerrero</h1>
                     <h1 class = "text-sm text-center text-slate-600" >Admin</h1>
@@ -59,9 +59,11 @@
             </div>
 
         <!-- CONTENTS -->
-             
+        <div class="content-wrapper mt-5 mx-2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse corporis possimus facere, consequatur vitae odio quam ipsam praesentium veniam atque odit magnam dolore eos minima cum eveniet accusantium pariatur? Qui.
+        </div>
                
-       
+     
        
        
         </main>
