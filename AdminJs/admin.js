@@ -1,5 +1,5 @@
 
-// TOGGLE DISPLAY
+// MOBILE--------------------------- TOGGLE DISPLAY
 var nav = document.querySelector('#nav');
 var contents = document.querySelector('#contents');
 $('.mobileToggler').click(function(){
@@ -8,8 +8,9 @@ $('.mobileToggler').click(function(){
     {
         $(this).removeClass('open');
         contents.style.marginLeft = "100px";
-        nav.style.opacity = "1";
         nav.style.display = "block";
+        nav.style.opacity = "1";
+
     }
     else 
     {
@@ -21,6 +22,7 @@ $('.mobileToggler').click(function(){
     }
 
 });
+
 
 // CLOCK DISPLAY
 function startTime() {
