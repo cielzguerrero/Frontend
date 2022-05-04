@@ -60,6 +60,11 @@
   max-width: 12px;
 }
 
+.main-wrapper main h1
+.main-wrapper main .middle-container {
+  max-height: 4rem !important;
+}
+
 @media only screen and (max-width: 768px) {
   .clock {
     display: none !important;

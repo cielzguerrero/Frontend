@@ -11,6 +11,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/9fb78288eb.js" crossorigin="anonymous"></script>
+    <!-- FLOWBITE CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css" />
     <!-- JQUERY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
@@ -26,8 +28,8 @@
                         <img src="../img/Glogoblue.png" class ="h-12">
                         <!-- TABS -->
                         <div class="tabs mt-24 flex flex-col  justify-center items-center content-center">
-                        <a href=""><i class="fa-solid px-3 py-2 bg-blue-500 rounded  fa-house  text-2xl mt-10 text-white "></i></a>
-                        <a href=""><i class="fa-solid fa-trash text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
+                        <a href=""><i class="fa-solid px-3 py-2 bg-slate-800 rounded  fa-house  text-2xl mt-10 text-white "></i></a>
+                        <a href=""><i class="fa-solid fa-wine-bottle text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
                         <a href=""><i class="fa-solid fa-money-bill text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
                         <a href=""><i class="fa-solid fa-user text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
                         <a href=""><i class="fa-solid fa-paperclip text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
@@ -62,36 +64,192 @@
             </div>
 
         <!-- CONTENTS -->
-        <div class="content-wrapper mt-5 mx-2">
+        <div class="content-wrapper  mt-5 mx-2">
             <!-- TOP CONTENTS -->
-            <div class="container grid xl:grid-cols-4 lg:grid-cols-4 
+            <div class="container grid xl:grid-cols-3 lg:grid-cols-3 
             md:grid-cols-2   sm:grid-cols-2  gap-4 ">
                 
                 <div class="box rounded-xl drop-shadow-md  p-14 px-28 bg-slate-100">
-                    <h1 class= "text-3xl font-bold text-center mb-5 text-slate-800">150</h1>
-                    <h1 class = "text-center font-semibold text-slate-800"> <i class="fa-solid fa-users pr-2"></i>Members</h1>
+                    <h1 class= "text-3xl font-bold text-center mb-5 text-slate-600">150</h1>
+                    <h1 class = "text-center font-semibold text-slate-600"> <i class="fa-solid fa-users pr-2"></i>Members</h1>
                 </div>
                 
                  
                 <div class="box rounded-xl drop-shadow-md p-14 px-28 bg-slate-100">
-                    <h1 class= "text-3xl font-bold text-center mb-5 text-slate-800">150</h1>
-                    <h1 class = "text-center font-semibold text-slate-800"> <i class="fa-solid fa-users pr-2"></i>Members</h1>
+                    <h1 class= "text-3xl font-bold text-center mb-5 text-slate-600">150</h1>
+                    <h1 class = "text-center font-semibold text-slate-600"> <i class="fa-solid fa-note-sticky pr-2"></i>Logs</h1>
                 </div>
 
                 <div class="box rounded-xl drop-shadow-md p-14 px-28 bg-slate-100">
-                    <h1 class= "text-3xl font-bold text-center mb-5 text-slate-800">150</h1>
-                    <h1 class = "text-center font-semibold text-slate-800"> <i class="fa-solid fa-users pr-2"></i>Members</h1>
+                    <h1 class= "text-3xl font-bold text-center mb-5 text-slate-600">150</h1>
+                    <h1 class = "text-center font-semibold text-slate-600"> <i class="fa-solid fa-truck pr-2"></i> Collected</h1>
                 </div>
 
-                <div class="box rounded-xl drop-shadow-md p-14 px-28    bg-slate-100">
-                    <h1 class= "text-3xl font-bold text-center mb-5 text-slate-800">150</h1>
-                    <h1 class = "text-center font-semibold text-slate-800"> <i class="fa-solid fa-users pr-2"></i>Members</h1>
-                </div>
+             
 
             </div>
-            <!--BOTTOM CONTENTS -->
-            <div class="bottom-container">
+            <!--middle contents CONTENTS -->
+            <div class="middle-container mt-5 grid xl:grid-cols-2 lg:grid-cols-2 
+            md:grid-cols-1   sm:grid-cols-1  gap-4 ">
+                <!-- PRIZES -->
+          
                 
+                <!-- LEADERBOARD -->
+                <div class="leaderboard  ">
+                        <h1 class = "font-semibold text-lg text-center  py-1 rounded text-slate-100 bg-slate-800 ">Leaderboard</h1>
+                        <div class="relative overflow-y-auto shadow-md sm:rounded-lg">
+                            <table class="w-full text-sm text-gray-500 dark:text-gray-400 text-center">
+                                <!-- THEAD -->
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-3">
+                                            Rank
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            Name
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            Points
+                                        </th>
+                                   
+                                      
+                                    </tr>
+                                </thead>
+                                <!-- TBODY -->
+                                <tbody>
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                                            1
+                                        </th>
+                                        <td class="px-6 py-4">
+                                            aldrin
+                                        </td>
+                                        <td class="px-6 py-4">
+                                        3050
+                                        </td>
+                                     
+                                   
+                                    </tr>
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                                            2
+                                        </th>
+                                        <td class="px-6 py-4">
+                                        aldrin
+                                        </td>
+                                        <td class="px-6 py-4">
+                                        3050
+                                        </td>
+                                  
+                                     
+                                    </tr>
+                                    <tr class="bg-white dark:bg-gray-800">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                                             3
+                                        </th>
+                                        <td class="px-6 py-4">
+                                        aldrin
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            3050
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white dark:bg-gray-800">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                                             4
+                                        </th>
+                                        <td class="px-6 py-4">
+                                        aldrin
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            3050
+                                        </td>
+                                    </tr>   <tr class="bg-white dark:bg-gray-800">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                                             5
+                                        </th>
+                                        <td class="px-6 py-4">
+                                        aldrin
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            3050
+                                        </td>
+                                    </tr>
+             
+                                </tbody>
+                            </table>
+                        </div>
+                </div>
+                   <!-- LOGS -->
+                   <div class="logs ">
+                        <h1 class = "font-semibold text-lg text-start pl-5 pr-40 py-1 rounded text-slate-100 bg-slate-800 ">Logs <a href="" class = "text-sm font-normal ">See all...</a></h1>
+                        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                            <table class="w-full text-sm text-gray-500 dark:text-gray-400 text-center">
+                                <!-- THEAD -->
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-3">
+                                            Activity
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            Time
+                                        </th>
+                                     
+                                   
+                                      
+                                    </tr>
+                                </thead>
+                                <!-- TBODY -->
+                                <tbody>
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                                        Bojji Kage : Gained 3 points
+                                        </th>
+                                        <td class="px-6 py-4">
+                                        2022-04-29 04:56:28
+                                        </td>
+                                    
+                                     
+                                   
+                                    </tr>
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                                        Bojji Kage : Gained 3 points
+                                        </th>
+                                        <td class="px-6 py-4">
+                                        2022-04-29 04:56:28
+                                        </td>   
+                                    </tr>
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                                        Bojji Kage : Gained 3 points
+                                        </th>
+                                        <td class="px-6 py-4">
+                                        2022-04-29 04:56:28
+                                        </td>   
+                                    </tr>
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                                        Bojji Kage : Gained 3 points
+                                        </th>
+                                        <td class="px-6 py-4">
+                                        2022-04-29 04:56:28
+                                        </td>   
+                                    </tr>
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                                        Bojji Kage : Gained 3 points
+                                        </th>
+                                        <td class="px-6 py-4">
+                                        2022-04-29 04:56:28
+                                        </td>   
+                                    </tr>
+                                 
+                                </tbody>
+                            </table>
+                        </div>
+                </div>
+               
             </div>
         </div>
                
@@ -108,5 +266,7 @@
 
     <!-- MY SCRIPT -->
     <script src="../AdminJs/admin.js"></script>
+    <!-- flowbiet JS -->
+    <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
 </body> 
 </html> 

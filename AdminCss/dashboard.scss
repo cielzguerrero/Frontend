@@ -91,6 +91,18 @@ $blue: rgb(12, 86, 235);
         
        
     }
+
+    // MIDDLE CONTENTS
+    main 
+    {
+        & h1 
+        
+        & .middle-container 
+        {
+            max-height: 4rem !important;
+        }
+    }
+  
 }
 
 
@@ -102,4 +114,5 @@ $blue: rgb(12, 86, 235);
    }
    
 }
+
    
