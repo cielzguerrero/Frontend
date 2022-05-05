@@ -13,6 +13,8 @@
     <script src="https://kit.fontawesome.com/9fb78288eb.js" crossorigin="anonymous"></script>
     <!-- FLOWBITE CSS -->
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css" />
+    <!-- CHARTS TAILWIND -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- JQUERY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
@@ -84,18 +86,31 @@
                     <h1 class= "text-3xl font-bold text-center mb-5 text-slate-600">150</h1>
                     <h1 class = "text-center font-semibold text-slate-600"> <i class="fa-solid fa-truck pr-2"></i> Collected</h1>
                 </div>
-
-             
-
             </div>
-            <!--middle contents CONTENTS -->
-            <div class="middle-container mt-5 grid xl:grid-cols-2 lg:grid-cols-2 
-            md:grid-cols-1   sm:grid-cols-1  gap-4 ">
-                <!-- PRIZES -->
-          
-                
+
+
+            <!-- MIDDLE CONTENTS -->
+            <div class="bottom-contents mt-5 flex justify-center items-center ">
+                  
+                <!-- DONUT TOTAL BARANGAY MEMBERS -->
+                <div class="">
+              
+                <canvas class="p-1" id="chartDoughnut"></canvas>
+                <div class="text-center font-semibold drop-shadow-xl text-slate-600">Member per Brgy.</div>
+                </div>
+                <!-- POINTS PER BARANGAY -->
+                <div class="">
+               
+                <canvas class="p-1" id="chartDoughnut2"></canvas>
+                <div class="text-center font-semibold drop-shadow-xl text-slate-600">Total Points per Brgy.</div>
+                </div>
+            </div>
+            
+            <!--BOTTOM  CONTENTS -->
+            <div class="middle-container mt-5  grid xl:grid-cols-2 lg:grid-cols-2 
+            md:grid-cols-1   sm:grid-cols-1  mx-2 gap-4 ">
                 <!-- LEADERBOARD -->
-                <div class="leaderboard  ">
+                <div class="leaderboard ">
                         <h1 class = "font-semibold text-lg text-center  py-1 rounded text-slate-100 bg-slate-800 ">Leaderboard</h1>
                         <div class="relative overflow-y-auto shadow-md sm:rounded-lg">
                             <table class="w-full text-sm text-gray-500 dark:text-gray-400 text-center">
@@ -181,8 +196,9 @@
                         </div>
                 </div>
                    <!-- LOGS -->
-                   <div class="logs ">
-                        <h1 class = "font-semibold text-lg text-start pl-5 pr-40 py-1 rounded text-slate-100 bg-slate-800 ">Logs <a href="" class = "text-sm font-normal ">See all...</a></h1>
+                   <div class="logs mb-10 ">
+               
+                        <h1 class = "font-semibold text-lg text-center py-1 px-5   rounded text-slate-100 bg-slate-800 ">Logs</h1>
                         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                             <table class="w-full text-sm text-gray-500 dark:text-gray-400 text-center">
                                 <!-- THEAD -->
@@ -252,7 +268,6 @@
                
             </div>
         </div>
-               
      
        
        

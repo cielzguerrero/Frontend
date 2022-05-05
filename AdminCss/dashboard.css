@@ -5,6 +5,22 @@
   transition: all 0.3s ease;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 3px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(7, 55, 151, 0.389);
+  border-radius: 10px;
+}
+
 .main-wrapper {
   max-width: 1400px;
   margin: auto;
@@ -60,7 +76,10 @@
   max-width: 12px;
 }
 
-.main-wrapper main h1
+.main-wrapper main table {
+  max-height: 5rem !important;
+}
+
 .main-wrapper main .middle-container {
   max-height: 4rem !important;
 }
