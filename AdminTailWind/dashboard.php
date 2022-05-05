@@ -90,20 +90,23 @@
 
 
             <!-- MIDDLE CONTENTS -->
-            <div class="bottom-contents mt-5 flex justify-center items-center ">
+            <div class="bottom-contents mt-5 xl:flex lg:flex md:flex sm:flex-wrap xs:flex-wrap mx-8  justify-evenly items-center ">
                   
                 <!-- DONUT TOTAL BARANGAY MEMBERS -->
                 <div class="">
               
                 <canvas class="p-1" id="chartDoughnut"></canvas>
-                <div class="text-center font-semibold drop-shadow-xl text-slate-600">Member per Brgy.</div>
+                <div class="text-center font-light drop-shadow-xl text-slate-600">Member per Brgy.</div>
                 </div>
                 <!-- POINTS PER BARANGAY -->
                 <div class="">
-               
                 <canvas class="p-1" id="chartDoughnut2"></canvas>
-                <div class="text-center font-semibold drop-shadow-xl text-slate-600">Total Points per Brgy.</div>
+                <div class="text-center font-light drop-shadow-xl text-slate-600">Total Points per Brgy.</div>
                 </div>
+
+                <!-- NEWS -->
+            
+                
             </div>
             
             <!--BOTTOM  CONTENTS -->
