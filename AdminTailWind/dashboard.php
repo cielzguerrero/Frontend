@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css" />
     <!-- CHARTS TAILWIND -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- OWL CAROUSEL CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
     <!-- JQUERY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
@@ -66,7 +71,7 @@
             </div>
 
         <!-- CONTENTS -->
-        <div class="content-wrapper  mt-5 mx-2">
+        <div class="content-wrapper   mt-5 mx-2">
             <!-- TOP CONTENTS -->
             <div class="container grid xl:grid-cols-3 lg:grid-cols-3 
             md:grid-cols-2   sm:grid-cols-2  gap-4 ">
@@ -90,22 +95,39 @@
 
 
             <!-- MIDDLE CONTENTS -->
-            <div class="bottom-contents mt-5 xl:flex lg:flex md:flex sm:flex-wrap xs:flex-wrap mx-8  justify-evenly items-center ">
+            <div class="bottom-contents mt-5 grid  xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 overflow-hidden justify-center items-center ">
                   
                 <!-- DONUT TOTAL BARANGAY MEMBERS -->
                 <div class="">
               
                 <canvas class="p-1" id="chartDoughnut"></canvas>
-                <div class="text-center font-light drop-shadow-xl text-slate-600">Member per Brgy.</div>
+                <div class="text-center  drop-shadow-xl text-slate-800 font-bold">Member per Brgy.</div>
                 </div>
+
                 <!-- POINTS PER BARANGAY -->
                 <div class="">
                 <canvas class="p-1" id="chartDoughnut2"></canvas>
-                <div class="text-center font-light drop-shadow-xl text-slate-600">Total Points per Brgy.</div>
+                <div class="text-center  drop-shadow-xl text-slate-800 font-bold">Total Points per Brgy.</div>
                 </div>
-
-                <!-- NEWS -->
+              
+                <!-- PRIZES -->
+                <div class="prizes my-5 overflow-hidden drop-shadow-xl">
+                <h1 class = "font-bold text-center text-xl text-white py-1 mt-2  bg-slate-800  ">Prizes</h1>
+                    <div class="owl-carousel ">
             
+                        <!-- PRIZE 1 -->
+                        <div class="item "><img src="../admin/images/prize/Prize-256.jpg" alt=""></div>
+                        <!-- PRIZE 2 -->
+                        <div class="item"><img src="../admin/images/prize/Prize-63.png"></div>
+                        <!-- PRIZE 3 -->
+                        <div class="item"><img src="../admin/images/prize/Prize-226.jpg"></div>
+                    
+                    </div>
+               
+                  
+                </div>
+              
+                
                 
             </div>
             
@@ -280,11 +302,14 @@
 
       
 
-        
+          <!-- OWL JS -->
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- MY SCRIPT -->
     <script src="../AdminJs/admin.js"></script>
     <!-- flowbiet JS -->
+    
     <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
 </body> 
 </html> 
