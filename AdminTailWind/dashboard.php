@@ -101,18 +101,18 @@
                 <div class="">
               
                 <canvas class="p-1" id="chartDoughnut"></canvas>
-                <div class="text-center  drop-shadow-xl text-slate-800 font-bold">Member per Brgy.</div>
+                <div class="text-center  drop-shadow-xl text-slate-600 font-bold">Member per Brgy.</div>
                 </div>
 
                 <!-- POINTS PER BARANGAY -->
                 <div class="">
                 <canvas class="p-1" id="chartDoughnut2"></canvas>
-                <div class="text-center  drop-shadow-xl text-slate-800 font-bold">Total Points per Brgy.</div>
+                <div class="text-center  drop-shadow-xl text-slate-600 font-bold">Total Points per Brgy.</div>
                 </div>
               
                 <!-- PRIZES -->
-                <div class="prizes my-5 overflow-hidden drop-shadow-xl">
-                <h1 class = "font-bold text-center text-xl text-white py-1 mt-2  bg-slate-800  ">Prizes</h1>
+                <div class="prizes my-5 overflow-hidden drop-shadow-xl rou">
+                <h1 class = "font-semibold text-center text-lg text-slate-100 py-1 mt-2  bg-slate-800  ">Prizes</h1>
                     <div class="owl-carousel ">
             
                         <!-- PRIZE 1 -->
