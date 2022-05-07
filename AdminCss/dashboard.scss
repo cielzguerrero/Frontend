@@ -7,7 +7,7 @@ $poppins: "Poppins",sans-serif;
 $blue: rgb(12, 86, 235);
 
 *{
-
+    overflow: hidden;
     font-family: $poppins;
     transition: all 0.3s ease;
 }
