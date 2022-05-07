@@ -36,9 +36,9 @@
                         <!-- TABS -->
                         <div class="tabs mt-24 flex flex-col  justify-center items-center content-center">
                         <a href="../AdminTailWind/dashboard.php"><i class="fa-solid  fa-house  text-2xl mt-10 text-slate-600 hover:text-blue-600"></i></a>
-                        <a href=""><i class="fa-solid  px-3 py-2 bg-slate-800 rounded fa-wine-bottle text-2xl mt-10 text-white  "></i></a>
+                        <a href="#!"><i class="fa-solid  px-3 py-2 bg-slate-800 rounded fa-wine-bottle text-2xl mt-10 text-white  "></i></a>
                         <a href="../AdminTailWind/NewsPrizes.php"><i class="fa-solid fa-money-bill text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
-                        <a href=""><i class="fa-solid fa-user text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
+                        <a href="../AdminTailWind/profile.php"><i class="fa-solid fa-user text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
                         <a href=""><i class="fa-solid fa-paperclip text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
                         <a href=""><i class="fa-solid fa-chart-simple text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
                         <a href=""><i class="fa-solid fa-power-off text-2xl mt-48 text-slate-600  hover:text-red-800"></i></a>
@@ -73,7 +73,7 @@
         <!-- CONTENTS -->
         <div class="content-wrapper   mt-5 mx-2">
            <!-- WASTE CONTENTS -->
-           <div class="waste mt-28 ring-1 rounded-lg ring-slate-400  pb-5">
+           <div class="waste mt-28 ring-1 rounded-lg ring-slate-400  pb-1">
                <!-- WASTE TITLE -->
                 <div class="waste-title rounded-t flex justify-between py-2 text-slate-100 px-4 text-lg  bg-slate-800 items-center">
                 <h1 class="" >Garbage Type</h1>
@@ -82,7 +82,7 @@
              
                <div class="waste-wrapper bg-white grid bg xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1   xs:grid-cols-1 overflow-hidden justify-center content-center items-center  mx-2 gap-5">
              <!-- GARBAGE 1 -->
-                        <div class="box  drop-shadow-lg mt-24 bg-blue-200 flex flex-col items-center">
+                        <div class="box mt-2  drop-shadow-lg bg-blue-200 flex flex-col items-center">
                             <h1 class = "text-center font-bold w-full py-2 bg-slate-800 text-slate-100 rounded-t">Doy Pack</h1>
                             <img src="../admin/images/garbage/GarbageType-628.jpg" class = "py-5 h-52 w-52  ">
                             <h1 class = "text-center font-semibold py-2">Points: 2</h1>
@@ -108,7 +108,7 @@
                              
                         </div>
            <!-- GARBAGE 2 -->
-                        <div class="box  drop-shadow-lg mt-24 bg-blue-200 flex flex-col items-center">
+                        <div class="box mt-2  drop-shadow-lg  bg-blue-200 flex flex-col items-center">
                             <h1 class = "text-center font-bold w-full py-2 bg-slate-800 text-slate-100 rounded-t">Glass Bottle</h1>
                             <img src="../admin/images/garbage/GarbageType-973.jpg" class = "py-5 h-52 w-52  ">
                             <h1 class = "text-center font-semibold py-2">Points: 4</h1>
@@ -133,7 +133,7 @@
                             </div>
                         </div>
             <!-- GARBAGE 3 -->
-                       <div class="box  drop-shadow-lg mt-24 bg-blue-200 flex flex-col items-center">
+                       <div class="box mt-2  drop-shadow-lg  bg-blue-200 flex flex-col items-center">
                             <h1 class = "text-center font-bold w-full py-2 bg-slate-800 text-slate-100 rounded-t">Plastic Bottle</h1>
                             <img src="../admin/images/garbage/GarbageType-725.jpg" class = "py-5 h-52 w-52  ">
                             <h1 class = "text-center font-semibold py-2">Points: 3</h1>
@@ -158,7 +158,7 @@
                             </div>
                         </div>
            <!-- GARBAGE 4 -->
-                         <div class="box  drop-shadow-lg mt-24 bg-blue-200 flex flex-col items-center">
+                         <div class="box mt-2  drop-shadow-lg  bg-blue-200 flex flex-col items-center">
                             <h1 class = "text-center font-bold w-full py-2 bg-slate-800 text-slate-100 rounded-t">Aluminum Can</h1>
                             <img src="../admin/images/garbage/GarbageType-206.jpg" class = "py-5 h-52">
                             <h1 class = "text-center font-semibold py-2">Points: 10</h1>
