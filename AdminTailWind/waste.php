@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Garbage Type</title>
     <!-- MY CSS -->
     <link rel="stylesheet" href="../AdminCss/dashboard.css">
     <!-- TAILWIND CDN -->
@@ -37,7 +37,7 @@
                         <div class="tabs mt-24 flex flex-col  justify-center items-center content-center">
                         <a href="../AdminTailWind/dashboard.php"><i class="fa-solid  fa-house  text-2xl mt-10 text-slate-600 hover:text-blue-600"></i></a>
                         <a href=""><i class="fa-solid  px-3 py-2 bg-slate-800 rounded fa-wine-bottle text-2xl mt-10 text-white  "></i></a>
-                        <a href=""><i class="fa-solid fa-money-bill text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
+                        <a href="../AdminTailWind/NewsPrizes.php"><i class="fa-solid fa-money-bill text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
                         <a href=""><i class="fa-solid fa-user text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
                         <a href=""><i class="fa-solid fa-paperclip text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
                         <a href=""><i class="fa-solid fa-chart-simple text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
@@ -73,9 +73,9 @@
         <!-- CONTENTS -->
         <div class="content-wrapper   mt-5 mx-2">
            <!-- WASTE CONTENTS -->
-           <div class="waste mt-28 ring-1 rounded-lg ring-slate-400 bg-slate-100 pb-24">
+           <div class="waste mt-28 ring-1 rounded-lg ring-slate-400  pb-24">
                <!-- WASTE TITLE -->
-                <div class="waste-title flex justify-between py-2 text-slate-100 px-4 text-lg  bg-slate-800 items-center">
+                <div class="waste-title rounded-t flex justify-between py-2 text-slate-100 px-4 text-lg  bg-slate-800 items-center">
                 <h1 class="" >Garbage Type</h1>
                 <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Add New</button></a>
                 </div>

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard</title>
+
     <!-- MY CSS -->
     <link rel="stylesheet" href="../AdminCss/dashboard.css">
     <!-- TAILWIND CDN -->
@@ -19,9 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    
-    <!-- JQUERY -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ 
 </head>
 <body  class = "bg-slate-800"onload="startTime()">
 
@@ -37,7 +36,7 @@
                         <div class="tabs mt-24 flex flex-col  justify-center items-center content-center">
                         <a href="#!"><i class="fa-solid px-3 py-2 bg-slate-800 rounded  fa-house  text-2xl mt-10 text-white  "></i></a>
                         <a href="../AdminTailWind/waste.php"><i class="fa-solid fa-wine-bottle text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
-                        <a href=""><i class="fa-solid fa-money-bill text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
+                        <a href="../AdminTailWind/NewsPrizes.php"><i class="fa-solid fa-money-bill text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
                         <a href=""><i class="fa-solid fa-user text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
                         <a href=""><i class="fa-solid fa-paperclip text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
                         <a href=""><i class="fa-solid fa-chart-simple text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
@@ -95,7 +94,7 @@
 
 
             <!-- MIDDLE CONTENTS -->
-            <div class="bottom-contents mt-5 grid  xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 overflow-hidden justify-center items-center ">
+            <div class="bottom-contents  overflow-hidden mt-5 grid  xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1  justify-center items-center ">
                   
                 <!-- DONUT TOTAL BARANGAY MEMBERS -->
                 <div class="">
@@ -113,18 +112,16 @@
                 <!-- PRIZES -->
                 <div class="prizes my-5 overflow-hidden drop-shadow-xl rou">
                 <h1 class = "font-semibold text-center text-lg text-slate-100 py-1 mt-2  bg-slate-800  ">Prizes</h1>
-                    <div class="owl-carousel ">
+                    <div class="owl-one owl-carousel owl-theme overflow-hidden">
             
                         <!-- PRIZE 1 -->
-                        <div class="item "><img src="../admin/images/prize/Prize-256.jpg" alt=""></div>
+                        <div class="item "><img src="../admin/images/prize/Prize-256.jpg"></div>
                         <!-- PRIZE 2 -->
                         <div class="item"><img src="../admin/images/prize/Prize-63.png"></div>
                         <!-- PRIZE 3 -->
                         <div class="item"><img src="../admin/images/prize/Prize-226.jpg"></div>
                     
                     </div>
-               
-                  
                 </div>
               
                 
@@ -300,7 +297,9 @@
     </section>
 
 
-      
+         
+    <!-- JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
           <!-- OWL JS -->
     

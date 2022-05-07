@@ -100,8 +100,11 @@ const pointsDoughnut = {
     document.getElementById("chartDoughnut2"),
     configpointsDoughnut
   );
-  // OWL CAROUSEL 
-  $('.owl-carousel').owlCarousel({
+
+  
+  
+  // OWL CAROUSEL ON DASHBOARD
+  $('.owl-one').owlCarousel({
     loop:true,
     margin:10,
     nav:false,
@@ -119,4 +122,4 @@ const pointsDoughnut = {
             items:1
         }
     }
-})
+});
