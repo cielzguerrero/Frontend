@@ -112,7 +112,16 @@ $blue: rgb(12, 86, 235);
         
        
     }
-
+    // TABLE 
+    #recipients 
+    {
+        input
+        {
+            padding: 2px;
+            border-radius: 5px;
+        }
+    }
+   
    
   
 }
@@ -129,34 +138,3 @@ $blue: rgb(12, 86, 235);
 
    
 
-// TABLE 
-table 
-{
-    overflow: auto !important;
-    tbody 
-    {
-        overflow: auto !important;
-        tr 
-        {
-            overflow: auto !important;
-            th
-            {   
-                overflow: auto !important;
-                img 
-                {
-                    max-width: 45px;
-                    max-height: 45px;
-                    border-radius: 100%;
-                }
-            }
-            
-        }
-       
-    }
-
-    
-
-    
-    
-    
-}

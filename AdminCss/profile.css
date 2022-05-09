@@ -76,31 +76,14 @@
   max-width: 12px;
 }
 
+.main-wrapper #recipients input {
+  padding: 2px;
+  border-radius: 5px;
+}
+
 @media only screen and (max-width: 768px) {
   .clock {
     display: none !important;
   }
-}
-
-table {
-  overflow: auto !important;
-}
-
-table tbody {
-  overflow: auto !important;
-}
-
-table tbody tr {
-  overflow: auto !important;
-}
-
-table tbody tr th {
-  overflow: auto !important;
-}
-
-table tbody tr th img {
-  max-width: 45px;
-  max-height: 45px;
-  border-radius: 100%;
 }
 /*# sourceMappingURL=profile.css.map */
