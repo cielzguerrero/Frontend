@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Members</title>
+    <title>Logs</title>
 
     <!-- MY CSS -->
  
@@ -39,8 +39,8 @@
                         <a href="../AdminTailWind/dashboard.php"><i class="fa-solid  fa-house  text-2xl mt-10 text-slate-600 hover:to-blue-600  "></i></a>
                         <a href="../AdminTailWind/waste.php"><i class="fa-solid fa-wine-bottle text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
                         <a href="../AdminTailWind/NewsPrizes.php"><i class="fa-solid fa-money-bill text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
-                        <a href="#!"><i class="fa-solid fa-user px-3 py-2 bg-slate-800 rounded  text-2xl mt-10 text-white  "></i></a>
-                        <a href="../AdminTailWind/logs.php"><i class="fa-solid fa-paperclip text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
+                        <a href="../AdminTailWind/members.php"><i class="fa-solid fa-user text-2xl mt-10 text-slate-600  hover:text-blue-600" ></i></a>
+                        <a href="#!"><i class="fa-solid fa-paperclip px-3 py-2 bg-slate-800 rounded   text-2xl mt-10 text-white"></i></a>
                         <a href="../AdminTailWind/analytics.php"><i class="fa-solid fa-chart-simple text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
                         <a href=""><i class="fa-solid fa-power-off text-2xl mt-48 text-slate-600  hover:text-red-800"></i></a>
                         </div>
@@ -58,7 +58,7 @@
                                 <span class = ""> </span>
                                 <span class = ""> </span>
                         </a>
-                <h1 class = "text-xl font-bold flex-1 text-slate-600">Members</h1>
+                <h1 class = "text-xl font-bold flex-1 text-slate-600">Logs and Transactions</h1>
                 <!-- TIME CLOCK -->
                 <i class="fa-solid fa-clock mr-2 text-xl font-bold text-slate-600 lg:block md:hidden sm:hidden xs:hidden clock "></i>
                 <h1 class = "text-xl font-bold text-slate-600 lg:block md:hidden sm:hidden xs:hidden clock flex-auto" id = "clock">
@@ -75,68 +75,64 @@
         <div class="content-wrapper   mt-10 mx-2">
            
            
-    <!-- MEMBER TABLE -->
+    <!-- LOGS TABLE -->
 	<!--Container-->
 	<div class="container w-4/5 mx-auto px-2">
                 <!--Title-->
                 <h1 class="text-center font-sans font-bold break-normal text-blue-500 px-2 py-8 text-xl md:text-2xl">
-                  Members
+                  Logs
                 </h1>
                 <!--Card-->
                 <div id='recipients' class="p-8 mt-6 lg:mt-0 rounded-lg shadow bg-white">
                     <table id="example" class="stripe hover text-center" style="width:100%; padding-top: 1em;  padding-bottom: 1em;">
                         <thead>
                             <tr class = "text-slate-600">
-                                <th data-priority="1">Profile</th>
-                                <th data-priority="2">Full Name</th>
-                                <th data-priority="3">Date Created</th>
-                                <th data-priority="4">Email</th>
-                                <th data-priority="5">Contact</th>
-                                <th data-priority="6">Actions||      <button type="button" class="text-white bg-green-600 hover:bg-green-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Add</button></th>
+                                <th data-priority="1">User</th>
+                                <th data-priority="2">Activity</th>
+                                <th data-priority="3">Date Started</th>
+                                <th data-priority="4">Elapse Time</th>
+                                <th data-priority="5">Actions|| <button type="button" class="text-white bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Del all</button></th>
                             </tr>
                         </thead>
                         <tbody class = "text-slate-600">
                             <tr>
-                                <td ><img src="../img/aldrin.jpg"></td>
+                       
                                 <td>Johannes</td>
-                                <td>2021-12-21</td>
-                                <td>utherjohannes@gmail.com</td>
-                                <td>0192313123</td>
+                                <td>Bojji Kage : Gained 3 points</td>
+                                <td>2022-04-29 04:56:28</td>
+                                <td>2 weeks ago</td>
                            
                                 <td class = "flex justify-center mt-5">
-                                    <button type="button" class="text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">View</button>
-                                    <button type="button" class="text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Upd</button>
-                                    <button type="button" class="text-white bg-red-500 hover:bg-red-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Del</button>
+                                    <button type="button" class="text-white bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Del</button>
+                         
                             </td>
                             </tr>
 
                        
 
                             <tr>
-                                <td ><img src="../img/aldrin.jpg"></td>
+                               
                                 <td>Johannes</td>
-                                <td>2021-12-21</td>
-                                <td>utherjohannes@gmail.com</td>
-                                <td>0192313123</td>
+                                <td>Bojji Kage : Gained 3 points</td>
+                                <td>2022-04-29 04:56:28</td>
+                                <td>2 weeks ago</td>
                            
                                 <td class = "flex justify-center mt-5">
-                                    <button type="button" class="text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">View</button>
-                                    <button type="button" class="text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Upd</button>
-                                    <button type="button" class="text-white bg-red-500 hover:bg-red-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Del</button>
+                                    <button type="button" class="text-white bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Del</button>
+                                 
                             </td>
                             </tr>
 
                             <tr>
-                                <td ><img src="../img/aldrin.jpg"></td>
+                               
                                 <td>Johannes</td>
-                                <td>2021-12-21</td>
-                                <td>utherjohannes@gmail.com</td>
-                                <td>0192313123</td>
+                                <td>Bojji Kage : Gained 3 points</td>
+                                <td>2022-04-29 04:56:28</td>
+                                <td>2 weeks ago</td>
                            
                                 <td class = "flex justify-center mt-5">
-                                    <button type="button" class="text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">View</button>
-                                    <button type="button" class="text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Upd</button>
-                                    <button type="button" class="text-white bg-red-500 hover:bg-red-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Del</button>
+                                    <button type="button" class="text-white bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Del</button>
+                         
                             </td>
                             </tr>
 
@@ -152,6 +148,90 @@
                 <!--/Card-->
                 </div>
                 <!--/container-->
+
+
+
+
+                           
+    <!-- USER TRANSACTION TABLE -->
+	<!--Container-->
+	<div class="container w-4/5 mx-auto px-2 mt-10">
+                <!--Title-->
+                <h1 class="text-center font-sans font-bold break-normal text-blue-500 px-2 py-8 text-xl md:text-2xl">
+                  User Transaction
+                </h1>
+                <!--Card-->
+                <div id='recipients' class="p-8 mt-6 lg:mt-0 rounded-lg shadow bg-white">
+                    <table id="example2" class="stripe hover text-center" style="width:100%; padding-top: 1em;  padding-bottom: 1em;">
+                        <thead>
+                            <tr class = "text-slate-600">
+                                <th data-priority="1">User</th>
+                                <th data-priority="2">Activity</th>
+                                <th data-priority="3">Date of Transaction</th>
+                                <th data-priority="4">Reference Number</th>
+                                <th data-priority="5">Actions|| <button type="button" class="text-white bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Del all</button></th>
+                            </tr>
+                        </thead>
+                        <tbody class = "text-slate-600">
+                            <tr>
+                       
+                                <td>Johannes</td>
+                                <td>Claimed 200 Pesos</td>
+                                <td>2022-04-29 04:56:28</td>
+                                <td>70a32110fff0f26d301e58ebbca9cb9f</td>
+                           
+                                <td class = "flex justify-center mt-5">
+                                    <button type="button" class="text-white bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Del</button>
+                         
+                            </td>
+                            </tr>
+
+                       
+
+                            <tr>
+                               
+                                <td>Johannes</td>
+                                <td>Claimed 200 Pesos</td>
+                                <td>2022-04-29 04:56:28</td>
+                                <td>70a32110fff0f26d301e58ebbca9cb9f</td>
+                           
+                                <td class = "flex justify-center mt-5">
+                                    <button type="button" class="text-white bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Del</button>
+                                 
+                            </td>
+                            </tr>
+
+                            <tr>
+                               
+                                <td>Johannes</td>
+                                <td>Claimed 200 Pesos</td>
+                                <td>2022-04-29 04:56:28</td>
+                                <td>70a32110fff0f26d301e58ebbca9cb9f</td>
+                           
+                                <td class = "flex justify-center mt-5">
+                                    <button type="button" class="text-white bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Del</button>
+                         
+                            </td>
+                            </tr>
+
+                            
+
+                            
+                        </tbody>
+
+                    </table>
+
+
+                </div>
+                <!--/Card-->
+                </div>
+                <!--/container-->
+
+
+
+
+
+
         </div>
                                 
          
@@ -180,6 +260,15 @@
             .columns.adjust()
             .responsive.recalc();
     });
+    $(document).ready(function() {
+
+var table = $('#example2').DataTable({
+        responsive: true,
+        "lengthChange": false
+    })
+    .columns.adjust()
+    .responsive.recalc();
+});
 </script>
 </body> 
 </html> 
