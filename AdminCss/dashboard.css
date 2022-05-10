@@ -27,6 +27,11 @@
   margin: auto;
 }
 
+.main-wrapper #chartdiv {
+  width: 100%;
+  height: 500px;
+}
+
 .main-wrapper nav {
   width: 100px;
   height: 100%;

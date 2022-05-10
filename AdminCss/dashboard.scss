@@ -34,6 +34,10 @@ $blue: rgb(12, 86, 235);
 {   max-width: 1400px;
     margin: auto;
 
+    & #chartdiv {
+        width: 100%;
+        height: 500px;
+      }
 
 
     // SIDEBAR

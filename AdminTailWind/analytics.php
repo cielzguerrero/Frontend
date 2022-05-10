@@ -56,7 +56,7 @@
                                 <span class = ""> </span>
                                 <span class = ""> </span>
                         </a>
-                <h1 class = "text-xl font-bold flex-1 text-slate-600">Dashboard</h1>
+                <h1 class = "text-xl font-bold flex-1 text-slate-600">Analytics</h1>
                 <!-- TIME CLOCK -->
                 <i class="fa-solid fa-clock mr-2 text-xl font-bold text-slate-600 lg:block md:hidden sm:hidden xs:hidden clock "></i>
                 <h1 class = "text-xl font-bold text-slate-600 lg:block md:hidden sm:hidden xs:hidden clock flex-auto" id = "clock">
@@ -70,25 +70,42 @@
             </div>
 
         <!-- CONTENTS -->
-        <div class="content-wrapper   mt-5 mx-2">
-    
+        <div class="content-wrapper  mt-5 mx-2">
+                <!-- BAR CHART -->
+                <div id="chartdiv"></div>
+                <!-- BOTTOM CHARTS -->
+                <div class="my-5 grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 xs:grid-cols-1 items-center">
+
+                <!-- TOTAL POINTS BARANGAY -->
+                    <div class="">
+                    <canvas class="p-5 drop-shadow-lg" id="DoughnutAnalytics1"></canvas>
+                    <h1 class = "text-center font-semibold text-slate-600">Total Points Per Brgy</h1>
+                    </div>
+
+                    <!-- TOTAL PER BARANGAY -->
+                    <div class="">
+                    <canvas class="p-5 drop-shadow-lg" id="DoughnutAnalytics2"></canvas>
+                    <h1 class = "text-center font-semibold text-slate-600">Total Members Per Brgy</h1>
+                    </div>
+                    
+                    
+                </div>
         </div>
         </main>
     </section>
 
+  
 
-         
+
+    <!-- CHART JS  -->
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
     <!-- JQUERY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-          <!-- OWL JS -->
-    
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
     <!-- MY SCRIPT -->
-    <script src="../AdminJs/admin.js"></script>
+    <script src="../AdminJs/analytics.js"></script>
     <!-- flowbiet JS -->
-    
     <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
 </body> 
 </html> 
