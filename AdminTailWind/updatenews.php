@@ -71,7 +71,7 @@
             </div>
 
         <!-- CONTENTS -->
-        <div class="content-wrapper overflow-auto mt-5 mx-5">
+        <div class="content-wrapper overflow-auto mt-5 mx-5 ">
 
                 <!-- UPDATE NEWS -->
                 <div class="grid lg:grid-cols-2 md:grid-cols-1 justify-center items-center mt-20 bg-slate-300 py-5 px-6 rounded-lg  gap-10">

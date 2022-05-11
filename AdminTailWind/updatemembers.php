@@ -75,7 +75,7 @@
         <div class="content-wrapper   mt-10 mx-2">
      
                 
-            <div class="grid md:grid-cols-1 sm:grid-cols-1 mx-auto mt-20  py-5 px-6 rounded-lg items-center md:w-2/3 sm:w-full gap-10">
+            <div class="grid md:grid-cols-1 sm:grid-cols-1 mx-auto mt-20  py-5 px-6 rounded-lg items-center md:w-2/3 sm:w-full gap-10 ">
                 <!-- UPDATE PROFILE-->
                 <div class="update bg-slate-300 p-8 rounded-lg">
                 <div class="currentImage  ">

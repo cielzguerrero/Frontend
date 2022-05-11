@@ -218,7 +218,7 @@
                         </div>
                 </div>
                    <!-- LOGS -->
-                   <div class="logs mb-10 ">
+                   <div class="logs mb-10 drop-shadow">
                
                         <h1 class = "font-semibold text-lg text-center py-1 px-5   rounded text-slate-100 bg-slate-800 ">Logs</h1>
                         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
