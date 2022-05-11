@@ -83,7 +83,7 @@
                   Logs
                 </h1>
                 <!--Card-->
-                <div id='recipients' class="p-8 mt-6 lg:mt-0 rounded-lg shadow bg-white">
+                <div id='recipients' class="p-8 mt-6 lg:mt-0 rounded-lg shadow bg-slate-300">
                     <table id="example" class="stripe hover text-center" style="width:100%; padding-top: 1em;  padding-bottom: 1em;">
                         <thead>
                             <tr class = "text-slate-600">
@@ -161,7 +161,7 @@
                   User Transaction
                 </h1>
                 <!--Card-->
-                <div id='recipients' class="p-8 mt-6 lg:mt-0 rounded-lg shadow bg-white">
+                <div id='recipients' class="p-8 mt-6 lg:mt-0 rounded-lg shadow bg-slate-300">
                     <table id="example2" class="stripe hover text-center" style="width:100%; padding-top: 1em;  padding-bottom: 1em;">
                         <thead>
                             <tr class = "text-slate-600">
