@@ -74,17 +74,17 @@
                 <!-- BAR CHART -->
                 <div id="chartdiv"></div>
                 <!-- BOTTOM CHARTS -->
-                <div class="my-5 grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 xs:grid-cols-1 items-center">
+                <div class="my-5 grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 justify-center items-center gap-24">
 
                 <!-- TOTAL POINTS BARANGAY -->
                     <div class="">
-                    <canvas class="p-5 drop-shadow-lg" id="DoughnutAnalytics1"></canvas>
+                    <canvas class="p-1 drop-shadow-lg" id="DoughnutAnalytics1"></canvas>
                     <h1 class = "text-center font-semibold text-slate-600">Total Points Per Brgy</h1>
                     </div>
 
                     <!-- TOTAL PER BARANGAY -->
                     <div class="">
-                    <canvas class="p-5 drop-shadow-lg" id="DoughnutAnalytics2"></canvas>
+                    <canvas class="p-1 drop-shadow-lg" id="DoughnutAnalytics2"></canvas>
                     <h1 class = "text-center font-semibold text-slate-600">Total Members Per Brgy</h1>
                     </div>
                     

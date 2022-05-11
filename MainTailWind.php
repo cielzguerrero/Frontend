@@ -27,7 +27,7 @@
 
 <body class = "bg-slate-200 dark:bg-slate-800" id="top">
  <!-- NAV -->
-<nav class="bg-white border-gray-200 px-2 shadow-xl dark:shadow-xl sm:px-4 py-4  dark:bg-slate-800">
+<nav class="bg-white border-gray-200 px-2 shadow-xl dark:shadow sm:px-4 py-4  dark:bg-slate-800">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
   <a href="MainTailWind.php" class="flex items-center">
       <img src="img/glogoblue.png" class="mr-3 h-8 sm:h-9 " alt="Flowbite Logo" />
