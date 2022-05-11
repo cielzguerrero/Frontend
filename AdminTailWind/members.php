@@ -78,24 +78,21 @@
     <!-- MEMBER TABLE -->
 	<!--Container-->
 	<div class="container w-4/5 mx-auto px-2">
-                <!--Title-->
-                <h1 class="text-center font-sans font-bold break-normal text-blue-500 px-2 py-8 text-xl md:text-2xl">
-                  Members
-                </h1>
+            
                 <!--Card-->
-                <div id='recipients' class="p-8 mt-6 lg:mt-0 rounded-lg shadow bg-white">
-                    <table id="example" class="stripe hover text-center" style="width:100%; padding-top: 1em;  padding-bottom: 1em;">
-                        <thead>
+                <div id='recipients' class="p-8 mt-6 lg:mt-0 rounded-lg shadow bg-slate-300 ">
+                    <table id="example" class="stripe hover text-center  " style="width:100%; padding-top: 1em;  padding-bottom: 1em; ">
+                        <thead >
                             <tr class = "text-slate-600">
                                 <th data-priority="1">Profile</th>
                                 <th data-priority="2">Full Name</th>
                                 <th data-priority="3">Date Created</th>
                                 <th data-priority="4">Email</th>
                                 <th data-priority="5">Contact</th>
-                                <th data-priority="6">Actions||      <button type="button" class="text-white bg-green-600 hover:bg-green-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Add</button></th>
+                                <th data-priority="6">Actions</th>
                             </tr>
                         </thead>
-                        <tbody class = "text-slate-600">
+                        <tbody class = "">
                             <tr>
                                 <td ><img src="../img/aldrin.jpg"></td>
                                 <td>Johannes</td>
@@ -103,9 +100,9 @@
                                 <td>utherjohannes@gmail.com</td>
                                 <td>0192313123</td>
                            
-                                <td class = "flex justify-center mt-5">
-                                   
-                                    <button type="button" class="text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Upd</button>
+                                <td class = "flex justify-center  ">
+                                   <a href="../AdminTailWind/updatemembers.php"> <button type="button" class="text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Upd</button></a>
+                               
                                     <button type="button" class="text-white bg-red-500 hover:bg-red-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Del</button>
                             </td>
                             </tr>
@@ -119,9 +116,9 @@
                                 <td>utherjohannes@gmail.com</td>
                                 <td>0192313123</td>
                            
-                                <td class = "flex justify-center mt-5">
+                                <td class = "flex justify-center ">
                                    
-                                    <button type="button" class="text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Upd</button>
+                                <a href="../AdminTailWind/updatemembers.php"> <button type="button" class="text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Upd</button></a>
                                     <button type="button" class="text-white bg-red-500 hover:bg-red-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Del</button>
                             </td>
                             </tr>
@@ -133,9 +130,9 @@
                                 <td>utherjohannes@gmail.com</td>
                                 <td>0192313123</td>
                            
-                                <td class = "flex justify-center mt-5">
+                                <td class = "flex justify-center ">
                                    
-                                    <button type="button" class="text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Upd</button>
+                                <a href="../AdminTailWind/updatemembers.php"> <button type="button" class="text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Upd</button></a>
                                     <button type="button" class="text-white bg-red-500 hover:bg-red-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Del</button>
                             </td>
                             </tr>
