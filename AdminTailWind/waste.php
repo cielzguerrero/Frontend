@@ -73,12 +73,8 @@
         <!-- CONTENTS -->
         <div class="content-wrapper   mt-5 mx-2">
            <!-- WASTE CONTENTS -->
-           <div class="waste mt-28 ring-1 rounded-lg ring-slate-400  pb-1">
-               <!-- WASTE TITLE -->
-                <div class="waste-title rounded-t flex justify-between py-2 text-slate-100 px-4 text-lg  bg-slate-800 items-center">
-                <h1 class="" >Garbage Type</h1>
-                <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Add New</button></a>
-                </div>
+           <div class="waste mt-28 ">
+            
              
                <div class="waste-wrapper bg-white grid bg xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1   xs:grid-cols-1 overflow-hidden justify-center content-center items-center  mx-2 gap-5">
              <!-- GARBAGE 1 -->
@@ -89,10 +85,10 @@
                             <!-- Buttons -->
                             <div class="editDelButtons flex justify-between items-center">
                                 <!-- EDIT -->
-                                <a href="">
+                                <a href="../AdminTailWind/updatewaste.php">
                                 <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-bold text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500  hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800 ">
                                 <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                                   EDIT
+                                   UPD
                                 </span>
                                 </button>
                                 </a>
@@ -115,10 +111,10 @@
                             <!-- Buttons -->
                             <div class="editDelButtons flex justify-between items-center">
                                 <!-- EDIT -->
-                                <a href="">
+                                <a href="../AdminTailWind/updatewaste.php">
                                 <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-bold text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500  hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800 ">
                                 <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                                   EDIT
+                                UPD
                                 </span>
                                 </button>
                                 </a>
@@ -140,10 +136,10 @@
                             <!-- Buttons -->
                             <div class="editDelButtons flex justify-between items-center">
                                 <!-- EDIT -->
-                                <a href="">
+                                <a href="../AdminTailWind/updatewaste.php">
                                 <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-bold text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500  hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
                                 <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                                   EDIT
+                                UPD
                                 </span>
                                 </button>
                                 </a>
@@ -165,10 +161,10 @@
                             <!-- Buttons -->
                             <div class="editDelButtons flex justify-between items-center">
                                 <!-- EDIT -->
-                                <a href="">
+                                <a href="../AdminTailWind/updatewaste.php">
                                 <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-bold text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500  hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
                                 <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                                   EDIT
+                                UPD
                                 </span>
                                 </button>
                                 </a>
