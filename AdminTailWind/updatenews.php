@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garbage Type</title>
+    <title>News & Prizes</title>
     <!-- MY CSS -->
     <link rel="stylesheet" href="../AdminCss/dashboard.css">
     <!-- TAILWIND CDN -->
@@ -36,8 +36,8 @@
                         <!-- TABS -->
                         <div class="tabs mt-24 flex flex-col  justify-center items-center content-center">
                         <a href="../AdminTailWind/dashboard.php"><i class="fa-solid  fa-house  text-2xl mt-10 text-slate-600 hover:text-blue-600"></i></a>
-                        <a href="../AdminTailWind/waste.php"><i class="fa-solid  px-3 py-2 bg-slate-800 rounded fa-wine-bottle text-2xl mt-10 text-white  "></i></a>
-                        <a href="../AdminTailWind/NewsPrizes.php"><i class="fa-solid fa-money-bill text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
+                        <a href="../AdminTailWind/waste.php"><i class="fa-solid   fa-wine-bottle text-2xl mt-10  text-slate-600   hover:text-blue-600"></i></a>
+                        <a href="../AdminTailWind/NewsPrizes.php"><i class="fa-solid  px-3 py-2 bg-slate-800 text-white rounded fa-money-bill text-2xl mt-10   "></i></a>
                         <a href="../AdminTailWind/members.php"><i class="fa-solid fa-user text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
                         <a href="../AdminTailWind/logs.php"><i class="fa-solid fa-paperclip text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
                         <a href="../AdminTailWind/analytics.php"><i class="fa-solid fa-chart-simple text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
@@ -57,7 +57,7 @@
                                 <span class = ""> </span>
                                 <span class = ""> </span>
                         </a>
-                <h1 class = "text-xl font-bold flex-1 text-slate-600">Update/Add</h1>
+                <h1 class = "text-xl font-bold flex-1 text-slate-600">Update/Add News</h1>
                 <!-- TIME CLOCK -->
                 <i class="fa-solid fa-clock mr-2 text-xl font-bold text-slate-600 lg:block md:hidden sm:hidden xs:hidden clock "></i>
                 <h1 class = "text-xl font-bold text-slate-600 lg:block md:hidden sm:hidden xs:hidden clock flex-auto" id = "clock">
@@ -71,17 +71,19 @@
             </div>
 
         <!-- CONTENTS -->
-        <div class="content-wrapper overflow-auto mt-5 mx-10">
-        <!-- UPDATE -->
-            <div class="grid lg:grid-cols-2 md:grid-cols-1 justify-center items-center mt-20 bg-slate-300 py-5 px-6 rounded-lg gap-10">
+        <div class="content-wrapper overflow-auto mt-5 mx-5">
+
+                <!-- UPDATE NEWS -->
+                <div class="grid lg:grid-cols-2 md:grid-cols-1 justify-center items-center mt-20 bg-slate-300 py-5 px-6 rounded-lg  gap-10">
                 <form class = "w-full  ">
-                    <div class="mb-2">
-                        <label for="email" class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300 ">Name </label>
-                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" value = "Doy pack" required>
+
+                <div class="mb-2">
+                        <label for="text" class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300 ">Name </label>
+                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" value = "Waste Mangement" required>
                     </div>
                     <div class="mb-2">
-                        <label for="email" class="block mb-1 text-md  font-medium text-gray-900 dark:text-gray-300">Points</label>
-                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full"  value = "2" required>
+                        <label for="text" class="block mb-1 text-md  font-medium text-gray-900 dark:text-gray-300">Description</label>
+                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full"  value = "Solid Waste" required>
                     </div>
 
                     <div class="mb-4">
@@ -95,25 +97,25 @@
                 </form>
 
                 <!-- IMAGE -->
-                <div class="mx-auto ">
+                <div class="mx-auto  ">
                     <h1 class ="bg-slate-800 text-slate-200 text-center py-1 rounded-t">Current Image</h1>
-                    <img src="../admin/images/garbage/GarbageType-628.jpg">
+                    <img src="../admin/images/news/News-619.png">
                 </div>
-            
             </div>
 
 
-            <!-- ADD NEW -->
 
-            <div class=" mt-10 bg-slate-300 py-5 px-6 rounded-lg lg:w-2/3 md:w-2/3 sm:w-full mx-auto ">
-                <form class = " ">
-                    <div class="mb-2">
-                        <label for="email" class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300 ">Name </label>
-                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full"  required>
+                <!-- ADD NEW NEWS -->
+                <div class="md:w-2/3 sm:w-full  mx-auto mt-20 bg-slate-300 py-5 px-6 rounded-lg  gap-10">
+                <form class = "">
+
+                <div class="mb-2">
+                        <label for="text" class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300 ">Name </label>
+                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" value = "Waste Mangement" required>
                     </div>
                     <div class="mb-2">
-                        <label for="email" class="block mb-1 text-md  font-medium text-gray-900 dark:text-gray-300">Points</label>
-                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" required>
+                        <label for="text" class="block mb-1 text-md  font-medium text-gray-900 dark:text-gray-300">Description</label>
+                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full"  value = "Solid Waste" required>
                     </div>
 
                     <div class="mb-4">
@@ -123,12 +125,13 @@
                     </div>
                     
                     
-                    <button type="submit" class="text-white text-md  bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg  w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add New</button>
+                    <button type="submit" class="text-white text-md  bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg  w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add News</button>
                 </form>
 
-               
-            
             </div>
+
+
+
            
         </div>
 

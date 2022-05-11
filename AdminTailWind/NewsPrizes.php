@@ -75,76 +75,74 @@
                     <div class="content-wrapper overflow-hidden xl:w-3/4 lg:w-3/4 md:w-3/4 sm:w-full xs:w-full mt-16 mx-auto">
                         <!-- NEWS -->
                            <div class="news overflow-hidden  mx-4 ">
-                           <div class="flex px-2 justify-between items-center bg-slate-800/90">   
-                                <h1 class =" py-2 text-xl font-semibold text-white ">News</h1>
-                                <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 my-2">Add</button></a>
+                           <div class=" bg-slate-800/90 rounded-t">   
+                                <h1 class =" py-2 text-2xl font-semibold text-white text-center ">News</h1>
+                               
                             </div>
                                <div class="owl-carousel owl-theme">
                                    <!-- ITEM 1 -->
-                            <div class="item w-full"><img src="../admin/images/news/News-405.jpg" ><h4 class = " w-full text-start pl-4 bg-slate-800/90 text-white text-xl py-4 font-semibold">Waste Management</h4>
-                                <div class=" flex justify-start gap-2 mt-5 drop-shadow-xl">
-                                <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">View</button></a>
-                                    <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Edit</button></a>
-                                    <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Delete</button></a>
+                            <div class="item w-full"><img src="../admin/images/news/News-405.jpg" ><h4 class = " w-full text-center pl-4 bg-slate-800/90 text-white text-xl py-4 font-semibold  rounded-b">Waste Management</h4>
+                                <div class=" flex justify-center gap-2 mt-5 drop-shadow-xl">
+                                <a href="../AdminTailWind/viewnews.php"><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">View</button></a>
+                                    <a href="../AdminTailWind/updatenews.php"><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Upd/Add</button></a>
+                                    <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Delete</button></a>
                              
                                 </div>
                             </div>
                            
                                        <!-- ITEM 2 -->
-                            <div class="item w-full"><img src="../admin/images/news/News-619.png" ><h4 class = " w-full text-start pl-4 bg-slate-800/90 text-white text-xl py-4 font-semibold">Waste Management</h4>
-                                <div class=" flex justify-start gap-2 mt-5 drop-shadow-xl">
-                                <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">View</button></a>
-                                    <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Edit</button></a>
-                                    <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Delete</button></a>
+                            <div class="item w-full"><img src="../admin/images/news/News-619.png" ><h4 class = " w-full text-center pl-4 bg-slate-800/90 text-white text-xl py-4 font-semibold  rounded-b">Waste Management</h4>
+                                <div class=" flex justify-center gap-2 mt-5 drop-shadow-xl">
+                                <a href="../AdminTailWind/viewnews.php"><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">View</button></a>
+                                    <a href="../AdminTailWind/updatenews.php"><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Upd/Add</button></a>
+                                    <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Delete</button></a>
                              
                                 </div>
                             </div>
                                      
                                        <!-- ITEM 3 -->
-                            <div class="item w-full"><img src="../admin/images/news/News-187.png" ><h4 class = " w-full text-start pl-4 bg-slate-800/90 text-white text-xl py-4 font-semibold">Waste Management</h4>
-                                <div class=" flex justify-start gap-2 mt-5 drop-shadow-xl">
-                                <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">View</button></a>
-                                    <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Edit</button></a>
-                                    <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Delete</button></a>
+                            <div class="item w-full"><img src="../admin/images/news/News-187.png" ><h4 class = " w-full text-center pl-4 bg-slate-800/90 text-white text-xl py-4 font-semibold rounded-b">Waste Management</h4>
+                                <div class=" flex justify-center gap-2 mt-5 drop-shadow-xl">
+                                <a href="../AdminTailWind/viewnews.php"><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">View</button></a>
+                                    <a href="../AdminTailWind/updatenews.php"><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Upd/Add</button></a>
+                                    <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Delete</button></a>
                                 </div>
                             </div>
                             
                         </div>
                         <!-- PRIZES -->
                         <div class="prizes overflow-hidden mx-4 mt-24">
-                            <div class="flex px-2 justify-between items-center bg-slate-800/90">   
-                                <h1 class =" py-2 text-xl font-semibold text-white ">Prizes</h1>
-                                <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 my-2">Add</button></a>
+                            <div class=" bg-slate-800/90 rounded-t">   
+                                <h1 class =" py-2  font-semibold text-2xl text-white text-center  ">Prizes</h1>
+                               
                             </div>
                             
                                <div class="owl-carousel owl-theme">
                                    <!-- ITEM 1 -->
                             <div class="item w-full"><img src="../admin/images/prize/Prize-256.jpg" >
-                            <h4 class = " w-full text-start pl-4 bg-slate-800/90 text-white text-xl py-4 font-semibold">100 Pesos</h4>
-                                <div class=" flex justify-start gap-2 mt-5 drop-shadow-xl">
-                                <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">View</button></a>
-                                    <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Edit</button></a>
-                                    <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Delete</button></a>
+                            <h4 class = " w-full text-center pl-4 bg-slate-800/90 text-white text-xl py-4 font-semibold rounded-b">100 Pesos</h4>
+                                <div class=" flex justify-center gap-2 mt-5 drop-shadow-xl">
+                                <a href="../AdminTailWind/updateprize.php"><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Upd/Add</button></a>
+                                    <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Delete</button></a>
                              
                                 </div>
                             </div>
                            
                                        <!-- ITEM 2 -->
-                            <div class="item w-full"><img src="../admin/images/prize/Prize-698.png" ><h4 class = " w-full text-start pl-4 bg-slate-800/90 text-white text-xl py-4 font-semibold">200 Pesos</h4>
-                                <div class=" flex justify-start gap-2 mt-5 drop-shadow-xl">
-                                <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">View</button></a>
-                                    <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Edit</button></a>
-                                    <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Delete</button></a>
+                            <div class="item w-full"><img src="../admin/images/prize/Prize-698.png" ><h4 class = " w-full text-center pl-4 bg-slate-800/90 text-white text-xl py-4 font-semibold rounded-b">200 Pesos</h4>
+                                <div class=" flex justify-center gap-2 mt-5 drop-shadow-xl">
+                                <a href="../AdminTailWind/updateprize.php"><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Upd/Add</button></a>
+                                    <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Delete</button></a>
                              
                                 </div>
                             </div>
                                      
                                        <!-- ITEM 3 -->
-                            <div class="item w-full"><img src="../admin/images/prize/Prize-226.jpg" ><h4 class = " w-full text-start pl-4 bg-slate-800/90 text-white text-xl py-4 font-semibold">500 Pesos</h4>
-                                <div class=" flex justify-start gap-2 mt-5 drop-shadow-xl">
-                                <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">View</button></a>
-                                    <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Edit</button></a>
-                                    <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Delete</button></a>
+                            <div class="item w-full"><img src="../admin/images/prize/Prize-226.jpg" ><h4 class = " w-full text-center pl-4 bg-slate-800/90 text-white text-xl py-4 font-semibold rounded-b">500 Pesos</h4>
+                                <div class=" flex justify-center gap-2 mt-5 drop-shadow-xl">
+                            
+                                    <a href="../AdminTailWind/updateprize.php"><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Upd/Add</button></a>
+                                    <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Delete</button></a>
                                 </div>
                             </div>
                             

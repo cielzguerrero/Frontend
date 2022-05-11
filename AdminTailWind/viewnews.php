@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garbage Type</title>
+    <title>News & Prizes</title>
     <!-- MY CSS -->
     <link rel="stylesheet" href="../AdminCss/dashboard.css">
     <!-- TAILWIND CDN -->
@@ -36,8 +36,8 @@
                         <!-- TABS -->
                         <div class="tabs mt-24 flex flex-col  justify-center items-center content-center">
                         <a href="../AdminTailWind/dashboard.php"><i class="fa-solid  fa-house  text-2xl mt-10 text-slate-600 hover:text-blue-600"></i></a>
-                        <a href="../AdminTailWind/waste.php"><i class="fa-solid  px-3 py-2 bg-slate-800 rounded fa-wine-bottle text-2xl mt-10 text-white  "></i></a>
-                        <a href="../AdminTailWind/NewsPrizes.php"><i class="fa-solid fa-money-bill text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
+                        <a href="../AdminTailWind/waste.php"><i class="fa-solid   fa-wine-bottle text-2xl mt-10  text-slate-600   hover:text-blue-600"></i></a>
+                        <a href="../AdminTailWind/NewsPrizes.php"><i class="fa-solid  px-3 py-2 bg-slate-800 text-white rounded fa-money-bill text-2xl mt-10   "></i></a>
                         <a href="../AdminTailWind/members.php"><i class="fa-solid fa-user text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
                         <a href="../AdminTailWind/logs.php"><i class="fa-solid fa-paperclip text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
                         <a href="../AdminTailWind/analytics.php"><i class="fa-solid fa-chart-simple text-2xl mt-10 text-slate-600  hover:text-blue-600"></i></a>
@@ -57,7 +57,7 @@
                                 <span class = ""> </span>
                                 <span class = ""> </span>
                         </a>
-                <h1 class = "text-xl font-bold flex-1 text-slate-600">Update/Add</h1>
+                <h1 class = "text-xl font-bold flex-1 text-slate-600">News</h1>
                 <!-- TIME CLOCK -->
                 <i class="fa-solid fa-clock mr-2 text-xl font-bold text-slate-600 lg:block md:hidden sm:hidden xs:hidden clock "></i>
                 <h1 class = "text-xl font-bold text-slate-600 lg:block md:hidden sm:hidden xs:hidden clock flex-auto" id = "clock">
@@ -71,63 +71,20 @@
             </div>
 
         <!-- CONTENTS -->
-        <div class="content-wrapper overflow-auto mt-5 mx-10">
-        <!-- UPDATE -->
-            <div class="grid lg:grid-cols-2 md:grid-cols-1 justify-center items-center mt-20 bg-slate-300 py-5 px-6 rounded-lg gap-10">
-                <form class = "w-full  ">
-                    <div class="mb-2">
-                        <label for="email" class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300 ">Name </label>
-                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" value = "Doy pack" required>
-                    </div>
-                    <div class="mb-2">
-                        <label for="email" class="block mb-1 text-md  font-medium text-gray-900 dark:text-gray-300">Points</label>
-                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full"  value = "2" required>
-                    </div>
-
-                    <div class="mb-4">
-                        <label class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300" for="user_avatar">Upload file</label>
-                        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file">
-                      
-                    </div>
-                    
-                    
-                    <button type="submit" class="text-white text-md  bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg  w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Update</button>
-                </form>
-
-                <!-- IMAGE -->
-                <div class="mx-auto ">
-                    <h1 class ="bg-slate-800 text-slate-200 text-center py-1 rounded-t">Current Image</h1>
-                    <img src="../admin/images/garbage/GarbageType-628.jpg">
-                </div>
-            
+        <div class="content-wrapper overflow-auto mt-5 mx-5">
+            <!-- NEWS IMAGE -->
+            <div class="newsImage mx-auto flex justify-center">
+            <img src="../admin/images/news/News-619.png">
             </div>
 
+            <!-- TITLE -->
+            <h1 class = "text-center mt-5 font-bold text-4xl text-slate-800">News Title</h1>
+            <h1  class = "text-center mt-2 font-bold text-xl text-slate-600">News SubTitle</h1>
 
-            <!-- ADD NEW -->
-
-            <div class=" mt-10 bg-slate-300 py-5 px-6 rounded-lg lg:w-2/3 md:w-2/3 sm:w-full mx-auto ">
-                <form class = " ">
-                    <div class="mb-2">
-                        <label for="email" class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300 ">Name </label>
-                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full"  required>
-                    </div>
-                    <div class="mb-2">
-                        <label for="email" class="block mb-1 text-md  font-medium text-gray-900 dark:text-gray-300">Points</label>
-                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" required>
-                    </div>
-
-                    <div class="mb-4">
-                        <label class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300" for="user_avatar">Upload file</label>
-                        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file">
-                      
-                    </div>
-                    
-                    
-                    <button type="submit" class="text-white text-md  bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg  w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add New</button>
-                </form>
-
+            <!-- CONTENT -->
+            <div class="flex flex-wrap mt-3 text-slate-800 md:mx-10 sm:mx-auto justify-center items-center text-center text-justify">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique earum ipsam a accusantium. Dolor, iste! Iure fugit, accusantium quae molestias, adipisci, minus labore ratione voluptatem praesentium impedit sed eveniet assumenda. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum minus labore atque, perferendis praesentium qui non nesciunt? Esse, itaque quia voluptatum tempora, eos assumenda, inventore dolorum praesentium illo rerum possimus!</p>
                
-            
             </div>
            
         </div>
