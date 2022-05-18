@@ -176,7 +176,7 @@ include('includes/timeinclude.php');
                         <div class="card">
                             <div class="card-header" style="background: #54BAB9;">
                                 <h2>Logs</h2>
-                                <button><a href="actionlog.php">See All</a><span class="las la-button"></span></button>
+                                <button><a href="actionlog.php">View All</a><span class="las la-button"></span></button>
                             </div>
                             <div class="card-body">
                                 <table class="table-half">
