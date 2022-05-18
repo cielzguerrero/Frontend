@@ -91,7 +91,14 @@
                         <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file">
                       
                     </div>
-                    
+                    <div class="mb-4">
+                        <label class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300" for="user_avatar">Content</label>
+                        <textarea name="newscontent" id="newscontent" class="form-control" rows="16" ><?php echo $row['news_content'];?></textarea>
+                        <script type="text/javascript" src="../AdminJs/ckeditor/ckeditor.js"></script>
+                        <script type="text/javascript" >                        
+                        CKEDITOR.replace( 'newscontent' );
+                        </script>
+                    </div>
                     
                     <button type="submit" class="text-white text-md  bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg  w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Update</button>
                 </form>
@@ -122,6 +129,14 @@
                         <label class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300" for="user_avatar">Upload file</label>
                         <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file">
                       
+                    </div>
+                    <div class="mb-4">
+                        <label class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300" for="user_avatar">Content</label>
+                        <textarea name="addnewscontent" id="newscontent" class="form-control" rows="16"></textarea>
+                                                <script type="text/javascript" src="../AdminJs/ckeditor/ckeditor.js"></script>
+                                                <script type="text/javascript">                        
+                                                    CKEDITOR.replace( 'addnewscontent' );
+                                                </script>
                     </div>
                     
                     
