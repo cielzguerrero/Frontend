@@ -94,8 +94,8 @@
                         </thead>
                         <tbody class = "">
                             <tr>
-                                <td ><img src="../img/aldrin.jpg"></td>
-                                <td>Johannes</td>
+                                <td ><img src="../admin/images/profile/Profile-307.jpg"></td>
+                                <td>Bojji</td>
                                 <td>2021-12-21</td>
                                 <td>utherjohannes@gmail.com</td>
                                 <td>0192313123</td>
@@ -110,8 +110,8 @@
                        
 
                             <tr>
-                                <td ><img src="../img/aldrin.jpg"></td>
-                                <td>Johannes</td>
+                                <td ><img src="../admin/images/profile/Profile-215.jpg"></td>
+                                <td>Kage</td>
                                 <td>2021-12-21</td>
                                 <td>utherjohannes@gmail.com</td>
                                 <td>0192313123</td>
@@ -124,8 +124,8 @@
                             </tr>
 
                             <tr>
-                                <td ><img src="../img/aldrin.jpg"></td>
-                                <td>Johannes</td>
+                                <td ><img src="../admin/images/profile/Profile-281.jpg"></td>
+                                <td>Despa</td>
                                 <td>2021-12-21</td>
                                 <td>utherjohannes@gmail.com</td>
                                 <td>0192313123</td>

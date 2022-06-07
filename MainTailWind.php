@@ -55,8 +55,8 @@
       <!-- Dropdown menu -->
       <div class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown">
         <div class="py-3 px-4">
-          <span class="block text-sm text-gray-900 dark:text-white"><?php echo $rows['profilename']; ?></span>
-          <span class="block text-sm font-medium text-gray-500 truncate dark:text-gray-400"><?php echo $rows['email']; ?></span>
+          <span class="block text-sm text-gray-900 dark:text-white">Aldrin Ramores</span>
+          <span class="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">aldrinramores43@gmail.com</span>
         </div>
         <ul class="py-1" aria-labelledby="dropdown">
           <li>
@@ -146,21 +146,21 @@
        
 
             <div class="top-2 flex flex-col items-center">
-            <img src="./img/aldrin.jpg" class = "rounded-full  h-28" alt="">
-            <h2 class = "mt-2 text-gray-600 dark:text-white">AldrinxD</h2>
+            <img src="admin/images/profile/Profile-215.jpg" class = "rounded-full  h-28" alt="">
+            <h2 class = "mt-2 text-gray-600 dark:text-white">UserName</h2>
             <h1 class = "font-bold text-2xl text-gray-700 dark:text-white">3500</h1>
             <h1></h1>
             </div>
 
             <div class="top-1 flex flex-col items-center pb-20">
-            <img src="./img/aldrin.jpg" class = "rounded-full h-28" alt="">
-            <h2 class = "mt-2  text-gray-600 dark:text-white">AldrinxD</h2>
+            <img src="admin/images/profile/Profile-421.jpg" class = "rounded-full h-28" alt="">
+            <h2 class = "mt-2  text-gray-600 dark:text-white">UserName</h2>
             <h1 class = "font-bold text-2xl text-gray-700 dark:text-white">3500</h1>
             </div>
 
             <div class="top-3 flex flex-col items-center">
-            <img src="./img/aldrin.jpg" class = "rounded-full h-28" alt="">
-            <h2 class = "mt-2  text-gray-600 dark:text-white">AldrinxD</h2>
+            <img src="admin/images/profile/Profile-603.jpg" class = "rounded-full h-28" alt="">
+            <h2 class = "mt-2  text-gray-600 dark:text-white">UserName</h2>
             <h1 class = "font-bold text-gray-700 text-2xl dark:text-white">3500</h1>
             </div>
             
@@ -170,36 +170,36 @@
             
             <div class="mt-3 flex justify-between items-center  rounded-md p-1">
             <h1 class = "font-bold text-center px-5 text-lg  rounded-md bg-yellow-400 text-white dark:text-white" >1 </h1>
-            <img src="./img/aldrin.jpg" class = "rounded-full  h-10" alt="">
-            <h2 class = "text-gray-700 dark:text-white"> AldrinxD</h2>
+            <img src="admin/images/profile/Profile-215.jpg" class = "rounded-full  h-10" alt="">
+            <h2 class = "text-gray-700 dark:text-white"> UserName</h2>
             <h2 class = "font-bold text-2xl text-gray-700 dark:text-white"> 3500</h2>
             </div>
 
             <div class="mt-3 flex justify-between items-center">
             <h1 class = "font-bold text-center text-lg px-4  rounded-md bg-gray-400 text-white dark:text-white" >2</h1>
-            <img src="./img/aldrin.jpg" class = "rounded-full  h-10" alt="">
-            <h2 class = "text-gray-700 dark:text-white"> AldrinxD</h2>
+            <img src="admin/images/profile/Profile-421.jpg" class = "rounded-full  h-10" alt="">
+            <h2 class = "text-gray-700 dark:text-white"> UserName</h2>
             <h2 class = "font-bold text-2xl text-gray-700 dark:text-white"> 3500</h2>
             </div>
 
             <div class="mt-3 flex justify-between items-center">
             <h1 class = "font-bold text-center px-4  text-lg rounded-md bg-yellow-600 text-white dark:text-white" >3</h1>
-            <img src="./img/aldrin.jpg" class = "rounded-full  h-10" alt="">
-            <h2 class = "text-gray-700 dark:text-white"> AldrinxD</h2>
+            <img src="admin/images/profile/Profile-603.jpg" class = "rounded-full  h-10" alt="">
+            <h2 class = "text-gray-700 dark:text-white"> UserName</h2>
             <h2 class = "font-bold text-2xl text-gray-700 dark:text-white"> 3500</h2>
             </div>
 
             <div class="mt-3 flex justify-between items-center">
             <h1 class = "font-bold text-center text-lg px-4 rounded-md  text-black dark:text-white" >4</h1>
-            <img src="./img/aldrin.jpg" class = "rounded-full  h-10" alt="">
-            <h2 class = "text-gray-700 dark:text-white"> AldrinxD</h2>
+            <img src="admin/images/profile/Profile-924.jpg" class = "rounded-full  h-10" alt="">
+            <h2 class = "text-gray-700 dark:text-white"> UserName</h2>
             <h2 class = "font-bold text-2xl text-gray-700 dark:text-white"> 3500</h2>
             </div>
 
             <div class="mt-3 flex justify-between items-center">
             <h1 class = "font-bold text-center px-4 text-lg rounded-md  text-black dark:text-white" >5</h1>
-            <img src="./img/aldrin.jpg" class = "rounded-full  h-10" alt="">
-            <h2 class = "text-gray-700 dark:text-white"> AldrinxD</h2>
+            <img src="admin/images/profile/Profile-934.jpg" class = "rounded-full  h-10" alt="">
+            <h2 class = "text-gray-700 dark:text-white"> UserName</h2>
             <h2 class = "font-bold text-2xl text-gray-700 dark:text-white"> 3500</h2>
             </div>
 
@@ -383,7 +383,7 @@
 
 <!-- CLAIM MODAL -->
 <div id="authentication-modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full claim-modal">
-    <div class="relative w-full h-full max-w-md p-4 md:h-auto">
+    <div class="relative w-full h-full max-w-lg p-4 md:h-auto">
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
             <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="authentication-modal">
@@ -393,22 +393,19 @@
                 <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Claim Rewards</h3>
 
                 <div class="flex flex-wrap justify-center items-center mt-4  gap-2 containers">
-                    <img src="admin/images/prize/Prize-63.png" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
+                    <img src="admin/images/prize/Prize-256.jpg" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
                     <a href="#!"><h2 class ="px-3  py-2 rounded-md bg-slate-700 dark:bg-slate-50 text-white dark:text-gray-700 text-xl block">1000 PTS</h2></a>
                 </div>
                 <div class="flex flex-wrap justify-center items-center mt-4  gap-2 containers">
                     <img src="admin/images/prize/Prize-63.png" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
-                    <a href="#!"><h2 class ="px-3  py-2 rounded-md bg-slate-700 dark:bg-slate-50 text-white dark:text-gray-700 text-xl block">1000 PTS</h2></a>
+                    <a href="#!"><h2 class ="px-3  py-2 rounded-md bg-slate-700 dark:bg-slate-50 text-white dark:text-gray-700 text-xl block">2000 PTS</h2></a>
                 </div>
 
-                <div class="flex flex-wrap justify-center items-center mt-4  gap-2 containers">
-                    <img src="admin/images/prize/Prize-63.png" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
-                    <a href="#!"><h2 class ="px-3  py-2 rounded-md bg-slate-700 dark:bg-slate-50 text-white dark:text-gray-700 text-xl block">1000 PTS</h2></a>
+                <div class="flex flex-wrap justify-center items-center mt-4  gap-3 containers">
+                    <img src="admin/images/prize/Prize-226.jpg" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
+                    <a href="#!"><h2 class ="px-3  py-2 rounded-md bg-slate-700 dark:bg-slate-50 text-white dark:text-gray-700 text-xl block">5000 PTS</h2></a>
                 </div>
-                <div class="flex flex-wrap justify-center items-center mt-4  gap-2 containers">
-                    <img src="admin/images/prize/Prize-63.png" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
-                    <a href="#!"><h2 class ="px-3  py-2 rounded-md bg-slate-700 dark:bg-slate-50 text-white dark:text-gray-700 text-xl block">1000 PTS</h2></a>
-                </div>
+               
                     
             </div>
         </div>
