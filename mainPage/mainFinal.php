@@ -144,7 +144,7 @@ $mresult = mysqli_query($conn,$sql);
         <h2>G-C0INS</h2>
       </div>
       <div class="gpoints-below">
-        <div class="gpoints-text">
+        <div class="gpoints-text" id="refreshpoint">
           <h4>Your Points</h4>
           <h1><?php echo $rows['points']; ?></h1>
         </div>
@@ -440,7 +440,7 @@ $mresult = mysqli_query($conn,$sql);
           </div>
 
           <div class="col-md-4 col-sm-6 col-xs-12">
-            <ul class="social-icons">
+            <ul class="social-icons" style="list-style: none;">
               <li><a class="facebook" href="https://www.facebook.com/aldrin.ramores.77"><i class="fa fa-facebook"></i></a></li>
               <li><a class="twitter" href="https://www.instagram.com/ramoresaldrin/"><i class="fa fa-instagram"></i></a></li>
               <li><a class="dribbble" href="https://github.com/cielzguerrero"><i class="fa fa-github"></i></a></li>
@@ -524,7 +524,13 @@ $mresult = mysqli_query($conn,$sql);
       <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <!-- MY JS -->
       <script src="main.js"></script>
-
+      <script> 
+      $(document).ready(function(){
+      setInterval(function(){
+            $("#refreshpoint").load(window.location.href + " #refreshpoint" );
+      }, 1000);
+      });
+      </script>
 
 
 

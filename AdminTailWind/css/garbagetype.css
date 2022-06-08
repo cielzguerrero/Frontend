@@ -1,0 +1,107 @@
+.garbagetype-wrapper
+{
+    border: 1px solid rgb(0, 161, 205);
+    border-radius: 5px;
+    background: rgb(240,255,255);
+}
+.news-box
+{
+    border: 1px solid rgb(0, 161, 205);
+    border-radius: 5px;
+}
+.boxnewstitle
+{
+    border: 1px solid rgb(0, 161, 205);
+    background-color: rgb(0, 161, 205);
+    color: white;
+    text-align: center;
+
+}
+.garbage-contents
+{
+    width:95%;
+    overflow: auto;
+    max-height: 40rem;
+    height: 40rem;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgb(0, 161, 205);
+    border-radius: 5px;
+    background:white;
+}
+.garbagebox
+{
+    text-align: center;
+    display: inline-block;
+    background: rgb(224,255,255);
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+    height: 20rem;
+    width: 15rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    position: relative;
+    border: 2px solid #767676;
+    font-weight: 600;
+    font-size: 1.2rem;
+  
+}
+.garbagebox i{
+    padding-bottom: 20px;
+}
+.buttonactions
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+.buttonaction
+{
+    font-size: 1.2rem;
+    margin: 1rem;
+    padding: 5px 18px;
+    background-color: rgb(0, 161, 205);
+    color: white;
+    border-radius: 5px;
+    border: 2px solid #767676;
+}
+.newsdescription
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0.5rem;
+}
+.addgarbagetype
+{
+    font-size: 1.2rem;
+    padding: 5px 45px;
+    background-color: rgb(0, 161, 205);
+    color: white;
+    border-radius: 5px;
+    border: 2px solid #767676;
+    margin-left: 5%;
+}
+
+.boxtitle{
+    padding: 10px;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 700px) {
+
+    .addgarbagetype
+    {
+        font-size: 1rem;
+        padding: 5px 45px;
+        background-color: rgb(0, 161, 205);
+        color: white;
+        border-radius: 5px;
+        border: 2px solid #767676;
+        margin-left: 55%;
+    }
+   
+}

@@ -1,0 +1,283 @@
+body { 
+    display: grid;
+    grid-template-areas: 
+      "header header logout"
+      "nav article article"
+      "nav footer footer";
+    grid-template-rows: 80px 1fr 70px;  
+    grid-template-columns: 20% 1fr 15%;
+   
+    height: 100vh;
+    margin: 0;
+    }  
+header, footer, nav, div {
+    padding: 1.0em;
+    background: rgb(0, 161, 205);
+    }
+.snav
+    {
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(0, 161, 205);
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: white;
+    color: black;
+    }
+    nav
+    {
+        position: fixed;
+        width: 21%;
+        height: 100%;
+        
+    }
+   
+article
+    {
+        padding: 1.0em;
+    } 
+#siteHeader {
+    grid-area: header;
+    }
+#siteFooter {
+    grid-area: footer;
+    }
+#siteArticle { 
+    grid-area: article;      
+    }
+#sideNav { 
+    grid-area: nav; 
+    }
+#sitelogout { 
+    grid-area: logout; 
+} 
+.snav a {
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(0, 161, 205);
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    transition: 0.5s;
+}
+  .snav a:hover {
+    background-color: yellowgreen;
+    color:white;
+    text-decoration: none;
+}
+.snav img
+{
+    height: 250px;
+    width: 335px;
+    padding: 10px;
+    align-self: center;
+    background-color:rgb(0, 161, 205);
+}
+.snav h4
+{
+    background-color:rgb(0, 161, 205);
+    padding-bottom:5px;
+    text-align:center;
+}
+.snav h4
+{
+    text-align: center;
+}
+.loginout
+{
+    text-align: right;
+
+}
+.loginout a
+{
+    color: white;
+    padding: 5px;
+    font-size:20px;
+}
+.loginout a:hover
+{
+    color: black;
+    text-decoration: none;
+}
+.container
+{
+    width:95%;
+    overflow: auto;
+    max-height: 40rem;
+    margin:5px auto;
+    background-color:white;
+}
+.container ul
+{
+    padding:0px;
+    margin:0px;
+
+}
+.container ul li
+{
+    list-style:none;
+    float:left;
+    width:30%;
+    height:525px;
+    background-color:rgb(0, 161, 205);
+    margin-left:15px;
+    margin-right:15px;
+    margin-top:15px;
+}
+.container ul li .ccontainer
+{
+    color:white;
+    text-align:center;
+    font-size:25px;
+}
+.container ul li .ccontainer h1
+{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-size: 150px;
+}
+.container ul li .ccontainer table tr th
+{
+   text-align:left ;
+}
+.container ul li .ccontainer table tr td
+{
+   padding:1%;
+}
+.table-full
+{
+   width: 100% ;
+   height: 100%;
+}
+
+.dashboard
+{
+    height: 100%;
+    background-color:white;
+}
+table tr th {
+    border-bottom: 1px solid #000;
+    padding: 1%;
+    text-align: left;
+  }
+  
+  table tr td {
+    padding: 1%;
+  }
+  .tbl-full {
+    width: 100%;
+    
+    background-color: white;
+  }
+  
+  .tbl-40 {
+    width: 100%;
+  }
+  .wrapper {
+    padding: 1%;
+    width: 80%;
+    margin: 0 auto;
+  }
+.mrfs
+{
+    background-color:white ;
+}
+.headers {
+    background-color: rgb(0, 161, 205);
+    padding: 10px;
+    text-align: center;
+    font-size: 35px;
+    margin: 3px;
+    color: black;
+    position: relative;
+}
+
+.login-container
+
+{
+  margin: 5px;
+  border:2px black;
+  border-style: solid;
+  border-radius:5px;
+  background-color: rgb(0, 161, 205);
+  align-self: center;
+}
+.clogin
+{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+}
+.profile-container
+{
+    max-width:100%;
+    overflow: hidden;
+    margin:auto;
+    background-color:white;
+    align-self:middle;
+}
+.profile-container ul
+{
+  width:100%;
+  margin:0px;
+  padding:0 0 0 0;
+}
+.profile-container ul li
+{
+    list-style:none;
+    float:left;
+    background-color:rgb(0, 161, 205);
+    margin-left:2px;
+    margin-right:2px;
+    margin-top:2px;
+}
+.side-profile
+{
+    width:35.5vh;
+    height:65vh;
+}
+.side-profile img
+{
+  height:35vh;
+  width:33vh;
+  margin:5px auto;
+  border-style: solid;
+  border-width: 5px;
+}
+.right-profile
+{
+    width:35vh;
+    height: 65vh;
+}
+.middle-profile
+{
+    width:75vh;
+    height:65vh;
+
+}
+.middle-profile h4
+{
+    padding: 0px;
+    margin: 0vh;
+}
+.middle-profile h5
+{
+  color:white;
+}
+.profile 
+{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+.profile img
+{
+    border-style: solid;
+}

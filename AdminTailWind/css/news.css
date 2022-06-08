@@ -1,0 +1,193 @@
+.news-wrapper
+{
+    border: 1px solid #54BAB9;
+    border-radius: 5px;
+}
+.news-box
+{
+    border: 1px solid #54BAB9;
+    border-radius: 5px;
+    width: 100%;
+}
+.news-box .slideshow-newsbox
+{
+    display: grid;
+    grid-template-columns:100%;
+}
+.box .indexslideshow-newsbox
+{
+    display: grid;
+    grid-template-columns:100%;
+}
+.boxnewstitle
+{
+    border: 1px solid #54BAB9;
+    background-color: #54BAB9;
+    color: white;
+    text-align: center;
+}
+.newsbox .next
+{
+    text-align: center;
+    margin-top: 8.5rem;
+    margin-right: 2rem;
+    font-size: 2rem;
+}
+.newsbox .prev
+{
+    text-align: center;
+    margin-top: 8.5rem;
+    margin-left: 2rem;
+    font-size: 2rem;
+}
+.box .indexnext
+{
+    text-align: center;
+    margin-top: 3.5rem;
+    margin-right: 2rem;
+    font-size: 2rem;
+}
+.box .indexprev
+{
+    text-align: center;
+    margin-top: 3.5rem;
+    margin-left: 2rem;
+    font-size: 2rem;
+}
+.newsbox .newsbox-wrapper
+{
+    width: 90%;
+    margin: 0px auto;
+    height: 21rem;
+    overflow: hidden;
+}
+.newsbox .newsbox-wrapper .newsbox
+{
+    display: inline-block;
+    background: #d9b48fff;
+    margin-left: 1.5rem;
+    height: 20.5rem;
+    width: 17rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    position: relative;
+    border: 2px solid #767676;
+}
+.newsbox .indexnewsbox-wrapper
+{
+    width: 95%;
+    margin: 0px auto;
+    height: 11rem;
+    overflow: hidden;
+}
+.newsbox .newsbox-wrapper .indexnewsbox
+{
+    display: inline-block;
+    background: #d9b48fff;
+    margin-left: 1.5rem;
+    height: 20.5rem;
+    width: 15rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    position: relative;
+    border: 2px solid #767676;
+}
+.newsaction
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border: 1px solid #54BAB9;
+}
+.buttonaction
+{
+    font-size: 1.5rem;
+}
+.newsdescription
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0.5rem;
+}
+.pindexdescription
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 9rem;
+}
+.newsbutton
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+.newsbutton button
+{
+    padding: 0.2rem;
+    background-color: #54BAB9;
+    color: white;
+    border-radius: 10px;
+}
+.news-divide
+{
+    display: grid;
+    grid-template-columns: 45% auto;
+    margin-bottom:.5rem;
+}
+.newspage
+{
+    
+}
+.newspage-wrapper 
+{
+    width: 100%;
+    margin: 0px auto;
+    margin-top: 1rem;
+    border: 1px solid #54BAB9;
+    border-radius: 5px;
+}
+.newspage-box
+{
+   margin: .5rem;
+}
+.imagenewspage
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.newspage-box img
+{
+    border: 1px solid #54BAB9;
+    border-radius: 5px;
+}
+.addactionsnews
+{
+    display: inline-block;
+    background: #54BAB9;
+    height: 35rem;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+.addcontentdesign
+{
+    background-color: white;
+    height: 34rem;
+}
+.newspagetitlewrapper
+{
+    border:2px solid #767676;
+    text-align: center;
+    margin-bottom:0.5rem
+}
+.newspagecontentwrapper
+{
+    border-top: 2px solid #767676;
+    margin-top: 0.5rem;
+    opacity: calc(10);
+}

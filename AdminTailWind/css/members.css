@@ -1,0 +1,162 @@
+.member-grid
+{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 100% auto;
+    grid-gap: 2rem;
+}
+.card
+{
+    border-radius: 5px;
+}
+.memberheader
+{
+    padding: 5px;
+    background: #062C30;
+    color: #fbfbfb;
+    padding-bottom: 0;
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px #54BAB9;
+}
+.membercard-header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.membercard-header button
+{
+    padding: .5rem;
+    background-color: #d9b48fff;
+    color: white;
+    border-radius: 10px;
+}
+.membercard-body
+{
+    padding: 1rem;
+    min-height: 0%;
+    max-height: 50rem;
+    overflow: auto;
+}
+.table
+{
+    width: 100%;
+    overflow: auto;
+    max-height: 30rem;
+    text-align: center;
+}
+.table tr
+{
+    font-size: 1.2rem;
+}
+.table td
+{
+    border-top:1px #f0f0f0;
+    border-bottom:1px #f0f0f0;
+    border-style: solid;
+    padding: 0.5rem;
+}
+.table thead td
+{
+    font-weight: bolder;
+}
+.profile-grid
+{
+    
+    display: grid;
+    grid-template-columns: 25% 60% 15%;
+    border: 2px solid #54BAB9;
+    border-radius: 5px;
+    padding: .5rem;
+    background: white;
+}
+.profiletitle
+{
+    margin-top: 1rem;
+    background: #54BAB9;
+    border-radius: 5px;
+    padding-top: .5rem;
+}
+.profileleft
+{
+    background: #d9b48fff;
+    border: 2px solid #767676;
+    border-radius: 5px;
+    padding: .5rem;
+}
+.profileleftcontent
+{
+    border: 2px solid #767676;
+    background: #d9b48fff;
+    width: 100%;
+}
+.profilename
+{
+    padding-top: .5rem;
+}
+.profilemiddle
+{
+    background: #d9b48fff;
+    border: 2px solid #767676;
+    border-radius: 5px;
+    padding: .25rem;
+}
+.pmcontent
+{
+    background: white;
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin-top: .25rem;
+}
+.pmtitle
+{
+    border: 1px solid gray;
+    padding:.15rem;
+    text-align: center;
+    padding-top: .5rem;
+}
+.pmdesc
+{
+    border: 1px solid gray;
+}
+.pmdesc a
+{
+    font-size:1.25rem; 
+    padding:.25rem;
+}
+.profileright
+{
+    background: #d9b48fff;
+    border: 2px solid #767676;
+    border-radius: 5px;
+    padding: .5rem;
+}
+.profileaction
+{
+    background: white;
+    border: 2px solid #767676;
+    border-radius: 5px;
+    padding: .5rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+
+    .table tr
+    {
+        font-size: 0.8rem;
+    }
+    .table td
+    {
+        font-size: 0.8rem;
+        border-top:1px #f0f0f0;
+        border-bottom:1px #f0f0f0;
+        border-style: solid;
+        padding: 0.5rem;
+    }
+    .btn{
+        font-size: 0.7rem !important;
+    }
+}

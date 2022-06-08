@@ -1,3 +1,8 @@
+<?php
+include('connections/connection.php');
+include('includes/afterlogin.php');
+include('includes/timeinclude.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

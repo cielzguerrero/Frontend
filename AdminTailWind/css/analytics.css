@@ -1,0 +1,90 @@
+.analytics-wrapper
+{
+    border: 1px solid rgb(0, 161, 205);
+    border-radius: 5px;
+    background: rgb(240,255,255);
+}
+.analytics-contents
+{
+    width:95%;
+    overflow: auto;
+    max-height: 50rem;
+    height: 50rem;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgb(0, 161, 205);
+    border-radius: 5px;
+    background:white;
+}
+.analyticsbox
+{
+    display: inline-block;
+    background: rgb(224,255,255);
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+    height: 20rem;
+    width: 15rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    position: relative;
+    border: 2px solid #767676;
+}
+.analytics-button
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+.buttonaction
+{
+    font-size: 1.2rem;
+    margin: 1rem;
+    padding: 0.25rem;
+    background-color: rgb(0, 161, 205);
+    color: white;
+    border-radius: 5px;
+    border: 2px solid #767676;
+}
+.barangay-content
+{
+    display: inline-block;
+    background:  #e0ffff;
+    margin-left: 1.25rem;
+    margin-top: 1rem;
+    height: 17rem;
+    width: 15rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    border: 2px solid rgb(0, 161, 205);
+}
+.analytics-barangays
+{
+    width: 95%;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid rgb(0, 161, 205);
+}
+
+.barangay-content h4{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px  #54BAB9;
+    color:#fbfbfb;
+}
+.barangay-content p{
+    color:#3a3a3a;
+    font-weight: 600;
+    text-justify: justify;
+    font-size: 1.1rem;
+
+}
+.barangay-padding {
+    background-color: #062C30;
+}
