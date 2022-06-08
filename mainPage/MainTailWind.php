@@ -1,6 +1,47 @@
+<?php
+include('../connections/connection.php');
+if (empty($_SESSION['username'])) {
 
+  header("Location: logout.php");
+}
+if (!isset($_SESSION['id'])) {
 
+  $_SESSION['view'] = "<div class='message warning'>User Not Found.</div>";
+  header("Location: ../../Frontend/index.php");
+} else {
 
+  $id = $_SESSION['id'];
+
+  $sql = "SELECT * FROM members WHERE id = $id";
+  $result = mysqli_query($conn, $sql);
+  $rows = mysqli_fetch_assoc($result);
+  $currentprofileuser = $rows['username'];
+  $userid = $rows['id'];
+
+  
+  if ($result == TRUE) {
+    $count = mysqli_num_rows($result);
+
+    if ($count > 0) {
+    } else {
+      $_SESSION['view'] = "<div class='message warning'>User Not Found.</div>";
+      header("Location: ../../Frontend/index.php");
+    }
+  }
+}
+include('../includes/timeinclude.php');
+include('../includes/mainedit.php');
+include('../includes/decreasepoint.php');
+include('../includes/deposit.php');
+$name = $rows['profilename'];
+$username = $_SESSION['username'];
+$arduinodata = $_GET["gdata"];
+$bump=0;
+
+$sql = "INSERT INTO tempdeposit (tdeposit) VALUES ('$arduinodata')";
+$mresult = mysqli_query($conn,$sql);
+
+?>
 <!doctype html>
 <html>
 <head>
@@ -14,10 +55,10 @@
   <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.3/dist/flowbite.min.css" />
   <script src="https://unpkg.com/flowbite@1.4.3/dist/flowbite.js"></script>
   <!-- MY CSS -->
-  <link rel="stylesheet" href="./dist/output.css ">
-  <link rel="stylesheet" href="./css/maintailwind.css">
+  <link rel="stylesheet" href="../dist/output.css ">
+  <link rel="stylesheet" href="../css/maintailwind.css">
   <!-- LIGHTBOX -->
-  <link rel="stylesheet" href="./node_modules/lightbox2/dist/css/lightbox.css">
+  <link rel="stylesheet" href="../node_modules/lightbox2/dist/css/lightbox.css">
 </head>
 
 
@@ -28,7 +69,7 @@
 <nav class="bg-white border-gray-200 px-2 shadow-xl dark:shadow sm:px-4 py-4  dark:bg-slate-800">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
   <a href="MainTailWind.php" class="flex items-center">
-      <img src="img/glogoblue.png" class="mr-3 h-8 sm:h-9 " alt="Flowbite Logo" />
+      <img src="../img/glogoblue.png" class="mr-3 h-8 sm:h-9 " alt="Flowbite Logo" />
       <span class="self-center ml-1 text-xl font-semibold whitespace-nowrap text-gray-700 dark:text-white">G-Reward</span>
   </a>
   
@@ -47,14 +88,14 @@
       <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" type="button" data-dropdown-toggle="dropdown">
         <span class="sr-only">Open user menu</span>
         <!-- image -->
-        <img class="w-8 h-8 rounded-full ring-4  dark:ring-gray-600" src="img/aldrin.jpg" alt="user photo">
+        <img class="w-8 h-8 rounded-full ring-4  dark:ring-gray-600" src="../img/aldrin.jpg" alt="user photo">
       </button>
 
       <!-- Dropdown menu -->
       <div class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown">
         <div class="py-3 px-4">
-          <span class="block text-sm text-gray-900 dark:text-white">Aldrin Ramores</span>
-          <span class="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">aldrinramores43@gmail.com</span>
+          <span class="block text-sm text-gray-900 dark:text-white"><?php echo $rows['profilename']; ?></span>
+          <span class="block text-sm font-medium text-gray-500 truncate dark:text-gray-400"><?php echo $rows['email']; ?></span>
         </div>
         <ul class="py-1" aria-labelledby="dropdown">
           <li>
@@ -144,20 +185,20 @@
        
 
             <div class="top-2 flex flex-col items-center">
-            <img src="admin/images/profile/Profile-215.jpg" class = "rounded-full  h-28" alt="">
+            <img src="../admin/images/profile/Profile-215.jpg" class = "rounded-full  h-28" alt="">
             <h2 class = "mt-2 text-gray-600 dark:text-white">UserName</h2>
             <h1 class = "font-bold text-2xl text-gray-700 dark:text-white">3500</h1>
             <h1></h1>
             </div>
 
             <div class="top-1 flex flex-col items-center pb-20">
-            <img src="admin/images/profile/Profile-421.jpg" class = "rounded-full h-28" alt="">
+            <img src="../admin/images/profile/Profile-421.jpg" class = "rounded-full h-28" alt="">
             <h2 class = "mt-2  text-gray-600 dark:text-white">UserName</h2>
             <h1 class = "font-bold text-2xl text-gray-700 dark:text-white">3500</h1>
             </div>
 
             <div class="top-3 flex flex-col items-center">
-            <img src="admin/images/profile/Profile-603.jpg" class = "rounded-full h-28" alt="">
+            <img src="../admin/images/profile/Profile-603.jpg" class = "rounded-full h-28" alt="">
             <h2 class = "mt-2  text-gray-600 dark:text-white">UserName</h2>
             <h1 class = "font-bold text-gray-700 text-2xl dark:text-white">3500</h1>
             </div>
@@ -168,35 +209,35 @@
             
             <div class="mt-3 flex justify-between items-center  rounded-md p-1">
             <h1 class = "font-bold text-center px-5 text-lg  rounded-md bg-yellow-400 text-white dark:text-white" >1 </h1>
-            <img src="admin/images/profile/Profile-215.jpg" class = "rounded-full  h-10" alt="">
+            <img src="../admin/images/profile/Profile-215.jpg" class = "rounded-full  h-10" alt="">
             <h2 class = "text-gray-700 dark:text-white"> UserName</h2>
             <h2 class = "font-bold text-2xl text-gray-700 dark:text-white"> 3500</h2>
             </div>
 
             <div class="mt-3 flex justify-between items-center">
             <h1 class = "font-bold text-center text-lg px-4  rounded-md bg-gray-400 text-white dark:text-white" >2</h1>
-            <img src="admin/images/profile/Profile-421.jpg" class = "rounded-full  h-10" alt="">
+            <img src="../admin/images/profile/Profile-421.jpg" class = "rounded-full  h-10" alt="">
             <h2 class = "text-gray-700 dark:text-white"> UserName</h2>
             <h2 class = "font-bold text-2xl text-gray-700 dark:text-white"> 3500</h2>
             </div>
 
             <div class="mt-3 flex justify-between items-center">
             <h1 class = "font-bold text-center px-4  text-lg rounded-md bg-yellow-600 text-white dark:text-white" >3</h1>
-            <img src="admin/images/profile/Profile-603.jpg" class = "rounded-full  h-10" alt="">
+            <img src="../admin/images/profile/Profile-603.jpg" class = "rounded-full  h-10" alt="">
             <h2 class = "text-gray-700 dark:text-white"> UserName</h2>
             <h2 class = "font-bold text-2xl text-gray-700 dark:text-white"> 3500</h2>
             </div>
 
             <div class="mt-3 flex justify-between items-center">
             <h1 class = "font-bold text-center text-lg px-4 rounded-md  text-black dark:text-white" >4</h1>
-            <img src="admin/images/profile/Profile-924.jpg" class = "rounded-full  h-10" alt="">
+            <img src="../admin/images/profile/Profile-924.jpg" class = "rounded-full  h-10" alt="">
             <h2 class = "text-gray-700 dark:text-white"> UserName</h2>
             <h2 class = "font-bold text-2xl text-gray-700 dark:text-white"> 3500</h2>
             </div>
 
             <div class="mt-3 flex justify-between items-center">
             <h1 class = "font-bold text-center px-4 text-lg rounded-md  text-black dark:text-white" >5</h1>
-            <img src="admin/images/profile/Profile-934.jpg" class = "rounded-full  h-10" alt="">
+            <img src="../admin/images/profile/Profile-934.jpg" class = "rounded-full  h-10" alt="">
             <h2 class = "text-gray-700 dark:text-white"> UserName</h2>
             <h2 class = "font-bold text-2xl text-gray-700 dark:text-white"> 3500</h2>
             </div>
@@ -217,8 +258,8 @@
 
                 <div class="left grid items-center justify-center rounded  py-5">
                 <!-- <h2 class ="text-center text-black dark:text-white">Profile</h2> -->
-                    <a href="./img/aldrin.jpg" data-lightbox="image-1" id="lightImage">Yes</a>
-                    <img src="./img/aldrin.jpg"  class="rounded" id="profImage">
+                    <a href="../img/aldrin.jpg" data-lightbox="image-1" id="lightImage">Yes</a>
+                    <img src="../img/aldrin.jpg"  class="rounded" id="profImage">
                     <i class="las la-edit rounded-b text-center  text-white font-bold text-4xl" id="cameraPhoto"></i>
                     <input class="block " aria-describedby="user_avatar_help" id="uploadPhoto" type="file">
                     
@@ -269,19 +310,19 @@
                 
                     <!-- Item 1 -->
                     <div class="hidden duration-700 ease-in-out carousel-container" data-carousel-item>
-                        <img src="mainPage/main-images/1img.jpg" class="block absolute top-1/2 left-1/2 w-contain -translate-x-1/2 -translate-y-1/2" alt="...">
+                        <img src="../mainPage/main-images/1img.jpg" class="block absolute top-1/2 left-1/2 w-contain -translate-x-1/2 -translate-y-1/2" alt="...">
                         
                         <a href="#!" class = ""><h2 class="text-center text-4xl">NEWS TITLE</h2><p class= "text-center">Read more...</p></a>
                         
                     </div>
                     <!-- Item 2 -->
                     <div class="hidden duration-700 ease-in-out  carousel-container" data-carousel-item="active">
-                        <img src="mainPage/main-images/2img.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                        <img src="../mainPage/main-images/2img.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
                         <a href="#!" class = ""><h2 class="text-center text-4xl">NEWS TITLE</h2><p class= "text-center">Read more...</p></a>
                     </div> 
                     <!-- Item 3 -->
                     <div class="hidden duration-700 ease-in-out  carousel-container" data-carousel-item>
-                        <img src="mainPage/main-images/3img.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                        <img src="../mainPage/main-images/3img.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
                         <a href="#!" class = ""><h2 class="text-center text-4xl">NEWS TITLE</h2><p class= "text-center">Read more...</p></a>
                     </div>
 
@@ -391,16 +432,16 @@
                 <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Claim Rewards</h3>
 
                 <div class="flex flex-wrap justify-center items-center mt-4  gap-2 containers">
-                    <img src="admin/images/prize/Prize-256.jpg" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
+                    <img src="../admin/images/prize/Prize-256.jpg" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
                     <a href="#!"><h2 class ="px-3  py-2 rounded-md bg-slate-700 dark:bg-slate-50 text-white dark:text-gray-700 text-xl block">1000 PTS</h2></a>
                 </div>
                 <div class="flex flex-wrap justify-center items-center mt-4  gap-2 containers">
-                    <img src="admin/images/prize/Prize-63.png" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
+                    <img src="../admin/images/prize/Prize-63.png" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
                     <a href="#!"><h2 class ="px-3  py-2 rounded-md bg-slate-700 dark:bg-slate-50 text-white dark:text-gray-700 text-xl block">2000 PTS</h2></a>
                 </div>
 
                 <div class="flex flex-wrap justify-center items-center mt-4  gap-3 containers">
-                    <img src="admin/images/prize/Prize-226.jpg" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
+                    <img src="../admin/images/prize/Prize-226.jpg" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
                     <a href="#!"><h2 class ="px-3  py-2 rounded-md bg-slate-700 dark:bg-slate-50 text-white dark:text-gray-700 text-xl block">5000 PTS</h2></a>
                 </div>
                
@@ -419,7 +460,7 @@
     <div class="md:flex md:justify-between footers mx-auto max-w-7xl">
         <div class="mb-6 md:mb-0">
             <a href="#top" class="flex items-center">
-                <img src="img/glogoblue.png" class="mr-3 h-8" alt="FlowBite Logo" />
+                <img src="../img/glogoblue.png" class="mr-3 h-8" alt="FlowBite Logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap text-gray-700 dark:text-white">G-Reward</span>
             </a>
         </div>
@@ -508,19 +549,7 @@
 
 
 <!-- MYSCRIPT -->
-<script src="./js/maintailwind.js"></script>
-<!-- LIGHTBOX JS -->
-<script src="./node_modules/lightbox2/dist/js/lightbox.js"></script>
-<script>
-    lightbox.option({
-      'resizeDuration': 100,
-      'wrapAround': true,
-      'maxWidth': 450,
-      'fitImagesInViewport': true,
-      'fadeDuration':100
-    })
-</script>
-
+<script src="../js/maintailwind.js"></script>
 <!-- SCRIPTS TAILWIND -->
 <script src="../path/to/flowbite/dist/flowbite.js"></script>
 <script>

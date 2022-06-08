@@ -30,7 +30,11 @@ if(isset($_POST['submit'])){
         if ($rcount == 1 AND $status == "Member" ){
         $_SESSION['id'] = $id;
 		$_SESSION['username'] = $username;
-		header("Location: mainPage/mainFinal.php");
+        // Old Main Design
+		// header("Location: mainPage/mainFinal.php");
+
+        //New Main Design 
+        header("Location: mainPage/MainTailWind.php");
         }
         else
         {
