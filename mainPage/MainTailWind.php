@@ -88,7 +88,7 @@ $mresult = mysqli_query($conn,$sql);
       <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" type="button" data-dropdown-toggle="dropdown">
         <span class="sr-only">Open user menu</span>
         <!-- image -->
-        <img class="w-8 h-8 rounded-full ring-4  dark:ring-gray-600" src="../img/aldrin.jpg" alt="user photo">
+        <img class="w-8 h-8 rounded-full ring-4  dark:ring-gray-600" src="../admin/images/profile/<?php echo $rows['img_name']; ?>" alt="user photo">
       </button>
 
       <!-- Dropdown menu -->
@@ -185,62 +185,72 @@ $mresult = mysqli_query($conn,$sql);
        
 
             <div class="top-2 flex flex-col items-center">
-            <img src="../admin/images/profile/Profile-215.jpg" class = "rounded-full  h-28" alt="">
-            <h2 class = "mt-2 text-gray-600 dark:text-white">UserName</h2>
-            <h1 class = "font-bold text-2xl text-gray-700 dark:text-white">3500</h1>
-            <h1></h1>
+                <!-- top 2 checker -->
+                <?php
+                $thisyear = date('Y');
+                $thismonth = date('m');
+                $sql = "SELECT * , SUM(dpoints) AS tpoints FROM deposits WHERE MONTH(datetime) = '$thismonth' AND YEAR(datetime) = '$thisyear' GROUP BY profileuser ORDER BY tpoints DESC LIMIT 1,2";
+                $rsult = mysqli_query($conn, $sql);
+                $row = mysqli_fetch_assoc($rsult);
+                $totalpoints = $row['tpoints'];
+                ?>
+                <img src="../admin/images/profile/<?php echo $row['img_name']; ?>"  class = "rounded-full  h-28" alt="">
+                <h2 class = "mt-2 text-gray-600 dark:text-white"><?php echo $row['profileuser']; ?></h2>
+                <h1 class = "font-bold text-2xl text-gray-700 dark:text-white"><?php echo $totalpoints; ?></h1>
+              
             </div>
 
             <div class="top-1 flex flex-col items-center pb-20">
-            <img src="../admin/images/profile/Profile-421.jpg" class = "rounded-full h-28" alt="">
-            <h2 class = "mt-2  text-gray-600 dark:text-white">UserName</h2>
-            <h1 class = "font-bold text-2xl text-gray-700 dark:text-white">3500</h1>
+                <!-- top 1 checker  -->
+                <?php
+                $thisyear = date('Y');
+                $thismonth = date('m');
+                $sql = "SELECT * , SUM(dpoints) AS tpoints FROM deposits WHERE MONTH(datetime) = '$thismonth' AND YEAR(datetime) = '$thisyear' GROUP BY profileuser ORDER BY tpoints DESC LIMIT 0,1";
+                $rsult = mysqli_query($conn, $sql);
+                $row = mysqli_fetch_assoc($rsult);
+                $totalpoints = $row['tpoints'];
+                ?>
+            <img src="../admin/images/profile/<?php echo $row['img_name']; ?>" class = "rounded-full h-28" alt="">
+            <h2 class = "mt-2  text-gray-600 dark:text-white"><?php echo $row['profileuser']; ?></h2>
+            <h1 class = "font-bold text-2xl text-gray-700 dark:text-white"><?php echo $totalpoints; ?> </h1>
             </div>
 
             <div class="top-3 flex flex-col items-center">
-            <img src="../admin/images/profile/Profile-603.jpg" class = "rounded-full h-28" alt="">
-            <h2 class = "mt-2  text-gray-600 dark:text-white">UserName</h2>
-            <h1 class = "font-bold text-gray-700 text-2xl dark:text-white">3500</h1>
+                <!-- top 3 checker -->
+                <?php
+                $thisyear = date('Y');
+                $thismonth = date('m');
+                $sql = "SELECT * , SUM(dpoints) AS tpoints FROM deposits WHERE MONTH(datetime) = '$thismonth' AND YEAR(datetime) = '$thisyear' GROUP BY profileuser ORDER BY tpoints DESC LIMIT 2,3";
+                $rsult = mysqli_query($conn, $sql);
+                $row = mysqli_fetch_assoc($rsult);
+                $totalpoints = $row['tpoints'];
+                ?>
+            <img src="../admin/images/profile/<?php echo $row['img_name']; ?>" class = "rounded-full h-28" alt="">
+            <h2 class = "mt-2  text-gray-600 dark:text-white"><?php echo $row['profileuser']; ?></h2>
+            <h1 class = "font-bold text-gray-700 text-2xl dark:text-white"><?php echo $totalpoints; ?></h1>
             </div>
             
         </div>
         <!-- TOP5 -->
         <div class="top-five">
-            
-            <div class="mt-3 flex justify-between items-center  rounded-md p-1">
-            <h1 class = "font-bold text-center px-5 text-lg  rounded-md bg-yellow-400 text-white dark:text-white" >1 </h1>
-            <img src="../admin/images/profile/Profile-215.jpg" class = "rounded-full  h-10" alt="">
-            <h2 class = "text-gray-700 dark:text-white"> UserName</h2>
-            <h2 class = "font-bold text-2xl text-gray-700 dark:text-white"> 3500</h2>
-            </div>
-
-            <div class="mt-3 flex justify-between items-center">
-            <h1 class = "font-bold text-center text-lg px-4  rounded-md bg-gray-400 text-white dark:text-white" >2</h1>
-            <img src="../admin/images/profile/Profile-421.jpg" class = "rounded-full  h-10" alt="">
-            <h2 class = "text-gray-700 dark:text-white"> UserName</h2>
-            <h2 class = "font-bold text-2xl text-gray-700 dark:text-white"> 3500</h2>
-            </div>
-
-            <div class="mt-3 flex justify-between items-center">
-            <h1 class = "font-bold text-center px-4  text-lg rounded-md bg-yellow-600 text-white dark:text-white" >3</h1>
-            <img src="../admin/images/profile/Profile-603.jpg" class = "rounded-full  h-10" alt="">
-            <h2 class = "text-gray-700 dark:text-white"> UserName</h2>
-            <h2 class = "font-bold text-2xl text-gray-700 dark:text-white"> 3500</h2>
-            </div>
-
-            <div class="mt-3 flex justify-between items-center">
-            <h1 class = "font-bold text-center text-lg px-4 rounded-md  text-black dark:text-white" >4</h1>
-            <img src="../admin/images/profile/Profile-924.jpg" class = "rounded-full  h-10" alt="">
-            <h2 class = "text-gray-700 dark:text-white"> UserName</h2>
-            <h2 class = "font-bold text-2xl text-gray-700 dark:text-white"> 3500</h2>
-            </div>
-
-            <div class="mt-3 flex justify-between items-center">
-            <h1 class = "font-bold text-center px-4 text-lg rounded-md  text-black dark:text-white" >5</h1>
-            <img src="../admin/images/profile/Profile-934.jpg" class = "rounded-full  h-10" alt="">
-            <h2 class = "text-gray-700 dark:text-white"> UserName</h2>
-            <h2 class = "font-bold text-2xl text-gray-700 dark:text-white"> 3500</h2>
-            </div>
+        <?php
+            $thisyear = date('Y');
+            $thismonth = date('m');
+            $sql = "SELECT * , SUM(dpoints) AS tpoints FROM deposits WHERE MONTH(datetime) = '$thismonth' AND YEAR(datetime) = '$thisyear' GROUP BY profileuser ORDER BY tpoints DESC LIMIT 3,5";
+            $result = mysqli_query($conn, $sql);
+            $rows = mysqli_fetch_assoc($result);
+            $rank = 4;
+            $number = 0;
+            do { ?>
+              <tr class="trBorder">""
+                <td aria-placeholder="none"><?php echo $rank; ?>th</td>
+                <td class="rank-image" aria-placeholder="none"><img src="../admin/images/profile/<?php echo $rows['img_name']; ?>" style="background:white;"></td>
+                <td><?php echo $rows['profileuser']; ?></td>
+                <td><?php echo $rows['tpoints']; ?></td>
+              </tr>
+            <?php $rank++;
+            } while (($rows = mysqli_fetch_assoc($result)) and ($number <= 4)) ?>
+          </table>
 
         </div>
     </div>
@@ -258,35 +268,41 @@ $mresult = mysqli_query($conn,$sql);
 
                 <div class="left grid items-center justify-center rounded  py-5">
                 <!-- <h2 class ="text-center text-black dark:text-white">Profile</h2> -->
-                    <a href="../img/aldrin.jpg" data-lightbox="image-1" id="lightImage">Yes</a>
-                    <img src="../img/aldrin.jpg"  class="rounded" id="profImage">
+                   
+                <img src="../admin/images/profile/<?php echo $rows['img_name']; ?>"  class="rounded" id="profImage">
                     <i class="las la-edit rounded-b text-center  text-white font-bold text-4xl" id="cameraPhoto"></i>
                     <input class="block " aria-describedby="user_avatar_help" id="uploadPhoto" type="file">
                     
                 </div>
                 <div class="right px-6 ">
                     <form action="">
-                        <!-- TOP NAMES -->
+                    <?php
+                    $sql = "SELECT * FROM members WHERE id = $id";
+                    $result = mysqli_query($conn, $sql);
+                    $rows = mysqli_fetch_assoc($result);
+                    ?>
                     <!-- USERNAME -->
                     <div class="top flex justify-between items-center mt-4">
-                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-50 border-none text-gray-700 dark:text-white text-start shadow-inner" value="Username">
+                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-50 border-none text-gray-700 dark:text-white text-start shadow-inner" value="<?php echo $rows['username']; ?>">
                     <!-- FULL NAME -->
-                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ml-5 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="Full Name">
+                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ml-5 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value=" <?php echo $rows['fullname']; ?>">
                     </div>
                     <!-- PROFILE NAME -->
-                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="Profile Name">
+                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="<?php echo $rows['profilename']; ?>">
                      <!-- CONTACT NUMBER -->
-                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="Contact Number">
+                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="<?php echo $rows['contact']; ?>">
                      <!-- EMAIL -->
-                    <input type="email" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="Email" required>
+                    <input type="email" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="<?php echo $rows['email']; ?>" required>
                     <!-- PASSWORD -->
-                    <input type="password" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="Password">
+                    <input type="password" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="<?php echo $rows['password']; ?>">
                     <!-- BARANGAY -->
-                    <select id="countries" class=" rounded ring-2 ring-slate-400  w-full  text-blackk   dark:text-white mt-3">
-                    <option selected value ="Barangay Landayan" class ="text-black dark:text-white bg-slate-200 dark:bg-slate-800 hover:bg-slate-900 focus:bg-slate-900"><h2 class="text-black dark:text-white">Barangay Landayan</h2></option>
+                    <select id="countries" class=" rounded ring-2 ring-slate-400  w-full  text-blackk   dark:text-white mt-3" <?php echo $rows['address']; ?>  >
+                    <option selected value ="<?php echo $rows['address']; ?>" class ="text-black dark:text-white bg-slate-200 dark:bg-slate-800 hover:bg-slate-900 focus:bg-slate-900"><h2 class="text-black dark:text-white"></h2></option>
                     <option value="Barangay Nueva" class ="bg-slate-200 dark:bg-slate-800  text-black dark:text-white">Barangay Nueva</option>
-                    <option value="Barangay San Antonio" class ="bg-slate-200 dark:bg-slate-800 text-black dark:text-white">Barangay San Antonio</option>
-                    <option value="Barangay San Vicente" class ="bg-slate-200 dark:bg-slate-800 text-black dark:text-white">Barangay San Vicente</option>
+                    <option value="Barangay Nueva" class ="bg-slate-200 dark:bg-slate-800  text-black dark:text-white">Barangay San Antonio</option>
+                    <option value="Barangay San Antonio" class ="bg-slate-200 dark:bg-slate-800 text-black dark:text-white">Barangay San Vicente</option>
+                    <option value="Barangay San Vicente" class ="bg-slate-200 dark:bg-slate-800 text-black dark:text-white">Barangay San Roque</option>
+                    <option value="Barangay San Vicente" class ="bg-slate-200 dark:bg-slate-800 text-black dark:text-white">Barangay Landayan</option>
                   
                     </select>
                     <!-- SUBMIT PROFILE -->
@@ -307,24 +323,25 @@ $mresult = mysqli_query($conn,$sql);
          <div id="controls-carousel" class="relative" data-carousel="slide">
             <!-- Carousel wrapper -->
             <div class="overflow-hidden relative h-96  rounded-lg sm:h-64 xl:h-96 2xl:h-96">
-                
-                    <!-- Item 1 -->
-                    <div class="hidden duration-700 ease-in-out carousel-container" data-carousel-item>
-                        <img src="../mainPage/main-images/1img.jpg" class="block absolute top-1/2 left-1/2 w-contain -translate-x-1/2 -translate-y-1/2" alt="...">
-                        
-                        <a href="#!" class = ""><h2 class="text-center text-4xl">NEWS TITLE</h2><p class= "text-center">Read more...</p></a>
-                        
-                    </div>
-                    <!-- Item 2 -->
-                    <div class="hidden duration-700 ease-in-out  carousel-container" data-carousel-item="active">
-                        <img src="../mainPage/main-images/2img.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
-                        <a href="#!" class = ""><h2 class="text-center text-4xl">NEWS TITLE</h2><p class= "text-center">Read more...</p></a>
-                    </div> 
-                    <!-- Item 3 -->
-                    <div class="hidden duration-700 ease-in-out  carousel-container" data-carousel-item>
+                       
+                    <?php
+                    $sql = "SELECT * FROM news";
+                    $result = mysqli_query($conn, $sql);
+                    $rows = mysqli_fetch_assoc($result);
+                    $ranker = 1;
+                    do { ?>
+                        <div class="hidden duration-700 ease-in-out carousel-container">
+                        <img src="../admin/images/news/<?php echo $rows['news_img']; ?>" class = "block absolute top-1/2 left-1/2 w-contain -translate-x-1/2 -translate-y-1/2" alt="...">
+                        <a href="mainPage/ViewNews.php?ID=<?php echo $rows['news_id']; ?>">    <?php echo $rows['news_title']; ?></a>
+                        </div>
+                    <?php $ranker++;
+                    } while ($rows = mysqli_fetch_assoc($result)) ?>
+
+                    <!-- Item sample -->
+                    <!-- <div class="hidden duration-700 ease-in-out  carousel-container" data-carousel-item>
                         <img src="../mainPage/main-images/3img.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
                         <a href="#!" class = ""><h2 class="text-center text-4xl">NEWS TITLE</h2><p class= "text-center">Read more...</p></a>
-                    </div>
+                    </div> -->
 
                 </div>
                 <!-- Slider controls -->
@@ -367,51 +384,21 @@ $mresult = mysqli_query($conn,$sql);
             </tr>
         </thead>
         <tbody class="text-center">
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap ">
-                    aldrin
-                </th>
-                <td class="px-6 py-4 ">
-                    Aldrin:gain points
-                </td>
-                <td class="px-6 py-4">
-                  Date
-                </td>
-                <td class="px-6 py-4">
-                   3 mins ago
-                </td>
-               
+        <?php
+          $sql = "SELECT * FROM logs WHERE user='$currentprofileuser' ORDER BY id DESC Limit 0,5";
+          $result = mysqli_query($conn, $sql);
+          $rows = mysqli_fetch_assoc($result);
+          $rank = 1;
+          $number = 0;
+          do { ?>
+            <tr >
+              <td scope="row" class = "pt-3 pb-2"><?php echo $rows['user']; ?></td>
+              <td><?php echo $rows['activity']; ?></td>
+              <td><?php echo $rows['datetime']; ?></td>
+              <td><?php echo time_elapsed_string($rows['daysago']); ?></td>
             </tr>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                aldrin
-                </th>
-                <td class="px-6 py-4">
-                Aldrin:gain points
-                </td>
-                <td class="px-6 py-4">
-                    Date
-                </td>
-                <td class="px-6 py-4">
-                3 mins ago
-                </td>
-               
-            </tr>
-            <tr class="bg-white dark:bg-gray-800">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                aldrin
-                </th>
-                <td class="px-6 py-4">
-                Aldrin:gain points
-                </td>
-                <td class="px-6 py-4">
-                   Date
-                </td>
-                <td class="px-6 py-4">
-                3 mins ago
-                </td>
-               
-            </tr>
+          <?php $rank++;
+          } while (($rows = mysqli_fetch_assoc($result)) and ($number <= 5)) ?>
         </tbody>
     </table>
 </div>
