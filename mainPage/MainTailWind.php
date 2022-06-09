@@ -1,9 +1,5 @@
 <?php
 include('../connections/connection.php');
-if (empty($_SESSION['username'])) {
-
-  header("Location: logout.php");
-}
 if (!isset($_SESSION['id'])) {
 
   $_SESSION['view'] = "<div class='message warning'>User Not Found.</div>";
@@ -268,19 +264,18 @@ $mresult = mysqli_query($conn,$sql);
 
                 <div class="left grid items-center justify-center rounded  py-5">
                 <!-- <h2 class ="text-center text-black dark:text-white">Profile</h2> -->
-                   
-                <img src="../admin/images/profile/<?php echo $rows['img_name']; ?>"  class="rounded" id="profImage">
-                    <i class="las la-edit rounded-b text-center  text-white font-bold text-4xl" id="cameraPhoto"></i>
-                    <input class="block " aria-describedby="user_avatar_help" id="uploadPhoto" type="file">
-                    
-                </div>
-                <div class="right px-6 ">
-                    <form action="">
-                    <?php
+                <?php
                     $sql = "SELECT * FROM members WHERE id = $id";
                     $result = mysqli_query($conn, $sql);
                     $rows = mysqli_fetch_assoc($result);
                     ?>
+                <img src="../AdminTailWind/images/profile/<?php echo $rows['img_name']; ?>" class="rounded" id="profImage">
+                    <i class="las la-edit rounded-b text-center  text-white font-bold text-4xl" id="cameraPhoto"></i>
+                    <input class="block" aria-describedby="user_avatar_help" id="uploadPhoto" type="file">
+                    
+                </div>
+                <div class="right px-6 ">
+                    <form action="" method="POST">
                     <!-- USERNAME -->
                     <div class="top flex justify-between items-center mt-4">
                     <input type="text" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-50 border-none text-gray-700 dark:text-white text-start shadow-inner" value="<?php echo $rows['username']; ?>">
@@ -296,14 +291,13 @@ $mresult = mysqli_query($conn,$sql);
                     <!-- PASSWORD -->
                     <input type="password" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="<?php echo $rows['password']; ?>">
                     <!-- BARANGAY -->
-                    <select id="countries" class=" rounded ring-2 ring-slate-400  w-full  text-blackk   dark:text-white mt-3" <?php echo $rows['address']; ?>  >
-                    <option selected value ="<?php echo $rows['address']; ?>" class ="text-black dark:text-white bg-slate-200 dark:bg-slate-800 hover:bg-slate-900 focus:bg-slate-900"><h2 class="text-black dark:text-white"></h2></option>
+                    <select id="countries" class=" rounded ring-2 ring-slate-400  w-full  text-blackk   dark:text-white mt-3" value="<?php echo $rows['address']; ?>">
+                    <option selected value="<?php echo $rows['address']; ?>" class ="text-black dark:text-white bg-slate-200 dark:bg-slate-800 hover:bg-slate-900 focus:bg-slate-900"><?php echo $rows['address']; ?><h2 class="text-black dark:text-white"></h2></option>
                     <option value="Barangay Nueva" class ="bg-slate-200 dark:bg-slate-800  text-black dark:text-white">Barangay Nueva</option>
                     <option value="Barangay Nueva" class ="bg-slate-200 dark:bg-slate-800  text-black dark:text-white">Barangay San Antonio</option>
                     <option value="Barangay San Antonio" class ="bg-slate-200 dark:bg-slate-800 text-black dark:text-white">Barangay San Vicente</option>
                     <option value="Barangay San Vicente" class ="bg-slate-200 dark:bg-slate-800 text-black dark:text-white">Barangay San Roque</option>
                     <option value="Barangay San Vicente" class ="bg-slate-200 dark:bg-slate-800 text-black dark:text-white">Barangay Landayan</option>
-                  
                     </select>
                     <!-- SUBMIT PROFILE -->
                     <button class = "mt-3 w-full text-start bg-slate-700 rounded py-1 text-lg text-white mb-4 font-bold">Submit</button>
@@ -317,13 +311,10 @@ $mresult = mysqli_query($conn,$sql);
     
      <!-- NEWS -->
      <div class="news pt-20" id="newsanchor">
-         <div class="news-wrapper ring-2 shadow-2xl ring-slate-200 rounded">
-            
-          
+         <div class="news-wrapper ring-2 shadow-2xl ring-slate-200 rounded">   
          <div id="controls-carousel" class="relative" data-carousel="slide">
-            <!-- Carousel wrapper -->
+            <!-- Carousel wrapper -->   
             <div class="overflow-hidden relative h-96  rounded-lg sm:h-64 xl:h-96 2xl:h-96">
-                       
                     <?php
                     $sql = "SELECT * FROM news";
                     $result = mysqli_query($conn, $sql);
@@ -331,12 +322,11 @@ $mresult = mysqli_query($conn,$sql);
                     $ranker = 1;
                     do { ?>
                         <div class="hidden duration-700 ease-in-out carousel-container">
-                        <img src="../admin/images/news/<?php echo $rows['news_img']; ?>" class = "block absolute top-1/2 left-1/2 w-contain -translate-x-1/2 -translate-y-1/2" alt="...">
-                        <a href="mainPage/ViewNews.php?ID=<?php echo $rows['news_id']; ?>">    <?php echo $rows['news_title']; ?></a>
+                        <img src="../AdminTailWind/images/news/<?php echo $rows['news_img'];?>" class = "block absolute top-1/2 left-1/2 w-contain -translate-x-1/2 -translate-y-1/2" alt="...">
+                        <!-- <a href="mainPage/ViewNews.php?ID=<?php echo $rows['news_id']; ?>">    <?php echo $rows['news_title']; ?></a> -->
                         </div>
-                    <?php $ranker++;
+                        <?php $ranker++;
                     } while ($rows = mysqli_fetch_assoc($result)) ?>
-
                     <!-- Item sample -->
                     <!-- <div class="hidden duration-700 ease-in-out  carousel-container" data-carousel-item>
                         <img src="../mainPage/main-images/3img.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
@@ -344,6 +334,7 @@ $mresult = mysqli_query($conn,$sql);
                     </div> -->
 
                 </div>
+                
                 <!-- Slider controls -->
                 <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
                     <span class="inline-flex justify-center items-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">

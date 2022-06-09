@@ -172,7 +172,7 @@ $mresult = mysqli_query($conn,$sql);
       $rows = mysqli_fetch_assoc($result);
       $ranker = 1;
       do { ?>
-        <div class="item"><img src="../admin/images/news/<?php echo $rows['news_img']; ?>">
+        <div class="item"><img src="../AdminTailWind/images/news/<?php echo $rows['news_img']; ?>">
           <h4><?php echo $rows['news_title']; ?></h4>
           <p><?php echo $rows['news_description']; ?>
           <p> Posted by <?php echo $rows['postedby']; ?> on <?php echo $rows['datetime']; ?> | Last Updated <?php echo time_elapsed_string($rows['lastupdate']); ?>.</p>

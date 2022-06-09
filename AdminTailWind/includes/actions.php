@@ -226,7 +226,7 @@ if (isset($_POST['editgarbagetype'])) {
     
                 if($upload == FALSE) {
                     $_SESSION['upload'] = "<div class='message warning'>Failed To Upload Image. Try Again Later.</div>";
-                    header("Location: garbagetype.php");
+                    header("Location: waste.php");
     
                     die();
                 }
@@ -237,7 +237,7 @@ if (isset($_POST['editgarbagetype'])) {
     
                     if($remove == FALSE){
                         $_SESSION['remove'] = "<div class='message warning'>Failed To Remove Current Image. Try Again Later.</div>";
-                        header("Location: garbagetype.php");
+                        header("Location: waste.php");
                         die();
                     }
                 }
@@ -255,10 +255,10 @@ if (isset($_POST['editgarbagetype'])) {
         $_SESSION['update'] = "<div class='message success'>Details Updated Successfully!</div>";
         $log = "INSERT INTO logs (user, activity, datetime) VALUES ('$username', '$activity', '$time')";
         $result = mysqli_query($conn, $log);
-        header("Location: garbagetype.php");
+        header("Location: waste.php");
     } else {
         $_SESSION['update'] = "<div class='message warning'>Failed To Update Details. Try Again Later.</div>";
-        header("Location: garbagetype.php");
+        header("Location: waste.php");
     }
 }
 if (isset($_POST['editmember'])){
@@ -461,4 +461,31 @@ if (isset($_POST['editprize'])) {
     }
 }
 
+// DELETE
+if (isset($_POST['deletegarbage'])) {
+$id = $rows['garbage_ID'];
+    
+    if ($image_name != "") {
+
+        $path = "images/garbage/".$image_name;
+        $remove = unlink($path);
+
+        if ($remove == FALSE) {
+            echo "<meta http-equiv='refresh' content='0'>";
+            die();
+        }
+    }
+
+    $sql = "DELETE FROM garbagetype WHERE garbage_ID = $id";
+    $result = mysqli_query($conn, $sql);
+
+    if($result == TRUE) {
+        $_SESSION['delete'] = "<div class='message success'>Removed Successfully!</div>";
+        $log = "INSERT INTO logs (user, activity, datetime) VALUES ('$username', '$activity', '$time')";
+        $result = mysqli_query($conn, $log);
+        echo "<meta http-equiv='refresh' content='0'>";
+    } else {
+        $_SESSION['delete'] = "<div class='message warning'>Failed To Remove. Try Again Later.</div>";
+    }
+}
 ?>
