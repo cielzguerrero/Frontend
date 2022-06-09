@@ -146,8 +146,6 @@ html {
 }
 
 .whitewrapper .profile-wrapper .left img {
-  cursor: -webkit-zoom-in;
-  cursor: zoom-in;
   max-width: 210px;
   -webkit-box-shadow: 0px 0px 10px #08388b7f;
           box-shadow: 0px 0px 10px #08388b7f;
