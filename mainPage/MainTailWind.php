@@ -160,7 +160,7 @@ $mresult = mysqli_query($conn,$sql);
     <h2 class="p-3 text-2xl">G-POINTS</h2>
     <h5 class="pl-3 pb-1 mt-10">Available Points</h5>
     <div class="bottomcard flex items-center">
-      <h1 class="p-3 text-4xl font-black">3200</h1>
+      <h1 class="p-3 text-4xl font-black"><?php echo $rows['points']; ?></h1>
       <button class="block  text-white bg-slate-700 hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  ml-12 mr-3 px-10 py-3 text-center  dark:hover:bg-slate-800 dark:focus:ring-slate-800" type="button" data-modal-toggle="authentication-modal">
       Claim
     </button>
