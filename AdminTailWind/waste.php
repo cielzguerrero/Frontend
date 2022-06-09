@@ -1,6 +1,7 @@
 <?php
 include('connections/connection.php');
 include('includes/afterlogin.php');
+include('includes/actions.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
