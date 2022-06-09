@@ -1,3 +1,7 @@
+<?php
+include('connections/connection.php');
+include('includes/afterlogin.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,10 +82,16 @@
              
                <div class="waste-wrapper bg-white grid bg xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1   xs:grid-cols-1 overflow-hidden justify-center content-center items-center  mx-2 gap-5">
              <!-- GARBAGE 1 -->
+             <?php
+                            $sql = "SELECT * FROM garbagetype";
+                            $result = mysqli_query($conn, $sql);
+                            $rows = mysqli_fetch_assoc($result);
+                            $ranker = 1; 
+                            do { ?>
                         <div class="box mt-2  drop-shadow-lg bg-blue-200 flex flex-col items-center">
-                            <h1 class = "text-center font-bold w-full py-2 bg-slate-800 text-slate-100 rounded-t">Doy Pack</h1>
-                            <img src="../admin/images/garbage/GarbageType-628.jpg" class = "py-5 h-52 w-52  ">
-                            <h1 class = "text-center font-semibold py-2">Points: 2</h1>
+                            <h1 class = "text-center font-bold w-full py-2 bg-slate-800 text-slate-100 rounded-t"><?php echo $rows['garbage_Name'];?></h1>
+                            <img src="images/garbage/<?php echo $rows['garbage_Img'];?>" class = "py-5 h-52 w-52  ">
+                            <h1 class = "text-center font-semibold py-2">Points: <?php echo $rows['garbage_Points'];?></h1>
                             <!-- Buttons -->
                             <div class="editDelButtons flex justify-between items-center">
                                 <!-- EDIT -->
@@ -100,86 +110,9 @@
                                 </span>
                                 </button>
                                 </a>
-                            </div>
-                             
+                            </div>               
                         </div>
-           <!-- GARBAGE 2 -->
-                        <div class="box mt-2  drop-shadow-lg  bg-blue-200 flex flex-col items-center">
-                            <h1 class = "text-center font-bold w-full py-2 bg-slate-800 text-slate-100 rounded-t">Glass Bottle</h1>
-                            <img src="../admin/images/garbage/GarbageType-973.jpg" class = "py-5 h-52 w-52  ">
-                            <h1 class = "text-center font-semibold py-2">Points: 4</h1>
-                            <!-- Buttons -->
-                            <div class="editDelButtons flex justify-between items-center">
-                                <!-- EDIT -->
-                                <a href="../AdminTailWind/updatewaste.php">
-                                <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-bold text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500  hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800 ">
-                                <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                                UPD/ADD
-                                </span>
-                                </button>
-                                </a>
-                               <!-- DELETE -->
-                               <a href="">
-                                <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-bold text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500  hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800 ">
-                                <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                                   DEL
-                                </span>
-                                </button>
-                                </a>
-                            </div>
-                        </div>
-            <!-- GARBAGE 3 -->
-                       <div class="box mt-2  drop-shadow-lg  bg-blue-200 flex flex-col items-center">
-                            <h1 class = "text-center font-bold w-full py-2 bg-slate-800 text-slate-100 rounded-t">Plastic Bottle</h1>
-                            <img src="../admin/images/garbage/GarbageType-725.jpg" class = "py-5 h-52 w-52  ">
-                            <h1 class = "text-center font-semibold py-2">Points: 3</h1>
-                            <!-- Buttons -->
-                            <div class="editDelButtons flex justify-between items-center">
-                                <!-- EDIT -->
-                                <a href="../AdminTailWind/updatewaste.php">
-                                <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-bold text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500  hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
-                                <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                                UPD/ADD
-                                </span>
-                                </button>
-                                </a>
-                                <!-- DELETE -->
-                                <a href="">
-                                <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-bold text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500  hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
-                                <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                                   DEL
-                                </span>
-                                </button>
-                                </a>
-                            </div>
-                        </div>
-           <!-- GARBAGE 4 -->
-                         <div class="box mt-2  drop-shadow-lg  bg-blue-200 flex flex-col items-center">
-                            <h1 class = "text-center font-bold w-full py-2 bg-slate-800 text-slate-100 rounded-t">Aluminum Can</h1>
-                            <img src="../admin/images/garbage/GarbageType-206.jpg" class = "py-5 h-52">
-                            <h1 class = "text-center font-semibold py-2">Points: 10</h1>
-                            <!-- Buttons -->
-                            <div class="editDelButtons flex justify-between items-center">
-                                <!-- EDIT -->
-                                <a href="../AdminTailWind/updatewaste.php">
-                                <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-bold text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500  hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
-                                <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                                UPD/ADD
-                                </span>
-                                </button>
-                                </a>
-                                <!-- DELETE -->
-                                <a href="">
-                                <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-bold text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500  hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
-                                <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                                   DEL
-                                </span>
-                                </button>
-                                </a>
-                            </div>
-                        </div>
-
-        
+                        <?php $ranker++; }  while ($rows = mysqli_fetch_assoc($result))?> 
                </div>
            </div>
         </div>

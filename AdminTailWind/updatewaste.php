@@ -1,3 +1,8 @@
+<?php
+include('connections/connection.php');
+include('includes/afterlogin.php');
+include('includes/actions.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +24,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- FUNCTION -->
     
     <!-- JQUERY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -74,24 +80,24 @@
         <div class="content-wrapper overflow-auto mt-5 mx-10">
         <!-- UPDATE -->
             <div class="grid lg:grid-cols-2 md:grid-cols-1 justify-center items-center mt-20 bg-slate-300 py-5 px-6 rounded-lg gap-10">
-                <form class = "w-full  ">
+                <form class = "w-full  " method="POST">
                     <div class="mb-2">
-                        <label for="email" class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300 ">Name </label>
-                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" value = "Doy pack" required>
+                        <label for="wastename" class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300 ">Name </label>
+                        <input type="text" id="wastename" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" value = "Doy pack" name="gname" required>
                     </div>
                     <div class="mb-2">
-                        <label for="email" class="block mb-1 text-md  font-medium text-gray-900 dark:text-gray-300">Points</label>
-                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full"  value = "2" required>
+                        <label for="points" class="block mb-1 text-md  font-medium text-gray-900 dark:text-gray-300">Points</label>
+                        <input type="text" id="points" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full"  value = "2" name="gpoints" required>
                     </div>
 
                     <div class="mb-4">
                         <label class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300" for="user_avatar">Upload file</label>
-                        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file">
+                        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" name="image" type="file">
                       
                     </div>
                     
                     
-                    <button type="submit" class="text-white text-md  bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg  w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Update</button>
+                    <button type="submit" class="text-white text-md  bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg  w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" name="editgarbagetype">Update</button>
                 </form>
 
                 <!-- IMAGE -->
@@ -106,24 +112,24 @@
             <!-- ADD NEW -->
 
             <div class=" mt-10 bg-slate-300 py-5 px-6 rounded-lg lg:w-2/3 md:w-2/3 sm:w-full mx-auto ">
-                <form class = " ">
+                <form class = " " method="POST">
                     <div class="mb-2">
-                        <label for="email" class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300 ">Name </label>
-                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full"  required>
+                        <label for="wastename" class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300 ">Name </label>
+                        <input type="text" id="wastename" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" name="gname" required>
                     </div>
                     <div class="mb-2">
-                        <label for="email" class="block mb-1 text-md  font-medium text-gray-900 dark:text-gray-300">Points</label>
-                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" required>
+                        <label for="points" class="block mb-1 text-md  font-medium text-gray-900 dark:text-gray-300">Points</label>
+                        <input type="text" id="points" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" name="gpoints" required>
                     </div>
 
                     <div class="mb-4">
                         <label class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300" for="user_avatar">Upload file</label>
-                        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file">
+                        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file" name="image">
                       
                     </div>
                     
                     
-                    <button type="submit" class="text-white text-md  bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg  w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add New</button>
+                    <button type="submit" class="text-white text-md  bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg  w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" name="addgarbagetype">Add New</button>
                 </form>
 
                
