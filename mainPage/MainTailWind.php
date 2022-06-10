@@ -311,10 +311,10 @@ $mresult = mysqli_query($conn,$sql);
     
      <!-- NEWS -->
      <div class="news pt-20" id="newsanchor">
-         <div class="news-wrapper ring-2 shadow-2xl ring-slate-200 rounded">   
+         <div class="news-wrapper dark:bg-slate-800 ring-2 shadow-2xl ring-slate-200 rounded">   
          <!-- <div id="controls-carousel" class="relative" data-carousel="slide">
             Carousel wrapper    -->
-            <div class="overflow-hidden  h-auto relative rounded-lg sm:h-64 xl:h-96 2xl:h-96">
+            <div class="overflow-hidden  dark:bg-slate-800  h-auto relative rounded-lg sm:h-64 xl:h-96 2xl:h-96">
                     <!-- OWL CAROUSEL -->
                         <div class="owl-carousel owl-theme ">
 
