@@ -33,7 +33,7 @@ if (!isset($_SESSION['id'])){
 
         <!-- LOGO -->
         <a href="#!" class="flex items-center">
-            <img src="img/glogoblue.png" class="mr-3 h-8 sm:h-9 " alt="Flowbite Logo" />
+            <img src="../img/glogoblue.png" class="mr-3 h-8 sm:h-9 " alt="Flowbite Logo" />
             <span class="self-center ml-1 text-xl font-semibold whitespace-nowrap text-gray-700 dark:text-white">G-Reward</span>
         </a>
 
