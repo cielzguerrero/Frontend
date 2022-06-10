@@ -383,10 +383,10 @@ $mresult = mysqli_query($conn,$sql);
           $number = 0;
           do { ?>
             <tr >
-              <td scope="row" class = "pt-3 pb-2"><?php echo $rows['user']; ?></td>
-              <td><?php echo $rows['activity']; ?></td>
-              <td><?php echo $rows['datetime']; ?></td>
-              <td><?php echo time_elapsed_string($rows['daysago']); ?></td>
+              <td  scope="row" class = "pt-3 pb-2 dark:text-white dark:bg-slate-800"><?php echo $rows['user']; ?></td>
+              <td class = "dark:text-white dark:bg-slate-800"><?php echo $rows['activity']; ?></td>
+              <td class = "dark:text-white dark:bg-slate-800"><?php echo $rows['datetime']; ?></td>
+              <td class = "dark:text-white dark:bg-slate-800"><?php echo time_elapsed_string($rows['daysago']); ?></td>
             </tr>
           <?php $rank++;
           } while (($rows = mysqli_fetch_assoc($result)) and ($number <= 5)) ?>

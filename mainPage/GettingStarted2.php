@@ -10,139 +10,103 @@ if (!isset($_SESSION['id'])){
     header("Location: ../../Frontend/index.php");
 }
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-      <!-- OWL CSS -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-     <!-- Bootstrap CSS -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-     <link rel="stylesheet" href="../mainPage/subtabs.css">
-   
-    <!-- FONT AWESOME -->
-    <script src="https://kit.fontawesome.com/9fb78288eb.js" crossorigin="anonymous"></script>
-    <title>G-Points</title>
-  
-  
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started</title>
+    <!-- TAILWIND -->
+    <link rel="stylesheet" href="../dist/output.css ">
+    <!-- FLOWBITE -->
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.3/dist/flowbite.min.css" />
+    <script src="https://unpkg.com/flowbite@1.4.3/dist/flowbite.js"></script>
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="../css/GettingStarted.css">
+</head>
+<body class = "">
+<nav class="bg-white border-gray-200 px-2 shadow-xl dark:shadow-xl sm:px-4 py-4  dark:bg-slate-800">
+    <div class="container flex flex-wrap justify-between items-center mx-auto">
 
-<div class="nav-main">
-    <nav class="navbar navbar-expand-lg navbar-light ">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="main-images/Glogo-white.png" ></a>
+        <!-- LOGO -->
+        <a href="#!" class="flex items-center">
+            <img src="../img/glogoblue.png" class="mr-3 h-8 sm:h-9 " alt="Flowbite Logo" />
+            <span class="self-center ml-1 text-xl font-semibold whitespace-nowrap text-gray-700 dark:text-white">G-Reward</span>
+        </a>
 
-          <!-- HAMBURGER -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <!-- <span class="navbar-toggler-icon navbar-light"></span> -->
-           
-            <span class="clickHamburger">
-                <div class="bar bar1 active"></div>
-                <div class="bar bar2 active"></div>
-                <div class="bar bar3 active"></div>
-            </span>
-          </button>
 
-          <!-- LINKS -->
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2  align-items-center">
-                
-            <li class="nav-item ">
-                <a class="nav-link active" aria-current="page" href="../mainPage/mainFinal.php">Home</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="GettingStarted2.php">Getting Started</a>
-              </li>
-              
-              <li class="nav-item ">
-                <a class="nav-link active" aria-current="page" href="AboutUs2.php">About Us</a>
-              </li>
-
-              <li class="nav-item ">
-                <a class="nav-link active" aria-current="page" href="ContactUs2.php">Contact</a>
-              </li>
-
-              <li class="nav-item ">
-                <a class="nav-link active" aria-current="page" href="OurTeam2.php">Our Team</a>
-              </li>
-        
-            </ul>
-            
-          </div>
+        <!-- MOBILE TOGGLE -->
+        <div class="flex items-center md:order-3">
+            <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </button>
         </div>
-      </nav>
-</div>
+
         
+                <!-- LINKS -->
+                <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-2" id="mobile-menu-2">
+            <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+            <li>
+                <a href="MainTailWind.php" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Back</a>
+            </li>
+          
+            <li>
+                <a href="AboutUs2.php" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About Us</a>
+            </li>
+            <li>
+                <a href="OurTeam2.php" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-whiate dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Our Team</a>
+            </li>
+            <li>
+                <a href="ContactUs2.php" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"> Contact Us</a>
+            </li>
+        
+       
+         
+            </ul>
+        </div>
 
 
-<!-- CONTENT -->
-   
-
-
-		<section class="title-card" id="steps">
-			<div class="title-card-wrapper">
-				<div><img src="../img/Procedures.gif" class="title-card-img" id = "img"></div>
-				<div class="title-card-text">
-					<h1>GETTING STARTED</h1>
-					<h3>Follow This Easy Steps To Claim Your Points. Prizes May Vary Monthly</h3>
-				</div>
-			</div>
-		</section>
-
-
-  <div class="card">
-  <section class = "card-content">
-			<div class="card-content-box">
-				<div class="card-1 card-box">
-					<img src="../img/signup.png">
-					<h3>REGISTER</h3>
-					<p>Create an account before segregating your non profitable and profitable waste</p>
-				</div>
-				<div class="card-2 card-box">
-				<img src="../img/login.png">
-					<h3>LOG IN</h3>
-					<p>Log your account to your respective barangay for identification</p>
-				</div>
-				<div class="card-3 card-box" >
-					<img src="../img/throw.png">
-					<h3>DROP</h3>
-					<p>Once the system recognized your identity, you can now drop all your trash in the bins.</p>
-				</div>
-			</div>
-		</section>
-
-  </div>
-		
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-  <!-- bootstrap js -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    
-  <!-- MY JS -->
-  <script src="main.js"></script>
-
-
-  
       
-  </body>
+    </nav>
+
+    <!-- CONTENT -->
+    <div class="top pt-20">
+        <div class="content-wrapper  flex sm:flex-wrap sm-flex-wrap justify-between gap-3  items-center">
+            <img src="../img/Procedures.gif" >
+            <div class="text">
+            <h1 class = "text-4xl font-extrabold text-center">GETTING STARTED</h1>
+            <p class = "text-center mt-2 text-xl">Follow This Easy Steps To Claim Your Points. Prizes May Vary Monthly</p>
+            </div>
+        </div>
+    </div>
+    <!-- bottom -->
+    <div class="bottom pt-10 pb-20">
+        <div class="bottom-wrapper  sm:flex-wrap sm-flex-wrap  md:flex gap-8   justify-center   items-center">
+
+            <div class="card p-3 ">
+            <img src="../img/signup.png" class = "h-28 ">
+                <h1 class = "text-center text-2xl mb-2 font-semibold">Register</h1>
+                <p class = "pb-3">Create an account before segregating your non profitable and profitable waste</p>
+            </div>
+
+            <div class="card p-3 ">
+            <img src="../img/login.png"  class = "h-28">
+                <h1 class = "text-center text-2xl mb-2 font-semibold">Log In</h1>
+                <p class = "pb-3">Log your account to your respective barangay for identification</p>
+            </div>
+
+            <div class="card p-3 ">
+            <img src="../img/throw.png" class = "h-28 ">
+                <h1 class = "text-center text-2xl mb-2 font-semibold">Drop</h1>
+                <p class = "pb-3">Once the system recognized your identity, you can now drop all your trash in the bins.</p>
+            </div>
+         
+        </div>
+    </div>
+
+
+</body>
 </html>

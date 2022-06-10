@@ -1,3 +1,26 @@
+<?php
+include('../connections/connection.php');
+if (empty($_SESSION['username'])) {
+
+  header("Location: logout.php");
+}
+if (!isset($_SESSION['id'])) {
+
+  $_SESSION['view'] = "<div class='message warning'>User Not Found.</div>";
+  header("Location: ../../Frontend/index.php");
+}
+
+include('../includes/contactform.php');
+
+$id = $_SESSION['id'];
+
+$sql = "SELECT * FROM members WHERE id = $id";
+$result = mysqli_query($conn, $sql);
+$rows = mysqli_fetch_assoc($result);
+$currentprofileuser = $rows['fullname'];
+$currentemail = $rows['email'];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
