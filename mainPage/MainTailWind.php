@@ -325,7 +325,7 @@ $mresult = mysqli_query($conn,$sql);
                     $ranker = 1;
                     do { ?>
                     <div class="item"><img src="../AdminTailWind/images/news/<?php echo $rows['news_img']; ?>">
-                        <a href="../mainPage/ViewNews.php?ID=<?php echo $rows['news_id']; ?>">        <h4><?php echo $rows['news_title']; ?></h4> <br> continue reading...</a></p>
+                        <a href="../mainPage/ViewNews.php?ID=<?php echo $rows['news_id']; ?>"><h4 class = "text-center font-bold text-4xl text-white"><?php echo $rows['news_title']; ?></h4></a>
                     </div>
                     <?php $ranker++;
                     } while ($rows = mysqli_fetch_assoc($result)) ?>
