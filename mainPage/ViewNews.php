@@ -1,3 +1,32 @@
+<?php
+include ('../connections/connection.php');
+if (empty($_SESSION['username'])) {
+
+    header("Location: logout.php");
+}
+if (!isset($_SESSION['id'])){
+
+    $_SESSION['view'] = "<div class='message warning'>User Not Found.</div>";
+    header("Location: ../../Frontend/index.php");
+
+} else {
+  $id = $_GET['ID'];
+ 
+     $sql = "SELECT * FROM news WHERE news_id = $id";
+     $result = mysqli_query($conn, $sql);
+     $row = mysqli_fetch_assoc($result);
+ 
+     if($result == TRUE) {
+         $count = mysqli_num_rows($result);
+         
+         if ($count > 0) {
+         } else {
+             $_SESSION['update'] = "<div class='message warning'>User Not Found.</div>";
+             header("Location: carousel.php");
+         }
+     }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +40,7 @@
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.3/dist/flowbite.min.css" />
     <script src="https://unpkg.com/flowbite@1.4.3/dist/flowbite.js"></script>
     <!-- MY CSS -->
-    <link rel="stylesheet" href="css/GettingStarted.css">
+    <link rel="stylesheet" href="../css/GettingStarted.css">
 </head>
 <body class = "">
 <nav class="bg-white border-gray-200 px-2 shadow-xl dark:shadow-xl sm:px-4 py-4  dark:bg-slate-800">
@@ -54,11 +83,13 @@
 
     <!-- CONTENT -->
     <div class="top pt-20">
-        <div class="content-wrapper grid justify-center">
-            <img src="./img/Procedures.gif" >
-            <div class="text">
-            <h2 class = "text-4xl font-extrabold text-center">GETTING STARTED</h2>
-            <p class = "text-center mt-2 text-xl">Follow This Easy Steps To Claim Your Points. Prizes May Vary Monthly</p>
+        <div class="content-wrapper grid justify-center mx-auto">
+        <img src="../admin/images/news/<?php echo $row['news_img'];?>" class = "ring-4 ring-slate-800 mx-auto">
+            <div class="text  w-full mx-auto py-10">
+            <h2 class = "text-4xl font-extrabold text-slate-400 text-center pt-5 "><?php echo $row['news_title'];?></h2>
+            <h3 class = "text-center font-bold text-2xl text-slate-200 pb-5"><?php echo $row['news_description'];?></h3>
+            <h4 class = " mx-auto"><?php echo $row['news_content'];?></h4>
+           
             </div>
         </div>
     </div>

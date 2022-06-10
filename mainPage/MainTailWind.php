@@ -47,6 +47,9 @@ $mresult = mysqli_query($conn,$sql);
   <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
   <!-- JQUERY -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- OWL CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- TAILWIND -->
   <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.3/dist/flowbite.min.css" />
   <script src="https://unpkg.com/flowbite@1.4.3/dist/flowbite.js"></script>
@@ -309,21 +312,27 @@ $mresult = mysqli_query($conn,$sql);
      <!-- NEWS -->
      <div class="news pt-20" id="newsanchor">
          <div class="news-wrapper ring-2 shadow-2xl ring-slate-200 rounded">   
-         <div id="controls-carousel" class="relative" data-carousel="slide">
-            <!-- Carousel wrapper -->   
-            <div class="overflow-hidden relative h-96  rounded-lg sm:h-64 xl:h-96 2xl:h-96">
+         <!-- <div id="controls-carousel" class="relative" data-carousel="slide">
+            Carousel wrapper    -->
+            <div class="overflow-hidden  h-auto relative rounded-lg sm:h-64 xl:h-96 2xl:h-96">
+                    <!-- OWL CAROUSEL -->
+                        <div class="owl-carousel owl-theme ">
+
                     <?php
                     $sql = "SELECT * FROM news";
                     $result = mysqli_query($conn, $sql);
                     $rows = mysqli_fetch_assoc($result);
                     $ranker = 1;
                     do { ?>
-                        <div class="hidden duration-700 ease-in-out carousel-container">
-                        <img src="../AdminTailWind/images/news/<?php echo $rows['news_img'];?>" class = "block absolute top-1/2 left-1/2 w-contain -translate-x-1/2 -translate-y-1/2" alt="...">
-                        <!-- <a href="mainPage/ViewNews.php?ID=<?php echo $rows['news_id']; ?>">    <?php echo $rows['news_title']; ?></a> -->
-                        </div>
-                        <?php $ranker++;
+                    <div class="item"><img src="../AdminTailWind/images/news/<?php echo $rows['news_img']; ?>">
+                        <a href="../mainPage/ViewNews.php?ID=<?php echo $rows['news_id']; ?>">        <h4><?php echo $rows['news_title']; ?></h4> <br> continue reading...</a></p>
+                    </div>
+                    <?php $ranker++;
                     } while ($rows = mysqli_fetch_assoc($result)) ?>
+                    </div>
+
+
+                  
                     <!-- Item sample -->
                     <!-- <div class="hidden duration-700 ease-in-out  carousel-container" data-carousel-item>
                         <img src="../mainPage/main-images/3img.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
@@ -331,20 +340,9 @@ $mresult = mysqli_query($conn,$sql);
                     </div> -->
 
                 </div>
+           
+          
                 
-                <!-- Slider controls -->
-                <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
-                    <span class="inline-flex justify-center items-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                        <svg class="w-6 h-6 text-black dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                        <span class="hidden">Previous</span>
-                    </span>
-                </button>
-                <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
-                    <span class="inline-flex justify-center items-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                        <svg class="w-6 h-6 text-black dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                        <span class="hidden">Next</span>
-                    </span>
-                </button>
             </div>
          </div>
      </div>
@@ -523,6 +521,9 @@ $mresult = mysqli_query($conn,$sql);
 </footer> 
 
 
+<!-- OWL JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- MYSCRIPT -->
 <script src="../js/maintailwind.js"></script>
 <!-- SCRIPTS TAILWIND -->
