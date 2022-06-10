@@ -1,4 +1,12 @@
 <?php
+error_reporting(0);
+
+// ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // 
+// ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // 
+// ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // 
+// ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // 
+// ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // 
+
 if (isset($_POST['addmember'])){
     $time = date("Y-m-d H:i:s");
     $username = $_SESSION['username'];
@@ -124,7 +132,6 @@ if (isset($_POST['addgarbagetype'])) {
        if($upload == FALSE) {
            $_SESSION['upload'] = "<div class='message warning'>Failed To Upload Image. Try Again Later.</div>";
            header("Location: waste.php");
-
            die();
        }
 
@@ -196,6 +203,8 @@ if (isset($_POST['addprize'])) {
    }
 }
 
+// EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // 
+// EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // 
 // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // 
 // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // 
 // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // // EDIT // 
@@ -461,21 +470,24 @@ if (isset($_POST['editprize'])) {
     }
 }
 
-// DELETE
-if (isset($_POST['deletegarbage'])) {
-$id = $rows['garbage_ID'];
-    
-    if ($image_name != "") {
+// DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // // DELETE // DELETE // DELETE //
+// DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // // DELETE // DELETE // DELETE //
+// DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // // DELETE // DELETE // DELETE //
+// DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // // DELETE // DELETE // DELETE //
+// DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // // DELETE // DELETE // DELETE //
 
+if(isset($_POST['deletegarbage'])){
+    $id = $_POST['gid'];
+    $image_name = $_POST['gimg'];
+    if ($image_name != "") {
         $path = "images/garbage/".$image_name;
         $remove = unlink($path);
 
         if ($remove == FALSE) {
-            echo "<meta http-equiv='refresh' content='0'>";
+            echo "<meta http-equiv='refresh' content='0'";
             die();
         }
     }
-
     $sql = "DELETE FROM garbagetype WHERE garbage_ID = $id";
     $result = mysqli_query($conn, $sql);
 
@@ -487,5 +499,57 @@ $id = $rows['garbage_ID'];
     } else {
         $_SESSION['delete'] = "<div class='message warning'>Failed To Remove. Try Again Later.</div>";
     }
+}
+
+if(isset($_POST['deletenews']))
+{
+    $id = $_GET['ID'];
+    $image_name = $_GET['Image_Name'];
+
+    if ($image_name != "") {
+        $path = "images/news/".$image_name;
+        $remove = unlink($path);
+    }
+    $sql = "DELETE FROM news WHERE news_id = $id";
+    $result = mysqli_query($conn, $sql);
+
+    if($result == TRUE) {
+        $_SESSION['delete'] = "<div class='message success'>Removed Successfully!</div>";
+        $log = "INSERT INTO logs (user, activity, datetime) VALUES ('$username', '$activity', '$time')";
+        $result = mysqli_query($conn, $log);
+        header("Location: carousel.php");
+    } else {
+        $_SESSION['delete'] = "<div class='message warning'>Failed To Remove. Try Again Later.</div>";
+    }
+}
+
+if(isset($_POST['deletemember']))
+{
+
+}
+
+if(isset($_POST['deleteprize']))
+{
+    
+}
+
+if(isset($_POST['deletelog']))
+{
+    
+}
+
+if(isset($_POST['deletealllog']))
+{
+    
+}
+
+if(isset($_POST['deletetemplog']))
+{
+    
+}
+
+if(isset($_POST['deletealltemplog']))
+{
+    
 }
 ?>

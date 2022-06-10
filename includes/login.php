@@ -18,7 +18,7 @@ if(isset($_POST['submit'])){
 		$_SESSION['fullname'] = $fullname;
 		$_SESSION['status'] = $status;
         $_SESSION['adminid'] = $adminid;
-		header("Location: admin/newindex.php"); 
+		header("Location: AdminTailWind/dashboard.php"); 
     } else if($count == 0){
         $sql = "SELECT * FROM members WHERE username = '$username' AND password = '$password'";				
         $rresult = mysqli_query($conn, $sql);

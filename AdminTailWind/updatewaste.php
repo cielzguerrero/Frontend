@@ -1,7 +1,7 @@
 <?php
 include('connections/connection.php');
 include('includes/afterlogin.php');
-include('includes/actions.php');
+include('actions.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -112,7 +112,7 @@ include('includes/actions.php');
             <!-- ADD NEW -->
 
             <div class=" mt-10 bg-slate-300 py-5 px-6 rounded-lg lg:w-2/3 md:w-2/3 sm:w-full mx-auto ">
-                <form class = " " method="POST">
+                <form class = " " action="" method="POST" enctype="multipart/form-data">
                     <div class="mb-2">
                         <label for="wastename" class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300 ">Name </label>
                         <input type="text" id="wastename" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" name="gname" required>
@@ -124,11 +124,9 @@ include('includes/actions.php');
 
                     <div class="mb-4">
                         <label class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300" for="user_avatar">Upload file</label>
-                        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file" name="image">
-                      
+                        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file"  name="image">
                     </div>
-                    
-                    
+                                      
                     <button type="submit" class="text-white text-md  bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg  w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" name="addgarbagetype">Add New</button>
                 </form>
 
