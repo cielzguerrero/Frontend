@@ -38,7 +38,7 @@ html
 .upwardToggler
 {
     position: fixed !important;
-    right: 0;
+    right: 2%;
     bottom: 5%;
     z-index: 200;
     padding: 5px;
@@ -242,6 +242,10 @@ html
             {
                 display: block;
             }
+            & span 
+            {
+                text-shadow: 0px 2px rgb(33, 38, 42);
+            }
             & a 
             {
                 opacity: 0;
@@ -256,7 +260,7 @@ html
                 background:linear-gradient(rgba(0, 0, 0, 0.472),rgba(0, 0, 0, 0.472));
                 & h4 
                 {
-                    padding-top: 250px;
+                    padding-top: 160px;
                     text-shadow: 0px 5px rgb(33, 38, 42);
                 }
                 &:hover 

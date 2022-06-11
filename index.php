@@ -17,8 +17,12 @@ if ($gdata == "1") {
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<!-- ANIMATE.CSS -->
+	<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 	<!-- MYCSS -->
-	
 	<link href="css/login1.css" rel="stylesheet" type="text/css" /></link>
 	<link href="css/style.css" rel="stylesheet" type="text/css" /></link>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -79,11 +83,11 @@ if ($gdata == "1") {
 <div class="content container-fluid text-center  ">
 				<?php echo $_SESSION['test'];
     			unset($_SESSION['test']);?>
-    <h1 class = "text-white display-5">SEGREGATE WASTE, EARN POINTS,   & CLAIM PRIZES</h1>
-	<p class = "fs-4 text-white "> A rewarding system built for the community.</p>
+    <h1 class = "text-white display-5 animate__animated animate__fadeInUp animate__delay-1s  ">SEGREGATE WASTE, EARN POINTS,   & CLAIM PRIZES</h1>
+	<p class = "fs-4 text-white animate__animated animate__fadeIn animate__delay-2s"> A rewarding system built for the community.</p>
 	<!-- Button trigger modal -->
 	<div class="d-flex  justify-content-center pt-3">
-	<button type="button" class="btn  px-5 py-3 fs-5" data-bs-toggle="modal" data-bs-target="#exampleCentralModal3">
+	<button type="button" class="btn  px-5 py-3 fs-5 animate__animated animate__fadeInUp animate__delay-3s" data-bs-toggle="modal" data-bs-target="#exampleCentralModal3">
 	Sign In
 	</button>
 

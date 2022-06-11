@@ -278,20 +278,20 @@ $mresult = mysqli_query($conn,$sql);
                     <form action="" method="POST">
                     <!-- USERNAME -->
                     <div class="top flex justify-between items-center mt-4">
-                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-50 border-none text-gray-700 dark:text-white text-start shadow-inner" value="<?php echo $rows['username']; ?>">
+                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-50 border-none text-gray-700 dark:text-white text-start shadow-inner" value="<?php echo $rows['username']; ?>" name="uname">
                     <!-- FULL NAME -->
-                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ml-5 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value=" <?php echo $rows['fullname']; ?>">
+                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ml-5 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value=" <?php echo $rows['fullname']; ?>" name="fname">
                     </div>
                     <!-- PROFILE NAME -->
-                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="<?php echo $rows['profilename']; ?>">
+                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="<?php echo $rows['profilename']; ?>" name="pname">
                      <!-- CONTACT NUMBER -->
-                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="<?php echo $rows['contact']; ?>">
+                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="<?php echo $rows['contact']; ?>" name="pcontact">
                      <!-- EMAIL -->
-                    <input type="email" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="<?php echo $rows['email']; ?>" required>
+                    <input type="email" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="<?php echo $rows['email']; ?>" name="email" required>
                     <!-- PASSWORD -->
-                    <input type="password" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="<?php echo $rows['password']; ?>">
+                    <input type="password" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="<?php echo $rows['password']; ?>" name="pass">
                     <!-- BARANGAY -->
-                    <select id="countries" class=" rounded ring-2 ring-slate-400  w-full  text-blackk   dark:text-white mt-3" value="<?php echo $rows['address']; ?>">
+                    <select id="countries" class=" rounded ring-2 ring-slate-400  w-full  text-blackk   dark:text-white mt-3" value="<?php echo $rows['address']; ?>" name="paddress">
                     <option selected value="<?php echo $rows['address']; ?>" class ="text-black dark:text-white bg-slate-200 dark:bg-slate-800 hover:bg-slate-900 focus:bg-slate-900"><?php echo $rows['address']; ?><h2 class="text-black dark:text-white"></h2></option>
                     <option value="Barangay Nueva" class ="bg-slate-200 dark:bg-slate-800  text-black dark:text-white">Barangay Nueva</option>
                     <option value="Barangay Nueva" class ="bg-slate-200 dark:bg-slate-800  text-black dark:text-white">Barangay San Antonio</option>
@@ -314,7 +314,7 @@ $mresult = mysqli_query($conn,$sql);
          <div class="news-wrapper dark:bg-slate-800 ring-2 shadow-2xl ring-slate-200 rounded">   
          <!-- <div id="controls-carousel" class="relative" data-carousel="slide">
             Carousel wrapper    -->
-            <div class="overflow-hidden  dark:bg-slate-800  h-auto relative rounded-lg sm:h-64 xl:h-96 2xl:h-96">
+            <div class="overflow-hidden  dark:bg-slate-800  h-96 relative rounded-lg ">
                     <!-- OWL CAROUSEL -->
                         <div class="owl-carousel owl-theme ">
 
@@ -324,8 +324,8 @@ $mresult = mysqli_query($conn,$sql);
                     $rows = mysqli_fetch_assoc($result);
                     $ranker = 1;
                     do { ?>
-                    <div class="item"><img src="../AdminTailWind/images/news/<?php echo $rows['news_img']; ?>">
-                        <a href="../mainPage/ViewNews.php?ID=<?php echo $rows['news_id']; ?>"><h4 class = "text-center font-bold text-4xl text-white"><?php echo $rows['news_title']; ?></h4></a>
+                    <div class="item"><img src="../AdminTailWind/images/news/<?php echo $rows['news_img']; ?>" class = "h-full">
+                        <a href="../mainPage/ViewNews.php?ID=<?php echo $rows['news_id']; ?>" class = "text-center"><h4 class = " font-bold text-4xl text-white"><?php echo $rows['news_title']; ?></h4><br><span class = " font-bold text-white"><?php echo $rows['news_description']; ?></span></a>
                     </div>
                     <?php $ranker++;
                     } while ($rows = mysqli_fetch_assoc($result)) ?>
