@@ -33,7 +33,7 @@ if (!isset($_SESSION['id'])){
 
         <!-- LOGO -->
         <a href="#!" class="flex items-center">
-            <img src="img/glogoblue.png" class="mr-3 h-8 sm:h-9 " alt="Flowbite Logo" />
+            <img src="../img/glogoblue.png" class="mr-3 h-8 sm:h-9 " alt="Flowbite Logo" />
             <span class="self-center ml-1 text-xl font-semibold whitespace-nowrap text-gray-700 dark:text-white">G-Reward</span>
         </a>
 
@@ -78,7 +78,7 @@ if (!isset($_SESSION['id'])){
 
         <div class="box py-12 flex flex-col justify-center items-center">
             <div class="top-circle"></div>
-            <img src="../img/aldrin.jpg" class="h-20 rounded-full">
+            <img src="../img/aldrin2x2.png" class="h-20 rounded-full">
             <h2 class = "pt-4 text-lg">Aldrin Ramores</h2>
             <h3 class="text-sm">UI/UX</h3>
 

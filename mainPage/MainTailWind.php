@@ -47,6 +47,9 @@ $mresult = mysqli_query($conn,$sql);
   <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
   <!-- JQUERY -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- OWL CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- TAILWIND -->
   <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.3/dist/flowbite.min.css" />
   <script src="https://unpkg.com/flowbite@1.4.3/dist/flowbite.js"></script>
@@ -73,7 +76,12 @@ $mresult = mysqli_query($conn,$sql);
 
     <!-- DARK MODE -->
     
-    <button id="theme-toggle" type="button" class="text-gray-500  mr-5 rounded-lg text-sm py-2  px-2.5 bg-slate-200">
+    <button id="theme-toggle" data-tooltip-target="tooltip-darkmode"  type="button" class="text-gray-500  mr-5 rounded-lg text-sm py-2  px-2.5 bg-slate-200">
+    <!-- TOOL TIP DARKMODE -->
+    <div id="tooltip-darkmode" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+    Dark Mode
+    <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
  
     <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
     <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
@@ -95,16 +103,13 @@ $mresult = mysqli_query($conn,$sql);
         </div>
         <ul class="py-1" aria-labelledby="dropdown">
           <li>
-            <a href="#top" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Points</a>
-          </li>
-          <li>
             <a href="#profileanchor" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</a>
           </li>
           <li>
             <a href="#logsanchor" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Logs</a>
           </li>
           <li>
-            <a href="#!" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+            <a href="../logout.php" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
           </li>
         </ul>
       </div>
@@ -269,29 +274,36 @@ $mresult = mysqli_query($conn,$sql);
                     $result = mysqli_query($conn, $sql);
                     $rows = mysqli_fetch_assoc($result);
                     ?>
-                <img src="../AdminTailWind/images/profile/<?php echo $rows['img_name']; ?>" class="rounded" id="profImage">
-                    <i class="las la-edit rounded-b text-center  text-white font-bold text-4xl" id="cameraPhoto"></i>
-                    <input class="block" aria-describedby="user_avatar_help" id="uploadPhoto" type="file">
+                <img src="../AdminTailWind/images/profile/<?php echo $rows['img_name']; ?>" class="rounded" id="profImage" >
+                    <i class="las la-edit rounded-b text-center  text-white font-bold text-4xl" id="cameraPhoto" data-tooltip-target="tooltip-imageupload" 
+                    data-tooltip-style="light" data-tooltip-placement="bottom" ></i>
+                    <input class="block" aria-describedby="user_avatar_help" id="uploadPhoto" type="file" required>
+
+                    <!-- TOOLTIP UPLOAD IMAGE -->
+                    <div id="tooltip-imageupload" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Upload Image
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
                     
                 </div>
                 <div class="right px-6 ">
                     <form action="" method="POST">
                     <!-- USERNAME -->
                     <div class="top flex justify-between items-center mt-4">
-                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-50 border-none text-gray-700 dark:text-white text-start shadow-inner" value="<?php echo $rows['username']; ?>">
+                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-50 border-none text-gray-700 dark:text-white text-start shadow-inner" value="<?php echo $rows['username']; ?>" name="uname">
                     <!-- FULL NAME -->
-                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ml-5 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value=" <?php echo $rows['fullname']; ?>">
+                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ml-5 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value=" <?php echo $rows['fullname']; ?>" name="fname">
                     </div>
                     <!-- PROFILE NAME -->
-                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="<?php echo $rows['profilename']; ?>">
+                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="<?php echo $rows['profilename']; ?>" name="pname">
                      <!-- CONTACT NUMBER -->
-                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="<?php echo $rows['contact']; ?>">
+                    <input type="text" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="<?php echo $rows['contact']; ?>" name="pcontact">
                      <!-- EMAIL -->
-                    <input type="email" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="<?php echo $rows['email']; ?>" required>
+                    <input type="email" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="<?php echo $rows['email']; ?>" name="email" required>
                     <!-- PASSWORD -->
-                    <input type="password" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="<?php echo $rows['password']; ?>">
+                    <input type="password" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-400 border-none text-gray-700 dark:text-white text-start" value="<?php echo $rows['password']; ?>" name="pass">
                     <!-- BARANGAY -->
-                    <select id="countries" class=" rounded ring-2 ring-slate-400  w-full  text-blackk   dark:text-white mt-3" value="<?php echo $rows['address']; ?>">
+                    <select id="countries" class=" rounded ring-2 ring-slate-400  w-full  text-blackk   dark:text-white mt-3" value="<?php echo $rows['address']; ?>" name="paddress">
                     <option selected value="<?php echo $rows['address']; ?>" class ="text-black dark:text-white bg-slate-200 dark:bg-slate-800 hover:bg-slate-900 focus:bg-slate-900"><?php echo $rows['address']; ?><h2 class="text-black dark:text-white"></h2></option>
                     <option value="Barangay Nueva" class ="bg-slate-200 dark:bg-slate-800  text-black dark:text-white">Barangay Nueva</option>
                     <option value="Barangay Nueva" class ="bg-slate-200 dark:bg-slate-800  text-black dark:text-white">Barangay San Antonio</option>
@@ -300,7 +312,7 @@ $mresult = mysqli_query($conn,$sql);
                     <option value="Barangay San Vicente" class ="bg-slate-200 dark:bg-slate-800 text-black dark:text-white">Barangay Landayan</option>
                     </select>
                     <!-- SUBMIT PROFILE -->
-                    <button class = "mt-3 w-full text-start bg-slate-700 rounded py-1 text-lg text-white mb-4 font-bold">Submit</button>
+                    <button class = "mt-3 w-full text-start bg-slate-700 rounded py-1 text-lg text-white mb-4 font-bold" name="submit">Save Changes</button>
                     </form>
                     
                 </div>
@@ -311,22 +323,29 @@ $mresult = mysqli_query($conn,$sql);
     
      <!-- NEWS -->
      <div class="news pt-20" id="newsanchor">
-         <div class="news-wrapper ring-2 shadow-2xl ring-slate-200 rounded">   
-         <div id="controls-carousel" class="relative" data-carousel="slide">
-            <!-- Carousel wrapper -->   
-            <div class="overflow-hidden relative h-96  rounded-lg sm:h-64 xl:h-96 2xl:h-96">
+         <div class="news-wrapper dark:bg-slate-800 ring-2 shadow-2xl ring-slate-200 rounded" >  
+       
+         <!-- <div id="controls-carousel" class="relative" data-carousel="slide">
+            Carousel wrapper    -->
+            <div class="overflow-hidden  dark:bg-slate-800  h-96 relative rounded-lg ">
+                    <!-- OWL CAROUSEL -->
+                        <div class="owl-carousel owl-theme ">
+
                     <?php
                     $sql = "SELECT * FROM news";
                     $result = mysqli_query($conn, $sql);
                     $rows = mysqli_fetch_assoc($result);
                     $ranker = 1;
                     do { ?>
-                        <div class="hidden duration-700 ease-in-out carousel-container">
-                        <img src="../AdminTailWind/images/news/<?php echo $rows['news_img'];?>" class = "block absolute top-1/2 left-1/2 w-contain -translate-x-1/2 -translate-y-1/2" alt="...">
-                        <!-- <a href="mainPage/ViewNews.php?ID=<?php echo $rows['news_id']; ?>">    <?php echo $rows['news_title']; ?></a> -->
-                        </div>
-                        <?php $ranker++;
+                    <div class="item"><img src="../AdminTailWind/images/news/<?php echo $rows['news_img']; ?>" class = "h-full">
+                        <a href="../mainPage/ViewNews.php?ID=<?php echo $rows['news_id']; ?>" class = "text-center"><h4 class = " font-bold text-4xl text-white"><?php echo $rows['news_title']; ?></h4><br><span class = " font-bold text-white"><?php echo $rows['news_description']; ?></span></a>
+                    </div>
+                    <?php $ranker++;
                     } while ($rows = mysqli_fetch_assoc($result)) ?>
+                    </div>
+
+
+                  
                     <!-- Item sample -->
                     <!-- <div class="hidden duration-700 ease-in-out  carousel-container" data-carousel-item>
                         <img src="../mainPage/main-images/3img.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
@@ -334,20 +353,9 @@ $mresult = mysqli_query($conn,$sql);
                     </div> -->
 
                 </div>
+           
+          
                 
-                <!-- Slider controls -->
-                <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
-                    <span class="inline-flex justify-center items-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                        <svg class="w-6 h-6 text-black dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                        <span class="hidden">Previous</span>
-                    </span>
-                </button>
-                <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
-                    <span class="inline-flex justify-center items-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                        <svg class="w-6 h-6 text-black dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                        <span class="hidden">Next</span>
-                    </span>
-                </button>
             </div>
          </div>
      </div>
@@ -510,14 +518,14 @@ $mresult = mysqli_query($conn,$sql);
         <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="#!" class="hover:underline">G-Reward</a>. All Rights Reserved.
         </span>
         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+            <a href="https://www.facebook.com/G-Reward-106651495407804" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
             </a>
            
             <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
             </a>
-            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+            <a href="https://github.com/cielzguerrero/Frontend" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
             </a>
  
@@ -526,6 +534,9 @@ $mresult = mysqli_query($conn,$sql);
 </footer> 
 
 
+<!-- OWL JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- MYSCRIPT -->
 <script src="../js/maintailwind.js"></script>
 <!-- SCRIPTS TAILWIND -->
