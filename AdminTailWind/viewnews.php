@@ -1,3 +1,9 @@
+<?php
+include('connections/connection.php');
+include('includes/afterlogin.php');
+include('actions.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

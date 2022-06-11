@@ -98,7 +98,7 @@ include('actions.php');
                             <div class="editDelButtons flex justify-between items-center">
                                 <!-- EDIT -->
                                 
-                                <a href="../AdminTailWind/updatewaste.php">
+                                <a href="../AdminTailWind/updatewaste.php?ID=<?php echo $rows['garbage_ID']?>">
                                 <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-bold text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500  hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800 ">
                                 <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                                    UPD/ADD
@@ -108,8 +108,8 @@ include('actions.php');
                                 <!-- DELETE -->
                                 <form action="" method="POST">
                                 <a href="">
-                                <input type="hidden" name="gid" value="<?php echo $id = $rows['garbage_ID'];?>">
-                                <input type="hidden" name="gimg" value="<?php echo $id = $rows['garbage_Img'];?>">
+                                <input type="hidden" name="gid" value="<?php echo $rows['garbage_ID'];?>">
+                                <input type="hidden" name="gimg" value="<?php echo $rows['garbage_Img'];?>">
                                 <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-bold text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500  hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800" name="deletegarbage">
                                 <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                                    DEL

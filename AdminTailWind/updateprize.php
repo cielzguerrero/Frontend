@@ -1,3 +1,22 @@
+<?php
+include('connections/connection.php');
+include('includes/afterlogin.php');
+include('actions.php');
+
+$targetprize = $_GET['ID'];
+
+if (!isset($_GET['ID']))
+{
+    header("Location: NewsPrizes.php");
+}
+else
+{
+    $sql = "SELECT * FROM prizes WHERE id = $targetprize";
+    $result = mysqli_query($conn, $sql);
+    $rows = mysqli_fetch_assoc($result);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,36 +93,41 @@
         <div class="content-wrapper overflow-auto mt-5 mx-10">
         <!-- UPDATE -->
             <div class="grid lg:grid-cols-2 md:grid-cols-1 justify-center items-center mt-20 bg-slate-300 py-5 px-6 rounded-lg gap-10">
-                <form class = "w-full  ">
+                <form class = "w-full  " action="" method="POST" enctype="multipart/form-data">
 
                 <div class="mb-2">
                         <label for="text" class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300 ">Name </label>
-                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" value = "PHP 200" required>
+                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" value = "<?php echo $rows['prizename']?>" name="pname" required>
+                    </div>
+                    <div class="mb-2">
+                        <label for="text" class="block mb-1 text-md  font-medium text-gray-900 dark:text-gray-300">Pesos</label>
+                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" value = "<?php echo $rows['pesos']?>" name="ppeso" required>
                     </div>
                     <div class="mb-2">
                         <label for="text" class="block mb-1 text-md  font-medium text-gray-900 dark:text-gray-300">Description</label>
-                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full"  value = "Claim 200 Pesos with 2000 points" required>
+                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" value = "<?php echo $rows['pdescription']?>" name="pdesc" required>
                     </div>
                 
                     <div class="mb-2">
                         <label for="text" class="block mb-1 text-md  font-medium text-gray-900 dark:text-gray-300">Points</label>
-                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full"  value = "2000" required>
+                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" value = "<?php echo $rows['points']?>" name="ppoints" required>
                     </div>
 
                     <div class="mb-4">
                         <label class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300" for="user_avatar">Upload file</label>
-                        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file">
+                        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" name="image" type="file">
                       
                     </div>
                     
-                    
-                    <button type="submit" class="text-white text-md  bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg  w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Update</button>
+                    <input type="hidden" name="current_image" value="<?php echo $rows['prize_img'];?>">
+                    <input type="hidden" name="id" value="<?php echo $rows['id'];?>">
+                    <button type="submit" class="text-white text-md  bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg  w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" name="editprize">Update</button>
                 </form>
 
                 <!-- IMAGE -->
                 <div class="mx-auto ">
                     <h1 class ="bg-slate-800 text-slate-200 text-center py-1 rounded-t">Current Image</h1>
-                    <img src="../admin/images/prize/Prize-601.png">
+                    <img src="images/prize/<?php echo $rows['prize_img'];?>">
                 </div>
             
             </div>
@@ -112,28 +136,32 @@
             <!-- ADD NEW -->
 
             <div class=" mt-10 bg-slate-300 py-5 px-6 rounded-lg lg:w-2/3 md:w-2/3 sm:w-full mx-auto ">
-                <form class = " ">
+                <form class = " " action="" method="POST" enctype="multipart/form-data">
                     <div class="mb-2">
                         <label for="text" class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300 ">Name </label>
-                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full"  required>
+                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" value = "" name="pname" required>
+                    </div>
+                    <div class="mb-2">
+                        <label for="text" class="block mb-1 text-md  font-medium text-gray-900 dark:text-gray-300">Pesos</label>
+                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" value = "" name="ppeso" required>
                     </div>
                     <div class="mb-2">
                         <label for="text" class="block mb-1 text-md  font-medium text-gray-900 dark:text-gray-300">Description</label>
-                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" required>
+                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" value = "" name="pdesc" required>
                     </div>
                     <div class="mb-2">
                         <label for="text" class="block mb-1 text-md  font-medium text-gray-900 dark:text-gray-300">Points</label>
-                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" required>
+                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" value = "" name="ppoints" required>
                     </div>
 
                     <div class="mb-4">
                         <label class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300" for="user_avatar">Upload file</label>
-                        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file">
+                        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file" name="image">
                       
                     </div>
                     
                     
-                    <button type="submit" class="text-white text-md  bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg  w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add New</button>
+                    <button type="submit" class="text-white text-md  bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg  w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" name="addprize">Add New</button>
                 </form>
 
                

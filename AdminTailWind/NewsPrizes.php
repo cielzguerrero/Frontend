@@ -1,3 +1,8 @@
+<?php
+include('connections/connection.php');
+include('includes/afterlogin.php');
+include('actions.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,72 +86,64 @@
                             </div>
                                <div class="owl-carousel owl-theme">
                                    <!-- ITEM 1 -->
-                            <div class="item w-full"><img src="../admin/images/news/News-405.jpg" ><h4 class = " w-full text-center pl-4 bg-slate-800/90 text-white text-xl py-4 font-semibold  rounded-b">Waste Management</h4>
-                                <div class=" flex justify-center gap-2 mt-5 drop-shadow-xl">
-                                <a href="../AdminTailWind/viewnews.php"><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">View</button></a>
-                                    <a href="../AdminTailWind/updatenews.php"><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Upd/Add</button></a>
-                                    <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Delete</button></a>
-                             
-                                </div>
-                            </div>
-                           
-                                       <!-- ITEM 2 -->
-                            <div class="item w-full"><img src="../admin/images/news/News-619.png" ><h4 class = " w-full text-center pl-4 bg-slate-800/90 text-white text-xl py-4 font-semibold  rounded-b">Waste Management</h4>
-                                <div class=" flex justify-center gap-2 mt-5 drop-shadow-xl">
-                                <a href="../AdminTailWind/viewnews.php"><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">View</button></a>
-                                    <a href="../AdminTailWind/updatenews.php"><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Upd/Add</button></a>
-                                    <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Delete</button></a>
-                             
-                                </div>
-                            </div>
+                                   <?php
+                                    $sql = "SELECT * FROM news";
+                                    $result = mysqli_query($conn, $sql);
+                                    $rows = mysqli_fetch_assoc($result);
+                                    $ranker = 1; 
+                                    do { ?>
+                                    <div class="item w-full"><img src="images/news/<?php echo $rows['news_img'];?>"  ><h4 class = " w-full text-center pl-4 bg-slate-800/90 text-white text-xl py-4 font-semibold  rounded-b"><?php echo $rows['news_title'];?></h4>
+                                        <div class=" flex justify-center gap-2 mt-5 drop-shadow-xl">
+                                            <!-- VIEW -->
+                                        <a href="../AdminTailWind/viewnews.php"><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">View</button></a>
+                                        <!-- EDIT -->
+                                            <a href="../AdminTailWind/updatenews.php?ID=<?php echo $rows['news_id'];?>"><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Upd/Add</button></a>
+                                            <!-- DELETE -->
+                                            <form action="" method="POST">
+                                            <a href="">
+                                            <input type="hidden" name="newsid" value="<?php echo $rows['news_id'];?>">
+                                            <input type="hidden" name="newsimg" value="<?php echo $rows['news_img'];?>">
+                                            <button type="submit" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2" name="deletenews">
+                                            Delete
+                                            </button>
+                                            </a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <?php $ranker++; }  while ($rows = mysqli_fetch_assoc($result))?> 
                                      
-                                       <!-- ITEM 3 -->
-                            <div class="item w-full"><img src="../admin/images/news/News-187.png" ><h4 class = " w-full text-center pl-4 bg-slate-800/90 text-white text-xl py-4 font-semibold rounded-b">Waste Management</h4>
-                                <div class=" flex justify-center gap-2 mt-5 drop-shadow-xl">
-                                <a href="../AdminTailWind/viewnews.php"><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">View</button></a>
-                                    <a href="../AdminTailWind/updatenews.php"><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Upd/Add</button></a>
-                                    <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Delete</button></a>
                                 </div>
-                            </div>
-                            
-                        </div>
                         <!-- PRIZES -->
-                        <div class="prizes overflow-hidden mx-4 mt-24">
-                            <div class=" bg-slate-800/90 rounded-t">   
-                                <h1 class =" py-2  font-semibold text-2xl text-white text-center  ">Prizes</h1>
-                               
-                            </div>
-                            
-                               <div class="owl-carousel owl-theme">
-                                   <!-- ITEM 1 -->
-                            <div class="item w-full"><img src="../admin/images/prize/Prize-256.jpg" >
-                            <h4 class = " w-full text-center pl-4 bg-slate-800/90 text-white text-xl py-4 font-semibold rounded-b">100 Pesos</h4>
-                                <div class=" flex justify-center gap-2 mt-5 drop-shadow-xl">
-                                <a href="../AdminTailWind/updateprize.php"><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Upd/Add</button></a>
-                                    <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Delete</button></a>
-                             
-                                </div>
-                            </div>
-                           
-                                       <!-- ITEM 2 -->
-                            <div class="item w-full"><img src="../admin/images/prize/Prize-698.png" ><h4 class = " w-full text-center pl-4 bg-slate-800/90 text-white text-xl py-4 font-semibold rounded-b">200 Pesos</h4>
-                                <div class=" flex justify-center gap-2 mt-5 drop-shadow-xl">
-                                <a href="../AdminTailWind/updateprize.php"><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Upd/Add</button></a>
-                                    <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Delete</button></a>
-                             
-                                </div>
-                            </div>
-                                     
-                                       <!-- ITEM 3 -->
-                            <div class="item w-full"><img src="../admin/images/prize/Prize-226.jpg" ><h4 class = " w-full text-center pl-4 bg-slate-800/90 text-white text-xl py-4 font-semibold rounded-b">500 Pesos</h4>
-                                <div class=" flex justify-center gap-2 mt-5 drop-shadow-xl">
-                            
-                                    <a href="../AdminTailWind/updateprize.php"><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Upd/Add</button></a>
-                                    <a href=""><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Delete</button></a>
-                                </div>
-                            </div>
-                            
-                        </div>
+                                <div class="prizes overflow-hidden mx-4 mt-24">
+                                    <div class=" bg-slate-800/90 rounded-t">   
+                                        <h1 class =" py-2  font-semibold text-2xl text-white text-center  ">Prizes</h1>
+                                    
+                                    </div>
+                                    
+                                    <div class="owl-carousel owl-theme">
+                                        <!-- ITEM 1 -->
+                                        <?php
+                                            $sql = "SELECT * FROM prizes";
+                                            $result = mysqli_query($conn, $sql);
+                                            $rows = mysqli_fetch_assoc($result);
+                                            $ranker = 1; 
+                                            do { ?>
+                                        <div class="item w-full"><img src="images/prize/<?php echo $rows['prize_img'];?>" >
+                                        <h4 class = " w-full text-center pl-4 bg-slate-800/90 text-white text-xl py-4 font-semibold rounded-b"><?php echo $rows['pesos'];?></h4>
+                                            <div class=" flex justify-center gap-2 mt-5 drop-shadow-xl">
+                                            <a href="../AdminTailWind/updateprize.php?ID=<?php echo $rows['id'];?>"><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Upd/Add</button></a>
+                                            <form action="" method="POST">
+                                            <a href="">
+                                            <input type="hidden" name="pid" value="<?php echo $rows['id'];?>">
+                                            <input type="hidden" name="prizesimg" value="<?php echo $rows['prize_img'];?>">                        
+                                            <button type="submit" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2" name="deleteprize">
+                                                Delete
+                                            </button>
+                                            </form>
+                                            </div>
+                                        </div>
+                                        <?php $ranker++; }  while ($rows = mysqli_fetch_assoc($result))?> 
+                                    </div>
                     </div>
                                 
                 

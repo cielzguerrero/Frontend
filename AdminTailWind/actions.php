@@ -67,7 +67,7 @@ if (isset($_POST['addnews'])) {
     $activity = "Added New News";
     $newstitle = $_POST['newsname'];
     $ndescription = $_POST['newsdesc'];
-    $ncontent = $_POST['newscontent'];
+    $ncontent = $_POST['addnewscontent'];
     $newstime = date("Y-m-d H:i:s");
     $originalposter = $_SESSION['fullname'];
    if(isset($_FILES['image']['name'])) {
@@ -85,7 +85,7 @@ if (isset($_POST['addnews'])) {
 
        if($upload == FALSE) {
            $_SESSION['upload'] = "<div class='message warning'>Failed To Upload Image. Try Again Later.</div>";
-           header("Location: carousel.php");
+           header("Location: NewsPrizes.php");
 
            die();
        }
@@ -103,10 +103,10 @@ if (isset($_POST['addnews'])) {
        $result = mysqli_query($conn, $log);
        $_SESSION['add'] = "<div class='message success'>New User Added Successfully!</div>";
        
-       header("Location: carousel.php");
+       header("Location: NewsPrizes.php");
    } else {
        $_SESSION['add'] = "<div class='message warning'>Failed To Add User. Try Again Later.</div>";
-       header("Location: carousel.php");
+       header("Location: NewsPrizes.php");
    }
 }
 
@@ -178,7 +178,7 @@ if (isset($_POST['addprize'])) {
 
        if($upload == FALSE) {
            $_SESSION['upload'] = "<div class='message warning'>Failed To Upload Image. Try Again Later.</div>";
-           header("Location: carousel.php");
+           header("Location: NewsPrizes.php");
 
            die();
        }
@@ -196,10 +196,10 @@ if (isset($_POST['addprize'])) {
        $result = mysqli_query($conn, $log);
        $_SESSION['add'] = "<div class='message success'>New User Added Successfully!</div>";
        
-       header("Location: carousel.php");
+       header("Location: NewsPrizes.php");
    } else {
        $_SESSION['add'] = "<div class='message warning'>Failed To Add User. Try Again Later.</div>";
-       header("Location: carousel.php");
+       header("Location: NewsPrizes.php");
    }
 }
 
@@ -370,7 +370,7 @@ if (isset($_POST['editnews'])) {
     
                 if($upload == FALSE) {
                     $_SESSION['upload'] = "<div class='message warning'>Failed To Upload Image. Try Again Later.</div>";
-                    header("Location: carousel.php");
+                    header("Location: NewsPrizes.php");
     
                     die();
                 }
@@ -381,7 +381,7 @@ if (isset($_POST['editnews'])) {
     
                     if($remove == FALSE){
                         $_SESSION['remove'] = "<div class='message warning'>Failed To Remove Current Image. Try Again Later.</div>";
-                        header("Location: carousel.php");
+                        header("Location: NewsPrizes.php");
                         die();
                     }
                 }
@@ -399,10 +399,10 @@ if (isset($_POST['editnews'])) {
         $_SESSION['update'] = "<div class='message success'>Details Updated Successfully!</div>";
         $log = "INSERT INTO logs (user, activity, datetime) VALUES ('$username', '$activity', '$time')";
         $result = mysqli_query($conn, $log);
-        header("Location: carousel.php");
+        header("Location: NewsPrizes.php");
     } else {
         $_SESSION['update'] = "<div class='message warning'>Failed To Update Details. Try Again Later.</div>";
-        header("Location: carousel.php");
+        header("Location: NewsPrizes.php");
     }
 }
 
@@ -434,7 +434,7 @@ if (isset($_POST['editprize'])) {
    
                if($upload == FALSE) {
                    $_SESSION['upload'] = "<div class='message warning'>Failed To Upload Image. Try Again Later.</div>";
-                   header("Location: carousel.php");
+                   header("Location: NewsPrizes.php");
    
                    die();
                }
@@ -445,7 +445,7 @@ if (isset($_POST['editprize'])) {
    
                    if($remove == FALSE){
                        $_SESSION['remove'] = "<div class='message warning'>Failed To Remove Current Image. Try Again Later.</div>";
-                       header("Location: carousel.php");
+                       header("Location: NewsPrizes.php");
                        die();
                    }
                }
@@ -463,10 +463,10 @@ if (isset($_POST['editprize'])) {
         $_SESSION['update'] = "<div class='message success'>Details Updated Successfully!</div>";
         $log = "INSERT INTO logs (user, activity, datetime) VALUES ('$username', '$activity', '$time')";
         $result = mysqli_query($conn, $log);
-        header("Location: carousel.php");
+        header("Location: NewsPrizes.php");
     } else {
         $_SESSION['update'] = "<div class='message warning'>Failed To Update Details. Try Again Later.</div>";
-        header("Location: carousel.php");
+        header("Location: NewsPrizes.php");
     }
 }
 
@@ -476,7 +476,8 @@ if (isset($_POST['editprize'])) {
 // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // // DELETE // DELETE // DELETE //
 // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // DELETE // // DELETE // DELETE // DELETE //
 
-if(isset($_POST['deletegarbage'])){
+if(isset($_POST['deletegarbage']))
+{
     $id = $_POST['gid'];
     $image_name = $_POST['gimg'];
     if ($image_name != "") {
@@ -503,12 +504,17 @@ if(isset($_POST['deletegarbage'])){
 
 if(isset($_POST['deletenews']))
 {
-    $id = $_GET['ID'];
-    $image_name = $_GET['Image_Name'];
+    $id = $_POST['newsid'];
+    $image_name = $_POST['newsimg'];
 
     if ($image_name != "") {
         $path = "images/news/".$image_name;
         $remove = unlink($path);
+
+        if ($remove == FALSE) {
+            echo "<meta http-equiv='refresh' content='0'";
+            die();
+        }
     }
     $sql = "DELETE FROM news WHERE news_id = $id";
     $result = mysqli_query($conn, $sql);
@@ -517,7 +523,7 @@ if(isset($_POST['deletenews']))
         $_SESSION['delete'] = "<div class='message success'>Removed Successfully!</div>";
         $log = "INSERT INTO logs (user, activity, datetime) VALUES ('$username', '$activity', '$time')";
         $result = mysqli_query($conn, $log);
-        header("Location: carousel.php");
+        echo "<meta http-equiv='refresh' content='0'>";
     } else {
         $_SESSION['delete'] = "<div class='message warning'>Failed To Remove. Try Again Later.</div>";
     }
@@ -530,7 +536,29 @@ if(isset($_POST['deletemember']))
 
 if(isset($_POST['deleteprize']))
 {
-    
+    $id = $_POST['pid'];
+    $image_name = $_POST['prizesimg'];
+
+    if ($image_name != "") {
+        $path = "images/prize/".$image_name;
+        $remove = unlink($path);
+
+        if ($remove == FALSE) {
+            echo "<meta http-equiv='refresh' content='0'";
+            die();
+        }
+    }
+    $sql = "DELETE FROM prizes WHERE id = $id";
+    $result = mysqli_query($conn, $sql);
+
+    if($result == TRUE) {
+        $_SESSION['delete'] = "<div class='message success'>Removed Successfully!</div>";
+        $log = "INSERT INTO logs (user, activity, datetime) VALUES ('$username', '$activity', '$time')";
+        $result = mysqli_query($conn, $log);
+        echo "<meta http-equiv='refresh' content='0'>";
+    } else {
+        $_SESSION['delete'] = "<div class='message warning'>Failed To Remove. Try Again Later.</div>";
+    }
 }
 
 if(isset($_POST['deletelog']))

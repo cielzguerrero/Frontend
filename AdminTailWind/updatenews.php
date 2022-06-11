@@ -1,3 +1,22 @@
+<?php
+include('connections/connection.php');
+include('includes/afterlogin.php');
+include('actions.php');
+
+$targetnews = $_GET['ID'];
+
+if (!isset($_GET['ID']))
+{
+    header("Location: NewsPrizes.php");
+}
+else
+{
+    $sql = "SELECT * FROM news WHERE news_ID = $targetnews";
+    $result = mysqli_query($conn, $sql);
+    $rows = mysqli_fetch_assoc($result);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,38 +94,39 @@
 
                 <!-- UPDATE NEWS -->
                 <div class="grid lg:grid-cols-2 md:grid-cols-1 justify-center items-center mt-20 bg-slate-300 py-5 px-6 rounded-lg  gap-10">
-                <form class = "w-full  ">
+                <form class = "w-full  " action="" method="POST" enctype="multipart/form-data">
 
                 <div class="mb-2">
                         <label for="text" class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300 ">Name </label>
-                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" value = "Waste Mangement" required>
+                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" value = "<?php echo $rows['news_title'];?>" name="newsname" required>
                     </div>
                     <div class="mb-2">
                         <label for="text" class="block mb-1 text-md  font-medium text-gray-900 dark:text-gray-300">Description</label>
-                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full"  value = "Solid Waste" required>
+                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full"  value = "<?php echo $rows['news_description'];?>" name="newsdesc" required>
                     </div>
 
                     <div class="mb-4">
                         <label class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300" for="user_avatar">Upload file</label>
-                        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file">
+                        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file" name="image">
                       
                     </div>
                     <div class="mb-4">
                         <label class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300" for="user_avatar">Content</label>
-                        <textarea name="newscontent" id="newscontent" class="form-control" rows="16" ><?php echo $row['news_content'];?></textarea>
+                        <textarea name="newscontent" id="newscontent" class="form-control" rows="16" name="newscontent"><?php echo $rows['news_content'];?></textarea>
                         <script type="text/javascript" src="../AdminJs/ckeditor/ckeditor.js"></script>
                         <script type="text/javascript" >                        
                         CKEDITOR.replace( 'newscontent' );
                         </script>
                     </div>
-                    
-                    <button type="submit" class="text-white text-md  bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg  w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Update</button>
+                    <input type="hidden" name="current_image" value="<?php echo $rows['news_img'];?>">
+                    <input type="hidden" name="id" value="<?php echo $rows['news_id'];?>">
+                    <button type="submit" class="text-white text-md  bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg  w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" name="editnews">Update</button>
                 </form>
 
                 <!-- IMAGE -->
                 <div class="mx-auto  ">
                     <h1 class ="bg-slate-800 text-slate-200 text-center py-1 rounded-t">Current Image</h1>
-                    <img src="../admin/images/news/News-619.png">
+                    <img src="images/news/<?php echo $rows['news_img'];?>">
                 </div>
             </div>
 
@@ -114,20 +134,20 @@
 
                 <!-- ADD NEW NEWS -->
                 <div class="md:w-2/3 sm:w-full  mx-auto mt-20 bg-slate-300 py-5 px-6 rounded-lg  gap-10">
-                <form class = "">
+                <form class = "w-full  " action="" method="POST" enctype="multipart/form-data">
 
                 <div class="mb-2">
                         <label for="text" class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300 ">Name </label>
-                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" value = "" required>
+                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" value = "" name="newsname" required>
                     </div>
                     <div class="mb-2">
                         <label for="text" class="block mb-1 text-md  font-medium text-gray-900 dark:text-gray-300">Description</label>
-                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full"  value = "" required>
+                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full"  value = "" name="newsdesc" required>
                     </div>
 
                     <div class="mb-4">
                         <label class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300" for="user_avatar">Upload file</label>
-                        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file">
+                        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file" name="image">
                       
                     </div>
                     <div class="mb-4">
@@ -140,7 +160,7 @@
                     </div>
                     
                     
-                    <button type="submit" class="text-white text-md  bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg  w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add News</button>
+                    <button type="submit" class="text-white text-md  bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg  w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" name="addnews">Add News</button>
                 </form>
 
             </div>
