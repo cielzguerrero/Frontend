@@ -109,18 +109,22 @@ html
                 }   
                 & h1,h2,img
                 {
+                
                     z-index: 10;
                 }
                 & .top-2 img
                 {
+                    max-height: 200px;
                     border: 5px solid rgba(153, 153, 153, 0.801);
                 }
                 & .top1-image 
                 {
+                    max-height: 200px;
                     border: 6px solid rgba(220, 187, 2, 0.808);
                 }
                 & .top-3 img
                 {
+                    max-height: 200px;
                     border: 5px solid rgba(218, 158, 80, 0.803);
                 }
                 & .crown 
