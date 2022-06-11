@@ -196,7 +196,7 @@ $mresult = mysqli_query($conn,$sql);
                 $row = mysqli_fetch_assoc($rsult);
                 $totalpoints = $row['tpoints'];
                 ?>
-                <img src="../admin/images/profile/<?php echo $row['img_name']; ?>"  class = "rounded-full  max-h-28" alt="">
+                <img src="../admin/images/profile/<?php echo $row['img_name']; ?>"  class = "rounded-full max-h-12" alt="">
                 <h2 class = "mt-2 text-gray-600 dark:text-white"><?php echo $row['profileuser']; ?></h2>
                 <h1 class = "font-bold text-2xl text-gray-700 dark:text-white"><?php echo $totalpoints; ?></h1>
               
@@ -213,7 +213,7 @@ $mresult = mysqli_query($conn,$sql);
                 $totalpoints = $row['tpoints'];
                 ?>
               
-            <img src="../AdminTailWind/images/profile/<?php echo $rows['img_name'] ?>" class = "rounded-full max-h-28 top1-image" alt="">
+            <img src="../AdminTailWind/images/profile/<?php echo $rows['img_name'] ?>" class = "rounded-full max-h-12 top1-image" alt="">
             <img src="../img/crown.png" class = "h-8 crown" >
             <h2 class = "mt-2  text-gray-600 dark:text-white"><?php echo $row['profileuser']; ?></h2>
             <h1 class = "font-bold text-2xl text-gray-700 dark:text-white"><?php echo $totalpoints; ?> </h1>
@@ -230,7 +230,7 @@ $mresult = mysqli_query($conn,$sql);
                 $row = mysqli_fetch_assoc($rsult);
                 $totalpoints = $row['tpoints'];
                 ?>
-            <img src="../admin/images/profile/<?php echo $row['img_name']; ?>" class = "rounded-full max-h-28" alt="">
+            <img src="../admin/images/profile/<?php echo $row['img_name']; ?>" class = "rounded-full max-h-12" alt="">
             <h2 class = "mt-2  text-gray-600 dark:text-white"><?php echo $row['profileuser']; ?></h2>
             <h1 class = "font-bold text-gray-700 text-2xl dark:text-white"><?php echo $totalpoints; ?></h1>
             </div>
