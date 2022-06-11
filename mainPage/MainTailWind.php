@@ -187,6 +187,7 @@ $mresult = mysqli_query($conn,$sql);
 
             <div class="top-2 flex flex-col items-center">
                 <!-- top 2 checker -->
+                <div id = "silver-shield"></div>
                 <?php
                 $thisyear = date('Y');
                 $thismonth = date('m');
@@ -211,13 +212,16 @@ $mresult = mysqli_query($conn,$sql);
                 $row = mysqli_fetch_assoc($rsult);
                 $totalpoints = $row['tpoints'];
                 ?>
-            <img src="../admin/images/profile/<?php echo $row['img_name']; ?>" class = "rounded-full h-28" alt="">
+              
+            <img src="../admin/images/profile/<?php echo $row['img_name']; ?>" class = "rounded-full h-28 top1-image" alt="">
+            <img src="../img/crown.png" class = "h-8 crown" >
             <h2 class = "mt-2  text-gray-600 dark:text-white"><?php echo $row['profileuser']; ?></h2>
             <h1 class = "font-bold text-2xl text-gray-700 dark:text-white"><?php echo $totalpoints; ?> </h1>
             </div>
 
             <div class="top-3 flex flex-col items-center">
                 <!-- top 3 checker -->
+                <div id = "bronze-shield"></div>
                 <?php
                 $thisyear = date('Y');
                 $thismonth = date('m');
@@ -233,8 +237,9 @@ $mresult = mysqli_query($conn,$sql);
             
         </div>
         <!-- TOP5 -->
-        <div class="top-five">
-        <?php
+        <div class="top-five  ">
+        <table class="rank-table z-20 w-full text-sm text-center text-gray-600 dark:text-white md:ml-5 sm:ml-0  py-5">
+            <?php
             $thisyear = date('Y');
             $thismonth = date('m');
             $sql = "SELECT * , SUM(dpoints) AS tpoints FROM deposits WHERE MONTH(datetime) = '$thismonth' AND YEAR(datetime) = '$thisyear' GROUP BY profileuser ORDER BY tpoints DESC LIMIT 3,5";
@@ -243,11 +248,11 @@ $mresult = mysqli_query($conn,$sql);
             $rank = 4;
             $number = 0;
             do { ?>
-              <tr class="trBorder">""
-                <td aria-placeholder="none"><?php echo $rank; ?>th</td>
-                <td class="rank-image" aria-placeholder="none"><img src="../admin/images/profile/<?php echo $rows['img_name']; ?>" style="background:white;"></td>
-                <td><?php echo $rows['profileuser']; ?></td>
-                <td><?php echo $rows['tpoints']; ?></td>
+              <tr class="trBorder w-100 ">
+                <td aria-placeholder="none" class = "text-xl font-bold "><?php echo $rank; ?></td>
+                <td class="rank-image" aria-placeholder="none"><img src="../admin/images/profile/<?php echo $rows['img_name']; ?>" class = "h-14 z-20 rounded-full ring-2 ring-slate-500 hover:scale-50"></td>
+                <td class = "text-lg z-20"><?php echo $rows['profileuser']; ?></td>
+                <td class = "text-xl font-extrabold z-20"><?php echo $rows['tpoints']; ?></td>
               </tr>
             <?php $rank++;
             } while (($rows = mysqli_fetch_assoc($result)) and ($number <= 4)) ?>

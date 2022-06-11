@@ -96,12 +96,57 @@ html {
   border: 5px solid rgba(153, 153, 153, 0.801);
 }
 
-.whitewrapper .leaderboard .leaderboard-wrapper .top-lead .top-1 img {
+.whitewrapper .leaderboard .leaderboard-wrapper .top-lead .top1-image {
   border: 6px solid rgba(220, 187, 2, 0.808);
 }
 
 .whitewrapper .leaderboard .leaderboard-wrapper .top-lead .top-3 img {
   border: 5px solid rgba(218, 158, 80, 0.803);
+}
+
+.whitewrapper .leaderboard .leaderboard-wrapper .top-lead .crown {
+  position: absolute;
+  top: 35px;
+}
+
+.whitewrapper .leaderboard .leaderboard-wrapper .top-lead #silver-shield {
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-bottom: 10px solid #939393;
+  position: relative;
+  top: -20px;
+}
+
+.whitewrapper .leaderboard .leaderboard-wrapper .top-lead #silver-shield:after {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 10px;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-top: 10px solid #939393;
+}
+
+.whitewrapper .leaderboard .leaderboard-wrapper .top-lead #bronze-shield {
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-bottom: 10px solid rgba(218, 158, 80, 0.803);
+  position: relative;
+  top: -20px;
+}
+
+.whitewrapper .leaderboard .leaderboard-wrapper .top-lead #bronze-shield:after {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 10px;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-top: 10px solid rgba(218, 158, 80, 0.803);
 }
 
 .whitewrapper .leaderboard .leaderboard-wrapper .top-five .mt-3 {
