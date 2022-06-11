@@ -250,7 +250,7 @@ $mresult = mysqli_query($conn,$sql);
             do { ?>
               <tr class="trBorder w-100 ">
                 <td aria-placeholder="none" class = "text-xl font-bold "><?php echo $rank; ?></td>
-                <td class="rank-image" aria-placeholder="none"><img src="../admin/images/profile/<?php echo $rows['img_name']; ?>" class = "h-14 z-20 rounded-full ring-2 ring-slate-500"></td>
+                <td class="rank-image" aria-placeholder="none"><img src="../admin/images/profile/<?php echo $rows['img_name']; ?>" class = "h-14 z-20 rounded-full ring-2 ring-slate-500 hover:scale-50"></td>
                 <td class = "text-lg z-20"><?php echo $rows['profileuser']; ?></td>
                 <td class = "text-xl font-extrabold z-20"><?php echo $rows['tpoints']; ?></td>
               </tr>
