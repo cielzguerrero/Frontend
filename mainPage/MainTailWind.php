@@ -92,7 +92,7 @@ $mresult = mysqli_query($conn,$sql);
       <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" type="button" data-dropdown-toggle="dropdown">
         <span class="sr-only">Open user menu</span>
         <!-- image -->
-        <img class="w-8 h-8 rounded-full ring-4  dark:ring-gray-600" src="../admin/images/profile/<?php echo $rows['img_name']; ?>" alt="user photo">
+        <img class="w-8 h-8 rounded-full ring-4  dark:ring-gray-600" src="../AdminTailWind/images/profile/<?php echo $rows['img_name']; ?>?>" alt="user photo">
       </button>
 
       <!-- Dropdown menu -->
@@ -269,15 +269,19 @@ $mresult = mysqli_query($conn,$sql);
 
                 <div class="left grid items-center justify-center rounded  py-5">
                 <!-- <h2 class ="text-center text-black dark:text-white">Profile</h2> -->
+                <form action="" method="POST" enctype="multipart/form-data">
                 <?php
                     $sql = "SELECT * FROM members WHERE id = $id";
                     $result = mysqli_query($conn, $sql);
                     $rows = mysqli_fetch_assoc($result);
                     ?>
-                <img src="../AdminTailWind/images/profile/<?php echo $rows['img_name']; ?>" class="rounded" id="profImage" >
+                    <img src="../AdminTailWind/images/profile/<?php echo $rows['img_name']; ?>" class="rounded" id="profImage" >
                     <i class="las la-edit rounded-b text-center  text-white font-bold text-4xl" id="cameraPhoto" data-tooltip-target="tooltip-imageupload" 
                     data-tooltip-style="light" data-tooltip-placement="bottom" ></i>
-                    <input class="block" aria-describedby="user_avatar_help" id="uploadPhoto" type="file" required>
+                    
+                    
+                    <input class="block" id="uploadPhoto" type="file" name="image">
+                    
 
                     <!-- TOOLTIP UPLOAD IMAGE -->
                     <div id="tooltip-imageupload" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
@@ -287,7 +291,7 @@ $mresult = mysqli_query($conn,$sql);
                     
                 </div>
                 <div class="right px-6 ">
-                    <form action="" method="POST">
+                    
                     <!-- USERNAME -->
                     <div class="top flex justify-between items-center mt-4">
                     <input type="text" class = "w-full h-6 rounded py-4 mt-3 ring-2 ring-slate-50 border-none text-gray-700 dark:text-white text-start shadow-inner" value="<?php echo $rows['username']; ?>" name="uname">
@@ -312,7 +316,10 @@ $mresult = mysqli_query($conn,$sql);
                     <option value="Barangay San Vicente" class ="bg-slate-200 dark:bg-slate-800 text-black dark:text-white">Barangay Landayan</option>
                     </select>
                     <!-- SUBMIT PROFILE -->
+                    <input type="hidden" name="current_image" value="<?php echo $rows['img_name']; ?>">
+                    <input type="hidden" name="id" value="<?php echo $rows['id']; ?>">
                     <button class = "mt-3 w-full text-start bg-slate-700 rounded py-1 text-lg text-white mb-4 font-bold" name="submit">Save Changes</button>
+                    
                     </form>
                     
                 </div>

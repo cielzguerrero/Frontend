@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
             $image_name = "Profile-" . rand(000, 999) . "." . $extension;
 
             $sourcepath = $_FILES['image']['tmp_name'];
-            $destinationpath = "../admin/images/profile/" . $image_name;
+            $destinationpath = "../AdminTailWind/images/profile/" . $image_name;
 
             $upload = move_uploaded_file($sourcepath, $destinationpath);
 
@@ -37,9 +37,8 @@ if (isset($_POST['submit'])) {
             }
 
             if ($current_image != "") {
-                $remove_path = "../admin/images/profile/" . $current_image;
+                $remove_path = "../AdminTailWind/images/profile/" . $current_image;
                 $remove = unlink($remove_path);
-
                 if ($remove == FALSE) {
                     $_SESSION['remove'] = "<div class='message warning'>Failed To Remove Current Image. Try Again Later.</div>";
                     echo "<meta http-equiv='refresh' content='0'>";
