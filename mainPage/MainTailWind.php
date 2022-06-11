@@ -277,7 +277,7 @@ $mresult = mysqli_query($conn,$sql);
                 <img src="../AdminTailWind/images/profile/<?php echo $rows['img_name']; ?>" class="rounded" id="profImage" >
                     <i class="las la-edit rounded-b text-center  text-white font-bold text-4xl" id="cameraPhoto" data-tooltip-target="tooltip-imageupload" 
                     data-tooltip-style="light" data-tooltip-placement="bottom" ></i>
-                    <input class="block" aria-describedby="user_avatar_help" id="uploadPhoto" type="file">
+                    <input class="block" aria-describedby="user_avatar_help" id="uploadPhoto" type="file" required>
 
                     <!-- TOOLTIP UPLOAD IMAGE -->
                     <div id="tooltip-imageupload" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
