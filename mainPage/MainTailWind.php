@@ -76,7 +76,12 @@ $mresult = mysqli_query($conn,$sql);
 
     <!-- DARK MODE -->
     
-    <button id="theme-toggle" type="button" class="text-gray-500  mr-5 rounded-lg text-sm py-2  px-2.5 bg-slate-200">
+    <button id="theme-toggle" data-tooltip-target="tooltip-darkmode"  type="button" class="text-gray-500  mr-5 rounded-lg text-sm py-2  px-2.5 bg-slate-200">
+    <!-- TOOL TIP DARKMODE -->
+    <div id="tooltip-darkmode" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+    Dark Mode
+    <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
  
     <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
     <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
@@ -269,9 +274,16 @@ $mresult = mysqli_query($conn,$sql);
                     $result = mysqli_query($conn, $sql);
                     $rows = mysqli_fetch_assoc($result);
                     ?>
-                <img src="../AdminTailWind/images/profile/<?php echo $rows['img_name']; ?>" class="rounded" id="profImage">
-                    <i class="las la-edit rounded-b text-center  text-white font-bold text-4xl" id="cameraPhoto"></i>
+                <img src="../AdminTailWind/images/profile/<?php echo $rows['img_name']; ?>" class="rounded" id="profImage" >
+                    <i class="las la-edit rounded-b text-center  text-white font-bold text-4xl" id="cameraPhoto" data-tooltip-target="tooltip-imageupload" 
+                    data-tooltip-style="light" data-tooltip-placement="bottom" ></i>
                     <input class="block" aria-describedby="user_avatar_help" id="uploadPhoto" type="file">
+
+                    <!-- TOOLTIP UPLOAD IMAGE -->
+                    <div id="tooltip-imageupload" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Upload Image
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
                     
                 </div>
                 <div class="right px-6 ">
@@ -300,7 +312,7 @@ $mresult = mysqli_query($conn,$sql);
                     <option value="Barangay San Vicente" class ="bg-slate-200 dark:bg-slate-800 text-black dark:text-white">Barangay Landayan</option>
                     </select>
                     <!-- SUBMIT PROFILE -->
-                    <button class = "mt-3 w-full text-start bg-slate-700 rounded py-1 text-lg text-white mb-4 font-bold">Submit</button>
+                    <button class = "mt-3 w-full text-start bg-slate-700 rounded py-1 text-lg text-white mb-4 font-bold" name="submit">Save Changes</button>
                     </form>
                     
                 </div>
@@ -311,7 +323,8 @@ $mresult = mysqli_query($conn,$sql);
     
      <!-- NEWS -->
      <div class="news pt-20" id="newsanchor">
-         <div class="news-wrapper dark:bg-slate-800 ring-2 shadow-2xl ring-slate-200 rounded">   
+         <div class="news-wrapper dark:bg-slate-800 ring-2 shadow-2xl ring-slate-200 rounded" >  
+       
          <!-- <div id="controls-carousel" class="relative" data-carousel="slide">
             Carousel wrapper    -->
             <div class="overflow-hidden  dark:bg-slate-800  h-96 relative rounded-lg ">
