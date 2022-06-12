@@ -107,7 +107,7 @@
         
         <div class="box py-12 flex flex-col justify-center items-center">
             <div class="top-circle"></div>
-            <img src="img/faller.png" class="h-20 rounded-full">
+            <img src="img/faller2.jpg" class="h-20 rounded-full">
             <h2 class = "pt-4 text-lg">Marc Jhon Faller</h2>
             <h3 class="text-sm">QA</h3>
 
