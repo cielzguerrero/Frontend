@@ -196,7 +196,8 @@ footer {
 
 .social-wrapper .linkedin:hover {
     color: gainsboro;
-    background-color: #0270ad;
+    
+   
 }
 
 
@@ -399,6 +400,18 @@ body::before
     transform: translateY(-5px);
     
 }
+.socials .fa-linkedin-in
+{
+    color:white !important;
+    transition: all 0.2s ease-in-out;
+}
+.socials .fa-linkedin-in:hover
+{
+    color:#0077B5 !important;
+    transform: translateY(-5px);
+
+}
+
 
 .socials .fa-instagram
 {

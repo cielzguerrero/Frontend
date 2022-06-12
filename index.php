@@ -104,7 +104,7 @@ if ($gdata == "1") {
 
 		<ul class = "inline-block d-flex justify-content-between mt-5 pt-5 animate__animated animate__zoomIn animate__delay-1s">
 		<li><a href="https://www.facebook.com/cielits"><i class="fa-brands fa-facebook-f fa-lg me-5"></i></a></li>
-		<li><a href="https://www.instagram.com/ramoresaldrin/"><i class="fa-brands fa-instagram fa-lg me-5" ></i></a></li>
+		<li><a href="https://www.instagram.com/ramoresaldrin/"><i class="fa-brands fa-linkedin-in fa-lg me-5" ></i></a></li>
 		<li><a href="https://twitter.com/hahaxdddddd"><i class="fa-brands fa-twitter fa-lg me-5"></i></a></li>
 		</ul>
 </section>
