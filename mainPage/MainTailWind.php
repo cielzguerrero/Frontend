@@ -428,21 +428,31 @@ $mresult = mysqli_query($conn,$sql);
             </button>
             <div class="px-6 py-6  ">
                 <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Claim Rewards</h3>
+                <?php
+                  $sql = "SELECT * FROM prizes";
+                  $result = mysqli_query($conn, $sql);
+                  $rows = mysqli_fetch_assoc($result);
+                  $number = 0;
+                  do { ?>
+                    <div class="row align-items-center">
+                      <form action="" method="POST" enctype="multipart/form-data" style="display:inline-flex;">
+                        <div class="col">
+                          <img src="../admin/images/prize/<?php echo $rows['prize_img']; ?>">
 
-                <div class="flex flex-wrap justify-center items-center mt-4  gap-2 containers">
-                    <img src="../admin/images/prize/Prize-256.jpg" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
-                    <a href="#!"><h2 class ="px-3  py-2 rounded-md bg-slate-700 dark:bg-slate-50 text-white dark:text-gray-700 text-xl block">1000 PTS</h2></a>
-                </div>
-                <div class="flex flex-wrap justify-center items-center mt-4  gap-2 containers">
-                    <img src="../admin/images/prize/Prize-63.png" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
-                    <a href="#!"><h2 class ="px-3  py-2 rounded-md bg-slate-700 dark:bg-slate-50 text-white dark:text-gray-700 text-xl block">2000 PTS</h2></a>
-                </div>
 
-                <div class="flex flex-wrap justify-center items-center mt-4  gap-3 containers">
-                    <img src="../admin/images/prize/Prize-226.jpg" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
-                    <a href="#!"><h2 class ="px-3  py-2 rounded-md bg-slate-700 dark:bg-slate-50 text-white dark:text-gray-700 text-xl block">5000 PTS</h2></a>
-                </div>
-               
+                          <input type="text" name="rprize" value="<?php echo $rows['pesos']; ?>" style="display:none;">
+                        </div>
+                        <div class="col">
+                          <button type="submit" onclick="return confirm('Are you sure')" class="btn btn-primary btn-lg" name="rsubmit" value="<?php echo $rows['points']; ?>">
+                            <?php echo $rows['points']; ?> PTS
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  <?php $number++;
+                  } while (($rows = mysqli_fetch_assoc($result)) and ($number <= 10)) ?>
+
+            
                     
             </div>
         </div>

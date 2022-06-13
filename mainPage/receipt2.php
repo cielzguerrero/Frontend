@@ -92,7 +92,7 @@ include('../includes/decreasepoint.php');
         <div class="content-wrapper flex flex-wrap content-center items-center text-center mx-auto justify-center ">
             <img src="main-images/rewardImage.png" class = "">
 
-            <div class="receipt-text rounded-lg drop-shadow ring-2 mx-3 ring-slate-500 p-4">
+            <div class="receipt-text rounded drop-shadow ring-4 mx-3 ring-slate-500 p-4">
             <p class = "font-extrabold text-4xl text-gray-600">Your Reward is ready to Claim!</p>
             <p class = "italic">"Don't forget to save/screenshot this"</p>
             <?php
@@ -100,9 +100,9 @@ include('../includes/decreasepoint.php');
             $rsult = mysqli_query($conn, $mysql);
             $row = mysqli_fetch_assoc($rsult);
             ?>
-             <h3 class = "text-lg font-bold"><?php echo $row['profilename'];?></h3>
-             <h3 class = "text-lg font-bold"><?php echo $row['fullname']?></h3>
-             <h3 class = "text-lg font-bold"><?php echo $row['address']?></h3>
+             <h3 class = "text-lg font-bold text-gray-600"><?php echo $row['profilename'];?></h3>
+             <h3 class = "text-lg font-bold text-gray-600"><?php echo $row['fullname']?></h3>
+             <h3 class = "text-lg font-bold text-gray-600"><?php echo $row['address']?></h3>
              <?php
               $tsql = "SELECT * FROM tempo WHERE profile_name = '$currentprofileuser' ORDER BY datetransaction DESC LIMIT 0,1";
               $tresult = mysqli_query($conn, $tsql);
@@ -111,7 +111,7 @@ include('../includes/decreasepoint.php');
               $tresult -> close();
             ?>
              <h5>Reference Number: <?php echo $drows['securitykey'];?></h5>
-             <p>Reward to Receive: <?php echo $drows['t_reward'];?> pesos </p>
+             <p>Reward to Receive: <?php echo $drows['t_reward'];?> Pesos </p>
              <h5>Date: <?php echo $drows['t_date'];?></h5>
              <h5>Time: <?php echo $drows['t_time'];?></h5>
             </div>

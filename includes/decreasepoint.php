@@ -21,7 +21,7 @@ if($result) {
     $result = mysqli_query($conn, $log);
     $temp ="INSERT INTO tempo (profile_name, t_reward, t_date, t_time, datetransaction, securitykey) VALUES ('$username', '$prize','$t_date', '$t_time', '$time' ,'$key')";
     $tresult = mysqli_query($conn, $temp);
-    header("Location: receipt.php?ID={$id}");
+    header("Location: receipt2.php?ID={$id}");
 } else {
     echo "<meta http-equiv='refresh' content='0'>";
 }
