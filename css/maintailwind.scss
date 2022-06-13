@@ -333,21 +333,17 @@ html
 
 
 // MODAL
+.border-gradient {
+    padding: 8px;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-width: 3px;
 
-.claim-modal
-{
- & .containers
- {
-    & img
-    {
-        &:hover{
-            transform: scale(1.04) !important;
-        }
-    }
-   
- }
- 
-}
+  }
+  .border-gradient-purple {
+
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  }
 
 
 

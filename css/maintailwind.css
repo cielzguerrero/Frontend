@@ -277,9 +277,15 @@ html {
   margin: auto;
 }
 
-.claim-modal .containers img:hover {
-  -webkit-transform: scale(1.04) !important;
-          transform: scale(1.04) !important;
+.border-gradient {
+  padding: 8px;
+  border: 2px solid;
+  border-image-slice: 1;
+  border-width: 3px;
+}
+
+.border-gradient-purple {
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
 }
 
 @media only screen and (max-width: 768px) {

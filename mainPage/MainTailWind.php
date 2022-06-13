@@ -427,7 +427,7 @@ $mresult = mysqli_query($conn,$sql);
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
             </button>
             <div class="px-6 py-6  ">
-                <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Claim Rewards</h3>
+                <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Available Rewards</h3>
                 <?php
                   $sql = "SELECT * FROM prizes";
                   $result = mysqli_query($conn, $sql);
@@ -435,17 +435,18 @@ $mresult = mysqli_query($conn,$sql);
                   $number = 0;
                   do { ?>
                     <div class="row align-items-center">
-                      <form action="" method="POST" enctype="multipart/form-data" style="display:inline-flex;">
+                      <form action="" method="POST" enctype="multipart/form-data"  class = "flex justify-between items-center gap-8 mt-5">
                         <div class="col">
-                          <img src="../admin/images/prize/<?php echo $rows['prize_img']; ?>">
+                          <img src="../admin/images/prize/<?php echo $rows['prize_img']; ?>" class = "h-28 ">
 
 
                           <input type="text" name="rprize" value="<?php echo $rows['pesos']; ?>" style="display:none;">
                         </div>
                         <div class="col">
-                          <button type="submit" onclick="return confirm('Are you sure')" class="btn btn-primary btn-lg" name="rsubmit" value="<?php echo $rows['points']; ?>">
-                            <?php echo $rows['points']; ?> PTS
+                        <button class = "border-gradient border-gradient-purple " type="submit"  onclick="return confirm('Are you sure')"  name="rsubmit" value="<?php echo $rows['points']; ?>">
+                            <span><?php echo $rows['points']; ?> Points</span>
                           </button>
+                        
                         </div>
                       </form>
                     </div>
