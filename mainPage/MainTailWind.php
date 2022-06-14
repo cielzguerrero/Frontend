@@ -434,7 +434,7 @@ $mresult = mysqli_query($conn,$sql);
                   $rows = mysqli_fetch_assoc($result);
                   $number = 0;
                   do { ?>
-                    <div class="row align-items-center">
+                    <div class="row align-items-center claimform">
                       <form action="" method="POST" enctype="multipart/form-data"  class = "flex justify-between items-center gap-8 mt-5">
                         <div class="col">
                           <img src="../admin/images/prize/<?php echo $rows['prize_img']; ?>" class = "h-28 ">
@@ -444,7 +444,7 @@ $mresult = mysqli_query($conn,$sql);
                         </div>
                         <div class="col">
                         <button class = "border-gradient border-gradient-purple " type="submit"  onclick="return confirm('Are you sure')"  name="rsubmit" value="<?php echo $rows['points']; ?>">
-                            <span><?php echo $rows['points']; ?> Points</span>
+                            <span class = "dark:text-white"><?php echo $rows['points']; ?> Points</span>
                           </button>
                         
                         </div>

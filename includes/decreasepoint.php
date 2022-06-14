@@ -16,7 +16,7 @@ $sum = $collectedpoint - $point;
 
 $sql = "UPDATE members SET points = '$sum' WHERE id = '$id'";
 $result = mysqli_query($conn, $sql);
-if($result) {
+if($result And $currentpoint > 999) {
     $log = "INSERT INTO logs (user, activity, datetime) VALUES ('$username', '$activity','$time')";
     $result = mysqli_query($conn, $log);
     $temp ="INSERT INTO tempo (profile_name, t_reward, t_date, t_time, datetransaction, securitykey) VALUES ('$username', '$prize','$t_date', '$t_time', '$time' ,'$key')";
@@ -24,6 +24,9 @@ if($result) {
     header("Location: receipt2.php?ID={$id}");
 } else {
     echo "<meta http-equiv='refresh' content='0'>";
+   
+   
+
 }
 }
 ?>
