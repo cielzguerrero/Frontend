@@ -16,7 +16,7 @@ $sum = $collectedpoint - $point;
 
 
 // $result = mysqli_query($conn, $sql);
-if($currentpoint > 999) {
+if($currentpoint >= $totalpesos ) {
     // Update Client Points
     $sql = "UPDATE members SET points = '$sum' WHERE id = '$id'";
     $result = mysqli_query($conn, $sql);
