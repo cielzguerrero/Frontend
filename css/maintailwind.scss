@@ -55,7 +55,7 @@ html
 
 .pointcard
 {
-    & .max-w-xs
+    & .max-w-md
     {
         background: linear-gradient(to right, #CAA347, #DCC080);
     }
@@ -75,6 +75,14 @@ html
         color: white;
       
         text-shadow: 0px 2px 0px  #c78f0c;
+    }
+    & button 
+    {
+        &:hover
+        {  border: 2px solid #555;
+            transform: translateY(-5px);
+            box-shadow:0px 7px #555;
+        }
     }
 }
 

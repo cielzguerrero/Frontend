@@ -158,7 +158,7 @@ $mresult = mysqli_query($conn,$sql);
 
 <!-- CARD -->
 <section class = "pointcard mt-40 grid place-items-center ">
-<div class="max-w-xs rounded-lg border  shadow-xl ">
+<div class="max-w-md rounded-lg border  shadow-xl ">
   
     <h2 class="p-3 text-2xl">G-POINTS</h2>
     <h5 class="pl-3 pb-1 mt-10">Available Points</h5>

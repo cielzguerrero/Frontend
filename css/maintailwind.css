@@ -46,7 +46,7 @@ html {
           transform: translateY(-10px);
 }
 
-.pointcard .max-w-xs {
+.pointcard .max-w-md {
   background: -webkit-gradient(linear, left top, right top, from(#CAA347), to(#DCC080));
   background: linear-gradient(to right, #CAA347, #DCC080);
 }
@@ -65,6 +65,14 @@ html {
 .pointcard h1 {
   color: white;
   text-shadow: 0px 2px 0px  #c78f0c;
+}
+
+.pointcard button:hover {
+  border: 2px solid #555;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 0px 7px #555;
+          box-shadow: 0px 7px #555;
 }
 
 .whitewrapper {
