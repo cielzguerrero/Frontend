@@ -58,6 +58,8 @@ $mresult = mysqli_query($conn,$sql);
   <link rel="stylesheet" href="../css/maintailwind.css">
   <!-- LIGHTBOX -->
   <link rel="stylesheet" href="../node_modules/lightbox2/dist/css/lightbox.css">
+  <!-- SWEET ALERT -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 
