@@ -445,7 +445,7 @@ $mresult = mysqli_query($conn,$sql);
                           <input type="text" name="rprize" value="<?php echo $rows['pesos']; ?>" style="display:none;">
                         </div>
                         <div class="col">
-                        <button class = "border-gradient border-gradient-purple " type="submit"  onclick="return confirm('Are you sure')"  name="rsubmit" value="<?php echo $rows['points']; ?>">
+                        <button class = "border-gradient border-gradient-purple " type="submit"  onclick="ClaimClicked()"  name="rsubmit" value="<?php echo $rows['points']; ?>">
                             <span class = "dark:text-white"><?php echo $rows['points']; ?> Points</span>
                           </button>
                         

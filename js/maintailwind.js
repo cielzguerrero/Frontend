@@ -37,3 +37,9 @@ $('.owl-carousel').owlCarousel({
 $(window).ready(function(){
     $( ".claimAlert" ).fadeOut(3000);
 });
+
+
+// Claim Alert
+function ClaimClicked(){
+    return confirm('Are you sure ?')
+};
