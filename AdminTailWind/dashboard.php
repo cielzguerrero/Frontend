@@ -69,8 +69,8 @@ include('includes/timeinclude.php');
                 </h1>
                 <!-- PROFILE NAME --> 
                     <div class="profile-display ">
-                    <h1 class = "text-md font-bold text-slate-600 " >Cielito Guerrero</h1>
-                    <h1 class = "text-sm text-center text-slate-600" >Admin</h1>
+                    <h1 class = "text-md font-bold text-slate-600 " ><?php echo $afullname;?></h1>
+                    <h1 class = "text-sm text-center text-slate-600" ><?php echo $astatus;?></h1>
                     </div>
             </div>
 

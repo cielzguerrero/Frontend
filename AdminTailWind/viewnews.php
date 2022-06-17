@@ -3,6 +3,20 @@ include('connections/connection.php');
 include('includes/afterlogin.php');
 include('actions.php');
 
+$targetnews = $_GET['ID'];
+
+if (!isset($_GET['ID']))
+{
+    header("Location: NewsPrizes.php");
+}
+else
+{
+    $sql = "SELECT * FROM news WHERE news_ID = $targetnews";
+    $result = mysqli_query($conn, $sql);
+    $rows = mysqli_fetch_assoc($result);
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -70,9 +84,9 @@ include('actions.php');
 
                 </h1>
                 <!-- PROFILE NAME --> 
-                    <div class="profile-display ">
-                    <h1 class = "text-md font-bold text-slate-600 " >Cielito Guerrero</h1>
-                    <h1 class = "text-sm text-center text-slate-600" >Admin</h1>
+                <div class="profile-display ">
+                    <h1 class = "text-md font-bold text-slate-600 " ><?php echo $afullname;?></h1>
+                    <h1 class = "text-sm text-center text-slate-600" ><?php echo $astatus;?></h1>
                     </div>
             </div>
 
@@ -80,16 +94,16 @@ include('actions.php');
         <div class="content-wrapper overflow-auto mt-5 mx-5">
             <!-- NEWS IMAGE -->
             <div class="newsImage mx-auto flex justify-center">
-            <img src="../admin/images/news/News-619.png">
+            <img src="../AdminTailWind/images/news/<?php echo $rows['news_img'];?>">
             </div>
 
             <!-- TITLE -->
-            <h1 class = "text-center mt-5 font-bold text-4xl text-slate-800">News Title</h1>
-            <h1  class = "text-center mt-2 font-bold text-xl text-slate-600">News SubTitle</h1>
+            <h1 class = "text-center mt-5 font-bold text-4xl text-slate-800"><?php echo $rows['news_title'];?></h1>
+            <h1  class = "text-center mt-2 font-bold text-xl text-slate-600"><?php echo $rows['news_description'];?></h1>
 
             <!-- CONTENT -->
             <div class="flex flex-wrap mt-3 text-slate-800 md:mx-10 sm:mx-auto justify-center items-center text-center text-justify">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique earum ipsam a accusantium. Dolor, iste! Iure fugit, accusantium quae molestias, adipisci, minus labore ratione voluptatem praesentium impedit sed eveniet assumenda. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum minus labore atque, perferendis praesentium qui non nesciunt? Esse, itaque quia voluptatum tempora, eos assumenda, inventore dolorum praesentium illo rerum possimus!</p>
+                <p><?php echo $rows['news_content'];?></p>
                
             </div>
            

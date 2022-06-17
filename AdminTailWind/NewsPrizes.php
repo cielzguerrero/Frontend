@@ -69,8 +69,8 @@ include('actions.php');
                 </h1>
                 <!-- PROFILE NAME --> 
                     <div class="profile-display ">
-                    <h1 class = "text-md font-bold text-slate-600 " >Cielito Guerrero</h1>
-                    <h1 class = "text-sm text-center text-slate-600" >Admin</h1>
+                    <h1 class = "text-md font-bold text-slate-600 " ><?php echo $afullname;?></h1>
+                    <h1 class = "text-sm text-center text-slate-600" ><?php echo $astatus;?></h1>
                     </div>
             </div>
 
@@ -92,10 +92,10 @@ include('actions.php');
                                     $rows = mysqli_fetch_assoc($result);
                                     $ranker = 1; 
                                     do { ?>
-                                    <div class="item w-full"><img src="images/news/<?php echo $rows['news_img'];?>"  ><h4 class = " w-full text-center pl-4 bg-slate-800/90 text-white text-xl py-4 font-semibold  rounded-b"><?php echo $rows['news_title'];?></h4>
+                                    <div class="item w-full"><img src="../AdminTailWind/images/news/<?php echo $rows['news_img'];?>"  ><h4 class = " w-full text-center pl-4 bg-slate-800/90 text-white text-xl py-4 font-semibold  rounded-b"><?php echo $rows['news_title'];?></h4>
                                         <div class=" flex justify-center gap-2 mt-5 drop-shadow-xl">
                                             <!-- VIEW -->
-                                        <a href="../AdminTailWind/viewnews.php"><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">View</button></a>
+                                        <a href="../AdminTailWind/viewnews.php?ID=<?php echo $rows['news_id'];?>"><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">View</button></a>
                                         <!-- EDIT -->
                                             <a href="../AdminTailWind/updatenews.php?ID=<?php echo $rows['news_id'];?>"><button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2">Upd/Add</button></a>
                                             <!-- DELETE -->

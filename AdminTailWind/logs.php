@@ -1,3 +1,9 @@
+<?php
+include('connections/connection.php');
+include('includes/afterlogin.php');
+include('actions.php');
+include('includes/timeinclude.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,8 +72,8 @@
                 </h1>
                 <!-- PROFILE NAME --> 
                     <div class="profile-display ">
-                    <h1 class = "text-md font-bold text-slate-600 " >Cielito Guerrero</h1>
-                    <h1 class = "text-sm text-center text-slate-600" >Admin</h1>
+                    <h1 class = "text-md font-bold text-slate-600 " ><?php echo $afullname;?></h1>
+                    <h1 class = "text-sm text-center text-slate-600" ><?php echo $astatus;?></h1>
                     </div>
             </div>
 
@@ -91,54 +97,33 @@
                                 <th data-priority="2">Activity</th>
                                 <th data-priority="3">Date Started</th>
                                 <th data-priority="4">Elapse Time</th>
-                                <th data-priority="5">Actions|| <button type="button" class="text-white bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Del all</button></th>
+                                <th data-priority="5">Actions|| <button type="submit" class="text-white bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 " name="deletealllog">Del all</button></th>
                             </tr>
                         </thead>
                         <tbody class = "text-slate-600">
+                        <?php  
+                                        $sql = "SELECT * FROM logs ORDER by logs.id DESC";
+                                        $result = mysqli_query($conn, $sql);
+                                        $rows = mysqli_fetch_assoc($result);                                        
+                                        $rank = 1;
+                                        $number = 0;
+                            do { ?>
                             <tr>
-                       
-                                <td>Johannes</td>
-                                <td>Bojji Kage : Gained 3 points</td>
-                                <td>2022-04-29 04:56:28</td>
-                                <td>2 weeks ago</td>
+                            
+                                <td><?php echo $rows['users'];?></td>
+                                <td><?php echo $rows['activity'];?></td>
+                                <td><?php echo $rows['datetime'];?></td>
+                                <td><?php echo time_elapsed_string($rows['daysago']);?></td>
                            
                                 <td class = "flex justify-center mt-5">
-                                    <button type="button" class="text-white bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Del</button>
+                                <form action="" method="POST">
+                                    <input type="hidden" name="logid" value="<?php echo $rows['id'];?>">
+                                    <button type="submit" class="text-white bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 " name="deletelog">Del</button>
+                                </form>
                          
                             </td>
-                            </tr>
-
-                       
-
-                            <tr>
-                               
-                                <td>Johannes</td>
-                                <td>Bojji Kage : Gained 3 points</td>
-                                <td>2022-04-29 04:56:28</td>
-                                <td>2 weeks ago</td>
-                           
-                                <td class = "flex justify-center mt-5">
-                                    <button type="button" class="text-white bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Del</button>
-                                 
-                            </td>
-                            </tr>
-
-                            <tr>
-                               
-                                <td>Johannes</td>
-                                <td>Bojji Kage : Gained 3 points</td>
-                                <td>2022-04-29 04:56:28</td>
-                                <td>2 weeks ago</td>
-                           
-                                <td class = "flex justify-center mt-5">
-                                    <button type="button" class="text-white bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Del</button>
-                         
-                            </td>
-                            </tr>
-
-                            
-
-                            
+                            </tr>   
+                            <?php $rank++;} while (($rows = mysqli_fetch_assoc($result)) and ($number <= 9))?>               
                         </tbody>
 
                     </table>
@@ -169,53 +154,33 @@
                                 <th data-priority="2">Activity</th>
                                 <th data-priority="3">Date of Transaction</th>
                                 <th data-priority="4">Reference Number</th>
-                                <th data-priority="5">Actions|| <button type="button" class="text-white bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Del all</button></th>
+                                <th data-priority="5">Actions|| <button type="submit" class="text-white bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 " name="deletealltemplog">Del all</button></th>
                             </tr>
                         </thead>
                         <tbody class = "text-slate-600">
+                        <?php  
+                                        $sql = "SELECT * FROM tempo ORDER BY datetransaction DESC";
+                                        $result = mysqli_query($conn, $sql);
+                                        $rows = mysqli_fetch_assoc($result);                                        
+                                        $rank = 1;
+                                        $number = 0;
+                            do { ?>
                             <tr>
                        
-                                <td>Johannes</td>
-                                <td>Claimed 200 Pesos</td>
-                                <td>2022-04-29 04:56:28</td>
-                                <td>70a32110fff0f26d301e58ebbca9cb9f</td>
+                                <td><?php echo $rows['profile_name'];?></td>
+                                <td>Claimed <?php echo $rows['t_reward'];?> Pesos</td>
+                                <td><?php echo $rows['datetransaction'];?></td>
+                                <td><?php echo $rows['securitykey'];?></td>
                            
                                 <td class = "flex justify-center mt-5">
-                                    <button type="button" class="text-white bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Del</button>
+                                <form action="" method="POST">
+                                    <input type="hidden" name="templogid" value="<?php echo $rows['id'];?>">
+                                    <button type="button" class="text-white bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 " name="deletetemplog">Del</button>
+                                </form>
                          
                             </td>
                             </tr>
-
-                       
-
-                            <tr>
-                               
-                                <td>Johannes</td>
-                                <td>Claimed 200 Pesos</td>
-                                <td>2022-04-29 04:56:28</td>
-                                <td>70a32110fff0f26d301e58ebbca9cb9f</td>
-                           
-                                <td class = "flex justify-center mt-5">
-                                    <button type="button" class="text-white bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Del</button>
-                                 
-                            </td>
-                            </tr>
-
-                            <tr>
-                               
-                                <td>Johannes</td>
-                                <td>Claimed 200 Pesos</td>
-                                <td>2022-04-29 04:56:28</td>
-                                <td>70a32110fff0f26d301e58ebbca9cb9f</td>
-                           
-                                <td class = "flex justify-center mt-5">
-                                    <button type="button" class="text-white bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Del</button>
-                         
-                            </td>
-                            </tr>
-
-                            
-
+                            <?php $rank++;} while (($rows = mysqli_fetch_assoc($result)) and ($number <= 4))?>
                             
                         </tbody>
 
