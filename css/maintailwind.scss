@@ -55,7 +55,7 @@ html
 
 .pointcard
 {
-    & .max-w-xs
+    & .max-w-md
     {
         background: linear-gradient(to right, #CAA347, #DCC080);
     }
@@ -75,6 +75,14 @@ html
         color: white;
       
         text-shadow: 0px 2px 0px  #c78f0c;
+    }
+    & button 
+    {
+        &:hover
+        {  border: 2px solid #555;
+            transform: translateY(-5px);
+            box-shadow:0px 3px #555;
+        }
     }
 }
 
@@ -109,18 +117,22 @@ html
                 }   
                 & h1,h2,img
                 {
+                
                     z-index: 10;
                 }
                 & .top-2 img
                 {
+                    max-height: 500px;
                     border: 5px solid rgba(153, 153, 153, 0.801);
                 }
                 & .top1-image 
                 {
+                    max-height: 500px;
                     border: 6px solid rgba(220, 187, 2, 0.808);
                 }
                 & .top-3 img
                 {
+                    max-height: 500px;
                     border: 5px solid rgba(218, 158, 80, 0.803);
                 }
                 & .crown 
@@ -330,20 +342,17 @@ html
 
 // MODAL
 
-.claim-modal
-{
- & .containers
- {
-    & img
-    {
-        &:hover{
-            transform: scale(1.04) !important;
-        }
-    }
-   
- }
- 
-}
+.border-gradient {
+    padding: 8px;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-width: 3px;
+
+  }
+  .border-gradient-purple {
+
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  }
 
 
 

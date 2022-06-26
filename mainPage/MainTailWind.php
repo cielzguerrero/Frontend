@@ -59,6 +59,8 @@ $mresult = mysqli_query($conn,$sql);
   <link rel="stylesheet" href="../css/maintailwind.css">
   <!-- LIGHTBOX -->
   <link rel="stylesheet" href="../node_modules/lightbox2/dist/css/lightbox.css">
+  <!-- SWEET ALERT -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 
@@ -157,7 +159,7 @@ $mresult = mysqli_query($conn,$sql);
 
 <!-- CARD -->
 <section class = "pointcard mt-40 grid place-items-center ">
-<div class="max-w-xs rounded-lg border  shadow-xl ">
+<div class="max-w-md rounded-lg border  shadow-xl ">
   
     <h2 class="p-3 text-2xl">G-POINTS</h2>
     <h5 class="pl-3 pb-1 mt-10">Available Points</h5>
@@ -197,7 +199,7 @@ $mresult = mysqli_query($conn,$sql);
                 $row = mysqli_fetch_assoc($rsult);
                 $totalpoints = $row['tpoints'];
                 ?>
-                <img src="../admin/images/profile/<?php echo $row['img_name']; ?>"  class = "rounded-full  h-28" alt="">
+                <img src="../admin/images/profile/<?php echo $row['img_name']; ?>"  class = "rounded-full object-fit" alt="">
                 <h2 class = "mt-2 text-gray-600 dark:text-white"><?php echo $row['profileuser']; ?></h2>
                 <h1 class = "font-bold text-2xl text-gray-700 dark:text-white"><?php echo $totalpoints; ?></h1>
               
@@ -214,7 +216,7 @@ $mresult = mysqli_query($conn,$sql);
                 $totalpoints = $row['tpoints'];
                 ?>
               
-            <img src="../AdminTailWind/images/profile/<?php echo $rows['img_name'] ?>" class = "rounded-full h-28 top1-image" alt="">
+            <img src="../AdminTailWind/images/profile/<?php echo $rows['img_name'] ?>" class = "rounded-full object-fit top1-image" alt="">
             <img src="../img/crown.png" class = "h-8 crown" >
             <h2 class = "mt-2  text-gray-600 dark:text-white"><?php echo $row['profileuser']; ?></h2>
             <h1 class = "font-bold text-2xl text-gray-700 dark:text-white"><?php echo $totalpoints; ?> </h1>
@@ -231,14 +233,14 @@ $mresult = mysqli_query($conn,$sql);
                 $row = mysqli_fetch_assoc($rsult);
                 $totalpoints = $row['tpoints'];
                 ?>
-            <img src="../admin/images/profile/<?php echo $row['img_name']; ?>" class = "rounded-full h-28" alt="">
+            <img src="../admin/images/profile/<?php echo $row['img_name']; ?>" class = "rounded-full object-fit" alt="">
             <h2 class = "mt-2  text-gray-600 dark:text-white"><?php echo $row['profileuser']; ?></h2>
             <h1 class = "font-bold text-gray-700 text-2xl dark:text-white"><?php echo $totalpoints; ?></h1>
             </div>
             
         </div>
         <!-- TOP5 -->
-        <div class="top-five  ">
+        <div class="top-five pt-10">
         <table class="rank-table z-20 w-full text-sm text-center text-gray-600 dark:text-white md:ml-5 sm:ml-0  py-5">
             <?php
             $thisyear = date('Y');
@@ -428,22 +430,33 @@ $mresult = mysqli_query($conn,$sql);
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
             </button>
             <div class="px-6 py-6  ">
-                <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Claim Rewards</h3>
+                <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Available Rewards</h3>
+                <?php
+                  $sql = "SELECT * FROM prizes";
+                  $result = mysqli_query($conn, $sql);
+                  $rows = mysqli_fetch_assoc($result);
+                  $number = 0;
+                  do { ?>
+                    <div class="row align-items-center claimform">
+                      <form action="" method="POST" enctype="multipart/form-data"  class = "flex justify-between items-center gap-8 mt-5">
+                        <div class="col">
+                          <img src="../admin/images/prize/<?php echo $rows['prize_img']; ?>" class = "h-28 ">
 
-                <div class="flex flex-wrap justify-center items-center mt-4  gap-2 containers">
-                    <img src="../admin/images/prize/Prize-256.jpg" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
-                    <a href="#!"><h2 class ="px-3  py-2 rounded-md bg-slate-700 dark:bg-slate-50 text-white dark:text-gray-700 text-xl block">1000 PTS</h2></a>
-                </div>
-                <div class="flex flex-wrap justify-center items-center mt-4  gap-2 containers">
-                    <img src="../admin/images/prize/Prize-63.png" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
-                    <a href="#!"><h2 class ="px-3  py-2 rounded-md bg-slate-700 dark:bg-slate-50 text-white dark:text-gray-700 text-xl block">2000 PTS</h2></a>
-                </div>
 
-                <div class="flex flex-wrap justify-center items-center mt-4  gap-3 containers">
-                    <img src="../admin/images/prize/Prize-226.jpg" class="h-24 shadow-xl ring-2 ring-slate-800 mx-2">
-                    <a href="#!"><h2 class ="px-3  py-2 rounded-md bg-slate-700 dark:bg-slate-50 text-white dark:text-gray-700 text-xl block">5000 PTS</h2></a>
-                </div>
-               
+                          <input type="text" name="rprize" value="<?php echo $rows['pesos']; ?>" style="display:none;">
+                        </div>
+                        <div class="col">
+                        <button class = "border-gradient border-gradient-purple " type="submit"  onclick="ClaimClicked()"  name="rsubmit" value="<?php echo $rows['points']; ?>">
+                            <span class = "dark:text-white"><?php echo $rows['points']; ?> Points</span>
+                          </button>
+                        
+                        </div>
+                      </form>
+                    </div>
+                  <?php $number++;
+                  } while (($rows = mysqli_fetch_assoc($result)) and ($number <= 10)) ?>
+
+            
                     
             </div>
         </div>

@@ -86,6 +86,7 @@ if (!isset($_SESSION['id'])){
                 <a href="https://www.facebook.com/aldrin.ramores.77"><i class="lab la-facebook-f la-lg"></i></a>
                 <a href="https://www.instagram.com/ramoresaldrin/"><i class="lab la-instagram la-lg"></i></a>
                 <a href="https://github.com/aldrinnunal"><i class="lab la-github la-lg"></i></a>
+                <a href="https://www.linkedin.com/in/aldrin-ramores-556798202/"><i class="lab la-linkedin-in la-lg"></i></a>
             </div>
         </div>
 
@@ -119,14 +120,14 @@ if (!isset($_SESSION['id'])){
         
         <div class="box py-12 flex flex-col justify-center items-center">
             <div class="top-circle"></div>
-            <img src="../img/faller.png" class="h-20 rounded-full">
+            <img src="../img/faller2.jpg" class="h-20 rounded-full">
             <h2 class = "pt-4 text-lg">Marc Jhon Faller</h2>
             <h3 class="text-sm">QA</h3>
 
             <div class="flex justify-between items-center px-10 py-2">
                 <a href="https://www.facebook.com/Marcjohnfaller"><i class="lab la-facebook-f la-lg"></i></a>
-                <a href=""><i class="lab la-instagram la-lg"></i></a>
-                <a href=""><i class="lab la-github la-lg"></i></a>
+                <a href="https://www.instagram.com/mjfaller_/"><i class="lab la-instagram la-lg"></i></a>
+                <a href="#!"><i class="lab la-github la-lg"></i></a>
             </div>
         </div>
        

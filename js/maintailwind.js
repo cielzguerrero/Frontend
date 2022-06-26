@@ -33,3 +33,13 @@ $('.owl-carousel').owlCarousel({
         }
     }
 })
+// Remove Insufficient Points 
+$(window).ready(function(){
+    $( ".claimAlert" ).fadeOut(3000);
+});
+
+
+// Claim Alert
+function ClaimClicked(){
+    return confirm('Are you sure ?')
+};
