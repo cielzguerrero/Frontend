@@ -1,3 +1,9 @@
+<?php
+include('connections/connection.php');
+include('includes/afterlogin.php');
+include('includes/timeinclude.php');
+ 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +22,8 @@
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css" />
     <!-- CHARTS TAILWIND -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="AdminTailWind/js/dist/Chart.min.js"></script>
     <!-- OWL CAROUSEL CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -64,15 +72,18 @@
                 </h1>
                 <!-- PROFILE NAME --> 
                     <div class="profile-display ">
-                    <h1 class = "text-md font-bold text-slate-600 " >Cielito Guerrero</h1>
-                    <h1 class = "text-sm text-center text-slate-600" >Admin</h1>
+                    <h1 class = "text-md font-bold text-slate-600 " ><?php echo $afullname;?></h1>
+                    <h1 class = "text-sm text-center text-slate-600" ><?php echo $astatus;?></h1>
                     </div>
             </div>
 
         <!-- CONTENTS -->
         <div class="content-wrapper  mt-5 mx-2">
                 <!-- BAR CHART -->
-                <div id="chartdiv"></div>
+                <!-- <div id="chartdiv"></div> -->
+                <div id="chart-container">
+                    <canvas id="mycanvas"></canvas>
+                </div>
                 <!-- BOTTOM CHARTS -->
                 <div class="my-5 grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 justify-center items-center gap-24">
 
@@ -105,6 +116,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- MY SCRIPT -->
     <script src="../AdminJs/analytics.js"></script>
+    <script src="../AdminJs/management.js"></script>
     <!-- flowbiet JS -->
     <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
 </body> 

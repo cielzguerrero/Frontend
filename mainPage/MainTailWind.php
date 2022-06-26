@@ -29,6 +29,7 @@ include('../includes/timeinclude.php');
 include('../includes/mainedit.php');
 include('../includes/decreasepoint.php');
 include('../includes/deposit.php');
+
 $name = $rows['profilename'];
 $username = $_SESSION['username'];
 $arduinodata = $_GET["gdata"];

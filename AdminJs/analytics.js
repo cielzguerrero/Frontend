@@ -40,13 +40,14 @@ function startTime() {
     return i;
   }
 // bar chart
+
 am5.ready(function() {
 
-   
     var root = am5.Root.new("chartdiv");
     root.setThemes([
       am5themes_Animated.new(root)
     ]);
+    // chart.dataSource.url = "./AdminJs/data.php";
     var chart = root.container.children.push(am5xy.XYChart.new(root, {
       panX: true,
       panY: true,
@@ -100,7 +101,7 @@ am5.ready(function() {
     // Set data
     var data = [{
       country: "Doy Pack",
-      value: 2025
+      value: 1231
     }, {
       country: "Glass Bottle",
       value: 1882
@@ -112,22 +113,37 @@ am5.ready(function() {
       value: 1322
     }];
     
+    
     xAxis.data.setAll(data);
     series.data.setAll(data);
     
 
     series.appear(1000);
     chart.appear(1000, 100);
-    
-    }); // end am5.ready()
+  
 
+  }); // end am5.ready()
+
+  $(document).ready(function(){
+    $.ajax({
+      url: "../AdminJs/totalpointsbrgy.php",
+      method: "GET",
+      success: function(data) {
+        console.log(data);
+        var brgy = [];
+        var totalp = [];
+  
+        for(var i in data) {
+          brgy.push(data[i].Barangay);
+          totalp.push(data[i].total_points);
+        }
   //  DONUT CHART FOR TOTAL POINTS PER BRGY
 const pointsDoughnut = {
-    labels: ["Nueva", "San Antonio", "San Vicente","San Roque","Landayan"],
+    labels: brgy,
     datasets: [
       {
         label: "My First Dataset",
-        data: [4800, 18150, 19500, 5700, 79748],
+        data: totalp,
         backgroundColor: [
           "#67b7dc",
           "#6794dc",
@@ -151,13 +167,29 @@ const pointsDoughnut = {
     configpointsDoughnut
   );
 
+}
+});
+});
+$(document).ready(function(){
+  $.ajax({
+    url: "../AdminJs/totaluserbrgy.php",
+    method: "GET",
+    success: function(data) {
+      console.log(data);
+      var brgy = [];
+      var totalu = [];
+
+      for(var i in data) {
+        brgy.push(data[i].Barangay);
+        totalu.push(data[i].total_user);
+      }
   //  DONUT CHART FOR TOTAL POINTS PER BRGY
 const membersDoughnut = {
-    labels: ["Nueva", "San Antonio", "San Vicente","San Roque","Landayan"],
+    labels: brgy,
     datasets: [
       {
         label: "My First Dataset",
-        data: [4800, 18150, 19500, 5700, 79748],
+        data: totalu,
         backgroundColor: [
           "#67b7dc",
           "#6794dc",
@@ -181,5 +213,7 @@ const membersDoughnut = {
     configmembersDoughnut
   );
 
-  
+}
+});
+});
   

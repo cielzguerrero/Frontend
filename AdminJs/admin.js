@@ -27,7 +27,7 @@ $('.mobileToggler').click(function(){
 // CLOCK DISPLAY
 function startTime() {
     const today = new Date();
-    let h = today.getHours()+12;
+    let h = today.getHours();
     let m = today.getMinutes();
     let s = today.getSeconds();
     m = checkTime(m);
@@ -42,23 +42,37 @@ function startTime() {
   }
 
 //  DONUT CHART FOR BARANGAY MEMBERS
-const memberDoughnut = {
-    labels: ["Nueva", "San Antonio", "San Vicente","San Roque","Landayan"],
-    datasets: [
-      {
-        label: "My First Dataset",
-        data: [300, 50, 100, 400, 300],
-        backgroundColor: [
-          "#67b7dc",
-          "#6794dc",
-          "#6771dc",
-          "#8974de",
-          "#4722dc",
-        ],
-        hoverOffset: 4,
-      },
-    ],
-  };
+$(document).ready(function(){
+  $.ajax({
+    url: "../AdminJs/totaluserbrgy.php",
+    method: "GET",
+    success: function(data) {
+      console.log(data);
+      var brgy = [];
+      var totalu = [];
+
+      for(var i in data) {
+        brgy.push(data[i].Barangay);
+        totalu.push(data[i].total_user);
+      }
+
+      const memberDoughnut = {
+          labels: brgy,
+          datasets: [
+            {
+              label: "My First Dataset",
+              data: totalu,
+              backgroundColor: [
+                "#67b7dc",
+                "#6794dc",
+                "#6771dc",
+                "#8974de",
+                "#4722dc",
+              ],
+              hoverOffset: 4,
+            },
+          ],
+        };
 
   const configmemberDoughnut = {
     type: "doughnut",
@@ -71,13 +85,30 @@ const memberDoughnut = {
     configmemberDoughnut
   );
 
-//  DONUT CHART FOR BARANGAY MEMBERS
-const pointsDoughnut = {
-    labels: ["Nueva", "San Antonio", "San Vicente","San Roque","Landayan"],
+}
+});
+});
+
+  //  DONUT CHART FOR TOTAL POINTS PER BRGY
+  $(document).ready(function(){
+    $.ajax({
+      url: "../AdminJs/totalpointsbrgy.php",
+      method: "GET",
+      success: function(data) {
+        console.log(data);
+        var brgy = [];
+        var totalp = [];
+  
+        for(var i in data) {
+          brgy.push(data[i].Barangay);
+          totalp.push(data[i].total_points);
+        }
+const pointDoughnut = {
+    labels: brgy,
     datasets: [
       {
         label: "My First Dataset",
-        data: [4800, 18150, 19500, 5700, 79748],
+        data: totalp,
         backgroundColor: [
           "#67b7dc",
           "#6794dc",
@@ -90,16 +121,20 @@ const pointsDoughnut = {
     ],
   };
 
-  const configpointsDoughnut = {
+  const configpointDoughnut = {
     type: "doughnut",
-    data: pointsDoughnut,
+    data: pointDoughnut,
     options: {},
   };
 
   var chartBar = new Chart(
     document.getElementById("chartDoughnut2"),
-    configpointsDoughnut
+    configpointDoughnut
   );
+
+}
+});
+});
 
   
   

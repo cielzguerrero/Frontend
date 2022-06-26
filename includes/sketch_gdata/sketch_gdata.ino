@@ -4,7 +4,7 @@
 
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 
-char server[] = "192.168.1.16";
+char server[] = "g-reward.com";
 IPAddress ip(192,168,1,1); 
 
 EthernetClient client;
@@ -81,14 +81,14 @@ void sending_to_php()
     Serial.println("Successfully Connected");
     //HTTP Request
     //THE URL OF LOCALHOST TO SEND DATA FROM SENSOR TO PHPMYADMIN DATABASE
-    Serial.print("GET /Frontend/mainPage/mainFinal.php?gdata=");
-    client.print("GET /Frontend/mainPage/mainFinal.php?gdata=");
+    Serial.print("GET /mainPage/MainTailWind.php?gdata=");
+    client.print("GET /mainPage/MainTailWind.php?gdata=");
     Serial.println(gdata);
     client.print(gdata);
     client.print(" ");
     client.print("HTTP/1.1");
     client.println();
-    client.println("Host: 192.162.1.16");
+    client.println("Host: g-reward.com");
     client.println("Connection: close");
     client.println();
     
