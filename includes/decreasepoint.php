@@ -9,16 +9,19 @@ $t_date = date("Y-m-d");
 $profileuser = $rows['profilename'];
 $prize = $_POST['rprize'];
 $activity = $rows['profilename']." : Claimed with ". $_POST['rsubmit']. " points";
+// Prize Points
 $currentpoint = $rows['points'];
+// Member Points
+$memberpoints = $rows['member_points'];
 $point = $_POST['rsubmit'];
 $collectedpoint = $currentpoint;
 $sum = $collectedpoint - $point;
 
 
-// $result = mysqli_query($conn, $sql);
-if($currentpoint >= $totalpesos ) {
+
+if($memberpoints >= $currentpoint ) {
     // Update Client Points
-    $sql = "UPDATE members SET points = '$sum' WHERE id = '$id'";
+    $sql = "UPDATE members SET member_points = '$sum' WHERE id = '$id'";
     $result = mysqli_query($conn, $sql);
     // Update Logs
     $log = "INSERT INTO logs (user, activity, datetime) VALUES ('$username', '$activity','$time')";
