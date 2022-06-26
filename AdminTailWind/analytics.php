@@ -30,7 +30,7 @@ include('includes/timeinclude.php');
 
  
 </head>
-<body  class = "bg-slate-800"onload="startTime()">
+<body  class = "bg-slate-800">
 
     <section class = "main-wrapper rounded-xl">
 
@@ -67,7 +67,7 @@ include('includes/timeinclude.php');
                 <h1 class = "text-xl font-bold flex-1 text-slate-600">Analytics</h1>
                 <!-- TIME CLOCK -->
                 <i class="fa-solid fa-clock mr-2 text-xl font-bold text-slate-600 lg:block md:hidden sm:hidden xs:hidden clock "></i>
-                <h1 class = "text-xl font-bold text-slate-600 lg:block md:hidden sm:hidden xs:hidden clock flex-auto" id = "clock">
+                <h1 class = "text-xl font-bold text-slate-600 lg:block md:hidden sm:hidden xs:hidden clock flex-auto" id = "runningTime">
 
                 </h1>
                 <!-- PROFILE NAME --> 
@@ -119,5 +119,19 @@ include('includes/timeinclude.php');
     <script src="../AdminJs/management.js"></script>
     <!-- flowbiet JS -->
     <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
+        <!-- TIME DISPLAY -->
+        <script type="text/javascript">
+    $(document).ready(function() {
+    setInterval(runningTime, 1000);
+    });
+    function runningTime() {
+    $.ajax({
+        url: '../AdminTailWind/includes/timescript.php',
+        success: function(data) {
+        $('#runningTime').html(data);
+        },
+    });
+    }
+    </script>
 </body> 
 </html> 

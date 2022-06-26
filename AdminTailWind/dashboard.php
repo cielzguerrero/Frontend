@@ -271,7 +271,9 @@ include('includes/time.php');
     <!-- flowbiet JS -->
     
     <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
+    
 
+    <!-- TIME DISPLAY -->
     <script type="text/javascript">
     $(document).ready(function() {
     setInterval(runningTime, 1000);

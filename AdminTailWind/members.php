@@ -29,7 +29,7 @@ include('actions.php');
 	<link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" rel="stylesheet">
  
 </head>
-<body  class = "bg-slate-800"onload="startTime()">
+<body  class = "bg-slate-800">
 
     <section class = "main-wrapper rounded-xl">
 
@@ -66,7 +66,7 @@ include('actions.php');
                 <h1 class = "text-xl font-bold flex-1 text-slate-600">Members</h1>
                 <!-- TIME CLOCK -->
                 <i class="fa-solid fa-clock mr-2 text-xl font-bold text-slate-600 lg:block md:hidden sm:hidden xs:hidden clock "></i>
-                <h1 class = "text-xl font-bold text-slate-600 lg:block md:hidden sm:hidden xs:hidden clock flex-auto" id = "clock">
+                <h1 class = "text-xl font-bold text-slate-600 lg:block md:hidden sm:hidden xs:hidden clock flex-auto" id = "runningTime">
 
                 </h1>
                 <!-- PROFILE NAME --> 
@@ -161,5 +161,19 @@ include('actions.php');
             .responsive.recalc();
     });
 </script>
+    <!-- TIME DISPLAY -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+    setInterval(runningTime, 1000);
+    });
+    function runningTime() {
+    $.ajax({
+        url: '../AdminTailWind/includes/timescript.php',
+        success: function(data) {
+        $('#runningTime').html(data);
+        },
+    });
+    }
+    </script>
 </body> 
 </html> 
