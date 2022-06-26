@@ -9,6 +9,6 @@ session_unset($_SESSION['status']);
 
 session_destroy();
 
-header("Location: ../../Frontend/index.php");
+header("Location: ../Frontend/index.php");
 
 ?>
