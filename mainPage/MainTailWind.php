@@ -57,8 +57,6 @@ $mresult = mysqli_query($conn,$sql);
   <!-- MY CSS -->
   <link rel="stylesheet" href="../dist/output.css ">
   <link rel="stylesheet" href="../css/maintailwind.css">
-  <!-- LIGHTBOX -->
-  <link rel="stylesheet" href="../node_modules/lightbox2/dist/css/lightbox.css">
   <!-- SWEET ALERT -->
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
@@ -71,7 +69,7 @@ $mresult = mysqli_query($conn,$sql);
 <nav class="bg-white border-gray-200 px-2 shadow-xl dark:shadow sm:px-4 py-4  dark:bg-slate-800">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
   <a href="MainTailWind.php" class="flex items-center">
-      <img src="../img/glogoblue.png" class="mr-3 h-8 sm:h-9 " alt="Flowbite Logo" />
+      <img src="../img/Glogoblue.png" class="mr-3 h-8 sm:h-9 " alt="GReward Logo" />
       <span class="self-center ml-1 text-xl font-semibold whitespace-nowrap text-gray-700 dark:text-white">G-Reward</span>
   </a>
   
@@ -164,7 +162,7 @@ $mresult = mysqli_query($conn,$sql);
     <h2 class="p-3 text-2xl">G-POINTS</h2>
     <h5 class="pl-3 pb-1 mt-10">Available Points</h5>
     <div class="bottomcard flex items-center">
-      <h1 class="p-3 text-4xl font-black" id="refreshpoint"><?php echo $rows['points']; ?></h1>
+      <h1 class="p-3 text-4xl font-black" id="refreshpoint"><?php echo $rows['member_points']; ?></h1>
       <button class="block  text-white bg-slate-700 hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  ml-12 mr-3 px-10 py-3 text-center  dark:hover:bg-slate-800 dark:focus:ring-slate-800" type="button" data-modal-toggle="authentication-modal">
       Claim
     </button>
@@ -199,7 +197,7 @@ $mresult = mysqli_query($conn,$sql);
                 $row = mysqli_fetch_assoc($rsult);
                 $totalpoints = $row['tpoints'];
                 ?>
-                <img src="../admin/images/profile/<?php echo $row['img_name']; ?>"  class = "rounded-full object-fit" alt="">
+                <img src="../AdminTailWind/images/profile/<?php echo $row['img_name']; ?>"  class = "rounded-full object-fit" alt="">
                 <h2 class = "mt-2 text-gray-600 dark:text-white"><?php echo $row['profileuser']; ?></h2>
                 <h1 class = "font-bold text-2xl text-gray-700 dark:text-white"><?php echo $totalpoints; ?></h1>
               
@@ -233,7 +231,7 @@ $mresult = mysqli_query($conn,$sql);
                 $row = mysqli_fetch_assoc($rsult);
                 $totalpoints = $row['tpoints'];
                 ?>
-            <img src="../admin/images/profile/<?php echo $row['img_name']; ?>" class = "rounded-full object-fit" alt="">
+            <img src="../AdminTailWind/images/profile/<?php echo $row['img_name']; ?>" class = "rounded-full object-fit" alt="">
             <h2 class = "mt-2  text-gray-600 dark:text-white"><?php echo $row['profileuser']; ?></h2>
             <h1 class = "font-bold text-gray-700 text-2xl dark:text-white"><?php echo $totalpoints; ?></h1>
             </div>
@@ -472,7 +470,7 @@ $mresult = mysqli_query($conn,$sql);
     <div class="md:flex md:justify-between footers mx-auto max-w-7xl">
         <div class="mb-6 md:mb-0">
             <a href="#top" class="flex items-center">
-                <img src="../img/glogoblue.png" class="mr-3 h-8" alt="FlowBite Logo" />
+                <img src="../img/Glogoblue.png" class="mr-3 h-8" alt="G-Reward Logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap text-gray-700 dark:text-white">G-Reward</span>
             </a>
         </div>

@@ -18,11 +18,11 @@ if($mycount>=250)
 if ($datafrom == "1") {
       $profileuser = $rows['profilename'];
       $activity = $rows['profilename'] . " : Deposited Doy Pack = 2 points";
-      $currentpoint = $rows['points'];
+      $currentpoint = $rows['member_points'];
       $point = 2;
       $collectedpoint = $currentpoint;
       $sum = $collectedpoint + $point;
-      $sql = "UPDATE members SET points = '$sum' WHERE id = '$id'";
+      $sql = "UPDATE members SET member_points = '$sum' WHERE id = '$id'";
       $result = mysqli_query($conn, $sql);
       if ($result) {
             $log = "INSERT INTO logs (user, activity) VALUES ('$profileuser', '$activity')";
@@ -34,11 +34,11 @@ if ($datafrom == "1") {
 } else if ($datafrom == "2") {
       $profileuser = $rows['profilename'];
       $activity = $rows['profilename'] . " : Deposited Glass Bottle = 2 points";
-      $currentpoint = $rows['points'];
+      $currentpoint = $rows['member_points'];
       $point = 4;
       $collectedpoint = $currentpoint;
       $sum = $collectedpoint + $point;
-      $sql = "UPDATE members SET points = '$sum' WHERE id = '$id'";
+      $sql = "UPDATE members SET member_points = '$sum' WHERE id = '$id'";
       $result = mysqli_query($conn, $sql);
       if ($result) {
             $log = "INSERT INTO logs (user, activity) VALUES ('$profileuser', '$activity')";
@@ -50,12 +50,12 @@ if ($datafrom == "1") {
 } else if ($datafrom == "3") {
       $profileuser = $rows['profilename'];
       $activity = $rows['profilename'] . " : Deposited Plastic Bottle = 3 points";
-      $currentpoint = $rows['points'];
+      $currentpoint = $rows['member_points'];
       $point = 3;
       $collectedpoint = $currentpoint;
       $sum = $collectedpoint + $point;
 
-      $sql = "UPDATE members SET points = '$sum' WHERE id = '$id'";
+      $sql = "UPDATE members SET member_points = '$sum' WHERE id = '$id'";
       $result = mysqli_query($conn, $sql);
       if ($result) {
             $log = "INSERT INTO logs (user, activity) VALUES ('$profileuser', '$activity')";
@@ -67,12 +67,12 @@ if ($datafrom == "1") {
 } else if ($datafrom == "4") {
       $profileuser = $rows['profilename'];
       $activity = $rows['profilename'] . " : Deposited Aluminum = 10 points";
-      $currentpoint = $rows['points'];
+      $currentpoint = $rows['member_points'];
       $point = 10;
       $collectedpoint = $currentpoint;
       $sum = $collectedpoint + $point;
 
-      $sql = "UPDATE members SET points = '$sum' WHERE id = '$id'";
+      $sql = "UPDATE members SET member_points = '$sum' WHERE id = '$id'";
       $result = mysqli_query($conn, $sql);
       if ($result) {
             $log = "INSERT INTO logs (user, activity) VALUES ('$profileuser', '$activity')";
