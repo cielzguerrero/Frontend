@@ -1,3 +1,8 @@
+<?php
+include('connections/connection.php');
+include('includes/afterlogin.php');
+include('actions.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,8 +71,8 @@
                 </h1>
                 <!-- PROFILE NAME --> 
                     <div class="profile-display ">
-                    <h1 class = "text-md font-bold text-slate-600 " >Cielito Guerrero</h1>
-                    <h1 class = "text-sm text-center text-slate-600" >Admin</h1>
+                    <h1 class = "text-md font-bold text-slate-600 " ><?php echo $afullname;?></h1>
+                    <h1 class = "text-sm text-center text-slate-600" ><?php echo $astatus;?></h1>
                     </div>
             </div>
 
@@ -93,53 +98,31 @@
                             </tr>
                         </thead>
                         <tbody class = "">
+                        <?php  
+                                        $sql = "SELECT * FROM members";
+                                        $result = mysqli_query($conn, $sql);
+                                        $rows = mysqli_fetch_assoc($result);                                        
+                                        $rank = 1;
+                                        $number = 0;
+                                        do { ?>
                             <tr>
-                                <td ><img src="../admin/images/profile/Profile-307.jpg"></td>
-                                <td>Bojji</td>
-                                <td>2021-12-21</td>
-                                <td>utherjohannes@gmail.com</td>
-                                <td>0192313123</td>
+                                <td ><img src="../AdminTailWind/images/profile/<?php echo $rows['img_name'];?>"></td>
+                                <td><?php echo $rows['profilename'];?></td>
+                                <td><?php echo $rows['datecreated'];?></td>
+                                <td><?php echo $rows['email'];?></td>
+                                <td><?php echo $rows['contact'];?></td>
                            
                                 <td class = "flex justify-center  ">
-                                   <a href="../AdminTailWind/updatemembers.php"> <button type="button" class="text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Upd</button></a>
-                               
-                                    <button type="button" class="text-white bg-red-500 hover:bg-red-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Del</button>
+                                   <a href="../AdminTailWind/updatemembers.php?ID=<?php echo $rows['id'];?>"> <button type="button" class="text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Upd</button></a>
+                                   <form action="" method="POST">
+                                   <input type="hidden" name="memid" value="<?php echo $rows['id'];?>">
+                                    <input type="hidden" name="memimg" value="<?php echo $rows['img_name'];?>">
+                                   <button type="submit" class="text-white bg-red-500 hover:bg-red-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 " name="deletemember">Del</button>
+                                   </form>
+                                    
                             </td>
                             </tr>
-
-                       
-
-                            <tr>
-                                <td ><img src="../admin/images/profile/Profile-215.jpg"></td>
-                                <td>Kage</td>
-                                <td>2021-12-21</td>
-                                <td>utherjohannes@gmail.com</td>
-                                <td>0192313123</td>
-                           
-                                <td class = "flex justify-center ">
-                                   
-                                <a href="../AdminTailWind/updatemembers.php"> <button type="button" class="text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Upd</button></a>
-                                    <button type="button" class="text-white bg-red-500 hover:bg-red-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Del</button>
-                            </td>
-                            </tr>
-
-                            <tr>
-                                <td ><img src="../admin/images/profile/Profile-281.jpg"></td>
-                                <td>Despa</td>
-                                <td>2021-12-21</td>
-                                <td>utherjohannes@gmail.com</td>
-                                <td>0192313123</td>
-                           
-                                <td class = "flex justify-center ">
-                                   
-                                <a href="../AdminTailWind/updatemembers.php"> <button type="button" class="text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Upd</button></a>
-                                    <button type="button" class="text-white bg-red-500 hover:bg-red-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Del</button>
-                            </td>
-                            </tr>
-
-                            
-
-                            
+                            <?php $rank++;} while (($rows = mysqli_fetch_assoc($result)) and ($number <= 9))?>
                         </tbody>
 
                     </table>

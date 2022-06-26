@@ -1,3 +1,23 @@
+<?php
+include('connections/connection.php');
+include('includes/afterlogin.php');
+include('actions.php');
+
+$targetnews = $_GET['ID'];
+
+if (!isset($_GET['ID']))
+{
+    header("Location: members.php");
+}
+else
+{
+    $sql = "SELECT * FROM members WHERE id = $targetnews";
+    $result = mysqli_query($conn, $sql);
+    $rows = mysqli_fetch_assoc($result);
+    $pmd = $rows['password'];
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,8 +86,8 @@
                 </h1>
                 <!-- PROFILE NAME --> 
                     <div class="profile-display ">
-                    <h1 class = "text-md font-bold text-slate-600 " >Cielito Guerrero</h1>
-                    <h1 class = "text-sm text-center text-slate-600" >Admin</h1>
+                    <h1 class = "text-md font-bold text-slate-600 " ><?php echo $afullname;?></h1>
+                    <h1 class = "text-sm text-center text-slate-600" ><?php echo $astatus;?></h1>
                     </div>
             </div>
 
@@ -80,34 +100,34 @@
                 <div class="update bg-slate-300 p-8 rounded-lg">
                 <div class="currentImage  ">
                     <h1 class="text-center text-slate-200 bg-slate-800 py-1">Current Image</h1>
-                    <img src="../admin/images/profile/Profile-153.jpg" >  
+                    <img src="images/profile/<?php echo $rows['img_name'];?>" >  
 
                 </div>
-                <form >
+                <form action="" method="POST" enctype="multipart/form-data">
                     <div class="mb-2 mt-3">
                         <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Username</label>
-                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  required>
+                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value="<?php echo $rows['username'];?>" name="uname" required>
                     </div>
                    
                     <div class="mb-2">
                         <label for="text" class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300 ">Profile Name </label>
-                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-1" value = "" required>
+                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-1" value = "<?php echo $rows['profilename'];?>" name="pname" required>
                     </div>
                     <div class="mb-2">
                         <label for="text" class="block mb-1 text-md  font-medium text-gray-900 dark:text-gray-300">Full Name</label>
-                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-1"  value = "" required>
+                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-1"  value = "<?php echo $rows['fullname'];?>" name="fname" required>
                     </div>
                     <div class="mb-2">
                         <label for="email" class="block mb-1 text-md  font-medium text-gray-900 dark:text-gray-300">Email</label>
-                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-1"  value = "" required>
+                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-1"  value = "<?php echo $rows['email'];?>" name="email" required>
                     </div>
                     <div class="mb-2">
                             <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Password</label>
-                            <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  required>
+                            <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value="<?php echo $passwords;?>" name="pass" required>
                     </div>
                     <div class="mb-2">
-                        <label for="email" class="block mb-1 text-md  font-medium text-gray-900 dark:text-gray-300">Contact</label>
-                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-1"  value = "" required>
+                        <label for="contact" class="block mb-1 text-md  font-medium text-gray-900 dark:text-gray-300">Contact</label>
+                        <input type="text" id="contact" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-1"  value = "<?php echo $rows['contact'];?>" name="pcontact" required>
                     </div>
                
 
@@ -116,7 +136,7 @@
                     <div class="mb-3 w-full" id = "address">
                         <select class="form-select appearance-none block w-full p-1 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat
                         border border-solid border-gray-300 rounded transition ease-in-out m-0
-                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
+                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example" name="paddress">
                             <option selected>Barangay San Antonio</option>
                             <option value="Barangay Nueva">Barangay Nueva</option>
                             <option value="Barangay San Vicente">Barangay San Vicente</option>
@@ -128,42 +148,43 @@
 
                     <div class="mb-4">
                         <label class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300" for="user_avatar">Upload file</label>
-                        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file">
+                        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file" name="image">
                     </div>
                     
-                    
-                    <button type="submit" class="text-white text-md  bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg  w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Update Profile</button>
+                    <input type="hidden" name="current_image" value="<?php echo $rows['img_name'];?>">
+                    <input type="hidden" name="id" value="<?php echo $rows['id'];?>">
+                    <button type="submit" class="text-white text-md  bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg  w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" name="editmember">Update Profile</button>
                 </form>
                 </div>
 
             <!-- ADD NEW PROFILE-->
                 <div class="add bg-slate-300 p-8 rounded-lg">
             
-                <form >
+                <form action="" method="POST" enctype="multipart/form-data">
                     <div class="mb-2 mt-3">
                         <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Username</label>
-                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  required>
+                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="uname" required>
                     </div>
                    
                     <div class="mb-2">
                         <label for="text" class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300 ">Profile Name </label>
-                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" value = "" required>
+                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full" value = "" name="pname" required>
                     </div>
                     <div class="mb-2">
                         <label for="text" class="block mb-1 text-md  font-medium text-gray-900 dark:text-gray-300">Full Name</label>
-                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full"  value = "" required>
+                        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full"  value = "" name="fname" required>
                     </div>
                     <div class="mb-2">
                         <label for="email" class="block mb-1 text-md  font-medium text-gray-900 dark:text-gray-300">Email</label>
-                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full"  value = "" required>
+                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full"  value = "" name="email" required>
                     </div>
                     <div class="mb-2">
                             <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Password</label>
-                            <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  required>
+                            <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="pass" required>
                     </div>
                     <div class="mb-2">
-                        <label for="email" class="block mb-1 text-md  font-medium text-gray-900 dark:text-gray-300">Contact</label>
-                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full"  value = "" required>
+                        <label for="contact" class="block mb-1 text-md  font-medium text-gray-900 dark:text-gray-300">Contact</label>
+                        <input type="text" id="contact" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full"  value = "" name="pcontact" required>
                     </div>
                
 
@@ -172,7 +193,7 @@
                     <div class="mb-3 w-full" id = "address">
                         <select class="form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat
                         border border-solid border-gray-300 rounded transition ease-in-out m-0
-                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
+                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example" name="paddress">
                             <option selected>Barangay San Antonio</option>
                             <option value="Barangay Nueva">Barangay Nueva</option>
                             <option value="Barangay San Vicente">Barangay San Vicente</option>
@@ -184,11 +205,11 @@
 
                     <div class="mb-4">
                         <label class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300" for="user_avatar">Upload file</label>
-                        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file">
+                        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file" name="image">
                     </div>
                     
                     
-                    <button type="submit" class="text-white text-md  bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg  w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add New Profile</button>
+                    <button type="submit" class="text-white text-md  bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg  w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" name="addmember">Add New Profile</button>
                 </form>
                 </div>
               

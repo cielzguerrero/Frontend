@@ -8,6 +8,8 @@ error_reporting(0);
 // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // // ADD // 
 
 if (isset($_POST['addmember'])){
+    $pusername = mysqli_real_escape_string($conn, $_POST["uname"]);
+    $ppassword = mysqli_real_escape_string($conn, $_POST["pass"]);
     $time = date("Y-m-d H:i:s");
     $username = $_SESSION['username'];
     $activity = "Added New Profile";
@@ -47,7 +49,7 @@ if (isset($_POST['addmember'])){
     }
     
     
-    $sql = "INSERT INTO members (profilename, fullname, status, username, password, datecreated, email, address, contact, img_name) VALUES ('$profile_name','$full_name', '$pstatus', '$user_name', '$pass_word', '$dc', '$email', '$address', '$contact', '$image_name')";
+    $sql = "INSERT INTO members (profilename, fullname, status, username, password, datecreated, email, address, contact, img_name) VALUES ('$profile_name','$full_name', 'Member', '$user_name', '$ppassword', '$dc', '$email', '$address', '$contact', '$image_name')";
     $result = mysqli_query($conn, $sql);
     if($result == TRUE) {
         $log = "INSERT INTO logs (user, activity, datetime) VALUES ('$username', '$activity', '$time')";
@@ -64,7 +66,7 @@ if (isset($_POST['addmember'])){
 if (isset($_POST['addnews'])) {
     $time = date("Y-m-d H:i:s");
     $username = $_SESSION['username'];
-    $activity = "Added New News";
+    $activity = "Added News";
     $newstitle = $_POST['newsname'];
     $ndescription = $_POST['newsdesc'];
     $ncontent = $_POST['addnewscontent'];
@@ -158,7 +160,7 @@ if (isset($_POST['addgarbagetype'])) {
 if (isset($_POST['addprize'])) {
     $time = date("Y-m-d H:i:s");
     $username = $_SESSION['username'];
-    $activity = "Added New Prize";
+    $activity = "Added Prize";
     $prizen = $_POST['pname'];
     $description = $_POST['pdesc'];
     $peso = $_POST['ppeso'];
@@ -271,6 +273,8 @@ if (isset($_POST['editgarbagetype'])) {
     }
 }
 if (isset($_POST['editmember'])){
+    $pusername = mysqli_real_escape_string($conn, $_POST["uname"]);
+    $ppassword = mysqli_real_escape_string($conn, $_POST["pass"]);
     $time = date("Y-m-d H:i:s");
     $username = $_SESSION['username'];
     $activity = "Edited Profile";
@@ -283,6 +287,7 @@ if (isset($_POST['editmember'])){
     $age = $_POST['age'];
     $email = $_POST['email'];
     $current_image = $_POST['current_image'];
+    $id = $_POST['id'];
     $image_name = $_POST['image'];
     $address = $_POST['paddress'];
     $contact = $_POST['pcontact'];
@@ -326,7 +331,7 @@ if (isset($_POST['editmember'])){
         }
     
     
-        $sql = "UPDATE members SET profilename = '$profile_name', fullname = '$full_name', status = '$pstatus', username = '$user_name', password = '$pass_word', email = '$email', address = '$address', contact = '$contact', img_name = '$image_name' WHERE id = '$id'";
+        $sql = "UPDATE members SET profilename = '$profile_name', fullname = '$full_name', status = 'Member', username = '$user_name', password = '$ppassword', email = '$email', address = '$address', contact = '$contact', img_name = '$image_name' WHERE id = '$id'";
         $result = mysqli_query($conn, $sql);
     
         if($result) {
@@ -478,6 +483,9 @@ if (isset($_POST['editprize'])) {
 
 if(isset($_POST['deletegarbage']))
 {
+    $time = date("Y-m-d H:i:s");
+    $username = $_SESSION['username'];
+    $activity = "Deleted Garbage";
     $id = $_POST['gid'];
     $image_name = $_POST['gimg'];
     if ($image_name != "") {
@@ -504,6 +512,9 @@ if(isset($_POST['deletegarbage']))
 
 if(isset($_POST['deletenews']))
 {
+    $time = date("Y-m-d H:i:s");
+    $username = $_SESSION['username'];
+    $activity = "Deleted News";
     $id = $_POST['newsid'];
     $image_name = $_POST['newsimg'];
 
@@ -531,11 +542,40 @@ if(isset($_POST['deletenews']))
 
 if(isset($_POST['deletemember']))
 {
+    $time = date("Y-m-d H:i:s");
+    $username = $_SESSION['username'];
+    $activity = "Deleted Profile";
 
+    $id = $_POST['memid'];
+    $image_name = $_POST['memimg'];
+
+    if ($image_name != "") {
+        $path = "images/profile/".$image_name;
+        $remove = unlink($path);
+
+        if ($remove == FALSE) {
+            echo "<meta http-equiv='refresh' content='0'";
+            die();
+        }
+    }
+    $sql = "DELETE FROM members WHERE id = $id";
+    $result = mysqli_query($conn, $sql);
+
+    if($result == TRUE) {
+        $_SESSION['delete'] = "<div class='message success'>Removed Successfully!</div>";
+        $log = "INSERT INTO logs (user, activity, datetime) VALUES ('$username', '$activity', '$time')";
+        $result = mysqli_query($conn, $log);
+        echo "<meta http-equiv='refresh' content='0'>";
+    } else {
+        $_SESSION['delete'] = "<div class='message warning'>Failed To Remove. Try Again Later.</div>";
+    }
 }
 
 if(isset($_POST['deleteprize']))
 {
+    $time = date("Y-m-d H:i:s");
+    $username = $_SESSION['username'];
+    $activity = "Deleted Prize";
     $id = $_POST['pid'];
     $image_name = $_POST['prizesimg'];
 
@@ -563,21 +603,27 @@ if(isset($_POST['deleteprize']))
 
 if(isset($_POST['deletelog']))
 {
-    
+    $id = $_POST['logid'];
+    $sql = "DELETE FROM logs WHERE id = $id";
+    $result = mysqli_query($conn, $sql);
 }
 
 if(isset($_POST['deletealllog']))
 {
-    
+    $sql = "DELETE FROM logs";
+    $result = mysqli_query($conn, $sql);
 }
 
 if(isset($_POST['deletetemplog']))
 {
-    
+    $id = $_POST['templogid'];
+    $sql = "DELETE FROM tempo WHERE id = $id";
+    $result = mysqli_query($conn, $sql);
 }
 
 if(isset($_POST['deletealltemplog']))
 {
-    
+    $sql = "DELETE FROM tempo";
+    $result = mysqli_query($conn, $sql);
 }
 ?>

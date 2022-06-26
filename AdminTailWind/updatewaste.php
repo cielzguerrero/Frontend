@@ -84,9 +84,9 @@ else
 
                 </h1>
                 <!-- PROFILE NAME --> 
-                    <div class="profile-display ">
-                    <h1 class = "text-md font-bold text-slate-600 " >Cielito Guerrero</h1>
-                    <h1 class = "text-sm text-center text-slate-600" >Admin</h1>
+                <div class="profile-display ">
+                    <h1 class = "text-md font-bold text-slate-600 " ><?php echo $afullname;?></h1>
+                    <h1 class = "text-sm text-center text-slate-600" ><?php echo $astatus;?></h1>
                     </div>
             </div>
 
@@ -127,7 +127,7 @@ else
 
             <!-- ADD NEW -->
 
-            <div class=" mt-10 bg-slate-300 py-5 px-6 rounded-lg lg:w-2/3 md:w-2/3 sm:w-full mx-auto ">
+            <!-- <div class=" mt-10 bg-slate-300 py-5 px-6 rounded-lg lg:w-2/3 md:w-2/3 sm:w-full mx-auto ">
                 <form class = " " action="" method="POST" enctype="multipart/form-data">
                     <div class="mb-2">
                         <label for="wastename" class="block mb-1 text-md font-medium text-gray-900 dark:text-gray-300 ">Name </label>
@@ -148,7 +148,7 @@ else
 
                
             
-            </div>
+            </div> -->
            
         </div>
 

@@ -70,9 +70,9 @@ include('actions.php');
 
                 </h1>
                 <!-- PROFILE NAME --> 
-                    <div class="profile-display ">
-                    <h1 class = "text-md font-bold text-slate-600 " >Cielito Guerrero</h1>
-                    <h1 class = "text-sm text-center text-slate-600" >Admin</h1>
+                <div class="profile-display ">
+                    <h1 class = "text-md font-bold text-slate-600 " ><?php echo $afullname;?></h1>
+                    <h1 class = "text-sm text-center text-slate-600" ><?php echo $astatus;?></h1>
                     </div>
             </div>
 
@@ -101,12 +101,12 @@ include('actions.php');
                                 <a href="../AdminTailWind/updatewaste.php?ID=<?php echo $rows['garbage_ID']?>">
                                 <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-bold text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500  hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800 ">
                                 <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                                   UPD/ADD
+                                   UPDATE
                                 </span>
                                 </button>
                                 </a>
                                 <!-- DELETE -->
-                                <form action="" method="POST">
+                                <!-- <form action="" method="POST">
                                 <a href="">
                                 <input type="hidden" name="gid" value="<?php echo $rows['garbage_ID'];?>">
                                 <input type="hidden" name="gimg" value="<?php echo $rows['garbage_Img'];?>">
@@ -116,7 +116,7 @@ include('actions.php');
                                 </span>
                                 </button>
                                 </a>
-                                </form>
+                                </form> -->
                                 
                             </div>               
                         </div>

@@ -28,7 +28,6 @@ include('includes/timeinclude.php');
  
 </head>
 <body  class = "bg-slate-800"onload="startTime()">
-
     <section class = "main-wrapper rounded-xl">
 
 
@@ -69,8 +68,8 @@ include('includes/timeinclude.php');
                 </h1>
                 <!-- PROFILE NAME --> 
                     <div class="profile-display ">
-                    <h1 class = "text-md font-bold text-slate-600 " >Cielito Guerrero</h1>
-                    <h1 class = "text-sm text-center text-slate-600" >Admin</h1>
+                    <h1 class = "text-md font-bold text-slate-600 " ><?php echo $afullname;?></h1>
+                    <h1 class = "text-sm text-center text-slate-600" ><?php echo $astatus;?></h1>
                     </div>
             </div>
 
@@ -81,19 +80,36 @@ include('includes/timeinclude.php');
             md:grid-cols-2   sm:grid-cols-2  gap-4 ">
                 
                 <div class="box rounded-xl drop-shadow-md  p-14 px-28 bg-slate-100">
-                    <h1 class= "text-3xl font-bold text-center mb-5 text-slate-600">150</h1>
+                            <?php
+                            $sql = "SELECT * FROM members";
+                            $result = mysqli_query($conn, $sql);
+                            $count = mysqli_num_rows($result);
+                            ?>
+                    <h1 class= "text-3xl font-bold text-center mb-5 text-slate-600"><?php echo $count?></h1>
                     <h1 class = "text-center font-semibold text-slate-600"> <i class="fa-solid fa-users pr-2"></i>Members</h1>
                 </div>
                 
                  
                 <div class="box rounded-xl drop-shadow-md p-14 px-28 bg-slate-100">
-                    <h1 class= "text-3xl font-bold text-center mb-5 text-slate-600">150</h1>
+                            <?php
+                            $sql = "SELECT * FROM logs";
+                            $result = mysqli_query($conn, $sql);
+                            $count = mysqli_num_rows($result);
+                            ?>
+                    <h1 class= "text-3xl font-bold text-center mb-5 text-slate-600"><?php echo $count?></h1>
                     <h1 class = "text-center font-semibold text-slate-600"> <i class="fa-solid fa-note-sticky pr-2"></i>Logs</h1>
                 </div>
 
                 <div class="box rounded-xl drop-shadow-md p-14 px-28 bg-slate-100">
-                    <h1 class= "text-3xl font-bold text-center mb-5 text-slate-600">150</h1>
-                    <h1 class = "text-center font-semibold text-slate-600"> <i class="fa-solid fa-truck pr-2"></i> Collected</h1>
+                <?php
+                            $sql = "SELECT SUM(garbage_Count) AS garbagecount FROM garbagetype";
+                            $result = mysqli_query($conn, $sql);
+                            $count = mysqli_num_rows($result);
+                            $rows = mysqli_fetch_assoc($result);
+                            $totalgcount = $rows['garbagecount'];
+                            ?>
+                    <h1 class= "text-3xl font-bold text-center mb-5 text-slate-600"><?php echo $totalgcount?></h1>
+                    <h1 class = "text-center font-semibold text-slate-600"> <i class="fa-solid fa-truck pr-2"></i>Total Collected</h1>
                 </div>
             </div>
 
@@ -118,14 +134,15 @@ include('includes/timeinclude.php');
                 <div class="prizes my-5 overflow-hidden drop-shadow-xl rou">
                 <h1 class = "font-semibold text-center text-lg text-slate-100 py-1 mt-2  bg-slate-800  ">Prizes</h1>
                     <div class="owl-one owl-carousel owl-theme overflow-hidden">
-            
+                    <?php
+                                            $sql = "SELECT * FROM prizes";
+                                            $result = mysqli_query($conn, $sql);
+                                            $rows = mysqli_fetch_assoc($result);
+                                            $ranker = 1; 
+                                            do { ?>
                         <!-- PRIZE 1 -->
-                        <div class="item "><img src="../admin/images/prize/Prize-256.jpg"></div>
-                        <!-- PRIZE 2 -->
-                        <div class="item"><img src="../admin/images/prize/Prize-63.png"></div>
-                        <!-- PRIZE 3 -->
-                        <div class="item"><img src="../admin/images/prize/Prize-226.jpg"></div>
-                    
+                        <div class="item "><img src="images/prize/<?php echo $rows['prize_img'];?>" ></div>
+                        <?php $ranker++; }  while ($rows = mysqli_fetch_assoc($result))?> 
                     </div>
                 </div>
               
@@ -159,65 +176,25 @@ include('includes/timeinclude.php');
                                 </thead>
                                 <!-- TBODY -->
                                 <tbody>
+                                <?php  
+                                       $sql = "SELECT * FROM members ORDER BY totalpoints DESC LIMIT 0,5";
+                                       $result = mysqli_query($conn, $sql);
+                                       $rows = mysqli_fetch_assoc($result);
+                                       $rank = 1;
+                                       $number = 0;
+                                        do { ?>
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                            1
+                                            <?php echo $rank;?>
                                         </th>
                                         <td class="px-6 py-4">
-                                            aldrin
+                                            <?php echo $rows['profilename'];?>
                                         </td>
                                         <td class="px-6 py-4">
-                                        3050
-                                        </td>
-                                     
-                                   
+                                            <?php echo $rows['totalpoints'];?>
+                                        </td>     
                                     </tr>
-                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                            2
-                                        </th>
-                                        <td class="px-6 py-4">
-                                        aldrin
-                                        </td>
-                                        <td class="px-6 py-4">
-                                        3050
-                                        </td>
-                                  
-                                     
-                                    </tr>
-                                    <tr class="bg-white dark:bg-gray-800">
-                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                             3
-                                        </th>
-                                        <td class="px-6 py-4">
-                                        aldrin
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            3050
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-white dark:bg-gray-800">
-                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                             4
-                                        </th>
-                                        <td class="px-6 py-4">
-                                        aldrin
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            3050
-                                        </td>
-                                    </tr>   <tr class="bg-white dark:bg-gray-800">
-                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                             5
-                                        </th>
-                                        <td class="px-6 py-4">
-                                        aldrin
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            3050
-                                        </td>
-                                    </tr>
-             
+                                    <?php $rank++;} while (($rows = mysqli_fetch_assoc($result)) and ($number <= 4))?>
                                 </tbody>
                             </table>
                         </div>
@@ -244,50 +221,23 @@ include('includes/timeinclude.php');
                                 </thead>
                                 <!-- TBODY -->
                                 <tbody>
+                                <?php  
+                                    $sql = "SELECT * FROM logs ORDER by id  DESC LIMIT 0,5";
+                                    $result = mysqli_query($conn, $sql);
+                                    $rows = mysqli_fetch_assoc($result);
+                                    $number = 0;
+                                    do { ?>
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                        Bojji Kage : Gained 3 points
+                                        <?php echo $rows['activity'];?>
                                         </th>
                                         <td class="px-6 py-4">
-                                        2022-04-29 04:56:28
+                                        <?php echo $rows['datetime'];?>
                                         </td>
-                                    
                                      
                                    
                                     </tr>
-                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                        Bojji Kage : Gained 3 points
-                                        </th>
-                                        <td class="px-6 py-4">
-                                        2022-04-29 04:56:28
-                                        </td>   
-                                    </tr>
-                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                        Bojji Kage : Gained 3 points
-                                        </th>
-                                        <td class="px-6 py-4">
-                                        2022-04-29 04:56:28
-                                        </td>   
-                                    </tr>
-                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                        Bojji Kage : Gained 3 points
-                                        </th>
-                                        <td class="px-6 py-4">
-                                        2022-04-29 04:56:28
-                                        </td>   
-                                    </tr>
-                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                        Bojji Kage : Gained 3 points
-                                        </th>
-                                        <td class="px-6 py-4">
-                                        2022-04-29 04:56:28
-                                        </td>   
-                                    </tr>
-                                 
+                                    <?php $number++; } while (($rows = mysqli_fetch_assoc($result)) and ($number <= 4))?>       
                                 </tbody>
                             </table>
                         </div>
